@@ -1,5 +1,5 @@
 import type { Theme, TokenType } from '../../theme'
-import type { OverrideTokenMap, TokenMap, GlobalToken } from '../interface'
+import type { GlobalToken, OverrideTokenMap, TokenMap } from '../interface'
 
 export type TokenMapWithTheme<
   CompTokenMap extends TokenMap,

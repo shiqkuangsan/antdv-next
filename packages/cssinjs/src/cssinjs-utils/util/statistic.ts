@@ -2,8 +2,8 @@ import type { TokenMap } from '../interface'
 
 declare const CSSINJS_STATISTIC: any
 
-const enableStatistic
-  = process.env.NODE_ENV !== 'production' || typeof CSSINJS_STATISTIC !== 'undefined'
+// @ts-expect-error this is a global variable which injected by babel plugin
+const enableStatistic = process.env.NODE_ENV !== 'production' || typeof CSSINJS_STATISTIC !== 'undefined'
 
 let recording = true
 
@@ -36,13 +36,13 @@ export function merge<CompTokenMap extends TokenMap>(
   return ret
 }
 
-export const statistic: Record<string, { global: string[]; component: Record<string, string | number> }> = {}
+export const statistic: Record<string, { global: string[], component: Record<string, string | number> }> = {}
 
 export const _statistic_build_: typeof statistic = {}
 
 function noop() {}
 
-const statisticToken = <CompTokenMap extends TokenMap>(token: CompTokenMap) => {
+function statisticToken<CompTokenMap extends TokenMap>(token: CompTokenMap) {
   let tokenKeys: Set<string> | undefined
   let proxy = token
   let flush: (component: string, componentToken: Record<string, string | number>) => void = noop

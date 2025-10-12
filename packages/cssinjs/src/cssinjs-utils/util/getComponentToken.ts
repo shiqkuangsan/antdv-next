@@ -1,12 +1,12 @@
-import { warning } from '@v-c/util/dist/warning'
 import type { TokenType } from '../../theme'
 import type {
+  ComponentToken,
+  ComponentTokenKey,
+  GlobalToken,
   TokenMap,
   TokenMapKey,
-  ComponentTokenKey,
-  ComponentToken,
-  GlobalToken,
 } from '../interface'
+import { warning } from '@v-c/util/dist/warning'
 
 function getComponentToken<
   CompTokenMap extends TokenMap,
@@ -29,6 +29,7 @@ function getComponentToken<
 
   if (options?.deprecatedTokens) {
     options.deprecatedTokens.forEach(([oldKey, newKey]) => {
+      // @ts-expect-error this is fine
       if (process.env.NODE_ENV !== 'production') {
         warning(
           !customToken?.[oldKey],

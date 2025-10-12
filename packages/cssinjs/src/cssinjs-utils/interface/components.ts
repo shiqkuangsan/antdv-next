@@ -1,4 +1,4 @@
-import type { TokenType } from '../theme/Theme'
+import type { TokenType } from '../../theme'
 
 export type TokenMap = Record<PropertyKey, any>
 

@@ -64,3 +64,5 @@ export type {
 export const _experimental = {
   supportModernCSS: () => supportWhere() && supportLogicProps(),
 }
+
+export * from './cssinjs-utils'
