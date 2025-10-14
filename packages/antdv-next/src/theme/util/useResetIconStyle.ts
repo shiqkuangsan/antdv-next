@@ -1,11 +1,12 @@
-import type { CSPConfig } from '../../config-provider'
+import type { Ref } from 'vue'
 
+import type { CSPConfig } from '../../config-provider'
 import { useStyleRegister } from '@antdv-next/cssinjs'
 import { computed } from 'vue'
 import { genIconStyle } from '../../style'
 import useToken from '../useToken'
 
-function useResetIconStyle(iconPrefixCls: string, csp?: CSPConfig) {
+function useResetIconStyle(iconPrefixCls: Ref<string>, csp?: Ref<CSPConfig>) {
   const [theme, token] = useToken()
 
   // Generate style for icons
@@ -14,13 +15,13 @@ function useResetIconStyle(iconPrefixCls: string, csp?: CSPConfig) {
       theme: theme.value!,
       token: token.value,
       hashId: '',
-      path: ['ant-design-icons', iconPrefixCls],
-      nonce: () => csp!.nonce!,
+      path: ['ant-design-icons', iconPrefixCls.value],
+      nonce: () => csp!.value!.nonce!,
       layer: {
         name: 'antd',
       },
     })),
-    () => genIconStyle(iconPrefixCls),
+    () => genIconStyle(iconPrefixCls.value),
   )
 }
 

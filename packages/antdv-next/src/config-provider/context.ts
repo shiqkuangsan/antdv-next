@@ -87,6 +87,12 @@ export interface ComponentStyleConfig {
   style?: CSSProperties
 }
 
+export type PopupOverflow = 'viewport' | 'scroll'
+
+export const Variants = ['outlined', 'borderless', 'filled', 'underlined'] as const
+
+export type Variant = (typeof Variants)[number]
+
 export interface WaveConfig {
   /**
    * @descCN 是否禁用水波纹效果。
