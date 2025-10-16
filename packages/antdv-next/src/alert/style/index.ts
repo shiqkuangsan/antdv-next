@@ -246,6 +246,6 @@ export const prepareComponentToken: GetDefaultToken<'Alert'> = (token) => {
 
 export default genStyleHooks(
   'Alert',
-  (token: any) => [genBaseStyle(token), genTypeStyle(token), genActionStyle(token)],
+  token => [genBaseStyle(token), genTypeStyle(token), genActionStyle(token)],
   prepareComponentToken,
 )

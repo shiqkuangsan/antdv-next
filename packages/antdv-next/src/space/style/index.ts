@@ -81,7 +81,7 @@ export const prepareComponentToken: GetDefaultToken<'Space'> = () => ({})
 
 export default genStyleHooks(
   'Space',
-  (token: any) => {
+  (token) => {
     const spaceToken = mergeToken<SpaceToken>(token, {
       spaceGapSmallSize: token.paddingXS,
       spaceGapMiddleSize: token.padding,

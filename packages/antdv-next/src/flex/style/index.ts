@@ -100,7 +100,7 @@ export const prepareComponentToken: GetDefaultToken<'Flex'> = () => ({})
 
 export default genStyleHooks(
   'Flex',
-  (token: any) => {
+  (token) => {
     const { paddingXS, padding, paddingLG } = token
     const flexToken = mergeToken<FlexToken>(token, {
       flexGapSM: paddingXS,

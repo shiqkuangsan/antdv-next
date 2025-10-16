@@ -776,7 +776,7 @@ const genBlockButtonStyle: GenerateStyle<ButtonToken> = (token) => {
 // ============================== Export ==============================
 export default genStyleHooks(
   'Button',
-  (token: any) => {
+  (token) => {
     const buttonToken = prepareToken(token)
 
     return [

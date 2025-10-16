@@ -35,7 +35,7 @@ const genButtonCompactStyle: GenerateStyle<ButtonToken> = (token) => {
 // ============================== Export ==============================
 export default genSubStyleComponent(
   ['Button', 'compact'],
-  (token: any) => {
+  (token) => {
     const buttonToken = prepareToken(token)
 
     return [

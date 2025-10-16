@@ -235,7 +235,7 @@ export const prepareComponentToken: GetDefaultToken<'Divider'> = token => ({
 // ============================== Export ==============================
 export default genStyleHooks(
   'Divider',
-  (token: any) => {
+  (token) => {
     const dividerToken = mergeToken<DividerToken>(token, {
       dividerHorizontalWithTextGutterMargin: token.margin,
       sizePaddingEdgeHorizontal: 0,
