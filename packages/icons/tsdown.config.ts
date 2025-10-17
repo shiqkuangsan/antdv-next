@@ -6,6 +6,7 @@ export default defineConfig({
   format: 'es',
   entry: [
     'src/index.ts',
+    'src/icons/index.tsx',
   ],
   external: [
     'vue',
