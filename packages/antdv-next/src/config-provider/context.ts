@@ -167,18 +167,71 @@ export type EmptyConfig = ComponentStyleConfig & Pick<EmptyProps, 'classes' | 's
 export type SpinConfig = ComponentStyleConfig & Pick<SpinProps, 'indicator'>
 
 export interface ConfigComponentProps {
+  // input?: InputConfig;
+  // textArea?: TextAreaConfig;
+  // inputNumber?: InputNumberConfig;
+  // pagination?: PaginationConfig;
   space?: SpaceConfig
-  button?: ButtonConfig
-  flex?: FlexConfig
-  divider?: ComponentStyleConfig
+  splitter?: ComponentStyleConfig
+  // form?: FormConfig;
+  // select?: SelectConfig;
   alert?: AlertConfig
   anchor?: ComponentStyleConfig
-  badge?: BadgeConfig
-  tag?: TagConfig
-  layout?: ComponentStyleConfig
-  empty?: EmptyConfig
-  result?: ComponentStyleConfig
+  button?: ButtonConfig
+  divider?: ComponentStyleConfig
+  // drawer?: DrawerConfig;
+  calendar?: ComponentStyleConfig
+  carousel?: ComponentStyleConfig
+  // cascader?: CascaderConfig;
+  // treeSelect?: TreeSelectConfig;
+  // collapse?: CollapseConfig;
+  // floatButton?: FloatButtonConfig;
+  // floatButtonGroup?: FloatButtonGroupConfig;
+  typography?: ComponentStyleConfig
+  skeleton?: ComponentStyleConfig
   spin?: SpinConfig
+  segmented?: ComponentStyleConfig
+  steps?: ComponentStyleConfig
+  statistic?: ComponentStyleConfig
+  // image?: ImageConfig;
+  layout?: ComponentStyleConfig
+  // list?: ListConfig;
+  // mentions?: MentionsConfig;
+  // modal?: ModalConfig;
+  progress?: ComponentStyleConfig
+  result?: ComponentStyleConfig
+  // slider?: SliderConfig;
+  breadcrumb?: ComponentStyleConfig
+  // menu?: MenuConfig;
+  checkbox?: ComponentStyleConfig
+  // descriptions?: DescriptionsConfig;
+  empty?: EmptyConfig
+  badge?: BadgeConfig
+  radio?: ComponentStyleConfig
+  rate?: ComponentStyleConfig
+  switch?: ComponentStyleConfig
+  // transfer?: TransferConfig;
+  avatar?: ComponentStyleConfig
+  message?: ComponentStyleConfig
+  tag?: TagConfig
+  // table?: TableConfig;
+  // card?: CardConfig;
+  // tabs?: TabsConfig;
+  timeline?: ComponentStyleConfig
+  // timePicker?: TimePickerConfig;
+  // tour?: TourConfig;
+  // tooltip?: TooltipConfig;
+  // popover?: PopoverConfig;
+  // popconfirm?: PopconfirmConfig;
+  // upload?: UploadConfig;
+  // notification?: NotificationConfig;
+  tree?: ComponentStyleConfig
+  colorPicker?: ComponentStyleConfig
+  // datePicker?: DatePickerConfig;
+  // rangePicker?: RangePickerConfig;
+  dropdown?: ComponentStyleConfig
+  flex?: FlexConfig
+  wave?: WaveConfig
 }
 
 export interface ConfigConsumerProps extends ConfigComponentProps {

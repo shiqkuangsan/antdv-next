@@ -32,5 +32,7 @@ declare module 'vue' {
     ASkeletonInput: typeof import('antdv-next')['SkeletonInput']
     ASkeletonImage: typeof import('antdv-next')['SkeletonImage']
     ASkeletonNode: typeof import('antdv-next')['SkeletonNode']
+    AStatistic: typeof import('antdv-next')['Statistic']
+    AStatisticTimer: typeof import('antdv-next')['StatisticTimer']
   }
 }

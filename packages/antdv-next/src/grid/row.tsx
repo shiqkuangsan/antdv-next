@@ -73,9 +73,15 @@ function useMergedPropByScreen(
   )
   return prop
 }
+const defaults = {
+  gutter: 0,
+  align: 'top',
+  justify: 'start',
+  wrap: true,
+} as any
 
 const Row = defineComponent<RowProps>(
-  (props, { attrs, slots }) => {
+  (props = defaults, { attrs, slots }) => {
     const configCtx = useConfig()
     const screens = useBreakpoint(true, null)
 
