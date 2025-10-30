@@ -1,5 +1,6 @@
 import type { DerivativeFunc } from '@antdv-next/cssinjs'
 import type { CSSProperties, InjectionKey, Ref } from 'vue'
+import type { WarningContextProps } from '../_util/warning.ts'
 import type { ShowWaveEffect } from '../_util/wave/interface.ts'
 import type { AlertProps } from '../alert'
 import type { BadgeProps } from '../badge'
@@ -8,6 +9,7 @@ import type { EmptyProps } from '../empty'
 import type { FlexProps } from '../flex'
 import type { Locale } from '../locale'
 import type { SpaceProps } from '../space'
+import type { SpinProps } from '../spin'
 import type { TagProps } from '../tag'
 import type { AliasToken, MapToken, OverrideToken, SeedToken } from '../theme/interface'
 import type { RenderEmptyHandler } from './defaultRenderEmpty.tsx'
@@ -162,6 +164,8 @@ export type TagConfig = ComponentStyleConfig & Pick<TagProps, 'closeIcon' | 'clo
 
 export type EmptyConfig = ComponentStyleConfig & Pick<EmptyProps, 'classes' | 'styles' | 'image'>
 
+export type SpinConfig = ComponentStyleConfig & Pick<SpinProps, 'indicator'>
+
 export interface ConfigComponentProps {
   space?: SpaceConfig
   button?: ButtonConfig
@@ -174,6 +178,7 @@ export interface ConfigComponentProps {
   layout?: ComponentStyleConfig
   empty?: EmptyConfig
   result?: ComponentStyleConfig
+  spin?: SpinConfig
 }
 
 export interface ConfigConsumerProps extends ConfigComponentProps {
@@ -197,7 +202,7 @@ export interface ConfigConsumerProps extends ConfigComponentProps {
   popupMatchSelectWidth?: boolean
   // popupOverflow?: PopupOverflow
   theme?: ThemeConfig
-  // warning?: WarningContextProps
+  warning?: WarningContextProps
   wave?: WaveConfig
 }
 

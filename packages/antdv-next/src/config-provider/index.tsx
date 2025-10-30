@@ -6,6 +6,7 @@ import { createTheme, useStyleContext } from '@antdv-next/cssinjs'
 import { IconContextProvider } from '@antdv-next/icons'
 import defu from 'defu'
 import { computed, defineComponent } from 'vue'
+import { useWarningProvider } from '../_util/warning.ts'
 import { ANT_MARK, LocaleProvider, useLocaleContext } from '../locale'
 import { defaultTheme, DesignTokenProvider } from '../theme/context.ts'
 import defaultSeedToken from '../theme/themes/seed'
@@ -35,7 +36,7 @@ const PASSED_PROPS: Exclude<
   // 'pagination',
   // 'form',
   // 'select',
-  // 'button',
+  'button',
 ]
 
 const providerDefaultProps: any = {
@@ -186,6 +187,11 @@ const ProviderChildren = defineComponent<
     })
 
     useConfigProvider(memoedConfig)
+    // warning provider
+    const strict = computed(() => memoedConfig.value?.warning?.strict)
+    useWarningProvider({
+      strict,
+    })
     return () => {
       let childNode = slots?.default?.()
 
