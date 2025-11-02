@@ -3,13 +3,17 @@ import type { CSSProperties, InjectionKey, Ref } from 'vue'
 import type { WarningContextProps } from '../_util/warning.ts'
 import type { ShowWaveEffect } from '../_util/wave/interface.ts'
 import type { AlertProps } from '../alert'
+import type { AnchorProps } from '../anchor'
 import type { BadgeProps } from '../badge'
 import type { ButtonProps } from '../button'
 import type { CollapseProps } from '../collapse/Collapse.tsx'
 import type { DescriptionsProps } from '../descriptions'
+import type { DividerProps } from '../divider'
 import type { EmptyProps } from '../empty'
 import type { FlexProps } from '../flex'
 import type { Locale } from '../locale'
+import type { QRCodeProps } from '../qrcode'
+import type { ResultProps } from '../result'
 import type { SpaceProps } from '../space'
 import type { SpinProps } from '../spin'
 import type { TagProps } from '../tag'
@@ -172,6 +176,14 @@ export type DescriptionsConfig = ComponentStyleConfig & Pick<DescriptionsProps, 
 
 export type CollapseConfig = ComponentStyleConfig & Pick<CollapseProps, 'expandIcon'>
 
+export type QRcodeConfig = ComponentStyleConfig & Pick<QRCodeProps, 'classes' | 'styles'>
+
+export type ResultConfig = ComponentStyleConfig & Pick<ResultProps, 'classes' | 'styles'>
+
+export type AnchorStyleConfig = ComponentStyleConfig & Pick<AnchorProps, 'classes' | 'styles'>
+
+export type DividerConfig = ComponentStyleConfig & Pick<DividerProps, 'classes' | 'styles'>
+
 export interface ConfigComponentProps {
   // input?: InputConfig;
   // textArea?: TextAreaConfig;
@@ -182,9 +194,9 @@ export interface ConfigComponentProps {
   // form?: FormConfig;
   // select?: SelectConfig;
   alert?: AlertConfig
-  anchor?: ComponentStyleConfig
+  anchor?: AnchorStyleConfig
   button?: ButtonConfig
-  divider?: ComponentStyleConfig
+  divider?: DividerConfig
   // drawer?: DrawerConfig;
   calendar?: ComponentStyleConfig
   carousel?: ComponentStyleConfig
@@ -205,7 +217,7 @@ export interface ConfigComponentProps {
   // mentions?: MentionsConfig;
   // modal?: ModalConfig;
   progress?: ComponentStyleConfig
-  result?: ComponentStyleConfig
+  result?: ResultConfig
   // slider?: SliderConfig;
   breadcrumb?: ComponentStyleConfig
   // menu?: MenuConfig;
@@ -237,6 +249,7 @@ export interface ConfigComponentProps {
   // rangePicker?: RangePickerConfig;
   dropdown?: ComponentStyleConfig
   flex?: FlexConfig
+  qrcode?: QRcodeConfig
   wave?: WaveConfig
 }
 

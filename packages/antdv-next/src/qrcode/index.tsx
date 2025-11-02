@@ -1,12 +1,22 @@
 import type { App, CSSProperties, SlotsType } from 'vue'
-import type { ImageSettings, QRCodeEmits, QRCodeProps, QRCodeSlots } from './interface'
+import type {
+  ImageSettings,
+  QRCodeClassNamesType,
+
+  QRCodeEmits,
+  QRCodeProps,
+  QRCodeSlots,
+  QRCodeStylesType,
+} from './interface'
 import { QRCodeCanvas, QRCodeSVG } from '@v-c/qrcode'
 import { classNames } from '@v-c/util'
 import pickAttrs from '@v-c/util/dist/pickAttrs'
 import { omit } from 'es-toolkit'
 import { computed, defineComponent } from 'vue'
+import { useMergeSemantic, useToArr, useToProps } from '../_util/hooks'
+import { toPropsRefs } from '../_util/tools.ts'
 import { devUseWarning, isDev } from '../_util/warning.ts'
-import { useBaseConfig } from '../config-provider/context'
+import { useComponentBaseConfig } from '../config-provider/context'
 import useLocale from '../locale/useLocale.ts'
 import { useToken } from '../theme/internal.ts'
 import QRcodeStatus from './QrcodeStatus.tsx'
@@ -34,7 +44,14 @@ const QRCode = defineComponent<
   SlotsType<QRCodeSlots>
 >(
   (props = defaults, { emit, attrs, slots }) => {
-    const { prefixCls } = useBaseConfig('qrcode', props)
+    const {
+      prefixCls,
+      class: contextClassName,
+      style: contextStyle,
+      classes: contextClassNames,
+      styles: contextStyles,
+    } = useComponentBaseConfig('qrcode', props)
+    const { styles, classes } = toPropsRefs(props, 'styles', 'classes')
     const [wrapCSSVar, hashId, cssVarCls] = useStyle(prefixCls)
     const [locale] = useLocale('QRCode')
     const [,token] = useToken()
@@ -52,6 +69,20 @@ const QRCode = defineComponent<
         crossOrigin: 'anonymous',
       } as ImageSettings
     })
+
+    // =========== Merged Props for Semantic ===========
+    const mergedProps = computed(() => {
+      return props
+    })
+    const [mergedClassNames, mergedStyles] = useMergeSemantic<
+      QRCodeClassNamesType,
+      QRCodeStylesType,
+      QRCodeProps
+    >(
+      useToArr(contextClassNames, classes),
+      useToArr(contextStyles, styles),
+      useToProps(mergedProps),
+    )
 
     return () => {
       const {
@@ -103,6 +134,8 @@ const QRCode = defineComponent<
         rootClass,
         hashId.value,
         cssVarCls.value,
+        contextClassName.value,
+        mergedClassNames.value.root,
         {
           [`${prefixCls.value}-borderless`]: !bordered,
         },
@@ -117,16 +150,21 @@ const QRCode = defineComponent<
         _height = `${_height}px`
       }
 
-      const mergedStyle: CSSProperties = {
+      const rootStyle: CSSProperties = {
         backgroundColor: bgColor,
+        ...mergedStyles.value?.root,
+        ...contextStyle.value,
         ...style,
         width: _width,
         height: _height,
       }
       return wrapCSSVar(
-        <div {...restProps} class={mergedCls} style={mergedStyle}>
+        <div {...restProps} class={mergedCls} style={rootStyle}>
           {status !== 'active' && (
-            <div class={`${prefixCls.value}-mask`}>
+            <div
+              class={[`${prefixCls.value}-cover`, mergedClassNames.value.cover]}
+              style={mergedStyles.value.cover}
+            >
               <QRcodeStatus
                 prefixCls={prefixCls.value}
                 locale={locale!.value!}

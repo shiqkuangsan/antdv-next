@@ -1,4 +1,5 @@
 import type { QRProps } from '@v-c/qrcode'
+import type { SemanticClassNamesType, SemanticStylesType } from '../_util/hooks'
 import type { ComponentBaseProps } from '../config-provider/context.ts'
 import type { Locale } from '../locale'
 
@@ -16,6 +17,11 @@ export type { ImageSettings, QRProps }
 export type QRPropsCanvas = QRProps
 export type QRPropsSvg = QRProps
 
+export type QRCodeSemanticName = 'root' | 'cover'
+
+export type QRCodeClassNamesType = SemanticClassNamesType<QRCodeProps, QRCodeSemanticName>
+export type QRCodeStylesType = SemanticStylesType<QRCodeProps, QRCodeSemanticName>
+
 export interface QRCodeProps extends QRProps, ComponentBaseProps {
   type?: 'canvas' | 'svg'
   icon?: string
@@ -25,6 +31,8 @@ export interface QRCodeProps extends QRProps, ComponentBaseProps {
   status?: QRStatus
   statusRender?: (info: StatusRenderInfo) => any
   color?: any
+  classes?: QRCodeClassNamesType
+  styles?: QRCodeStylesType
 }
 
 export interface QRCodeSlots {

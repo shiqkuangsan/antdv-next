@@ -1,12 +1,19 @@
 import type { App, SlotsType } from 'vue'
+import type { SemanticClassNamesType, SemanticStylesType } from '../_util/hooks'
 import type { EmptyEmit, VueNode } from '../_util/type.ts'
 import type { ComponentBaseProps } from '../config-provider/context.ts'
 import { CheckCircleFilled, CloseCircleFilled, ExclamationCircleFilled, WarningFilled } from '@antdv-next/icons'
 import { classNames } from '@v-c/util'
 import { filterEmpty } from '@v-c/util/dist/props-util'
-import { createVNode, defineComponent } from 'vue'
-import { getSlotPropsFnRun } from '../_util/tools.ts'
-import { useBaseConfig } from '../config-provider/context.ts'
+import { computed, createVNode, defineComponent } from 'vue'
+import {
+
+  useMergeSemantic,
+  useToArr,
+  useToProps,
+} from '../_util/hooks'
+import { clsx, getSlotPropsFnRun, toPropsRefs } from '../_util/tools.ts'
+import { useComponentBaseConfig } from '../config-provider/context.ts'
 import noFound from './noFound'
 import serverError from './serverError'
 import useStyle from './style'
@@ -28,12 +35,20 @@ export const ExceptionMap = {
 export type ExceptionStatusType = 403 | 404 | 500 | '403' | '404' | '500'
 export type ResultStatusType = ExceptionStatusType | keyof typeof IconMap
 
+type SemanticName = 'root' | 'title' | 'subTitle' | 'body' | 'extra' | 'icon'
+
+export type ResultClassNamesType = SemanticClassNamesType<ResultProps, SemanticName>
+
+export type ResultStylesType = SemanticStylesType<ResultProps, SemanticName>
+
 export interface ResultProps extends ComponentBaseProps {
   icon?: VueNode
   status?: ResultStatusType
   title?: VueNode
   subTitle?: VueNode
   extra?: VueNode
+  classes?: ResultClassNamesType
+  styles?: ResultStylesType
 }
 
 // ExceptionImageMap keys
@@ -47,7 +62,6 @@ const ExceptionStatus = Object.keys(ExceptionMap)
  */
 
 interface IconProps {
-  prefixCls: string
   icon: VueNode
   status: ResultStatusType
 }
@@ -56,15 +70,14 @@ const defaultIconProps = {
 } as any
 
 const Icon = defineComponent<IconProps>(
-  (props = defaultIconProps, { slots }) => {
+  (props = defaultIconProps, { slots, attrs }) => {
     return () => {
-      const { prefixCls, status } = props
+      const { status } = props
       const icon = getSlotPropsFnRun(slots, props, 'icon', false)
-      const className = classNames(`${prefixCls}-icon`)
       if (ExceptionStatus.includes(`${status}`)) {
         const SVGComponent = ExceptionMap[status as ExceptionStatusType]
         return (
-          <div class={`${className} ${prefixCls}-image`}>
+          <div {...attrs}>
             <SVGComponent />
           </div>
         )
@@ -76,13 +89,15 @@ const Icon = defineComponent<IconProps>(
         return null
       }
 
-      return <div class={className}>{icon || iconNode}</div>
+      return <div {...attrs}>{icon || iconNode}</div>
     }
+  },
+  {
+    inheritAttrs: false,
   },
 )
 
 interface ExtraProps {
-  prefixCls: string
   extra: VueNode
 }
 
@@ -91,15 +106,17 @@ const defaultExtraProps = {
 } as any
 
 const Extra = defineComponent<ExtraProps>(
-  (props = defaultExtraProps, { slots }) => {
+  (props = defaultExtraProps, { slots, attrs }) => {
     return () => {
-      const { prefixCls } = props
       const extra = getSlotPropsFnRun(slots, props, 'extra')
       if (!extra) {
         return null
       }
-      return <div class={`${prefixCls}-extra`}>{extra}</div>
+      return <div {...attrs}>{extra}</div>
     }
+  },
+  {
+    inheritAttrs: false,
   },
 )
 
@@ -126,35 +143,71 @@ const Result = defineComponent<
   SlotsType<ResultSlots>
 >(
   (props = defaultResultProps, { slots, attrs }) => {
-    const { prefixCls, direction, result } = useBaseConfig('result', props)
+    const {
+      prefixCls,
+      direction,
+      class: contextClassName,
+      style: contextStyle,
+      classes: contextClassNames,
+      styles: contextStyles,
+    } = useComponentBaseConfig('result', props)
+    const { classes, styles } = toPropsRefs(props, 'classes', 'styles')
     const [wrapCSSVar, hashId, cssVarCls] = useStyle(prefixCls)
+
+    // =========== Merged Props for Semantic ==========
+    const mergedProps = computed(() => props)
+
+    const [mergedClassNames, mergedStyles] = useMergeSemantic<
+      ResultClassNamesType,
+      ResultStylesType,
+      ResultProps
+    >(
+      useToArr(contextClassNames, classes),
+      useToArr(contextStyles, styles),
+      useToProps(mergedProps),
+    )
 
     return () => {
       const { status, rootClass } = props
-      const className = classNames(
+      const rootClassNames = classNames(
         prefixCls.value,
         `${prefixCls.value}-${status}`,
         (attrs as any).class,
-        result?.value?.class,
+        contextClassName.value,
         rootClass,
         { [`${prefixCls.value}-rtl`]: direction.value === 'rtl' },
         hashId.value,
         cssVarCls.value,
+        mergedClassNames.value.root,
       )
       const subTitle = getSlotPropsFnRun(slots, props, 'subTitle')
       const title = getSlotPropsFnRun(slots, props, 'title')
       const extra = getSlotPropsFnRun(slots, props, 'extra')
       const icon = getSlotPropsFnRun(slots, props, 'icon', false)
       const children = filterEmpty(slots?.default?.())
-      const mergedStyle = [result?.value?.style, (attrs as any).style]
+      const rootStyles = [mergedStyles.value.root, contextStyle.value, (attrs as any).style]
+
+      const titleClassNames = clsx(`${prefixCls.value}-title`, mergedClassNames.value.title)
+
+      const subTitleClassNames = clsx(`${prefixCls.value}-subtitle`, mergedClassNames.value.subTitle)
+
+      const extraClassNames = clsx(`${prefixCls.value}-extra`, mergedClassNames.value.extra)
+
+      const bodyClassNames = clsx(`${prefixCls.value}-body`, mergedClassNames.value.body)
+
+      const iconClassNames = clsx(
+        `${prefixCls.value}-icon`,
+        { [`${prefixCls.value}-image`]: ExceptionStatus.includes(`${status}`) },
+        mergedClassNames.value.icon,
+      )
 
       return wrapCSSVar(
-        <div class={className} style={mergedStyle}>
-          <Icon prefixCls={prefixCls.value} status={status!} icon={icon} />
-          <div class={`${prefixCls.value}-title`}>{title}</div>
-          {!!subTitle && <div class={`${prefixCls.value}-subtitle`}>{subTitle}</div>}
-          <Extra prefixCls={prefixCls.value} extra={extra} />
-          {!!children.length && <div class={`${prefixCls.value}-content`}>{children}</div>}
+        <div class={rootClassNames} style={rootStyles}>
+          <Icon class={iconClassNames} status={status!} icon={icon} style={mergedStyles.value.icon} />
+          <div class={titleClassNames} style={mergedStyles.value.title}>{title}</div>
+          {!!subTitle && <div class={subTitleClassNames} style={mergedStyles.value.subTitle}>{subTitle}</div>}
+          <Extra class={extraClassNames} extra={extra} style={mergedStyles.value.extra} />
+          {!!children.length && <div class={bodyClassNames} style={mergedStyles.value.body}>{children}</div>}
         </div>,
       )
     }
