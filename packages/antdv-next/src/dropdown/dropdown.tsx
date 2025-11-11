@@ -4,7 +4,7 @@ import type { App, SlotsType } from 'vue'
 import type { SemanticClassNamesType, SemanticStylesType } from '../_util/hooks'
 import type { AdjustOverflow } from '../_util/placements.ts'
 import type { ComponentBaseProps } from '../config-provider/context.ts'
-import type { MenuProps, MenuSlots } from '../menu'
+import type { MenuEmits, MenuProps, MenuSlots } from '../menu'
 import { LeftOutlined, RightOutlined } from '@antdv-next/icons'
 import VcDropdown from '@v-c/dropdown'
 import { clsx } from '@v-c/util'
@@ -78,6 +78,7 @@ export interface DropdownProps extends ComponentBaseProps {
 export interface DropdownEmits {
   'update:open': (open: boolean) => void
   'openChange': (open: boolean, info: { source: 'trigger' | 'menu' }) => void
+  'menuClick': MenuEmits['click']
   [key: string]: (...args: any[]) => void
 }
 
@@ -229,6 +230,9 @@ const Dropdown = defineComponent<
           overlayNode = (
             <Menu
               {...menu}
+              onClick={(...args) => {
+                emit('menuClick', ...args)
+              }}
               classes={{
                 ...menuClassNames,
                 subMenu: {
