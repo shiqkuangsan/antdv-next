@@ -12,7 +12,7 @@ import type { ComponentToken as ButtonComponentToken } from '../../button/style'
 // import type { ComponentToken as CardComponentToken } from '../../card/style';
 // import type { ComponentToken as CarouselComponentToken } from '../../carousel/style';
 // import type { ComponentToken as CascaderComponentToken } from '../../cascader/style';
-// import type { ComponentToken as CheckboxComponentToken } from '../../checkbox/style';
+import type { ComponentToken as CheckboxComponentToken } from '../../checkbox/style'
 import type { ComponentToken as CollapseComponentToken } from '../../collapse/style'
 // import type { ComponentToken as ColorPickerComponentToken } from '../../color-picker/style';
 // import type { ComponentToken as DatePickerComponentToken } from '../../date-picker/style';
@@ -80,7 +80,7 @@ export interface ComponentTokenMap {
   // Card?: CardComponentToken;
   // Carousel?: CarouselComponentToken;
   // Cascader?: CascaderComponentToken;
-  // Checkbox?: CheckboxComponentToken;
+  Checkbox?: CheckboxComponentToken
   // ColorPicker?: ColorPickerComponentToken;
   Collapse?: CollapseComponentToken
   // DatePicker?: DatePickerComponentToken;

@@ -54,5 +54,7 @@ declare module 'vue' {
     AAvatarGroup: typeof import('antdv-next')['AvatarGroup']
     AForm: typeof import('antdv-next')['Form']
     AFormItem: typeof import('antdv-next')['FormItem']
+    ACheckbox: typeof import('antdv-next')['Checkbox']
+    ACheckboxGroup: typeof import('antdv-next')['CheckboxGroup']
   }
 }
