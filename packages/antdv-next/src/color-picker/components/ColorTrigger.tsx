@@ -27,7 +27,7 @@ export default defineComponent<
   EmptyEmit,
   string
 >(
-  (props) => {
+  (props, { attrs }) => {
     const [locale] = useLocale('ColorPicker')
     const colorTriggerPrefixCls = computed(() => `${props.prefixCls}-trigger`)
     const colorTextPrefixCls = computed(() => `${colorTriggerPrefixCls.value}-text`)
@@ -80,6 +80,7 @@ export default defineComponent<
 
     return () => (
       <div
+        {...attrs}
         class={clsx(
           colorTriggerPrefixCls.value,
           props.className,
