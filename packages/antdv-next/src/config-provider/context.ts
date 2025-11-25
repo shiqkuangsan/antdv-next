@@ -32,6 +32,7 @@ import type { RadioProps } from '../radio/interface.ts'
 import type { ResultProps } from '../result'
 import type { SegmentedProps } from '../segmented'
 import type { SkeletonProps } from '../skeleton'
+import type { SliderProps } from '../slider'
 import type { SpaceProps } from '../space'
 import type { SpinProps } from '../spin'
 import type { StatisticProps } from '../statistic'
@@ -273,6 +274,8 @@ export type InputSearchConfig = ComponentStyleConfig & Pick<SearchProps, 'classe
 
 export type OTPConfig = ComponentStyleConfig & Pick<OTPProps, 'classes' | 'styles' | 'variant'>
 
+export type SliderConfig = ComponentStyleConfig & Pick<SliderProps, 'styles' | 'classes'>
+
 export interface ConfigComponentProps {
   input?: InputConfig
   inputNumber?: InputNumberConfig
@@ -309,7 +312,7 @@ export interface ConfigComponentProps {
   // modal?: ModalConfig;
   progress?: ComponentStyleConfig
   result?: ResultConfig
-  // slider?: SliderConfig;
+  slider?: SliderConfig
   breadcrumb?: BreadcrumbConfig
   masonry?: MasonryConfig
   menu?: MenuConfig

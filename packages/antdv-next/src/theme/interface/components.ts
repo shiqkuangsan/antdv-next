@@ -47,7 +47,7 @@ import type { ComponentToken as ResultComponentToken } from '../../result/style'
 import type { ComponentToken as SegmentedComponentToken } from '../../segmented/style'
 // import type { ComponentToken as SelectComponentToken } from '../../select/style';
 import type { ComponentToken as SkeletonComponentToken } from '../../skeleton/style'
-// import type { ComponentToken as SliderComponentToken } from '../../slider/style';
+import type { ComponentToken as SliderComponentToken } from '../../slider/style'
 import type { ComponentToken as SpaceComponentToken } from '../../space/style'
 import type { ComponentToken as SpinComponentToken } from '../../spin/style'
 import type { ComponentToken as StatisticComponentToken } from '../../statistic/style'
@@ -109,7 +109,7 @@ export interface ComponentTokenMap {
   Segmented?: SegmentedComponentToken
   // Select?: SelectComponentToken;
   Skeleton?: SkeletonComponentToken
-  // Slider?: SliderComponentToken;
+  Slider?: SliderComponentToken
   Spin?: SpinComponentToken
   Statistic?: StatisticComponentToken
   Switch?: SwitchComponentToken

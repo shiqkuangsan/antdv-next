@@ -13,6 +13,7 @@
     "@antfu/eslint-config": "catalog:",
     "@types/jsdom": "catalog:",
     "@types/node": "catalog:",
+    "@v-c/util": "catalog:",
     "@vitejs/plugin-vue": "catalog:",
     "@vitejs/plugin-vue-jsx": "catalog:",
     "@vue/tsconfig": "catalog:",
@@ -31,8 +32,8 @@
   },
   "pnpm": {
     "overrides": {
-      "@v-c/util": "0.0.18",
-      "vite": "npm:rolldown-vite@7.2.2"
+      "@v-c/util": "0.0.19",
+      "vite": "npm:rolldown-vite@7.2.7"
     },
     "onlyBuiltDependencies": [
       "esbuild"

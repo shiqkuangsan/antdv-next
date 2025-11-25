@@ -62,5 +62,6 @@ declare module 'vue' {
     ARadioButton: typeof import('antdv-next')['RadioButton']
     ASwitch: typeof import('antdv-next')['Switch']
     AColorPicker: typeof import('antdv-next')['ColorPicker']
+    ASlider: typeof import('antdv-next')['Slider']
   }
 }

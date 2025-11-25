@@ -24,7 +24,9 @@ export type OTPSemanticName = 'root' | 'input' | 'separator'
 export type OTPClassNamesType = SemanticClassNamesType<OTPProps, OTPSemanticName>
 export type OTPStylesType = SemanticStylesType<OTPProps, OTPSemanticName>
 
-export interface OTPProps extends ComponentBaseProps, Omit<HTMLAttributes, 'onChange' | 'onInput'> {
+export interface OTPProps extends ComponentBaseProps,
+  /* @vue-ignore */
+  Omit<HTMLAttributes, 'onChange' | 'onInput'> {
   length?: number
   variant?: Variant
   size?: SizeType
