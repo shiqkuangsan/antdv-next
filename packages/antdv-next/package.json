@@ -17,7 +17,7 @@
     "@v-c/color-picker": "catalog:",
     "@v-c/dropdown": "^1.0.0",
     "@v-c/input": "link:/Users/yanyu/workspace/github/antdv-next/vue-components/packages/input",
-    "@v-c/input-number": "^0.0.1",
+    "@v-c/input-number": "link:/Users/yanyu/workspace/github/antdv-next/vue-components/packages/input-number",
     "@v-c/menu": "^1.0.0",
     "@v-c/mutate-observer": "catalog:",
     "@v-c/notification": "^0.0.2",

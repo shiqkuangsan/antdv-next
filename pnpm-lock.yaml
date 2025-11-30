@@ -236,8 +236,8 @@ importers:
         specifier: link:/Users/yanyu/workspace/github/antdv-next/vue-components/packages/input
         version: link:../../../../../github/antdv-next/vue-components/packages/input
       '@v-c/input-number':
-        specifier: ^0.0.1
-        version: 0.0.1(vue@3.5.24(typescript@5.9.3))
+        specifier: link:/Users/yanyu/workspace/github/antdv-next/vue-components/packages/input-number
+        version: link:../../../../../github/antdv-next/vue-components/packages/input-number
       '@v-c/menu':
         specifier: ^1.0.0
         version: 1.0.0(vue@3.5.24(typescript@5.9.3))
@@ -1564,16 +1564,6 @@ packages:
     peerDependencies:
       vue: ^3.0.0
 
-  '@v-c/input-number@0.0.1':
-    resolution: {integrity: sha512-+w6EH/OUI6VJnHegp4JKrplrd8YbU1OrcuNQF/ApCt8c1pYux50V0WPpByuK1/ETv/HIcl3/7wdRhcQr9aH5aA==}
-    peerDependencies:
-      vue: ^3.0.0
-
-  '@v-c/input@0.0.1':
-    resolution: {integrity: sha512-dePIJBrb0Fom4purykmPMEGJCqLzAN/+L6IsqwFMF0VIMVJacenPsWZkkJEKRjh8EZqbMAT91nTtbNZ+Q4G7rw==}
-    peerDependencies:
-      vue: ^3.0.0
-
   '@v-c/input@0.0.2':
     resolution: {integrity: sha512-AL5bRTO00CkA7vJZ+JS5sNgy/zrfmQWe4dRUoyZf/RWlVF/OWLnOr/rENKfQa6t4hFgcObt28YtCZewG3+KrPQ==}
     peerDependencies:
@@ -1583,9 +1573,6 @@ packages:
     resolution: {integrity: sha512-k28vPfAzSWuwm0EZroroGa/tvcv6lWo4YROT3YfRkeZo3u3bCuvvHXh7a3iaMKebiN/2mmT8bMXzNC+lb4Ls3w==}
     peerDependencies:
       vue: ^3.0.0
-
-  '@v-c/mini-decimal@0.0.2':
-    resolution: {integrity: sha512-QAUCRTAc2go4K8kbocM9cKrVnQSxM0hmZjDxabS1LwNFLhlS+Spnxx7Bu5CcUb9z8GeXIxUd18WtOOjxfq/8kA==}
 
   '@v-c/mutate-observer@0.0.2':
     resolution: {integrity: sha512-fPHCM80uQvG2Dayg4yDV9e/+7hkJzOktu9V1nJ/s0WWjI4WknyrIMJlhqEQ1RdhxTNg4dmjd/krW317w1i1cQg==}
@@ -5085,18 +5072,6 @@ snapshots:
       '@v-c/util': 1.0.1(vue@3.5.24(typescript@5.9.3))
       vue: 3.5.24(typescript@5.9.3)
 
-  '@v-c/input-number@0.0.1(vue@3.5.24(typescript@5.9.3))':
-    dependencies:
-      '@v-c/input': 0.0.1(vue@3.5.24(typescript@5.9.3))
-      '@v-c/mini-decimal': 0.0.2
-      '@v-c/util': 1.0.1(vue@3.5.24(typescript@5.9.3))
-      vue: 3.5.24(typescript@5.9.3)
-
-  '@v-c/input@0.0.1(vue@3.5.24(typescript@5.9.3))':
-    dependencies:
-      '@v-c/util': 1.0.1(vue@3.5.24(typescript@5.9.3))
-      vue: 3.5.24(typescript@5.9.3)
-
   '@v-c/input@0.0.2(vue@3.5.24(typescript@5.9.3))':
     dependencies:
       '@v-c/util': 1.0.1(vue@3.5.24(typescript@5.9.3))
@@ -5108,8 +5083,6 @@ snapshots:
       '@v-c/trigger': 1.0.1(vue@3.5.24(typescript@5.9.3))
       '@v-c/util': 1.0.1(vue@3.5.24(typescript@5.9.3))
       vue: 3.5.24(typescript@5.9.3)
-
-  '@v-c/mini-decimal@0.0.2': {}
 
   '@v-c/mutate-observer@0.0.2(vue@3.5.24(typescript@5.9.3))':
     dependencies:

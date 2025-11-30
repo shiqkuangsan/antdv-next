@@ -82,8 +82,8 @@ export interface InputNumberEmits {
   'blur': (e: FocusEvent) => void
   'keydown': (e: KeyboardEvent) => void
   'keyup': (e: KeyboardEvent) => void
-  'compositionStart': (e: CompositionEvent) => void
-  'compositionEnd': (e: CompositionEvent) => void
+  'compositionstart': (e: CompositionEvent) => void
+  'compositionend': (e: CompositionEvent) => void
   'beforeinput': (e: InputEvent) => void
   [key: string]: (...args: any[]) => any
 }
@@ -96,7 +96,7 @@ export interface InputNumberSlots {
   default?: () => any
 }
 
-const omitKeys: (keyof InputNumberProps)[] = [
+const omitKeys: string[] = [
   'classes',
   'styles',
   'rootClass',
@@ -143,7 +143,7 @@ const InputNumber = defineComponent<
       style: contextStyle,
       classes: contextClassNames,
       styles: contextStyles,
-    } = useComponentBaseConfig('inputNumber', props)
+    } = useComponentBaseConfig('inputNumber', props, [], 'input-number')
 
     const {
       classes,
@@ -318,59 +318,63 @@ const InputNumber = defineComponent<
     const handleCompositionEvent = (eventName: keyof InputNumberEmits) => (e: CompositionEvent) => emit(eventName as any, e)
     const handleBeforeInput: InputNumberEmits['beforeinput'] = e => emit('beforeinput', e)
 
-    const inputNode = (
-      <VcInputNumber
-        {...restAttrs}
-        {...restProps}
-        ref={inputNumberRef as any}
-        prefixCls={prefixCls.value}
-        class={classesValue.value}
-        style={mergedStyle.value}
-        classNames={mergedClassNames.value as any}
-        styles={mergedStyles.value as any}
-        disabled={mergedDisabled.value}
-        controls={controlsProp.value}
-        upHandler={upIcon.value}
-        downHandler={downIcon.value}
-        prefix={prefixNode}
-        suffix={mergedSuffix.value}
-        onChange={handleChange}
-        {
-          ...{
-            'onUpdate:value': handleUpdateValue,
+    return () => {
+      const renderInputNode = () => (
+        <VcInputNumber
+          {...restAttrs}
+          {...restProps}
+          ref={inputNumberRef as any}
+          prefixCls={prefixCls.value}
+          className={classesValue.value}
+          style={mergedStyle.value}
+          classNames={mergedClassNames.value as any}
+          styles={mergedStyles.value as any}
+          disabled={mergedDisabled.value}
+          controls={controlsProp.value}
+          upHandler={upIcon.value}
+          downHandler={downIcon.value}
+          prefix={prefixNode}
+          suffix={mergedSuffix.value}
+          onChange={handleChange}
+          {
+            ...{
+              'onUpdate:value': handleUpdateValue,
+            }
           }
-        }
-        onInput={handleInput}
-        onPressEnter={handlePressEnter}
-        onStep={handleStep as any}
-        onMouseDown={handleMouseEvent('mousedown')}
-        onClick={handleMouseEvent('click')}
-        onMouseUp={handleMouseEvent('mouseup')}
-        onMouseLeave={handleMouseEvent('mouseleave')}
-        onMouseMove={handleMouseEvent('mousemove')}
-        onMouseEnter={handleMouseEvent('mouseenter')}
-        onMouseOut={handleMouseEvent('mouseout')}
-        onFocus={handleFocusEvent('focus')}
-        onBlur={handleFocusEvent('blur')}
-        onKeyDown={handleKeyboardEvent('keydown')}
-        onKeyUp={handleKeyboardEvent('keyup')}
-        onCompositionStart={handleCompositionEvent('compositionStart')}
-        onCompositionEnd={handleCompositionEvent('compositionEnd')}
-        onBeforeInput={handleBeforeInput}
-      />
-    )
+          onInput={handleInput}
+          onPressEnter={handlePressEnter}
+          onStep={handleStep as any}
+          onMouseDown={handleMouseEvent('mousedown')}
+          onClick={handleMouseEvent('click')}
+          onMouseUp={handleMouseEvent('mouseup')}
+          onMouseLeave={handleMouseEvent('mouseleave')}
+          onMouseMove={handleMouseEvent('mousemove')}
+          onMouseEnter={handleMouseEvent('mouseenter')}
+          onMouseOut={handleMouseEvent('mouseout')}
+          onFocus={handleFocusEvent('focus')}
+          onBlur={handleFocusEvent('blur')}
+          onKeyDown={handleKeyboardEvent('keydown')}
+          onKeyUp={handleKeyboardEvent('keyup')}
+          onCompositionStart={handleCompositionEvent('compositionstart')}
+          onCompositionEnd={handleCompositionEvent('compositionend')}
+          onBeforeInput={handleBeforeInput}
+        />
+      )
 
-    if (hasLegacyAddon.value) {
-      return (
-        <SpaceCompact rootClass={rootClass.value}>
-          {renderAddon(getSlotPropsFnRun(slots, props, 'addonBefore'))}
-          {inputNode}
-          {renderAddon(getSlotPropsFnRun(slots, props, 'addonAfter'))}
-        </SpaceCompact>
-      ) as any
+      const inputNode = renderInputNode()
+
+      if (hasLegacyAddon.value) {
+        return (
+          <SpaceCompact rootClass={rootClass.value}>
+            {renderAddon(getSlotPropsFnRun(slots, props, 'addonBefore'))}
+            {inputNode}
+            {renderAddon(getSlotPropsFnRun(slots, props, 'addonAfter'))}
+          </SpaceCompact>
+        ) as any
+      }
+
+      return inputNode as any
     }
-
-    return inputNode as any
   },
   {
     name: 'AInputNumber',
