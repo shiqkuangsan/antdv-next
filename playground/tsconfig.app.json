@@ -21,7 +21,8 @@
   },
   "files": [
     "types/antd.d.ts",
-    "types/vite-env.d.ts"
+    "types/vite-env.d.ts",
+    "types/md.d.ts"
   ],
   "include": [
     "src/**/*.ts",
