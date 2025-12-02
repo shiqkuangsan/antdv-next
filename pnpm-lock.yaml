@@ -118,8 +118,8 @@ catalogs:
       specifier: ^11.3.3
       version: 11.3.3
     vite-plugin-tsx-resolve-types:
-      specifier: ^0.0.6
-      version: 0.0.6
+      specifier: ^0.0.7
+      version: 0.0.7
     vitest:
       specifier: ^3.2.4
       version: 3.2.4
@@ -198,7 +198,7 @@ importers:
         version: 11.3.3(rolldown-vite@7.2.7(@types/node@24.10.0)(esbuild@0.25.11)(jiti@2.6.1)(tsx@4.20.6)(yaml@2.8.1))
       vite-plugin-tsx-resolve-types:
         specifier: 'catalog:'
-        version: 0.0.6(rolldown-vite@7.2.7(@types/node@24.10.0)(esbuild@0.25.11)(jiti@2.6.1)(tsx@4.20.6)(yaml@2.8.1))(typescript@5.9.3)
+        version: 0.0.7(rolldown-vite@7.2.7(@types/node@24.10.0)(esbuild@0.25.11)(jiti@2.6.1)(tsx@4.20.6)(yaml@2.8.1))(typescript@5.9.3)
       vitest:
         specifier: 'catalog:'
         version: 3.2.4(@types/debug@4.1.12)(@types/node@24.10.0)(esbuild@0.25.11)(jiti@2.6.1)(jsdom@27.1.0(postcss@8.5.6))(tsx@4.20.6)(yaml@2.8.1)
@@ -3932,8 +3932,8 @@ packages:
       '@nuxt/kit':
         optional: true
 
-  vite-plugin-tsx-resolve-types@0.0.6:
-    resolution: {integrity: sha512-TnPunBeIDEu+KJnOPg987HjFTaiUTj2nAFt4Np5Cm2UZUK5PMzUqXWhkWPw5c4XvfiIBzowoN3NTNTy0bW4RRg==}
+  vite-plugin-tsx-resolve-types@0.0.7:
+    resolution: {integrity: sha512-WLI3TFDa1edKy8T4pUgMGYsmvrrzTkJKhWcSDgyrpvvgSAsToe91IIZsz3FJv1Uzs75/6/U9+CD5MYei3YP7TA==}
     peerDependencies:
       typescript: '>=5'
       vite: '>=4'
@@ -7952,7 +7952,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  vite-plugin-tsx-resolve-types@0.0.6(rolldown-vite@7.2.7(@types/node@24.10.0)(esbuild@0.25.11)(jiti@2.6.1)(tsx@4.20.6)(yaml@2.8.1))(typescript@5.9.3):
+  vite-plugin-tsx-resolve-types@0.0.7(rolldown-vite@7.2.7(@types/node@24.10.0)(esbuild@0.25.11)(jiti@2.6.1)(tsx@4.20.6)(yaml@2.8.1))(typescript@5.9.3):
     dependencies:
       '@babel/generator': 7.28.5
       '@babel/parser': 7.28.5
