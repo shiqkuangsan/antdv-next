@@ -257,8 +257,8 @@ importers:
         specifier: ^0.0.8
         version: 0.0.8(vue@3.5.24(typescript@5.9.3))
       '@v-c/select':
-        specifier: ^0.0.2
-        version: 0.0.2(vue@3.5.24(typescript@5.9.3))
+        specifier: link:/Users/zhuzhengjian/workspace/gitea/antdv-next/vue-components/packages/select
+        version: link:../../../vue-components/packages/select
       '@v-c/slider':
         specifier: ^1.0.7
         version: 1.0.7(vue@3.5.24(typescript@5.9.3))
@@ -284,8 +284,8 @@ importers:
         specifier: ^1.0.2
         version: 1.0.2(vue@3.5.24(typescript@5.9.3))
       '@v-c/virtual-list':
-        specifier: ^1.0.1
-        version: 1.0.1(vue@3.5.24(typescript@5.9.3))
+        specifier: ^1.0.2
+        version: 1.0.2(vue@3.5.24(typescript@5.9.3))
       '@vueuse/core':
         specifier: 'catalog:'
         version: 13.9.0(vue@3.5.24(typescript@5.9.3))
@@ -1703,11 +1703,6 @@ packages:
     peerDependencies:
       vue: ^3.0.0
 
-  '@v-c/select@0.0.2':
-    resolution: {integrity: sha512-fD7SxbqW+WIggt+EdLu3673N+PlIoAvb8U3dITscdiKvIFlVbNeiDIvKwAm9PThlo5YT9S1JwNNqIFB3h6rdJg==}
-    peerDependencies:
-      vue: ^3.0.0
-
   '@v-c/slider@1.0.7':
     resolution: {integrity: sha512-3YV8m4k1cceqIIyB4ft/LS7qJzzATV1OMBzWlgwW7rip22h6zCCFzkm8nr9LnTx9LJU7BRx9gAGSlBUzJHy5JA==}
     peerDependencies:
@@ -1748,8 +1743,8 @@ packages:
     peerDependencies:
       vue: ^3.0.0
 
-  '@v-c/virtual-list@1.0.1':
-    resolution: {integrity: sha512-hIRMx6u4jkGRmNbnq2afns9SQkuEV1zsYMBzyzM0EoYKwUEgit/DtU7c+ThLhS/zP2GyB0zCNxPbP2zmByDo7g==}
+  '@v-c/virtual-list@1.0.2':
+    resolution: {integrity: sha512-zFfenJOAiFGigN84ix+HMAmRMzGn1961T4ebWEf7lo+7zTJutMu3mml4GPh1UkQCMEpw2u7d7F7lYdJ6MsBEkg==}
     peerDependencies:
       vue: ^3.0.0
 
@@ -5452,14 +5447,6 @@ snapshots:
       '@v-c/util': 1.0.2(vue@3.5.24(typescript@5.9.3))
       vue: 3.5.24(typescript@5.9.3)
 
-  '@v-c/select@0.0.2(vue@3.5.24(typescript@5.9.3))':
-    dependencies:
-      '@v-c/overflow': 1.0.0(vue@3.5.24(typescript@5.9.3))
-      '@v-c/trigger': 1.0.1(vue@3.5.24(typescript@5.9.3))
-      '@v-c/util': 1.0.2(vue@3.5.24(typescript@5.9.3))
-      '@v-c/virtual-list': 1.0.1(vue@3.5.24(typescript@5.9.3))
-      vue: 3.5.24(typescript@5.9.3)
-
   '@v-c/slider@1.0.7(vue@3.5.24(typescript@5.9.3))':
     dependencies:
       '@v-c/util': 1.0.2(vue@3.5.24(typescript@5.9.3))
@@ -5514,7 +5501,7 @@ snapshots:
     dependencies:
       vue: 3.5.24(typescript@5.9.3)
 
-  '@v-c/virtual-list@1.0.1(vue@3.5.24(typescript@5.9.3))':
+  '@v-c/virtual-list@1.0.2(vue@3.5.24(typescript@5.9.3))':
     dependencies:
       '@v-c/resize-observer': 1.0.0(vue@3.5.24(typescript@5.9.3))
       '@v-c/util': 1.0.2(vue@3.5.24(typescript@5.9.3))
