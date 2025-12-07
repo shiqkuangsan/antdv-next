@@ -80,5 +80,7 @@ declare module 'vue' {
     ASelect: typeof import('antdv-next')['Select']
     ASelectOption: typeof import('antdv-next')['SelectOption']
     ASelectOptGroup: typeof import('antdv-next')['SelectOptGroup']
+    ASplitter: typeof import('antdv-next')['Splitter']
+    ASplitterPanel: typeof import('antdv-next')['SplitterPanel']
   }
 }

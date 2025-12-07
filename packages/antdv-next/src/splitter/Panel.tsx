@@ -32,7 +32,7 @@ export const InternalPanel = defineComponent<InternalPanelProps>(
     }
   },
   {
-    name: 'Panel',
+    name: 'ASplitterPanel',
     inheritAttrs: false,
   },
 )

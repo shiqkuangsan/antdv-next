@@ -11,6 +11,7 @@ import type {
 import ResizeObserver from '@v-c/resize-observer'
 import { clsx } from '@v-c/util'
 import { filterEmpty } from '@v-c/util/dist/props-util'
+import { omit } from 'es-toolkit'
 import { computed, defineComponent, Fragment, shallowRef } from 'vue'
 import { getAttrStyleAndClass, useMergeSemantic, useOrientation, useToArr, useToProps } from '../_util/hooks'
 import { toPropsRefs } from '../_util/tools.ts'
@@ -206,12 +207,12 @@ const Splitter = defineComponent<
           <div {...restAttrs} style={mergedStyle} class={containerClassName}>
             {items.value?.map?.((item, idx) => {
               const panelProps = {
-                ...item,
+                ...omit(item, ['_$slots']),
                 class: clsx(mergedClassNames.value.panel, item.class),
                 style: { ...mergedStyles.value.panel, ...item.style },
               }
               // Panel
-              const panel = <InternalPanel {...panelProps} prefixCls={prefixCls.value} size={panelSizes.value[idx]} />
+              const panel = <InternalPanel v-slots={item._$slots} {...panelProps} prefixCls={prefixCls.value} size={panelSizes.value[idx]} />
               // Split Bar
               let splitBar: any | null = null
 

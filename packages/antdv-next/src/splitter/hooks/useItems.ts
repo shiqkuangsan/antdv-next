@@ -8,6 +8,7 @@ export type ItemType = Omit<PanelProps, 'collapsible'> & {
     end?: boolean
     showCollapsibleIcon: 'auto' | boolean
   }
+  _$slots?: Record<string, any>
 }
 
 function getCollapsible(collapsible?: PanelProps['collapsible']): ItemType['collapsible'] {
@@ -39,31 +40,16 @@ function useItems(children: Ref<any[]>): Ref<ItemType[]> {
     children,
     () => {
       const newItems = children.value?.filter(item => isVNode(item)).map((node) => {
-        const { props } = node
-        const { collapsible, ...restProps } = props as PanelProps
+        const { props, children } = node
+        const { collapsible, ...restProps } = (props ?? {}) as PanelProps
         return {
           ...restProps,
           collapsible: getCollapsible(collapsible),
+          _$slots: children,
         } as ItemType
       }) || []
       // 对比一下两个是否相等，避免不必要的更新
-      if (newItems.length === items.value.length) {
-        let isSame = true
-        for (let i = 0; i < newItems.length; i++) {
-          const newItem = newItems[i]
-          const oldItem = items.value[i]
-          if (JSON.stringify(newItem) !== JSON.stringify(oldItem)) {
-            isSame = false
-            break
-          }
-        }
-        if (!isSame) {
-          items.value = newItems
-        }
-      }
-      else {
-        items.value = newItems
-      }
+      items.value = newItems
     },
   )
 
