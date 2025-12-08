@@ -27,7 +27,7 @@ export interface CardMetaSlots {
   default?: () => any
 }
 
-const Meta = defineComponent<
+const CardMeta = defineComponent<
   CardMetaProps,
   EmptyEmit,
   string,
@@ -114,4 +114,4 @@ const Meta = defineComponent<
   },
 )
 
-export default Meta
+export default CardMeta

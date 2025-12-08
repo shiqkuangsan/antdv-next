@@ -12,7 +12,7 @@ const defaultProps: CardGridProps = {
   hoverable: true,
 }
 
-const Grid = defineComponent<CardGridProps>(
+const CardGrid = defineComponent<CardGridProps>(
   (props = defaultProps, { attrs, slots }) => {
     const { prefixCls } = useBaseConfig('card', props)
     return () => {
@@ -34,4 +34,4 @@ const Grid = defineComponent<CardGridProps>(
   },
 )
 
-export default Grid
+export default CardGrid

@@ -1,21 +1,23 @@
 import type { App } from 'vue'
 import Card from './Card'
-import Grid from './Grid'
-import Meta from './Meta'
+import CardGrid from './CardGrid'
+import CardMeta from './CardMeta'
 
 export type { CardEmits, CardProps, CardSize, CardSlots, CardTabListType } from './Card'
 
-export type { CardGridProps } from './Grid'
-export type { CardMetaProps } from './Meta'
+export type { CardGridProps } from './CardGrid'
+export type { CardMetaProps } from './CardMeta'
 
-(Card as any).Grid = Grid;
-(Card as any).Meta = Meta;
+(Card as any).Grid = CardGrid;
+(Card as any).Meta = CardMeta;
 (Card as any).install = (app: App) => {
   app.component(Card.name, Card)
-  app.component(Grid.name, Grid)
-  app.component(Meta.name, Meta)
+  app.component(CardGrid.name, CardGrid)
+  app.component(CardMeta.name, CardMeta)
 }
 
-export const CardMeta = Meta
-export const CardGrid = Grid
+export {
+  CardGrid,
+  CardMeta,
+}
 export default Card

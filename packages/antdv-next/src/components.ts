@@ -61,6 +61,8 @@ export type {
 } from './input-number'
 export { default as Layout, LayoutContent, LayoutFooter, LayoutHeader, LayoutSider, useLayoutSider } from './layout'
 export type { LayoutProps } from './layout'
+export { default as Masonry } from './masonry'
+export type { MasonryEmits, MasonryProps, MasonryRef, MasonrySlots } from './masonry'
 export { default as Menu, MenuDivider, MenuItem, SubMenu } from './menu'
 export type { MenuEmits, MenuItemGroupProps, MenuItemProps, MenuItemType, MenuProps, MenuRef, MenuSlots, SubMenuProps } from './menu'
 export { default as message } from './message'
@@ -103,6 +105,7 @@ export { default as Tooltip, UniqueProvider } from './tooltip'
 export type { TooltipAlignConfig, TooltipEmits, TooltipPlacement, TooltipProps, TooltipRef, TooltipSlots } from './tooltip'
 export { default as Tour } from './tour'
 export type { TourEmits, TourLocale, TourProps, TourSlots, TourStepItem, TourStylesType } from './tour'
+
 export {
   default as Typography,
   TypographyLink,
@@ -117,6 +120,5 @@ export type {
   TextProps as TypographyTextProps,
   TitleProps as TypographyTitleProps,
 } from './typography'
-
 export { default as Watermark } from './watermark'
 export type { WatermarkProps } from './watermark'

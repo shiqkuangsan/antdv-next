@@ -7,10 +7,12 @@ import type { ItemHeightData } from './hooks/usePositions'
 import type { MasonryItemType } from './MasonryItem'
 import ResizeObserver from '@v-c/resize-observer'
 import { clsx } from '@v-c/util'
+import { getDOM } from '@v-c/util/dist/Dom/findDOMNode'
 import isEqual from '@v-c/util/dist/isEqual'
 import { getTransitionGroupProps } from '@v-c/util/dist/utils/transition'
-import { computed, defineComponent, nextTick, ref, shallowRef, TransitionGroup, watch } from 'vue'
+import { computed, defineComponent, onMounted, onUnmounted, ref, shallowRef, TransitionGroup, watch } from 'vue'
 import { getAttrStyleAndClass, useMergeSemantic, useToArr, useToProps } from '../_util/hooks'
+import { useChildLoadEvents } from '../_util/hooks/useChildLoadEvents.ts'
 import { responsiveArray } from '../_util/responsiveObserver'
 import { toPropsRefs } from '../_util/tools'
 import { useComponentBaseConfig } from '../config-provider/context'
@@ -59,6 +61,7 @@ export interface MasonryEmits {
 
 export interface MasonrySlots {
   default: () => any
+  itemRender?: (itemInfo: MasonryItemType & { index: number }) => any
 }
 
 export interface MasonryRef {
@@ -76,7 +79,7 @@ const Masonry = defineComponent<
   string,
   SlotsType<MasonrySlots>
 >(
-  (props = defaults, { expose, emit, attrs }) => {
+  (props = defaults, { expose, emit, attrs, slots }) => {
     const {
       direction,
       class: contextClassName,
@@ -162,6 +165,18 @@ const Masonry = defineComponent<
         itemHeights.value = nextItemHeights as any
       }
     })
+
+    const { clear, bind } = useChildLoadEvents()
+    onMounted(() => {
+      if (containerRef.value) {
+        bind(containerRef.value, () => {
+          collectItemSize()
+        })
+        onUnmounted(() => {
+          clear()
+        })
+      }
+    })
     const [itemPositions, totalHeight] = usePositions(
       itemHeights,
       columnCount,
@@ -185,12 +200,12 @@ const Masonry = defineComponent<
 
     watch(
       [mergedItems, columnCount],
-      async () => {
-        await nextTick()
+      () => {
         collectItemSize()
       },
       {
         immediate: true,
+        flush: 'post',
       },
     )
 
@@ -199,8 +214,7 @@ const Masonry = defineComponent<
 
     watch(
       itemWithPositions,
-      async () => {
-        await nextTick()
+      () => {
         if (itemWithPositions.value.every(({ position }) => position)) {
           const nextItemColumns = itemWithPositions.value.map<ItemColumnsType>(({ item, position }) => [
             item,
@@ -213,13 +227,13 @@ const Masonry = defineComponent<
       },
       {
         immediate: true,
+        flush: 'post',
       },
     )
 
     watch(
       itemColumns,
       async () => {
-        await nextTick()
         if (!props.items?.length || props.items.length !== itemColumns.value.length) {
           return
         }
@@ -228,13 +242,16 @@ const Masonry = defineComponent<
       },
       {
         immediate: true,
+        flush: 'post',
       },
     )
 
     return () => {
+      const { fresh } = props
       const { className, style, restAttrs } = getAttrStyleAndClass(attrs)
       const motionName = `${prefixCls.value}-item-fade`
       const transitionProps = getTransitionGroupProps(motionName)
+      const itemRender = slots?.itemRender ?? props?.itemRender
       return (
         <ResizeObserver onResize={collectItemSize}>
           <div
@@ -256,8 +273,6 @@ const Masonry = defineComponent<
               ...contextStyle.value,
               ...style,
             }}
-            onLoad={collectItemSize}
-            onError={collectItemSize}
           >
             <TransitionGroup {...transitionProps}>
               {itemWithPositions.value.map((motionInfo) => {
@@ -282,8 +297,7 @@ const Masonry = defineComponent<
                   <MasonryItem
                     key={key}
                     ref={(ele) => {
-                      const element = ele && (ele as any)?.$el ? (ele as any).$el : (ele as HTMLDivElement | null)
-                      setItemRef(itemKey, element)
+                      setItemRef(itemKey, getDOM(ele) as any)
                     }}
                     prefixCls={prefixCls.value}
                     item={item}
@@ -294,9 +308,9 @@ const Masonry = defineComponent<
                       ...itemStyle,
                     }}
                     index={itemIndex}
-                    itemRender={props.itemRender}
+                    itemRender={itemRender}
                     column={columnIndex}
-                    onResize={props.fresh ? collectItemSize : null}
+                    onResize={fresh ? collectItemSize : null}
                   />
                 )
               })}

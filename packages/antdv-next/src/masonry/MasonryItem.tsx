@@ -24,7 +24,7 @@ interface MasonryItemProps extends Pick<MasonryProps, 'itemRender'> {
   class?: string
   index: number
   column: number
-  onResize: VoidFunction | null
+  onResize?: VoidFunction | null
 }
 
 const MasonryItem = defineComponent<MasonryItemProps>(
