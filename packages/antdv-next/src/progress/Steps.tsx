@@ -64,8 +64,8 @@ const Steps = defineComponent<
             )}
             style={{
               backgroundColor: index <= current - 1 ? color : mergedRailColor,
-              width: unitWidth,
-              height,
+              width: `${unitWidth}px`,
+              height: `${height}px`,
               ...styles.track,
             }}
           />

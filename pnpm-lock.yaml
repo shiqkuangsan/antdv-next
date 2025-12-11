@@ -246,8 +246,8 @@ importers:
         specifier: ^0.0.2
         version: 0.0.2(vue@3.5.24(typescript@5.9.3))
       '@v-c/progress':
-        specifier: ^0.0.1
-        version: 0.0.1(vue@3.5.24(typescript@5.9.3))
+        specifier: ^0.0.2
+        version: 0.0.2(vue@3.5.24(typescript@5.9.3))
       '@v-c/qrcode':
         specifier: 'catalog:'
         version: 0.0.5(vue@3.5.24(typescript@5.9.3))
@@ -1690,8 +1690,8 @@ packages:
     peerDependencies:
       vue: ^3.0.0
 
-  '@v-c/progress@0.0.1':
-    resolution: {integrity: sha512-qmVh0W04RCUbYsNPAUUtEe11ccbHP4f1O8rBHxdTGkcFgsb3IxaXm9XcnHMekVVtAyCJV60Pg5jo5TRsUfQxpA==}
+  '@v-c/progress@0.0.2':
+    resolution: {integrity: sha512-u1AvEeviCWSQGLSsSHDju58J/aHyqOGszqUb0Zkx0eaL0nkzF+eYp10qni3tpdlLRbJV/H4g4xucP+pLDp5MOQ==}
     peerDependencies:
       vue: ^3.0.0
 
@@ -5427,7 +5427,7 @@ snapshots:
       '@v-c/util': 1.0.2(vue@3.5.24(typescript@5.9.3))
       vue: 3.5.24(typescript@5.9.3)
 
-  '@v-c/progress@0.0.1(vue@3.5.24(typescript@5.9.3))':
+  '@v-c/progress@0.0.2(vue@3.5.24(typescript@5.9.3))':
     dependencies:
       '@v-c/util': 1.0.2(vue@3.5.24(typescript@5.9.3))
       vue: 3.5.24(typescript@5.9.3)

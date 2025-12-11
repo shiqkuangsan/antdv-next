@@ -21,7 +21,7 @@
     "@v-c/menu": "^1.0.0",
     "@v-c/mutate-observer": "catalog:",
     "@v-c/notification": "^0.0.2",
-    "@v-c/progress": "^0.0.1",
+    "@v-c/progress": "^0.0.2",
     "@v-c/qrcode": "catalog:",
     "@v-c/rate": "^0.0.2",
     "@v-c/resize-observer": "catalog:",
