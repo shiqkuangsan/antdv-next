@@ -194,11 +194,48 @@ export function presetAntd(options: AntdPresetOptions = {}) {
               return { 'background-color': color }
           }],
 
+          // --- Border 边框色 ---
+          // ${prefix}-border 或 ${prefix}-b -> border-color: var(--${antPrefix}-color-border) (DEFAULT)
+          [new RegExp(`^${prefix}-(?:border|b)$`), (_, { theme }) => {
+            return { 'border-color': (theme.colors as any)?.border }
+          }],
           // ${prefix}-border-primary 或 ${prefix}-b-primary -> border-color: ...
           [new RegExp(`^${prefix}-(?:border|b)-(.+)$`), ([_, c], { theme }) => {
             const color = (theme.colors as any)?.[c!]
             if (color)
               return { 'border-color': color }
+          }],
+          // 方向性 border: bt/border-t, br/border-r, bb/border-b, bl/border-l
+          [new RegExp(`^${prefix}-(?:border-t|bt)-(.+)$`), ([_, c], { theme }) => {
+            const color = (theme.colors as any)?.[c!]
+            if (color)
+              return { 'border-top-color': color }
+          }],
+          [new RegExp(`^${prefix}-(?:border-r|br)-(.+)$`), ([_, c], { theme }) => {
+            const color = (theme.colors as any)?.[c!]
+            if (color)
+              return { 'border-right-color': color }
+          }],
+          [new RegExp(`^${prefix}-(?:border-b|bb)-(.+)$`), ([_, c], { theme }) => {
+            const color = (theme.colors as any)?.[c!]
+            if (color)
+              return { 'border-bottom-color': color }
+          }],
+          [new RegExp(`^${prefix}-(?:border-l|bl)-(.+)$`), ([_, c], { theme }) => {
+            const color = (theme.colors as any)?.[c!]
+            if (color)
+              return { 'border-left-color': color }
+          }],
+          // 双向 border: bx/border-x, by/border-y
+          [new RegExp(`^${prefix}-(?:border-x|bx)-(.+)$`), ([_, c], { theme }) => {
+            const color = (theme.colors as any)?.[c!]
+            if (color)
+              return { 'border-left-color': color, 'border-right-color': color }
+          }],
+          [new RegExp(`^${prefix}-(?:border-y|by)-(.+)$`), ([_, c], { theme }) => {
+            const color = (theme.colors as any)?.[c!]
+            if (color)
+              return { 'border-top-color': color, 'border-bottom-color': color }
           }],
 
           // --- 间距类 (Margin / Padding) ---
@@ -229,8 +266,61 @@ export function presetAntd(options: AntdPresetOptions = {}) {
           // ${prefix}-text-lg -> font-size: 16px (var)
           [new RegExp(`^${prefix}-text-(.+)$`), ([_, s], { theme }) => ({ 'font-size': (theme.fontSize as any)?.[s!] })],
 
-          // ${prefix}-rounded-sm -> border-radius: 4px (var)
-          [new RegExp(`^${prefix}-rounded-(.+)$`), ([_, s], { theme }) => ({ 'border-radius': (theme.borderRadius as any)?.[s!] })],
+          // --- Rounded 圆角 ---
+          // ${prefix}-rounded -> border-radius: var(--${antPrefix}-border-radius) (DEFAULT)
+          [new RegExp(`^${prefix}-(?:rounded|rd)$`), (_, { theme }) => {
+            return { 'border-radius': (theme.borderRadius as any)?.DEFAULT }
+          }],
+          // ${prefix}-rounded-sm 或 ${prefix}-rd-sm -> border-radius: 4px (var)
+          [new RegExp(`^${prefix}-(?:rounded|rd)-(.+)$`), ([_, s], { theme }) => {
+            const v = (theme.borderRadius as any)?.[s!]
+            if (v)
+              return { 'border-radius': v }
+          }],
+          // 角落圆角: rounded-tl, rounded-tr, rounded-bl, rounded-br (简写: rd-tl, rd-tr, rd-bl, rd-br)
+          [new RegExp(`^${prefix}-(?:rounded|rd)-tl(?:-(.+))?$`), ([_, s], { theme }) => {
+            const v = (theme.borderRadius as any)?.[s || 'DEFAULT']
+            if (v)
+              return { 'border-top-left-radius': v }
+          }],
+          [new RegExp(`^${prefix}-(?:rounded|rd)-tr(?:-(.+))?$`), ([_, s], { theme }) => {
+            const v = (theme.borderRadius as any)?.[s || 'DEFAULT']
+            if (v)
+              return { 'border-top-right-radius': v }
+          }],
+          [new RegExp(`^${prefix}-(?:rounded|rd)-bl(?:-(.+))?$`), ([_, s], { theme }) => {
+            const v = (theme.borderRadius as any)?.[s || 'DEFAULT']
+            if (v)
+              return { 'border-bottom-left-radius': v }
+          }],
+          [new RegExp(`^${prefix}-(?:rounded|rd)-br(?:-(.+))?$`), ([_, s], { theme }) => {
+            const v = (theme.borderRadius as any)?.[s || 'DEFAULT']
+            if (v)
+              return { 'border-bottom-right-radius': v }
+          }],
+          // 边侧圆角: rounded-t, rounded-r, rounded-b, rounded-l (简写: rd-t, rd-r, rd-b, rd-l)
+          [new RegExp(`^${prefix}-(?:rounded|rd)-t(?:-(.+))?$`), ([_, s], { theme }) => {
+            const v = (theme.borderRadius as any)?.[s || 'DEFAULT']
+            if (v)
+              return { 'border-top-left-radius': v, 'border-top-right-radius': v }
+          }],
+          [new RegExp(`^${prefix}-(?:rounded|rd)-r(?:-(.+))?$`), ([_, s], { theme }) => {
+            const v = (theme.borderRadius as any)?.[s || 'DEFAULT']
+            if (v)
+              return { 'border-top-right-radius': v, 'border-bottom-right-radius': v }
+          }],
+          [new RegExp(`^${prefix}-(?:rounded|rd)-b(?:-(.+))?$`), ([_, s], { theme }) => {
+            const v = (theme.borderRadius as any)?.[s || 'DEFAULT']
+            if (v)
+              return { 'border-bottom-left-radius': v, 'border-bottom-right-radius': v }
+          }],
+          [new RegExp(`^${prefix}-(?:rounded|rd)-l(?:-(.+))?$`), ([_, s], { theme }) => {
+            const v = (theme.borderRadius as any)?.[s || 'DEFAULT']
+            if (v)
+              return { 'border-top-left-radius': v, 'border-bottom-left-radius': v }
+          }],
+
+          // --- Shadow 阴影 ---
           [
             new RegExp(`^${prefix}-shadow(?:-(.+))?$`),
             ([_, s], { theme }) => {
@@ -250,8 +340,25 @@ export function presetAntd(options: AntdPresetOptions = {}) {
             `${prefix}-color-$colors`,
             `${prefix}-c-$colors`,
             `${prefix}-bg-$colors`,
+
+            // Border 边框色
+            `${prefix}-border`,
+            `${prefix}-b`,
             `${prefix}-border-$colors`,
             `${prefix}-b-$colors`,
+            // Border 方向性
+            `${prefix}-border-t-$colors`,
+            `${prefix}-bt-$colors`,
+            `${prefix}-border-r-$colors`,
+            `${prefix}-br-$colors`,
+            `${prefix}-border-b-$colors`,
+            `${prefix}-bb-$colors`,
+            `${prefix}-border-l-$colors`,
+            `${prefix}-bl-$colors`,
+            `${prefix}-border-x-$colors`,
+            `${prefix}-bx-$colors`,
+            `${prefix}-border-y-$colors`,
+            `${prefix}-by-$colors`,
 
             // Margin 类
             `${prefix}-m-$spacing`,
@@ -271,9 +378,34 @@ export function presetAntd(options: AntdPresetOptions = {}) {
             `${prefix}-px-$spacing`,
             `${prefix}-py-$spacing`,
 
-            // 其他
+            // 字体
             `${prefix}-text-$fontSize`,
+
+            // Rounded 圆角
+            `${prefix}-rounded`,
+            `${prefix}-rd`,
             `${prefix}-rounded-$borderRadius`,
+            `${prefix}-rd-$borderRadius`,
+            // 角落圆角
+            `${prefix}-rounded-tl`,
+            `${prefix}-rounded-tl-$borderRadius`,
+            `${prefix}-rounded-tr`,
+            `${prefix}-rounded-tr-$borderRadius`,
+            `${prefix}-rounded-bl`,
+            `${prefix}-rounded-bl-$borderRadius`,
+            `${prefix}-rounded-br`,
+            `${prefix}-rounded-br-$borderRadius`,
+            // 边侧圆角
+            `${prefix}-rounded-t`,
+            `${prefix}-rounded-t-$borderRadius`,
+            `${prefix}-rounded-r`,
+            `${prefix}-rounded-r-$borderRadius`,
+            `${prefix}-rounded-b`,
+            `${prefix}-rounded-b-$borderRadius`,
+            `${prefix}-rounded-l`,
+            `${prefix}-rounded-l-$borderRadius`,
+
+            // Shadow 阴影
             `${prefix}-shadow`,
             `${prefix}-shadow-$boxShadow`,
           ],
