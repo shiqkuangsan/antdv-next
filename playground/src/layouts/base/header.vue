@@ -34,7 +34,14 @@ watch(
     const exclude = ['', '/', route.path]
     const matched = route.matched?.map(v => v.path).filter(path => !exclude.includes(path))
     appStore.setSiderOpenKeys(matched)
-    appStore.setSiderKey([route.path])
+    // check path has -cn
+    if (route.path.endsWith('-cn')) {
+      const path = route.path.slice(0, route.path.length - 3)
+      appStore.setSiderKey([path])
+    }
+    else {
+      appStore.setSiderKey([route.path])
+    }
     const foundKey = itemKeys.find(v => matched?.includes?.(v))
     if (foundKey) {
       appStore.setHeaderKey([foundKey])

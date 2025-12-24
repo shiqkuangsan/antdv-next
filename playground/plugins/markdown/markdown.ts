@@ -17,6 +17,7 @@ import {
 import { transformerTwoslash } from '@shikijs/twoslash'
 import anchorPlugin from 'markdown-it-anchor'
 import MarkdownIt from 'markdown-it-async'
+import attrsPlugin from 'markdown-it-attrs'
 // @ts-expect-error this is not has types
 import { full as emoij } from 'markdown-it-emoji'
 import { codeToHtml } from 'shiki'
@@ -72,6 +73,8 @@ export function loadBaseMd(md: MarkdownItAsync) {
   md.use(titlePlugin)
   // 加载emoji表情包
   md.use(emoij)
+  // 加载处理器
+  md.use(attrsPlugin)
   // 加载容器插件
   md.use(containerPlugin)
   // 加载github警告插件

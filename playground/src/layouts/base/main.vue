@@ -1,11 +1,13 @@
 <script setup lang="ts">
 import { storeToRefs } from 'pinia'
-import { useMobile } from '@/composables/mobile.ts'
-import { useAppStore } from '@/stores/app.ts'
+import { useDocPage } from '@/composables/doc-page'
+import { useMobile } from '@/composables/mobile'
+import { useAppStore } from '@/stores/app'
 
 const { isMobile } = useMobile()
 const appStore = useAppStore()
 const { siderMenus, siderKey, siderOpenKeys } = storeToRefs(appStore)
+const { anchorItems } = useDocPage()
 </script>
 
 <template>
@@ -14,7 +16,12 @@ const { siderMenus, siderKey, siderOpenKeys } = storeToRefs(appStore)
       <a-menu class="ant-doc-main-sider-menu" :items="siderMenus" :selected-keys="siderKey" :open-keys="siderOpenKeys" />
     </a-col>
     <a-col :xxl="20" :xl="19" :lg="18" :md="18" :sm="24" :xs="24">
-      <slot />
+      <section class="ant-doc-main-section">
+        <a-anchor :items="anchorItems" class="ant-doc-main-sider-anchor" :affix="false" />
+      </section>
+      <article class="pl-48px pr-164px pb-32px">
+        <slot />
+      </article>
     </a-col>
   </main>
 </template>
@@ -40,6 +47,33 @@ const { siderMenus, siderKey, siderOpenKeys } = storeToRefs(appStore)
       padding-top: 0;
       padding-bottom: var(--ant-margin-xxl) !important;
       padding-inline: var(--ant-margin-xxs);
+    }
+    &-anchor {
+      scrollbar-width: thin;
+      scrollbar-gutter: stable;
+    }
+  }
+
+  &-section {
+    position: fixed;
+    top: calc(var(--ant-doc-header-height) + var(--ant-margin-xl) - 4px);
+    inset-inline-end: 0;
+    padding: 0;
+    border-radius: var(--ant-border-radius);
+    box-sizing: border-box;
+    width: 148px;
+    margin-inline-end: calc(8px - 100vw + 100%);
+    z-index: 10;
+
+    > div {
+      box-sizing: border-box;
+      width: 100%;
+      max-height: calc(100vh - var(--ant-doc-header-height) - var(--ant-margin-xl) - 24px) !important;
+      margin: auto;
+      overflow: auto;
+      padding: var(--ant-padding-xxs);
+      -webkit-backdrop-filter: blur(8px);
+      backdrop-filter: blur(8px);
     }
   }
 }

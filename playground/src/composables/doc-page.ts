@@ -1,4 +1,4 @@
-import { inject } from 'vue'
+import { computed, provide, shallowRef } from 'vue'
 
 export interface Frontmatter {
   title?: string
@@ -23,5 +23,34 @@ export interface DocPage {
 }
 
 export function useDocPage() {
-  return inject('__pageData__', {} as DocPage)
+  const pageData = shallowRef<DocPage>()
+  const demosMap = new Map<string, any>()
+  provide('__pageData__', (data: DocPage) => {
+    console.log(data)
+    pageData.value = data
+  })
+
+  provide('__demosMap__', (key: string, demo: any) => {
+    demosMap.set(key, demo)
+  })
+  const anchorItems = computed<any[]>(() => {
+    const formatHeaders = (headers: HeaderItem[]) => {
+      return headers.map((header) => {
+        const item: Record<string, any> = {
+          key: header.slug,
+          title: header.title,
+          href: header.link ?? `#${header.slug}`,
+        }
+        if (header.children && header.children.length) {
+          item.children = formatHeaders(header.children)
+        }
+        return item
+      })
+    }
+    return formatHeaders(pageData.value?.headers ?? [])
+  })
+  return {
+    pageData,
+    anchorItems,
+  }
 }
