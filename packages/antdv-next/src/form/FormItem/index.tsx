@@ -201,8 +201,6 @@ const InternalFormItem = defineComponent<
       }
 
       updateMeta({ validating: true, validated: true })
-      errors.value = []
-      warnings.value = []
 
       const promise = validateRules(
         namePath.value,
@@ -250,7 +248,6 @@ const InternalFormItem = defineComponent<
           return results
         })
     }
-
     const triggerValidate = (triggerName: string) => {
       const trigger = mergedValidateTrigger.value
       if (trigger === false)

@@ -5,8 +5,16 @@ import { pagesRoutes } from '@/routes/pages'
 
 export const router = createRouter({
   routes: [
-    ...componentRoutes,
-    ...pagesRoutes,
+    {
+      path: '',
+      redirect: '/',
+      name: 'ROOT_ROUTE',
+      component: () => import('@/layouts/base/root.vue'),
+      children: [
+        ...componentRoutes,
+        ...pagesRoutes,
+      ],
+    },
     {
       path: '/~demos',
       redirect: '/~demos/affix-demo-basic',

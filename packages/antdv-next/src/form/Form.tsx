@@ -104,6 +104,7 @@ export interface FormInstance {
   setFieldValue: (name: NamePath, value: any) => void
   setFieldsValue: (values: Record<string, any>) => void
   validateFields: (nameList?: NamePath[], options?: ValidateOptions) => Promise<Record<string, any>>
+  validate: () => Promise<Record<string, any>>
   submit: () => void
   nativeElement: HTMLFormElement | undefined
 }
@@ -525,6 +526,7 @@ const InternalForm = defineComponent<
       setFieldValue,
       setFieldsValue,
       validateFields,
+      validate: () => validateFields(),
       submit,
       nativeElement: nativeElementRef,
     })

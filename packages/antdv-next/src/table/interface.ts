@@ -3,7 +3,7 @@ import type { Breakpoint } from '../_util/responsiveObserver.ts'
 import type { AnyObject, VueNode } from '../_util/type.ts'
 import type { CheckboxProps } from '../checkbox'
 import type { DropdownProps } from '../dropdown'
-import type { PaginationProps } from '../pagination'
+import type { PaginationEmits, PaginationProps } from '../pagination'
 import type { TooltipProps } from '../tooltip'
 import type { INTERNAL_SELECTION_ITEM } from './hooks/useSelection.tsx'
 
@@ -265,4 +265,7 @@ export interface TablePaginationConfig extends PaginationProps {
   placement?: TablePaginationPlacement[]
   /** @deprecated please use `placement` instead */
   position?: TablePaginationPosition[]
+  onChange?: PaginationEmits['change']
+  onShowSizeChange?: PaginationEmits['showSizeChange']
+
 }
