@@ -21,7 +21,7 @@
   "scripts": {
     "build": "tsdown",
     "prepublish": "pnpm build",
-    "patch": "bumpp --release --commit \"chore(release): @antdv-next/cssinjs %s\" --push --tag \"@antdv-next/cssinjs@%s\""
+    "patch": "bumpp --release --commit \"chore(release): @antdv-next/unocss %s\" --push --tag \"@antdv-next/unocss@%s\""
   },
   "peerDependencies": {
     "vue": ">=3.2.0"
