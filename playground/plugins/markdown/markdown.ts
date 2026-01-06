@@ -26,6 +26,7 @@ import { demoPlugin } from './plugins/demo'
 import { gitHubAlertsPlugin } from './plugins/github-alerts'
 import { imagePlugin } from './plugins/image'
 import { preWrapperPlugin } from './plugins/pre-wrapper'
+import { tablePlugin } from './plugins/table'
 
 export function loadShiki(md: MarkdownItAsync, cls: string = 'ant-doc-code') {
   md.use(fromAsyncCodeToHtml(codeToHtml, {
@@ -118,6 +119,8 @@ function withPlugins(md: MarkdownItAsync, options: CreateMarkdownOptions) {
   md.use(preWrapperPlugin, {
     hasSingleTheme: false, // 是否只有一个主题
   })
+  // 加载表格插件，为 Api 区域的表格添加属性
+  md.use(tablePlugin)
 
   // 禁用markdown自动识别链接
   md.linkify.set({ fuzzyLink: false })

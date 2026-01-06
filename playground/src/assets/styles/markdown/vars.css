@@ -49,7 +49,7 @@
   --vp-c-gray-3: #ebebef;
   --vp-c-gray-soft: rgba(142, 150, 170, 0.14);
 
-  --vp-c-indigo-1: #3451b2;
+  --vp-c-indigo-1: var(--ant-color-primary-text, #3451b2);
   --vp-c-indigo-2: #3a5ccc;
   --vp-c-indigo-3: #5672cd;
   --vp-c-indigo-soft: rgba(100, 108, 255, 0.14);
@@ -83,7 +83,7 @@
   --vp-c-gray-3: #32363f;
   --vp-c-gray-soft: rgba(101, 117, 133, 0.16);
 
-  --vp-c-indigo-1: #a8b1ff;
+  --vp-c-indigo-1: var(--ant-color-primary-text, #a8b1ff);
   --vp-c-indigo-2: #5c73e7;
   --vp-c-indigo-3: #3e63dd;
   --vp-c-indigo-soft: rgba(100, 108, 255, 0.16);
@@ -153,13 +153,14 @@
 
 :root {
   --vp-c-border: #c2c2c4;
-  --vp-c-divider: #e2e2e3;
+  --vp-c-divider: var(--ant-color-split, #e2e2e3);
   --vp-c-gutter: #e2e2e3;
 }
 
 .dark {
   --vp-c-border: #3c3f44;
-  --vp-c-divider: #2e2e32;
+  /*--vp-c-divider: #2e2e32;*/
+  --vp-c-divider: var(--ant-color-split, #e2e2e3);
   --vp-c-gutter: #000000;
 }
 

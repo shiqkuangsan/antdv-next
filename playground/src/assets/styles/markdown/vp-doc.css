@@ -161,6 +161,7 @@
   border-collapse: collapse;
   margin: 20px 0;
   overflow-x: auto;
+  font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace;
 }
 
 .vp-doc tr {
@@ -240,13 +241,13 @@
 /* inline code */
 .vp-doc :not(pre, h1, h2, h3, h4, h5, h6) > code {
   font-size: var(--vp-code-font-size);
-  color: var(--vp-code-color);
+  border: 1px solid var(--vp-c-divider);
 }
 
 .vp-doc :not(pre) > code {
   border-radius: 4px;
   padding: 3px 6px;
-  background-color: var(--vp-code-bg);
+  background-color: var(--ant-color-fill-tertiary);
   transition:
     color 0.25s,
     background-color 0.5s;
