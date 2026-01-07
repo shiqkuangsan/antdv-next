@@ -3,11 +3,11 @@ import type { ComponentBaseProps } from '../config-provider/context'
 import type { FloatButtonProps, FloatButtonRef, FloatButtonShape } from './FloatButton'
 import { VerticalAlignTopOutlined } from '@antdv-next/icons'
 import { filterEmpty } from '@v-c/util/dist/props-util'
+import { getTransitionProps } from '@v-c/util/dist/utils/transition'
 import { omit } from 'es-toolkit'
 import { computed, defineComponent, onBeforeUnmount, onMounted, shallowRef, Transition, watch } from 'vue'
 import getScroll from '../_util/getScroll'
 import { pureAttrs } from '../_util/hooks'
-import { getTransitionProps } from '../_util/motion'
 import scrollTo from '../_util/scrollTo'
 import throttleByAnimationFrame from '../_util/throttleByAnimationFrame'
 import { toPropsRefs } from '../_util/tools'
@@ -124,27 +124,29 @@ const BackTop = defineComponent<
       emit('click', e)
     }
 
-    return () => (
-      <Transition {...transitionProps.value}>
-        {{
-          default: () => (
-            visible.value
-              ? (
-                  <FloatButton
-                    {...pureAttrs(attrs)}
-                    {...omit(props, ['visibilityHeight', 'target', 'duration'])}
-                    ref={floatButtonRef as any}
-                    shape={mergedShape.value}
-                    icon={mergedIcon.value as any}
-                    onClick={scrollToTop}
-                    v-slots={{ default: slots.default }}
-                  />
-                )
-              : null
-          ),
-        }}
-      </Transition>
-    )
+    return () => {
+      return (
+        <Transition {...transitionProps.value}>
+          {{
+            default: () => (
+              visible.value
+                ? (
+                    <FloatButton
+                      {...pureAttrs(attrs)}
+                      {...omit(props, ['visibilityHeight', 'target', 'duration'])}
+                      ref={floatButtonRef as any}
+                      shape={mergedShape.value}
+                      icon={mergedIcon.value as any}
+                      onClick={scrollToTop}
+                      v-slots={{ default: slots.default }}
+                    />
+                  )
+                : null
+            ),
+          }}
+        </Transition>
+      )
+    }
   },
   {
     name: 'AFloatBackTop',

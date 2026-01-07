@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { EditOutlined, LinkOutlined } from '@antdv-next/icons'
+import { storeToRefs } from 'pinia'
 import demos from 'virtual:demos'
 import { computed, defineAsyncComponent, shallowRef } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
@@ -20,6 +21,7 @@ const demo = computed(() => demos[src])
 const route = useRoute()
 const router = useRouter()
 const appStore = useAppStore()
+const { locale } = storeToRefs(appStore)
 const description = computed(() => {
   const locales = demo.value?.locales ?? {}
   const localeData = locales[appStore.locale] || {}
@@ -45,6 +47,22 @@ function handleScroll(e: Event) {
     path: route.path,
     hash: `#${id.value}`,
   })
+}
+const locales = {
+  'en-Us': {
+    action: {
+      externalLink: 'Open in new window',
+      expandCode: 'Expand Code',
+      expandedCode: 'Collapse Code',
+    },
+  },
+  'zh-CN': {
+    action: {
+      externalLink: '在新窗口打开',
+      expandCode: '展开代码',
+      expandedCode: '收起代码',
+    },
+  },
 }
 </script>
 
@@ -77,11 +95,15 @@ function handleScroll(e: Event) {
         <a class="ant-doc-demo-box-code-action">
           <LinkOutlined />
         </a>
-        <a class="ant-doc-demo-box-code-action">
-          <ExternalLink />
+        <a class="ant-doc-demo-box-code-action" :href="`/~demos/${id}`" target="_blank" rel="noopener norreferrer">
+          <a-tooltip :title="locales[locale]?.action?.externalLink || 'Open in new window'">
+            <ExternalLink />
+          </a-tooltip>
         </a>
         <div class="ant-doc-demo-box-expand-icon ant-doc-demo-box-code-action" @click="handleShowCode">
-          <ExpandIcon :expanded="showCode" />
+          <a-tooltip :title="locales[locale]?.action?.[showCode ? 'expandedCode' : 'expandCode'] || (showCode ? 'Collapse Code' : 'Expand Code')">
+            <ExpandIcon :expanded="showCode" />
+          </a-tooltip>
         </div>
       </a-flex>
     </section>
