@@ -88,7 +88,7 @@
     "@v-c/tour": "catalog:",
     "@v-c/tree": "catalog:",
     "@v-c/tree-select": "catalog:",
-    "@v-c/trigger": "^1.0.2",
+    "@v-c/trigger": "catalog:",
     "@v-c/upload": "catalog:",
     "@v-c/util": "catalog:",
     "@v-c/virtual-list": "catalog:",
