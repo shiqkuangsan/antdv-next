@@ -16,6 +16,11 @@ coverDark: https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*37T2R6O9oi0AAA
 <demo-group>
 <demo src="./demo/basic.vue">Basic Usage</demo>
 <demo src="./demo/vertical.vue">Vertical Spacing</demo>
+<demo src="./demo/size.vue">Space Size</demo>
+<demo src="./demo/align.vue">Align</demo>
+<demo src="./demo/wrap.vue">Wrap</demo>
+<demo src="./demo/separator.vue">Separator</demo>
+<demo src="./demo/compact.vue">Compact Mode for form component</demo>
 </demo-group>
 
 ## API

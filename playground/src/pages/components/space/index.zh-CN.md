@@ -17,6 +17,11 @@ coverDark: https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*37T2R6O9oi0AAA
 <demo-group>
 <demo src="./demo/basic.vue">基本用法</demo>
 <demo src="./demo/vertical.vue">垂直间距</demo>
+<demo src="./demo/size.vue">间距大小</demo>
+<demo src="./demo/align.vue">对齐方式</demo>
+<demo src="./demo/wrap.vue">自动换行</demo>
+<demo src="./demo/separator.vue">分隔符</demo>
+<demo src="./demo/compact.vue">紧凑布局组合</demo>
 </demo-group>
 
 ## API

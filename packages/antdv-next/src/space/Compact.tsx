@@ -6,7 +6,7 @@ import { filterEmpty } from '@v-c/util/dist/props-util'
 import { computed, defineComponent, inject, provide, ref } from 'vue'
 import { useConfig } from '../config-provider/context.ts'
 import { useSize } from '../config-provider/hooks/useSize.ts'
-import useStyle from './style'
+import useStyle from './style/compact'
 
 export interface SpaceCompactProps extends ComponentBaseProps {
   size?: SizeType
