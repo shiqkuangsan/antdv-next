@@ -1,3 +1,11 @@
+<docs lang="zh-CN">
+自定义清除按钮
+</docs>
+
+<docs lang="en-US">
+Customize clear button
+</docs>
+
 <script setup lang="ts">
 import { CloseSquareFilled } from '@antdv-next/icons'
 import { h, ref } from 'vue'

@@ -1,3 +1,11 @@
+<docs lang="zh-CN">
+基本使用，通过 `options` 设置自动完成的数据源。
+</docs>
+
+<docs lang="en-US">
+Basic Usage, set data source of autocomplete with `options` property.
+</docs>
+
 <script setup lang="ts">
 import { ref } from 'vue'
 

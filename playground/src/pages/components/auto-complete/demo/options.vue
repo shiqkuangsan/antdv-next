@@ -1,3 +1,11 @@
+<docs lang="zh-CN">
+可以返回自定义的 `Option` label
+</docs>
+
+<docs lang="en-US">
+You could set custom `Option` label
+</docs>
+
 <script setup lang="ts">
 import { ref } from 'vue'
 

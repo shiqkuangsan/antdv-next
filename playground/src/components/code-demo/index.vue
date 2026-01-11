@@ -105,7 +105,7 @@ const demoStyle = computed(() => {
           <EditOutlined class="color-text-tertiary" />
         </a>
       </div>
-      <div v-if="description" class="pt-18px pb-24px px-12px">
+      <div v-if="description" class="pt-18px pb-24px px-12px ant-doc-demo-box-meta-description">
         <div v-html="description" />
       </div>
       <a-flex class="ant-doc-demo-box-actions " wrap gap="middle">

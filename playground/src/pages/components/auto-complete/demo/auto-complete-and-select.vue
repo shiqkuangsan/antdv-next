@@ -1,3 +1,11 @@
+<docs lang="zh-CN">
+debug demo
+</docs>
+
+<docs lang="en-US">
+debug demo
+</docs>
+
 <script setup lang="ts">
 const sizes = ['small', 'middle', 'large'] as const
 </script>

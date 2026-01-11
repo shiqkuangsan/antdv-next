@@ -129,6 +129,11 @@
     opacity 0.25s;
 }
 
+.vp-doc .ant-doc-demo-box-meta-description a {
+  text-decoration: none;
+  font-weight: normal;
+  color: var(--ant-color-link);
+}
 .vp-doc a:hover {
   color: var(--vp-c-brand-2);
 }

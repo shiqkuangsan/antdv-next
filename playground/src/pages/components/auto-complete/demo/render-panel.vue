@@ -1,0 +1,32 @@
+<docs lang="zh-CN">
+调试用组件，请勿直接使用。
+</docs>
+
+<docs lang="en-US">
+Debug usage. Do not use in your production.
+</docs>
+
+<script setup lang="ts">
+import { ref } from 'vue'
+
+const open = ref(false)
+
+const options = [
+  { label: 'Jack', value: 'jack' },
+  { label: 'Lucy', value: 'lucy' },
+  { label: 'Disabled', value: 'disabled' },
+  { label: 'Bamboo', value: 'bamboo' },
+]
+</script>
+
+<template>
+  <a-flex vertical align="start" gap="small">
+    <a-switch v-model:checked="open" />
+    <a-auto-complete
+      default-value="lucy"
+      style="width: 120px"
+      :open="open"
+      :options="options"
+    />
+  </a-flex>
+</template>

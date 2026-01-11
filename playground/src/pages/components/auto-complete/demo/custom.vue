@@ -1,3 +1,11 @@
+<docs lang="zh-CN">
+自定义输入组件。
+</docs>
+
+<docs lang="en-US">
+Customize Input Component
+</docs>
+
 <script setup lang="ts">
 import { ref } from 'vue'
 

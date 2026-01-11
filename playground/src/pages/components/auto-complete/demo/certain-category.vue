@@ -1,3 +1,11 @@
+<docs lang="zh-CN">
+[查询模式: 确定类目](https://ant.design/docs/spec/reaction#lookup-patterns) 示例。
+</docs>
+
+<docs lang="en-US">
+Demonstration of [Lookup Patterns: Certain Category](https://ant.design/docs/spec/reaction#lookup-patterns). Basic Usage, set options of autocomplete with `options` property.
+</docs>
+
 <script setup lang="ts">
 import { UserOutlined } from '@antdv-next/icons'
 import { h } from 'vue'
@@ -83,3 +91,27 @@ const options = [
     <a-input-search size="large" placeholder="input here" />
   </a-auto-complete>
 </template>
+
+<style>
+.certain-category-search-dropdown .ant-select-item-group {
+  color: #666;
+  font-weight: bold;
+}
+
+.certain-category-search-dropdown .ant-select-item-group:not(:last-child) {
+  border-bottom: 1px solid #f6f6f6;
+}
+
+.certain-category-search-dropdown .ant-select-item-option-grouped {
+  padding-inline-start: 16px;
+}
+
+.certain-category-search-dropdown .ant-select-item-option.show-all {
+  text-align: center;
+  cursor: default;
+}
+
+.certain-category-search-dropdown .rc-virtual-list-holder {
+  max-height: 300px;
+}
+</style>

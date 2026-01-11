@@ -1,3 +1,11 @@
+<docs lang="zh-CN">
+可选 `outlined` `filled` `borderless` `underlined` 四种形态。
+</docs>
+
+<docs lang="en-US">
+There are `outlined`, `filled`, `borderless`, and `underlined` variants to choose from.
+</docs>
+
 <script setup lang="ts">
 import { ref } from 'vue'
 
