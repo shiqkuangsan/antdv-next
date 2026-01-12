@@ -1,3 +1,11 @@
+<docs lang="zh-CN">
+图标放在文字前面。
+</docs>
+
+<docs lang="en-US">
+The icon should be placed in front of the text.
+</docs>
+
 <script lang="ts" setup>
 import type { BreadcrumbItemType } from 'antdv-next'
 import { HomeOutlined, UserOutlined } from '@antdv-next/icons'

@@ -1,3 +1,11 @@
+<docs lang="zh-CN">
+面包屑支持下拉菜单。
+</docs>
+
+<docs lang="en-US">
+Breadcrumbs support drop down menu.
+</docs>
+
 <script setup lang="ts">
 import { h } from 'vue'
 

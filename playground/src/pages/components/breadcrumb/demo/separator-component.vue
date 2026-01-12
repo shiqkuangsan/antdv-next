@@ -1,5 +1,15 @@
+<docs lang="zh-CN">
+自定义单独的分隔符。
+</docs>
+
+<docs lang="en-US">
+Customize separator for each other.
+</docs>
+
 <script setup lang="ts">
-const items = [
+import type { BreadcrumbItemType } from 'antdv-next'
+
+const items: BreadcrumbItemType[] = [
   {
     title: 'Location',
   },
@@ -28,5 +38,5 @@ const items = [
 </script>
 
 <template>
-  <a-breadcrumb :items="items" />
+  <a-breadcrumb separator="" :items="items" />
 </template>
