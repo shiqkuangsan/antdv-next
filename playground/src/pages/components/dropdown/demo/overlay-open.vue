@@ -45,7 +45,7 @@ const handleOpenChange = (nextOpen: boolean, info: { source: 'trigger' | 'menu' 
   <a-dropdown
     :menu="{ items, onClick: handleMenuClick }"
     :open="open"
-    @open-change="handleOpenChange"
+    @openChange="handleOpenChange"
   >
     <a @click.prevent>
       <a-space>

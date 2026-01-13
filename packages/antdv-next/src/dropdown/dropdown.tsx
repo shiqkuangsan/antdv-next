@@ -144,14 +144,24 @@ const Dropdown = defineComponent<
     const alignPoint = computed(() => !!triggerActions.value?.includes('contextMenu'))
 
     // =========================== Open ============================
-    const mergedOpen = shallowRef(props?.open)
+    const mergedOpen = shallowRef(props.open ?? false)
+    const popupClickRef = shallowRef(false)
     watch(
       () => props.open,
-      () => {
-        mergedOpen.value = props.open!
+      (value) => {
+        if (value !== undefined) {
+          mergedOpen.value = value
+        }
       },
     )
     const onInnerOpenChange = (nextOpen: boolean) => {
+      if (popupClickRef.value) {
+        popupClickRef.value = false
+        return
+      }
+      if (props.open === undefined) {
+        mergedOpen.value = nextOpen
+      }
       emit('openChange', nextOpen, { source: 'trigger' })
       emit('update:open', nextOpen)
     }
@@ -168,6 +178,9 @@ const Dropdown = defineComponent<
       const menu = props?.menu
       if (menu?.selectable && menu?.multiple) {
         return
+      }
+      if (props.open === undefined) {
+        mergedOpen.value = false
       }
       emit('update:open', false)
       emit('openChange', false, { source: 'menu' })
@@ -313,6 +326,9 @@ const Dropdown = defineComponent<
           overlay={renderOverlay}
           placement={memoPlacement.value}
           onVisibleChange={onInnerOpenChange}
+          onOverlayClick={() => {
+            popupClickRef.value = true
+          }}
           overlayStyle={{ ...mergedStyles.value, zIndex: zIndex.value }}
           overlayClassName={overlayClassNameCustomized}
           autoDestroy={destroyOnHidden}
