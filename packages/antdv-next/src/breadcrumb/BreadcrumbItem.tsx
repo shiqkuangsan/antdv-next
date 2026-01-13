@@ -90,7 +90,6 @@ export const InternalBreadcrumbItem = defineComponent<
     }
     return () => {
       const { separator = '/' } = props
-      console.log(props)
       const children = checkRenderNode(filterEmpty(slots?.default?.() ?? []))
       const { classes: mergedClassNames, styles: mergedStyles } = breadcrumbContext.value
       // wrap to dropDown
