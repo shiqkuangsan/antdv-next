@@ -48,7 +48,7 @@ export interface ConfirmDialogProps extends ModalFuncProps {
   isSilent?: () => boolean
 }
 
-const ConfirmContent = defineComponent<
+export const ConfirmContent = defineComponent<
   ConfirmDialogProps & { confirmPrefixCls: string },
   EmptyEmit,
   string,

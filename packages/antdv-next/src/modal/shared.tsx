@@ -1,4 +1,3 @@
-import type { VueNode } from '../_util/type.ts'
 import type { ModalEmits, ModalProps } from './interface.ts'
 import { CloseOutlined } from '@antdv-next/icons'
 import { computed, defineComponent } from 'vue'
@@ -10,7 +9,7 @@ import NormalOkBtn from './components/NormalOkBtn.tsx'
 import { useModalProvider } from './context.ts'
 import { getConfirmLocale } from './locale.ts'
 
-export function renderCloseIcon(prefixCls: string, closeIcon?: VueNode) {
+export function renderCloseIcon(prefixCls: string, closeIcon?: any) {
   closeIcon = getSlotPropsFnRun({}, { closeIcon }, 'closeIcon')
 
   return (

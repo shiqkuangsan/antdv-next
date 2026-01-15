@@ -4,6 +4,7 @@ import type useModal from './useModal'
 import confirm, { modalGlobalConfig, withError, withInfo, withSuccess, withWarn } from './confirm'
 import destroyFns from './destroyFns'
 import ModalComponent from './Modal'
+import PurePanel from './PurePanel'
 import useModalHook from './useModal/index'
 
 interface StaticModal {
@@ -43,3 +44,5 @@ export type { ModalEmits, ModalProps, ModalSlots }
 export { useModalHook as useModal }
 
 export default Modal as typeof ModalComponent & StaticModal
+
+;(Modal as any)._InternalPanelDoNotUseOrYouWillBeFired = PurePanel
