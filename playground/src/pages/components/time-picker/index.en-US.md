@@ -26,7 +26,6 @@ By clicking the input box, you can select a time from a popup panel.
 <demo src="./demo/addon.vue">Addon</demo>
 <demo src="./demo/12hours.vue">12 hours</demo>
 <demo src="./demo/change-on-scroll.vue" version="5.14.0">Change on scroll</demo>
-<demo src="./demo/colored-popup.vue" debug>Colored Popup</demo>
 <demo src="./demo/range-picker.vue">Time Range Picker</demo>
 <demo src="./demo/variant.vue" version="5.13.0">Variants</demo>
 <demo src="./demo/status.vue">Status</demo>

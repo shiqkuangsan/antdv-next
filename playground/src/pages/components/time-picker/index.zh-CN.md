@@ -27,7 +27,6 @@ demo:
 <demo src="./demo/addon.vue">附加内容</demo>
 <demo src="./demo/12hours.vue">12 小时制</demo>
 <demo src="./demo/change-on-scroll.vue" version="5.14.0">滚动即改变</demo>
-<demo src="./demo/colored-popup.vue" debug>色付きポップアップ</demo>
 <demo src="./demo/range-picker.vue">范围选择器</demo>
 <demo src="./demo/variant.vue" version="5.13.0">形态变体</demo>
 <demo src="./demo/status.vue">自定义状态</demo>
