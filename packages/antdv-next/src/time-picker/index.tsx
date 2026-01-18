@@ -122,24 +122,26 @@ const RangePicker = defineComponent<
       nativeElement: computed(() => rangeRef.value?.nativeElement),
     })
 
-    return () => (
-      <InternalRangePicker
-        {...attrs}
-        {...props as any}
-        ref={rangeRef as any}
-        picker="time"
-        mode={undefined}
-        onChange={onChange}
-        onCalendarChange={onCalendarChange}
-        onPanelChange={onPanelChange}
-        onOpenChange={onOpenChange}
-        onOk={onOk}
-        onFocus={onFocus}
-        onBlur={onBlur}
-        onKeydown={onKeyDown}
-        v-slots={slots}
-      />
-    )
+    return () => {
+      return (
+        <InternalRangePicker
+          {...attrs}
+          {...props as any}
+          ref={rangeRef as any}
+          picker="time"
+          mode={undefined}
+          onChange={onChange}
+          onCalendarChange={onCalendarChange}
+          onPanelChange={onPanelChange}
+          onOpenChange={onOpenChange}
+          onOk={onOk}
+          onFocus={onFocus}
+          onBlur={onBlur}
+          onKeydown={onKeyDown}
+          v-slots={slots}
+        />
+      )
+    }
   },
   {
     name: 'ATimeRangePicker',

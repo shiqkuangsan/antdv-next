@@ -281,7 +281,7 @@ function generateRangePicker<DateType extends AnyObject = AnyObject>(generateCon
           ...restProps
         } = props as DateRangePickerProps
 
-        const { className, style, restAttrs } = getAttrStyleAndClass(attrs)
+        const { className, style, restAttrs } = getAttrStyleAndClass(attrs, undefined, props)
 
         const mergedSuffixIcon = getSlotPropsFnRun(slots, { suffixIcon }, 'suffixIcon', false)
 

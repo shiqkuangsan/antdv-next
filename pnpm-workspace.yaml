@@ -44,11 +44,11 @@ catalog:
   '@v-c/mutate-observer': ^0.0.2
   '@v-c/notification': ^0.0.3
   '@v-c/pagination': ^0.0.1
-  '@v-c/picker': ^0.0.5
+  '@v-c/picker': ^0.0.6
   '@v-c/progress': ^0.0.2
   '@v-c/qrcode': ^0.0.5
   '@v-c/rate': ^0.0.2
-  '@v-c/resize-observer': ^1.0.5
+  '@v-c/resize-observer': ^1.0.6
   '@v-c/segmented': ^0.0.8
   '@v-c/select': ^1.0.5
   '@v-c/slick': ^0.0.1
@@ -62,7 +62,7 @@ catalog:
   '@v-c/tour': ^1.0.1
   '@v-c/tree': ^0.0.2
   '@v-c/tree-select': ^0.0.1
-  '@v-c/trigger': ^1.0.3
+  '@v-c/trigger': ^1.0.5
   '@v-c/upload': ^0.0.1
   '@v-c/util': ^1.0.8
   '@v-c/virtual-list': ^1.0.5

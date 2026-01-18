@@ -80,54 +80,7 @@ function generatePicker<DateType extends AnyObject = AnyObject>(generateConfig: 
       string,
       SlotsType<DatePickerSlots>
     >(
-      (props = {
-        'bordered': undefined,
-        'use12Hours': undefined,
-        'multiple': undefined,
-        'disabled': undefined,
-        'showTime': undefined,
-        'showWeek': undefined,
-        'allowClear': undefined,
-        'inputReadOnly': undefined,
-        'order': undefined,
-        'defaultOpen': undefined,
-        'open': undefined,
-        'needConfirm': undefined,
-        'changeOnBlur': undefined,
-        'preserveInvalidOnBlur': undefined,
-        'previewValue': undefined,
-        'showNow': undefined,
-        'showToday': undefined,
-        'contenteditable': undefined,
-        'draggable': undefined,
-        'hidden': undefined,
-        'inert': undefined,
-        'spellcheck': undefined,
-        'itemscope': undefined,
-        'aria-atomic': undefined,
-        'aria-busy': undefined,
-        'aria-checked': undefined,
-        'aria-current': undefined,
-        'aria-disabled': undefined,
-        'aria-expanded': undefined,
-        'aria-grabbed': undefined,
-        'aria-haspopup': undefined,
-        'aria-hidden': undefined,
-        'aria-invalid': undefined,
-        'aria-modal': undefined,
-        'aria-multiline': undefined,
-        'aria-multiselectable': undefined,
-        'aria-pressed': undefined,
-        'aria-readonly': undefined,
-        'aria-required': undefined,
-        'aria-selected': undefined,
-        'showHour': undefined,
-        'showMinute': undefined,
-        'showSecond': undefined,
-        'showMillisecond': undefined,
-        'hideDisabledOptions': undefined,
-        'changeOnScroll': undefined,
-      }, { slots, attrs, emit, expose }) => {
+      (props, { slots, attrs, emit, expose }) => {
         const {
           getPopupContainer: customGetPopupContainer,
           size: customizeSize,
@@ -317,7 +270,7 @@ function generatePicker<DateType extends AnyObject = AnyObject>(generateConfig: 
             ...restProps
           } = props as P
 
-          const { className, style, restAttrs } = getAttrStyleAndClass(attrs)
+          const { className, style, restAttrs } = getAttrStyleAndClass(attrs, undefined, props)
 
           const mergedSuffixIcon = getSlotPropsFnRun(slots, { suffixIcon }, 'suffixIcon', false)
 
