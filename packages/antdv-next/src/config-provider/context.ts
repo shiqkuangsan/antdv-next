@@ -598,7 +598,7 @@ export function useComponentBaseConfig<
     getPrefixCls: context.value.getPrefixCls,
     getTargetContainer: context.value.getTargetContainer,
     virtual: computed(() => context.value.virtual),
-    renderEmpty: context.value.renderEmpty,
+    renderEmpty: computed(() => context.value.renderEmpty),
     popupMatchSelectWidth: computed(() => context.value.popupMatchSelectWidth),
     popupOverflow: computed(() => context.value.popupOverflow),
   }

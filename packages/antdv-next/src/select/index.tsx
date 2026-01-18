@@ -403,7 +403,7 @@ const Select = defineComponent<
         mergedNotFound = null
       }
       else {
-        mergedNotFound = renderEmpty?.('Select') || <DefaultRenderEmpty componentName="Select" />
+        mergedNotFound = renderEmpty?.value?.('Select') || <DefaultRenderEmpty componentName="Select" />
       }
 
       // ===================== Icons =====================

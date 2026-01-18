@@ -232,7 +232,7 @@ const InternalMentions = defineComponent<
       if (props.notFoundContent !== undefined) {
         return props.notFoundContent
       }
-      return renderEmpty?.('Select') || <DefaultRenderEmpty componentName="Select" />
+      return renderEmpty?.value?.('Select') || <DefaultRenderEmpty componentName="Select" />
     })
 
     const mergedFilterOption = computed(() => (props.loading ? loadingFilterOption : props.filterOption))

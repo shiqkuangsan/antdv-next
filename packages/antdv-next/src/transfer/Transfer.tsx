@@ -305,7 +305,7 @@ const Transfer = defineComponent<
 
     const listLocale = computed(() => ({
       ...contextLocale?.value,
-      notFoundContent: renderEmpty?.('Transfer') || <DefaultRenderEmpty componentName="Transfer" />,
+      notFoundContent: renderEmpty?.value?.('Transfer') || <DefaultRenderEmpty componentName="Transfer" />,
       ...(props.locale || {}),
     }))
 

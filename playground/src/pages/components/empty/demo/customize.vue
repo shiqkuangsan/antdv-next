@@ -1,6 +1,10 @@
-<script setup lang="ts">
+<docs lang="zh-CN">
+自定义描述与操作区域。
+</docs>
 
-</script>
+<docs lang="en-US">
+Customize description and extra content.
+</docs>
 
 <template>
   <a-empty

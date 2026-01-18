@@ -572,7 +572,7 @@ const InternalTable = defineComponent<
         if (typeof locale?.emptyText !== 'undefined') {
           return locale?.emptyText
         }
-        return renderEmpty?.('Table') || <DefaultRenderEmpty componentName="Table" />
+        return renderEmpty?.value?.('Table') || <DefaultRenderEmpty componentName="Table" />
       }
       const mergedEmptyNode = mergedEmptyNodeFn()
       const mergedGetPopupContainer = props.getPopupContainer || contextGetPopupContainer
