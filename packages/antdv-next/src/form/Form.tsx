@@ -539,10 +539,10 @@ const InternalForm = defineComponent<
       submit,
       nativeElement: nativeElementRef,
       scrollToField: (name: NamePath, options: ScrollFocusOptions | boolean = {}) => {
-        scrollToField(options, name)
+        scrollToField(options, getNamePath(name))
       },
       focusField: (name: NamePath) => {
-        const targetId = getFieldId(name, props.name)
+        const targetId = getFieldId(getNamePath(name), props.name)
         const node = targetId ? document.getElementById(targetId) : null
         if (node) {
           try {
@@ -554,8 +554,10 @@ const InternalForm = defineComponent<
         }
       },
       getFieldInstance: (name: NamePath) => {
-        const targetId = getFieldId(name, props.name) ?? (typeof name === 'string' || typeof name === 'number') ? `${name}` : name.join('_')
-        return fields.value?.[targetId]
+        const targetId = getFieldId(getNamePath(name), props.name)
+        if (targetId) {
+          return fields.value?.[targetId]
+        }
       },
     })
 
