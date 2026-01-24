@@ -143,7 +143,7 @@ const demoStyle = computed(() => {
     @apply bg-container;
     padding: 42px 24px 50px;
     border-radius: 8px 8px 0 0;
-    border-bottom: 1px solid rgba(5, 5, 5, 0.06);
+    border-bottom: 1px solid var(--ant-color-split);
   }
 
   &-meta.markdown {
@@ -177,7 +177,7 @@ const demoStyle = computed(() => {
     display: flex;
     justify-content: center;
     padding: 12px 0;
-    border-top: 1px dashed rgba(5, 5, 5, 0.06);
+    border-top: 1px dashed var(--ant-color-split);
     opacity: 0.7;
     transition: opacity 0.3s;
 
