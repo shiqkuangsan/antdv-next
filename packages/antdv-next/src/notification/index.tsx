@@ -115,9 +115,9 @@ const GlobalHolderWrapper = defineComponent<{ onReady?: (holder: GlobalHolderRef
       },
       { immediate: true },
     )
+    const global = globalConfig()
 
     return () => {
-      const global = globalConfig()
       const holderNode = (
         <GlobalHolder
           ref={holderRef as any}
@@ -131,7 +131,7 @@ const GlobalHolderWrapper = defineComponent<{ onReady?: (holder: GlobalHolderRef
         <ConfigProvider
           prefixCls={global.getRootPrefixCls()}
           iconPrefixCls={global.getIconPrefixCls()}
-          theme={global.getTheme() as any}
+          theme={global.theme.value as any}
         >
           {dom}
         </ConfigProvider>

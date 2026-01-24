@@ -1,6 +1,6 @@
 import type { VNode } from 'vue'
 import type { ModalFuncProps } from './interface'
-import { createVNode, defineComponent, render } from 'vue'
+import { createVNode, defineComponent, render, watch } from 'vue'
 import { devUseWarning, isDev } from '../_util/warning'
 import { globalConfig } from '../config-provider'
 import ConfirmDialog from './ConfirmDialog'
@@ -55,7 +55,7 @@ export default function confirm(config: ModalFuncProps) {
   function renderWithProps(props: ModalFuncProps) {
     const rootPrefixCls = global.getPrefixCls(undefined, getRootPrefixCls())
     const iconPrefixCls = global.getIconPrefixCls?.()
-    const theme = global.getTheme?.()
+    const theme = global.theme.value
     const prefixCls = props.prefixCls ?? `${rootPrefixCls}-modal`
     const vnode: VNode = createVNode(ConfirmDialogWrapper, {
       ...props,
@@ -64,6 +64,13 @@ export default function confirm(config: ModalFuncProps) {
       iconPrefixCls,
       theme,
     })
+
+    watch(
+      () => global.theme.value,
+      () => {
+        vnode.component?.update?.()
+      },
+    )
     render(vnode, container)
   }
 

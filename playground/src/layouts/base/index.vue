@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { theme } from 'antdv-next'
+import { ConfigProvider, theme } from 'antdv-next'
 import en from 'antdv-next/locale/en_US'
 import cn from 'antdv-next/locale/zh_CN'
 import dayjs from 'dayjs'
@@ -15,9 +15,15 @@ const appStore = useAppStore()
 const { locale, darkMode, compactMode, direction } = storeToRefs(appStore)
 const { setThemeMode } = useTheme()
 
-watch(darkMode, (val) => {
-  applyThemeToDOM(val)
-}, { immediate: true })
+watch(
+  darkMode,
+  (val) => {
+    applyThemeToDOM(val)
+  },
+  {
+    immediate: true,
+  },
+)
 
 onMounted(() => {
   setThemeMode(themeModeStore.value)
@@ -48,6 +54,26 @@ const algorithm = computed(() => {
 })
 
 const zeroRuntime = import.meta.env.PROD === true
+
+const themeConfig = computed(() => {
+  return {
+    algorithm: algorithm.value,
+    zeroRuntime,
+  } as any
+})
+
+watch(
+  themeConfig,
+  () => {
+    console.log()
+    ;(ConfigProvider as any).config({
+      theme: themeConfig.value,
+    })
+  },
+  {
+    immediate: true,
+  },
+)
 </script>
 
 <template>
@@ -55,10 +81,7 @@ const zeroRuntime = import.meta.env.PROD === true
     <a-config-provider
       :locale="antdLocale"
       :direction="direction"
-      :theme="{
-        algorithm,
-        zeroRuntime,
-      }"
+      :theme="themeConfig"
     >
       <a-app>
         <slot />

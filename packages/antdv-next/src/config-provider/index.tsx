@@ -5,7 +5,7 @@ import type { ConfigProviderEmits, ConfigProviderProps, ConfigProviderSlots } fr
 import { createTheme, useStyleContext } from '@antdv-next/cssinjs'
 import { IconContextProvider } from '@antdv-next/icons'
 import defu from 'defu'
-import { computed, defineComponent } from 'vue'
+import { computed, defineComponent, shallowReactive } from 'vue'
 import { useWarningProvider } from '../_util/warning.ts'
 import { ANT_MARK, LocaleProvider, useLocaleContext } from '../locale'
 import { defaultTheme, DesignTokenProvider } from '../theme/context.ts'
@@ -63,27 +63,34 @@ export interface GlobalConfigProps {
   theme?: Theme | ThemeConfig
   holderRender?: holderRenderType
 }
+
+const globalConfigData = shallowReactive<GlobalConfigProps>({})
+
 function getGlobalPrefixCls() {
-  return globalPrefixCls || defaultPrefixCls
+  return globalConfigData.prefixCls || globalPrefixCls || defaultPrefixCls
 }
 
 function getGlobalIconPrefixCls() {
-  return globalIconPrefixCls || defaultIconPrefixCls
+  return globalConfigData.iconPrefixCls || globalIconPrefixCls || defaultIconPrefixCls
 }
 
 function setGlobalConfig(props: GlobalConfigProps) {
   const { prefixCls, iconPrefixCls, theme, holderRender } = props
   if (prefixCls !== undefined) {
     globalPrefixCls = prefixCls
+    globalConfigData.prefixCls = prefixCls
   }
   if (iconPrefixCls !== undefined) {
     globalIconPrefixCls = iconPrefixCls
+    globalConfigData.iconPrefixCls = iconPrefixCls
   }
   if ('holderRender' in props) {
     globalHolderRender = holderRender
+    globalConfigData.holderRender = holderRender
   }
   if (theme) {
     globalTheme = theme
+    globalConfigData.theme = theme
   }
 }
 const ProviderChildren = defineComponent<
@@ -289,14 +296,15 @@ export function globalConfig() {
     getIconPrefixCls: getGlobalIconPrefixCls,
     getRootPrefixCls: () => {
       // If Global prefixCls provided, use this
-      if (globalPrefixCls) {
-        return globalPrefixCls
+      if (globalConfigData.prefixCls || globalPrefixCls) {
+        return globalConfigData.prefixCls || globalPrefixCls
       }
 
       // Fallback to default prefixCls
       return getGlobalPrefixCls()
     },
     getTheme: () => globalTheme,
+    theme: computed(() => globalConfigData.theme || globalTheme),
     holderRender: globalHolderRender,
   }
 }
