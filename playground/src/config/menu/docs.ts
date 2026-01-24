@@ -1,4 +1,5 @@
 import type { AntdvMenuItem } from './interface'
+import { components } from './components'
 
 export const docsMenuLocales = {
   '/docs/vue/introduce': {
@@ -7,11 +8,12 @@ export const docsMenuLocales = {
   },
 }
 
-export const docs: Record<string, AntdvMenuItem[]> = {
+export const docsMenus: Record<string, AntdvMenuItem[]> = {
   '/docs/vue': [
     {
       key: '/docs/vue/introduce',
       label: '介绍',
     },
   ],
+  '/components': components,
 }

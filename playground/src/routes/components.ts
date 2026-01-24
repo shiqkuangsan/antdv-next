@@ -30,30 +30,26 @@ export function generateDocRoutes() {
   return routes
 }
 
-// generate custom docs
-const routePaths = [
-  // '/components/overview',
-  '/components/changelog',
-]
-
 function generateCustomDocRoutes() {
   const routes: RouteRecordRaw[] = []
-  for (const routePath of routePaths) {
-    const cnPath = `/src/pages${routePath}.zh-CN.md`
-    const enPath = `/src/pages${routePath}.en-US.md`
-    if (otherDocs[cnPath]) {
-      routes.push({
-        path: `${routePath}-cn`,
-        component: otherDocs[cnPath],
-      })
+
+  for (const path in otherDocs) {
+    let routePath = path.replace('/src/pages', '')
+    if (routePath.endsWith('/index.en-US.md') || routePath.endsWith('/index.zh-CN.md')) {
+      routePath = routePath.replace('/index.en-US.md', '').replace('/index.zh-CN.md', '')
     }
-    if (otherDocs[enPath]) {
+    else {
+      routePath = routePath.replace('.en-US.md', '').replace('.zh-CN.md', '-cn')
+    }
+    const component = otherDocs[path] as any
+    if (component) {
       routes.push({
         path: routePath,
-        component: otherDocs[enPath],
+        component,
       })
     }
   }
+
   return routes
 }
 
@@ -66,5 +62,13 @@ export default [
       ...generateCustomDocRoutes(),
       ...generateDocRoutes(),
     ],
+  },
+  {
+    path: '/docs/vue',
+    redirect: '/docs/vue/introduce',
+  },
+  {
+    path: '/docs/vue-cn',
+    redirect: '/docs/vue/introduce-cn',
   },
 ] as RouteRecordRaw[]
