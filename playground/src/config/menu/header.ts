@@ -13,10 +13,10 @@ export const headerItems: MenuItemType[] = [
     key: '/blog',
     label: '博客',
   },
-  {
-    key: '/docs/resources',
-    label: '资源',
-  },
+  // {
+  //   key: '/docs/resources',
+  //   label: '资源',
+  // },
 ]
 
 export const headerLocales: Record<string, {
