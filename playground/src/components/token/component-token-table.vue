@@ -5,14 +5,7 @@ import {
   QuestionCircleOutlined,
   RightOutlined,
 } from '@antdv-next/icons'
-import {
-  ConfigProvider,
-  Flex,
-  Popover,
-  Table,
-  theme,
-  Typography,
-} from 'antdv-next'
+import { theme } from 'antdv-next'
 import useLocale from 'antdv-next/locale/useLocale'
 import { computed, ref } from 'vue'
 import tokenMetaRes from '../../assets/token-meta.json'
@@ -87,6 +80,70 @@ function compare(token1: string, token2: string) {
 
 const defaultToken = theme.getDesignToken()
 
+// Convert CSS variable name to token name
+// e.g., "font-size-heading-3" -> "fontSizeHeading3"
+// e.g., "margin-xs" -> "marginXS"
+// e.g., "padding-content-vertical-sm" -> "paddingContentVerticalSM"
+function cssVarToTokenName(cssVar: string): string {
+  // First convert kebab-case to camelCase
+  let tokenName = cssVar.replace(/-([a-z0-9])/g, (_, char) => char.toUpperCase())
+
+  // Then handle common uppercase suffixes (XS, SM, MD, LG, XL, XXL, etc.)
+  tokenName = tokenName
+    .replace(/Xs$/, 'XS')
+    .replace(/Sm$/, 'SM')
+    .replace(/Md$/, 'MD')
+    .replace(/Lg$/, 'LG')
+    .replace(/Xl$/, 'XL')
+    .replace(/Xxl$/, 'XXL')
+
+  return tokenName
+}
+
+// Resolve CSS variable value to actual value
+// e.g., "var(--ant-font-size-heading-3)" -> actual value from defaultToken
+function resolveValue(value: any): any {
+  if (typeof value !== 'string') {
+    return value
+  }
+
+  // Match CSS variable pattern: var(--ant-xxx)
+  const cssVarMatch = value.match(/^var\(--ant-([^)]+)\)(.*)$/)
+  if (cssVarMatch && cssVarMatch[1]) {
+    const tokenName = cssVarToTokenName(cssVarMatch[1])
+    const suffix = cssVarMatch[2] // e.g., "px" or other suffix
+    const tokenValue = (defaultToken as Record<string, any>)[tokenName]
+
+    if (tokenValue !== undefined) {
+      // If there's a suffix like "px", append it
+      if (suffix) {
+        return `${tokenValue}${suffix}`
+      }
+      return tokenValue
+    }
+  }
+
+  // Handle complex expressions with multiple CSS variables
+  // e.g., "var(--ant-padding-md)px var(--ant-padding-content-horizontal-lg)px"
+  const complexMatch = value.match(/var\(--ant-([^)]+)\)/g)
+  if (complexMatch && complexMatch.length > 0) {
+    let resolvedValue = value
+    for (const match of complexMatch) {
+      const varName = match.match(/var\(--ant-([^)]+)\)/)?.[1]
+      if (varName != null) {
+        const tokenName = cssVarToTokenName(varName)
+        const tokenValue = (defaultToken as Record<string, any>)[tokenName]
+        if (tokenValue !== undefined) {
+          resolvedValue = resolvedValue.replace(match, String(tokenValue))
+        }
+      }
+    }
+    return resolvedValue
+  }
+
+  return value
+}
+
 // Columns definition
 const columns = computed(() => [
   {
@@ -155,13 +212,15 @@ function useSubTableData(
         const data = tokenData as Record<string, any>
         const defToken = defaultToken as Record<string, any>
 
+        const rawValue = component
+          ? data[component]?.component?.[name]
+          : defToken[name]
+
         return {
           name,
           desc: lang?.value === 'zh-cn' ? meta.desc : meta.descEn,
           type: meta.type,
-          value: component
-            ? data[component]?.component?.[name]
-            : defToken[name],
+          value: component ? resolveValue(rawValue) : rawValue,
         }
       })
       .filter(Boolean)
@@ -184,29 +243,29 @@ const globalOpen = ref(import.meta.env.DEV)
 
 // Code generation
 const componentCode = computed(() => {
-  return `<ConfigProvider
-  theme={{
+  return `<a-config-provider
+  :theme="{
     components: {
       ${props.component}: {
         /* ${locale.value.componentComment} */
       },
     },
-  }}
+  }"
 >
   ...
-</ConfigProvider>`
+</a-config-provider>`
 })
 
 const globalCode = computed(() => {
-  return `<ConfigProvider
-  theme={{
+  return `<a-config-provider
+  :theme="{
     token: {
       /* ${locale.value.globalComment} */
     },
-  }}
+  }"
 >
   ...
-</ConfigProvider>`
+</a-config-provider>`
 })
 </script>
 
@@ -219,32 +278,31 @@ const globalCode = computed(() => {
           class="text-16px transition-all duration-300"
           :rotate="componentOpen ? 90 : 0"
         />
-        <Flex class="text-16px font-bold" gap="small" justify="flex-start" align="center">
+        <a-flex class="text-16px font-bold" gap="small" justify="flex-start" align="center">
           {{ locale.componentToken }}
-          <Popover
-            title=""
+          <a-popover
             destroy-on-hidden
             :overlay-style="{ width: '400px' }"
           >
             <template #content>
-              <Typography>
+              <a-typography>
                 <pre dir="ltr" style="font-size: 12px;"><code dir="ltr">{{ componentCode }}</code></pre>
                 <a class="text-[#999]" :href="locale.customizeTokenLink" target="_blank" rel="noreferrer">
                   <LinkOutlined style="margin-inline-end: 4px;" />
                   {{ locale.help }}
                 </a>
-              </Typography>
+              </a-typography>
             </template>
             <span class="text-12px font-normal text-[#999]" @click.stop>
               <QuestionCircleOutlined style="margin-inline-end: 4px;" />
               {{ locale.help }}
             </span>
-          </Popover>
-        </Flex>
+          </a-popover>
+        </a-flex>
       </div>
       <div v-if="componentOpen">
-        <ConfigProvider :theme="{ token: { borderRadius: 0 } }">
-          <Table
+        <a-config-provider :theme="{ token: { borderRadius: 0 } }">
+          <a-table
             size="middle"
             :columns="columns"
             bordered
@@ -278,8 +336,8 @@ const globalCode = computed(() => {
                 </template>
               </template>
             </template>
-          </Table>
-        </ConfigProvider>
+          </a-table>
+        </a-config-provider>
       </div>
     </div>
 
@@ -290,32 +348,31 @@ const globalCode = computed(() => {
           class="text-16px transition-all duration-300"
           :rotate="globalOpen ? 90 : 0"
         />
-        <Flex class="text-16px font-bold" gap="small" justify="flex-start" align="center">
+        <a-flex class="text-16px font-bold" gap="small" justify="flex-start" align="center">
           {{ locale.globalToken }}
-          <Popover
-            title=""
+          <a-popover
             destroy-on-hidden
             :overlay-style="{ width: '400px' }"
           >
             <template #content>
-              <Typography>
+              <a-typography>
                 <pre dir="ltr" style="font-size: 12px;"><code dir="ltr">{{ globalCode }}</code></pre>
                 <a class="text-[#999]" :href="locale.customizeComponentTokenLink" target="_blank" rel="noreferrer">
                   <LinkOutlined style="margin-inline-end: 4px;" />
                   {{ locale.help }}
                 </a>
-              </Typography>
+              </a-typography>
             </template>
             <span class="text-12px font-normal text-[#999]" @click.stop>
               <QuestionCircleOutlined style="margin-inline-end: 4px;" />
               {{ locale.help }}
             </span>
-          </Popover>
-        </Flex>
+          </a-popover>
+        </a-flex>
       </div>
       <div v-if="globalOpen">
-        <ConfigProvider :theme="{ token: { borderRadius: 0 } }">
-          <Table
+        <a-config-provider :theme="{ token: { borderRadius: 0 } }">
+          <a-table
             size="middle"
             :columns="columns"
             bordered
@@ -349,8 +406,8 @@ const globalCode = computed(() => {
                 </template>
               </template>
             </template>
-          </Table>
-        </ConfigProvider>
+          </a-table>
+        </a-config-provider>
       </div>
     </div>
   </div>
