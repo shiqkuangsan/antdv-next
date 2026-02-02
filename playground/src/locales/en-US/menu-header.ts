@@ -5,4 +5,5 @@ export default {
   components: 'Components',
   blog: 'Blog',
   resources: 'Resources',
+  sponsor: 'Sponsor',
 } as const
