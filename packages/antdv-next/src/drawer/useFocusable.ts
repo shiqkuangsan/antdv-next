@@ -12,13 +12,10 @@ export default function useFocusable(
   defaultTrap: Ref<boolean | undefined> = shallowRef(),
   legacyFocusTriggerAfterClose: Ref<FocusableConfig['focusTriggerAfterClose'] | undefined> = shallowRef(),
 ) {
-  const ret: FocusableConfig = {
-    trap: unref(defaultTrap) ?? true,
-    focusTriggerAfterClose: unref(legacyFocusTriggerAfterClose) ?? true,
-  }
   return computed(() => {
     return {
-      ...ret,
+      trap: unref(defaultTrap) ?? true,
+      focusTriggerAfterClose: unref(legacyFocusTriggerAfterClose) ?? true,
       ...unref(focusable),
     }
   })
