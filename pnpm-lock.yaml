@@ -398,8 +398,8 @@ catalogs:
       specifier: ^1.0.3
       version: 1.0.3
     '@v-c/tree':
-      specifier: ^1.0.1
-      version: 1.0.1
+      specifier: ^1.0.2
+      version: 1.0.2
     '@v-c/tree-select':
       specifier: ^1.0.0
       version: 1.0.0
@@ -679,7 +679,7 @@ importers:
         version: 1.0.3(vue@3.5.27(typescript@5.9.3))
       '@v-c/tree':
         specifier: catalog:vc
-        version: 1.0.1(vue@3.5.27(typescript@5.9.3))
+        version: 1.0.2(vue@3.5.27(typescript@5.9.3))
       '@v-c/tree-select':
         specifier: catalog:vc
         version: 1.0.0(vue@3.5.27(typescript@5.9.3))
@@ -2373,6 +2373,11 @@ packages:
 
   '@v-c/tree@1.0.1':
     resolution: {integrity: sha512-zu9a0kdAuLnNQUayxcpmG9cJanUXs+UZOk25SD6rqYlQzuaccAN2r1skyPqEEcYfmEnUB3O7Ee3ju9EuoyQsNQ==}
+    peerDependencies:
+      vue: ^3.0.0
+
+  '@v-c/tree@1.0.2':
+    resolution: {integrity: sha512-Z/x1DuazauoPtuKWaL6iaNdTq6t/c+6j8dbOxQN7kAJOW4RJ8BKKx8DA0fq49R7OCUH/YQLOWTrWI5gyQ0169A==}
     peerDependencies:
       vue: ^3.0.0
 
@@ -7026,7 +7031,7 @@ snapshots:
   '@v-c/cascader@1.0.0(vue@3.5.27(typescript@5.9.3))':
     dependencies:
       '@v-c/select': 1.0.9(vue@3.5.27(typescript@5.9.3))
-      '@v-c/tree': 1.0.1(vue@3.5.27(typescript@5.9.3))
+      '@v-c/tree': 1.0.2(vue@3.5.27(typescript@5.9.3))
       '@v-c/util': 1.0.11(vue@3.5.27(typescript@5.9.3))
       vue: 3.5.27(typescript@5.9.3)
 
@@ -7245,11 +7250,17 @@ snapshots:
   '@v-c/tree-select@1.0.0(vue@3.5.27(typescript@5.9.3))':
     dependencies:
       '@v-c/select': 1.0.9(vue@3.5.27(typescript@5.9.3))
-      '@v-c/tree': 1.0.1(vue@3.5.27(typescript@5.9.3))
+      '@v-c/tree': 1.0.2(vue@3.5.27(typescript@5.9.3))
       '@v-c/util': 1.0.11(vue@3.5.27(typescript@5.9.3))
       vue: 3.5.27(typescript@5.9.3)
 
   '@v-c/tree@1.0.1(vue@3.5.27(typescript@5.9.3))':
+    dependencies:
+      '@v-c/util': 1.0.11(vue@3.5.27(typescript@5.9.3))
+      '@v-c/virtual-list': 1.0.5(vue@3.5.27(typescript@5.9.3))
+      vue: 3.5.27(typescript@5.9.3)
+
+  '@v-c/tree@1.0.2(vue@3.5.27(typescript@5.9.3))':
     dependencies:
       '@v-c/util': 1.0.11(vue@3.5.27(typescript@5.9.3))
       '@v-c/virtual-list': 1.0.5(vue@3.5.27(typescript@5.9.3))
