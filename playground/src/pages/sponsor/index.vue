@@ -28,15 +28,16 @@ const teamMembers = [
     avatar: 'https://avatars.githubusercontent.com/u/45655660?v=4',
   },
   {
-    github: 'cc-hearts',
-    name: 'cc-hearts',
-    avatar: 'https://avatars.githubusercontent.com/u/71313168?v=4',
-  },
-  {
     github: 'selicens',
     name: 'selicens',
     avatar: 'https://avatars.githubusercontent.com/u/69418751?v=4',
   },
+  {
+    github: 'cc-hearts',
+    name: 'cc-hearts',
+    avatar: 'https://avatars.githubusercontent.com/u/71313168?v=4',
+  },
+
   {
     github: 'ffgenius',
     name: 'ffgenius',
@@ -44,34 +45,47 @@ const teamMembers = [
   },
 ]
 
+interface SponsorForm {
+  amount: number | string
+  subject: string
+  payType: 'alipay' | 'wechat'
+  sponsorName?: string
+  sponsorEmail?: string
+  sponsorMessage?: string
+  invoiceRequired?: boolean
+  invoiceCompany?: string
+  invoiceTaxNo?: string
+  invoiceEmail?: string
+}
+
 // 组织赞助表单
-const orgSponsorForm = reactive({
-  amount: 10,
-  payMethod: 'alipay' as 'alipay' | 'wechat',
-  needInvoice: false,
-  companyName: '',
-  taxNumber: '',
-  email: '',
+const orgSponsorForm = reactive<SponsorForm>({
+  amount: 20,
+  subject: 'Antdv Next 项目赞助',
+  payType: 'alipay',
+  sponsorName: '',
+  sponsorEmail: '',
+  sponsorMessage: '',
+  invoiceRequired: false,
+  invoiceCompany: '',
+  invoiceTaxNo: '',
+  invoiceEmail: '',
 })
 
-// 现有赞助商列表（假数据）
 const sponsors = [
   { name: 'TechCorp', logo: 'https://via.placeholder.com/80?text=TC', amount: 5000, tier: 'gold' },
   // { name: 'DevStudio', logo: 'https://via.placeholder.com/80?text=DS', amount: 2000, tier: 'silver' },
   // { name: 'CodeLab', logo: 'https://via.placeholder.com/80?text=CL', amount: 1000, tier: 'bronze' },
 ]
 
-function handleOrgSponsorSubmit() {
-  const payUrl = orgSponsorForm.payMethod === 'alipay'
-    ? `https://qr.alipay.com/enterprise?amount=${orgSponsorForm.amount}`
-    : `https://pay.weixin.qq.com/enterprise?amount=${orgSponsorForm.amount}`
-  window.open(payUrl, '_blank')
+async function handleOrgSponsorSubmit() {
+  console.log('组织赞助表单提交：', orgSponsorForm)
 }
 
 const amountOptions = [
-  { label: '¥5', value: 5 },
   { label: '¥10', value: 10 },
   { label: '¥20', value: 20 },
+  { label: '¥30', value: 30 },
   { label: '¥50', value: 50 },
   { label: '¥100', value: 100 },
 ]
@@ -95,12 +109,11 @@ const amountOptions = [
         <template #contentRender="{ item }">
           <!-- 组织赞助内容 -->
           <div v-if="item.key === 'org'" class="tab-content">
-            <a-tag color="gold" class="mb-16px">
-              可开发票11
-            </a-tag>
-            <p class="section-intro">
-              组织赞助的资金将用于服务器等消耗资源的开支，多余的部分会统一分给团队成员和优秀的社区贡献者。
-            </p>
+            <a-alert class="mb-16px" type="info" show-icon>
+              <template #message>
+                组织赞助的资金将用于服务器等消耗资源的开支，多余的部分会统一分配给团队成员和优秀的社区贡献者。
+              </template>
+            </a-alert>
 
             <a-form layout="vertical" class="org-sponsor-form">
               <a-form-item label="赞助金额">
@@ -121,46 +134,61 @@ const amountOptions = [
                 </a-space>
               </a-form-item>
 
+              <a-form-item label="赞助人">
+                <a-input
+                  v-model:value="orgSponsorForm.sponsorName"
+                  placeholder="请输入赞助人昵称或组织名称"
+                />
+              </a-form-item>
+
+              <a-form-item label="留言">
+                <a-textarea
+                  v-model:value="orgSponsorForm.sponsorMessage"
+                  placeholder="可填写对项目的建议或想法"
+                  :auto-size="{ minRows: 3, maxRows: 5 }"
+                />
+              </a-form-item>
+
               <a-form-item label="支付方式">
-                <a-radio-group v-model:value="orgSponsorForm.payMethod">
+                <a-radio-group v-model:value="orgSponsorForm.payType">
                   <a-radio value="alipay">
                     <a-space>
                       <AlipayCircleOutlined class="text-18px" style="color: #1677ff" />
                       支付宝
                     </a-space>
                   </a-radio>
-                  <a-radio value="wechat">
+                  <a-radio value="wechat" disabled>
                     <a-space>
                       <WechatOutlined class="text-18px" style="color: #07c160" />
-                      微信支付
+                      微信支付（暂未开放）
                     </a-space>
                   </a-radio>
                 </a-radio-group>
               </a-form-item>
 
               <a-form-item>
-                <a-checkbox v-model:checked="orgSponsorForm.needInvoice">
+                <a-checkbox v-model:checked="orgSponsorForm.invoiceRequired">
                   需要开具发票
                 </a-checkbox>
               </a-form-item>
 
               <!-- 发票信息（仅勾选需要发票时显示） -->
-              <template v-if="orgSponsorForm.needInvoice">
+              <template v-if="orgSponsorForm.invoiceRequired">
                 <a-form-item label="公司/组织名称">
                   <a-input
-                    v-model:value="orgSponsorForm.companyName"
+                    v-model:value="orgSponsorForm.invoiceCompany"
                     placeholder="请输入公司或组织名称"
                   />
                 </a-form-item>
                 <a-form-item label="税号">
                   <a-input
-                    v-model:value="orgSponsorForm.taxNumber"
+                    v-model:value="orgSponsorForm.invoiceTaxNo"
                     placeholder="请输入纳税人识别号"
                   />
                 </a-form-item>
                 <a-form-item label="接收邮箱">
                   <a-input
-                    v-model:value="orgSponsorForm.email"
+                    v-model:value="orgSponsorForm.invoiceEmail"
                     placeholder="用于接收电子发票"
                   />
                 </a-form-item>
@@ -226,10 +254,9 @@ const amountOptions = [
                     class="member-github"
                   >
                     <GithubOutlined />
-                    {{ member.github }}
                   </a>
                   <a-space class="member-actions">
-                    <a-popover trigger="click" placement="bottom">
+                    <a-popover trigger="hover" placement="bottom">
                       <template #content>
                         <div class="qrcode-content">
                           <img
@@ -249,7 +276,7 @@ const amountOptions = [
                         支付宝
                       </a-button>
                     </a-popover>
-                    <a-popover trigger="click" placement="bottom">
+                    <a-popover trigger="hover" placement="bottom">
                       <template #content>
                         <div class="qrcode-content">
                           <img
