@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { theme } from 'antdv-next'
 import { computed } from 'vue'
-import { useSemanticLocale } from '@/composables/use-locale'
+import { useLocale } from '@/composables/use-locale'
 import tokenMetaRes from '../../assets/token-meta.json'
 import BezierVisualizer from '../bezier-visualizer/index.vue'
 import ColorChunk from '../color-chunk/index.vue'
@@ -14,22 +14,7 @@ const props = defineProps<{
   type: 'seed' | 'map' | 'alias'
 }>()
 
-const locales = {
-  cn: {
-    token: 'Token 名称',
-    description: '描述',
-    type: '类型',
-    value: '默认值',
-  },
-  en: {
-    token: 'Token Name',
-    description: 'Description',
-    type: 'Type',
-    value: 'Default Value',
-  },
-}
-
-const locale = useSemanticLocale(locales)
+const { t, messages } = useLocale()
 
 const { token: tokenState } = theme.useToken()
 
@@ -54,22 +39,22 @@ const tokenMeta = tokenMetaRes as { global: Record<string, TokenMeta> }
 
 const columns = computed(() => [
   {
-    title: locale.value.token,
+    title: t('components.tokenTable.token'),
     dataIndex: 'name',
     key: 'name',
   },
   {
-    title: locale.value.description,
+    title: t('components.tokenTable.description'),
     dataIndex: 'desc',
     key: 'desc',
   },
   {
-    title: locale.value.type,
+    title: t('components.tokenTable.type'),
     dataIndex: 'type',
     key: 'type',
   },
   {
-    title: locale.value.value,
+    title: t('components.tokenTable.value'),
     dataIndex: 'value',
     key: 'value',
   },
@@ -78,12 +63,17 @@ const columns = computed(() => [
 const data = computed<TokenData[]>(() => {
   return Object.entries(tokenMeta.global)
     .filter(([, meta]) => meta.source === props.type)
-    .map(([token, meta]) => ({
-      name: token,
-      desc: locale.value === locales.cn ? meta.desc : meta.descEn,
-      type: meta.type,
-      value: (defaultToken as Record<string, any>)[token],
-    }))
+    .map(([token, meta]) => {
+      const currentLocale = messages.value.components
+      const isChinese = 'tokenTable' in currentLocale && currentLocale.tokenTable.token === 'Token 名称'
+
+      return {
+        name: token,
+        desc: isChinese ? meta.desc : meta.descEn,
+        type: meta.type,
+        value: (defaultToken as Record<string, any>)[token],
+      }
+    })
 })
 
 function isColor(value: any): boolean {

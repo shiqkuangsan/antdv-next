@@ -3,6 +3,7 @@ import type { CategoriesKeys } from './field'
 import * as AntdIcons from '@antdv-next/icons/all'
 import { storeToRefs } from 'pinia'
 import { computed, h, ref } from 'vue'
+import { useLocale } from '@/composables/use-locale'
 import { useAppStore } from '@/stores/app'
 import Category from './Category.vue'
 import { all, categories } from './field'
@@ -15,12 +16,9 @@ interface MatchedCategory {
   category: string
   icons: string[]
 };
-const IconLocales = {
-  Outlined: { 'zh-CN': '线框风格', 'en-US': 'Outlined' },
-  Filled: { 'zh-CN': '实底风格', 'en-US': 'Filled' },
-  TwoTone: { 'zh-CN': '双色风格', 'en-US': 'TwoTone' },
-}
-const { locale, darkMode } = storeToRefs(useAppStore())
+
+const { darkMode } = storeToRefs(useAppStore())
+const { t } = useLocale()
 const allIcons = AntdIcons as Record<string, any>
 
 const theme = ref<ThemeType>('Outlined')
@@ -28,9 +26,9 @@ const searchKey = ref('')
 const searchBarAffixed = ref(false)
 
 const options = computed(() => [
-  { value: 'Outlined', label: IconLocales.Outlined[locale.value], icon: h(OutlinedIcon) },
-  { value: 'Filled', label: IconLocales.Filled[locale.value], icon: h(FilledIcon) },
-  { value: 'TwoTone', label: IconLocales.TwoTone[locale.value], icon: h(TwoToneIcon) },
+  { value: 'Outlined', label: t('ui.iconSearch.themes.outlined'), icon: h(OutlinedIcon) },
+  { value: 'Filled', label: t('ui.iconSearch.themes.filled'), icon: h(FilledIcon) },
+  { value: 'TwoTone', label: t('ui.iconSearch.themes.twoTone'), icon: h(TwoToneIcon) },
 ])
 
 const affixedStyle = computed(() => ({
@@ -87,13 +85,17 @@ function mergeCategory(
 ) {
   const merged: Record<string, MatchedCategory> = { ...categoryA }
   Object.keys(categoryB).forEach((key) => {
+    const categoryBItem = categoryB[key]
+    if (!categoryBItem)
+      return
+
     if (merged[key]) {
       merged[key].icons = Array.from(
-        new Set([...merged[key].icons, ...categoryB[key].icons]),
+        new Set([...merged[key].icons, ...categoryBItem.icons]),
       )
     }
     else {
-      merged[key] = categoryB[key]
+      merged[key] = categoryBItem
     }
   })
   return merged
@@ -135,8 +137,8 @@ const matchedCategories = computed(() => {
   return result
 })
 
-function onChangeTheme(val: ThemeType) {
-  theme.value = val
+function onChangeTheme(val: string | number) {
+  theme.value = val as ThemeType
 }
 </script>
 
@@ -155,7 +157,7 @@ function onChangeTheme(val: ThemeType) {
         />
         <a-input-search
           v-model:value="searchKey"
-          :placeholder="`Search icons (${all.length})`"
+          :placeholder="`${t('ui.iconSearch.searchPlaceholder')} (${all.length})`"
           style="flex: 1; margin-inline-start: 16px"
           allow-clear
           auto-focus

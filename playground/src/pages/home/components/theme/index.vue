@@ -13,6 +13,7 @@ import { AggregationColor } from 'antdv-next/color-picker/color'
 import { storeToRefs } from 'pinia'
 import { computed, h, reactive, ref, watch } from 'vue'
 import logo from '@/assets/antdv-next.svg'
+import { useLocale } from '@/composables/use-locale'
 import { useAppStore } from '@/stores/app.ts'
 import Group from '../group/index.vue'
 import BackgroundImage from './background-image.vue'
@@ -23,42 +24,6 @@ import ThemePicker from './theme-picker.vue'
 
 function generateColor(color: string | { h: number, s: number, b: number }): AggregationColor {
   return new AggregationColor(color as any)
-}
-
-// ============================= Locales =============================
-const locales = {
-  'zh-CN': {
-    themeTitle: '定制主题，随心所欲',
-    themeDesc: 'Antdv Next 开放更多样式算法，让你定制主题更简单',
-    customizeTheme: '定制主题',
-    myTheme: '我的主题',
-    titlePrimaryColor: '主色',
-    titleBorderRadius: '圆角',
-    titleCompact: '宽松度',
-    default: '默认',
-    compact: '紧凑',
-    titleTheme: '主题',
-    light: '亮色',
-    dark: '暗黑',
-    toDef: '深度定制',
-    toUse: '去使用',
-  },
-  'en-US': {
-    themeTitle: 'Flexible theme customization',
-    themeDesc: 'Antdv Next enable extendable algorithm, make custom theme easier',
-    customizeTheme: 'Customize Theme',
-    myTheme: 'My Theme',
-    titlePrimaryColor: 'Primary Color',
-    titleBorderRadius: 'Border Radius',
-    titleCompact: 'Compact',
-    titleTheme: 'Theme',
-    default: 'Default',
-    compact: 'Compact',
-    light: 'Light',
-    dark: 'Dark',
-    toDef: 'More',
-    toUse: 'Apply',
-  },
 }
 
 // ============================= Types =============================
@@ -159,10 +124,10 @@ function getTitleColor(colorPrimary: string, isLight?: boolean) {
 }
 
 // ============================= Setup =============================
-const appStore = useAppStore()
-const { locale, darkMode } = storeToRefs(appStore)
+const { t } = useLocale()
 
-const currentLocale = computed(() => locales[locale.value])
+const appStore = useAppStore()
+const { darkMode } = storeToRefs(appStore)
 
 // Theme data state
 const themeData = reactive<ThemeData>({ ...ThemeDefault })
@@ -250,8 +215,8 @@ const breadcrumbItems = computed(() => [
 ])
 
 const compactOptions = computed(() => [
-  { label: currentLocale.value.default, value: 'default', id: 'compact_default' },
-  { label: currentLocale.value.compact, value: 'compact' },
+  { label: t('homePage.theme.default'), value: 'default', id: 'compact_default' },
+  { label: t('homePage.theme.compact'), value: 'compact' },
 ])
 
 // ============================= Watchers =============================
@@ -289,9 +254,9 @@ function handleFormChange(changedValues: Partial<ThemeData>) {
 <template>
   <Group
     id="flexible"
-    :title="currentLocale.themeTitle"
+    :title="t('homePage.theme.themeTitle')"
     :title-color="titleColor"
-    :description="currentLocale.themeDesc"
+    :description="t('homePage.theme.themeDesc')"
     :background="backgroundColor"
   >
     <template #decoration>
@@ -397,16 +362,16 @@ function handleFormChange(changedValues: Partial<ThemeData>) {
               />
               <a-layout-content>
                 <a-typography-title :level="2">
-                  {{ currentLocale.customizeTheme }}
+                  {{ t('homePage.theme.customizeTheme') }}
                 </a-typography-title>
-                <a-card :title="currentLocale.myTheme">
+                <a-card :title="t('homePage.theme.myTheme')">
                   <template #extra>
                     <a-flex gap="small">
                       <a-button href="/theme-editor">
-                        {{ currentLocale.toDef }}
+                        {{ t('homePage.theme.toDef') }}
                       </a-button>
                       <a-button type="primary" href="/docs/vue/customize-theme">
-                        {{ currentLocale.toUse }}
+                        {{ t('homePage.theme.toUse') }}
                       </a-button>
                     </a-flex>
                   </template>
@@ -416,25 +381,25 @@ function handleFormChange(changedValues: Partial<ThemeData>) {
                     :wrapper-col="{ span: 21 }"
                     class="antdv-theme-form"
                   >
-                    <a-form-item :label="currentLocale.titleTheme" name="themeType">
+                    <a-form-item :label="t('homePage.theme.titleTheme')" name="themeType">
                       <ThemePicker
                         v-model="formState.themeType"
                         @update:model-value="(v) => handleFormChange({ themeType: v })"
                       />
                     </a-form-item>
-                    <a-form-item :label="currentLocale.titlePrimaryColor" name="colorPrimary">
+                    <a-form-item :label="t('homePage.theme.titlePrimaryColor')" name="colorPrimary">
                       <ColorPicker
                         v-model="formState.colorPrimary"
                         @update:model-value="(v) => handleFormChange({ colorPrimary: v as string })"
                       />
                     </a-form-item>
-                    <a-form-item :label="currentLocale.titleBorderRadius" name="borderRadius">
+                    <a-form-item :label="t('homePage.theme.titleBorderRadius')" name="borderRadius">
                       <RadiusPicker
                         v-model="formState.borderRadius"
                         @update:model-value="(v) => handleFormChange({ borderRadius: v ?? 6 })"
                       />
                     </a-form-item>
-                    <a-form-item :label="currentLocale.titleCompact" name="compact" html-for="compact_default">
+                    <a-form-item :label="t('homePage.theme.titleCompact')" name="compact" html-for="compact_default">
                       <a-radio-group
                         v-model:value="formState.compact"
                         :options="compactOptions"

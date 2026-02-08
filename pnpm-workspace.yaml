@@ -1,6 +1,19 @@
+shellEmulator: true
+
+trustPolicy: no-downgrade
+
 packages:
   - packages/*
   - playground
+
+overrides:
+  '@v-c/portal': catalog:vc
+  '@v-c/resize-observer': catalog:vc
+  '@v-c/trigger': catalog:vc
+  '@v-c/util': catalog:vc
+  vite: catalog:dev
+catalog:
+  flexsearch: ^0.8.212
 
 catalogs:
   dev:
@@ -72,7 +85,7 @@ catalogs:
     '@antdv-next/icons': ^1.0.0-rc.2
     '@emotion/hash': ^0.8.0
     '@emotion/unitless': ^0.7.5
-    '@vueuse/core': 14.1.0
+    '@vueuse/core': ^14.2.0
     csstype: ^3.2.3
     dayjs: ^1.11.19
     defu: ^6.1.4
@@ -122,7 +135,7 @@ catalogs:
     '@v-c/mutate-observer': ^1.0.1
     '@v-c/notification': ^1.0.0
     '@v-c/pagination': ^1.0.0
-    '@v-c/picker': ^1.0.1
+    '@v-c/picker': ^1.0.2
     '@v-c/portal': ^1.0.7
     '@v-c/progress': ^1.0.0
     '@v-c/qrcode': ^1.0.0
@@ -141,24 +154,10 @@ catalogs:
     '@v-c/tour': ^1.0.3
     '@v-c/tree': ^1.0.2
     '@v-c/tree-select': ^1.0.0
-    '@v-c/trigger': ^1.0.9
+    '@v-c/trigger': ^1.0.10
     '@v-c/upload': ^1.0.0
     '@v-c/util': ^1.0.13
     '@v-c/virtual-list': ^1.0.5
-
-cleanupUnusedCatalogs: true
-
 onlyBuiltDependencies:
   - esbuild
   - less
-
-overrides:
-  '@v-c/portal': catalog:vc
-  '@v-c/resize-observer': catalog:vc
-  '@v-c/trigger': catalog:vc
-  '@v-c/util': catalog:vc
-  vite: catalog:dev
-
-shellEmulator: true
-
-trustPolicy: no-downgrade

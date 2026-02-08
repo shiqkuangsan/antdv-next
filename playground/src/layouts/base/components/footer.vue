@@ -2,11 +2,10 @@
 import { FastColor } from '@ant-design/fast-color'
 import { theme } from 'antdv-next'
 import getAlphaColor from 'antdv-next/theme/util/getAlphaColor'
-import { storeToRefs } from 'pinia'
 import { computed } from 'vue'
-import { useAppStore } from '@/stores/app'
+import { useLocale } from '@/composables/use-locale'
 
-const { locale } = storeToRefs(useAppStore())
+const { t } = useLocale()
 const { token } = theme.useToken()
 const background = computed(() => new FastColor(getAlphaColor('#f0f3fa', '#fff'))
   .onBackground(token.value.colorBgContainer)
@@ -28,11 +27,6 @@ const details = {
     { name: 'Vite', url: 'https://vitejs.dev/' },
   ],
 }
-const footerLocales = {
-  Github: { 'zh-CN': 'Github', 'en-US': 'Github' },
-  Community: { 'zh-CN': '社区', 'en-US': 'Community' },
-  Links: { 'zh-CN': '友链', 'en-US': 'Links' },
-}
 </script>
 
 <template>
@@ -41,7 +35,7 @@ const footerLocales = {
       <a-row>
         <a-col v-for="(item, key) of details" :key="key" :md="6" :sm="24" :xs="24">
           <div class="footer-center">
-            <h2>{{ footerLocales?.[key]?.[locale] }}</h2>
+            <h2>{{ t(`layout.footer.sections.${String(key).toLowerCase()}`) }}</h2>
             <template v-for="child in item" :key="child.name">
               <div>
                 <a :href="child.url" target="_blank">{{ child.name }}</a>
@@ -54,10 +48,10 @@ const footerLocales = {
     <div class="footer-bottom">
       <div class="footer-bottom-container">
         <div style="opacity: 0.4;">
-          Made with <span style="color: rgb(255, 255, 255);">❤</span> by
+          {{ t('layout.footer.madeWith') }} <span style="color: rgb(255, 255, 255);">❤</span> by
         </div>
         <div style="color: var(--ant-color-text-secondary);">
-          Antdv Next Team
+          {{ t('layout.footer.teamName') }}
         </div>
       </div>
     </div>

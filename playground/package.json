@@ -10,7 +10,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "gen:search": "tsx ./scripts/gen-search.ts"
   },
   "dependencies": {
     "@ant-design/colors": "catalog:prod",
@@ -22,6 +23,7 @@
     "@vueuse/core": "catalog:prod",
     "dayjs": "catalog:prod",
     "es-toolkit": "catalog:prod",
+    "flexsearch": "catalog:",
     "pinia": "catalog:prod",
     "tslib": "catalog:prod",
     "vanilla-tilt": "catalog:prod",

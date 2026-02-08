@@ -1,8 +1,6 @@
 <script setup lang="ts">
 import type { THEME } from './types'
-import { storeToRefs } from 'pinia'
-import { computed } from 'vue'
-import { useAppStore } from '@/stores/app.ts'
+import { useLocale } from '@/composables/use-locale'
 
 defineProps<{
   id?: string
@@ -21,27 +19,9 @@ const THEMES: Record<THEME, string> = {
   v4: 'https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*bOiWT4-34jkAAAAAAAAAAAAADrJ8AQ/original',
 }
 
-const locales = {
-  'zh-CN': {
-    default: '默认',
-    dark: '暗黑',
-    lark: '知识协作',
-    comic: '桃花缘',
-    v4: 'V4 主题',
-  },
-  'en-US': {
-    default: 'Default',
-    dark: 'Dark',
-    lark: 'Document',
-    comic: 'Blossom',
-    v4: 'V4 Theme',
-  },
-}
+const { t } = useLocale()
 
-const appStore = useAppStore()
-const { locale } = storeToRefs(appStore)
-
-const currentLocale = computed(() => locales[locale.value])
+const getThemeLabel = (themeKey: THEME) => t(`homePage.themePicker.${themeKey}`)
 
 function handleClick(themeKey: THEME) {
   emit('update:modelValue', themeKey)
@@ -70,7 +50,7 @@ function handleClick(themeKey: THEME) {
         >
         <img draggable="false" :src="url" :alt="themeKey">
       </label>
-      <span>{{ currentLocale[themeKey as THEME] }}</span>
+      <span>{{ getThemeLabel(themeKey as THEME) }}</span>
     </a-flex>
   </a-flex>
 </template>

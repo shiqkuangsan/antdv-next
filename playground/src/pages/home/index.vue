@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { storeToRefs } from 'pinia'
 import { defineAsyncComponent } from 'vue'
-import { useLocaleNamespace } from '@/composables/use-locale'
+import { useLocale } from '@/composables/use-locale'
 import { useAppStore } from '@/stores/app.ts'
 
 const ComponentsBlock = defineAsyncComponent(() => import('./components/preview-banner/components-block.vue'))
@@ -13,7 +13,7 @@ const DesignFramework = defineAsyncComponent(() => import('./components/design-f
 const appStore = useAppStore()
 const { darkMode } = storeToRefs(appStore)
 
-const currentLocale = useLocaleNamespace('home')
+const { t } = useLocale()
 </script>
 
 <template>
@@ -55,17 +55,17 @@ const currentLocale = useLocaleNamespace('home')
               Antdv Next
             </h1>
             <p class="antdv-home-preview-banner-slogan text-lg! font-normal! mb-0!">
-              {{ currentLocale.slogan }}
+              {{ t('home.slogan') }}
             </p>
           </a-typography>
 
           <!-- Buttons -->
           <a-flex gap="middle" class="antdv-home-preview-banner-buttons">
             <a-button type="primary" href="/components/overview" size="large">
-              {{ currentLocale.start }}
+              {{ t('home.start') }}
             </a-button>
             <a-button href="https://github.com/antdv-next/antdv-next" target="_blank" rel="noopener noreferrer" size="large">
-              {{ currentLocale.designLanguage }}
+              {{ t('home.designLanguage') }}
             </a-button>
           </a-flex>
 
@@ -91,8 +91,8 @@ const currentLocale = useLocaleNamespace('home')
         <Group
           id="design"
           collapse
-          :title="currentLocale.assetsTitle"
-          :description="currentLocale.assetsDesc"
+          :title="t('home.assetsTitle')"
+          :description="t('home.assetsDesc')"
         >
           <ComponentsList />
         </Group>
@@ -104,8 +104,8 @@ const currentLocale = useLocaleNamespace('home')
       <!-- 设计语言与研发框架 -->
       <Suspense>
         <Group
-          :title="currentLocale.designTitle"
-          :description="currentLocale.designDesc"
+          :title="t('home.designTitle')"
+          :description="t('home.designDesc')"
           :background="darkMode ? '#393F4A' : '#F5F8FF'"
         >
           <template #decoration>

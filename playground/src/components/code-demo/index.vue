@@ -9,7 +9,7 @@ import ExpandIcon from '@/components/code-demo/expand-icon.vue'
 import CodeIframe from '@/components/code-demo/iframe.vue'
 import { getId } from '@/components/code-demo/utils/getId'
 import ExternalLink from '@/components/icons/external-link.vue'
-import { useLocaleNamespace } from '@/composables/use-locale'
+import { useLocale } from '@/composables/use-locale'
 import { useAppStore } from '@/stores/app.ts'
 import antdvPkg from '../../../../packages/antdv-next/package.json'
 import { openStackBlitz } from './utils/stackblitz'
@@ -63,7 +63,7 @@ function handleStackBlitz() {
   }
 }
 
-const locales = useLocaleNamespace('codeDemo')
+const { t } = useLocale()
 
 const demoStyle = computed(() => {
   const styles: CSSProperties = {}
@@ -129,24 +129,24 @@ const cls = computed(() => {
         </div>
         <a-flex class="ant-doc-demo-box-actions " wrap gap="middle">
           <a class="ant-doc-demo-box-code-action" @click="handleStackBlitz">
-            <a-tooltip :title="locales.action.stackblitz">
+            <a-tooltip :title="t('ui.codeDemo.action.stackblitz')">
               <ThunderboltOutlined />
             </a-tooltip>
           </a>
           <a class="ant-doc-demo-box-code-action" :href="`/~demos/${id}`" target="_blank" rel="noopener norreferrer">
-            <a-tooltip :title="locales.action.externalLink">
+            <a-tooltip :title="t('ui.codeDemo.action.externalLink')">
               <ExternalLink />
             </a-tooltip>
           </a>
           <div class="ant-doc-demo-box-expand-icon ant-doc-demo-box-code-action" @click="handleShowCode">
-            <a-tooltip :title="locales.action[showCode ? 'expandedCode' : 'expandCode']">
+            <a-tooltip :title="t(`ui.codeDemo.action.${showCode ? 'expandedCode' : 'expandCode'}`)">
               <ExpandIcon :expanded="showCode" />
             </a-tooltip>
           </div>
         </a-flex>
       </section>
       <div v-if="showCode" class="ant-doc-demo-box-code">
-        <a-tooltip :title="locales.action[copied ? 'copied' : 'copy']">
+        <a-tooltip :title="t(`ui.codeDemo.action.${copied ? 'copied' : 'copy'}`)">
           <div class="ant-doc-demo-box-code-copy" :class="copied ? 'ant-doc-demo-box-code-copied' : ''" @click="copy()">
             <CopyOutlined v-if="!copied" />
             <CheckOutlined v-else />

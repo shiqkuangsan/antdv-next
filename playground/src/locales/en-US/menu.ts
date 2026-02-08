@@ -1,5 +1,14 @@
-// Docs menu locales
 const menuLocales = {
+  header: {
+    docs: {
+      vue: 'Development',
+    },
+    components: 'Components',
+    blog: 'Blog',
+    resources: 'Resources',
+    sponsor: 'Sponsor',
+  },
+
   docs: {
     vue: {
       introduce: 'Ant Design of Vue',
@@ -21,6 +30,7 @@ const menuLocales = {
       faq: 'FAQ',
     },
   },
+
   blog: {
     antdvNextRelease: 'Antdv Next 1.0 Released',
   },
@@ -34,4 +44,4 @@ type DeepStringLeaves<T>
       ? { [K in keyof T]: DeepStringLeaves<T[K]> }
       : never
 
-export type MenuDocs = DeepStringLeaves<typeof menuLocales>
+export type Menu = DeepStringLeaves<typeof menuLocales>

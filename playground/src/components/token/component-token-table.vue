@@ -7,7 +7,7 @@ import {
 } from '@antdv-next/icons'
 import { theme } from 'antdv-next'
 import { computed, ref } from 'vue'
-import { useSemanticLocale } from '@/composables/use-locale'
+import { useLocale } from '@/composables/use-locale'
 import tokenMetaRes from '../../assets/token-meta.json'
 import tokenDataRes from '../../assets/token.json'
 import ColorChunk from '../color-chunk/index.vue'
@@ -20,36 +20,7 @@ const props = defineProps<{
   component: string
 }>()
 
-const locales = {
-  cn: {
-    token: 'Token 名称',
-    description: '描述',
-    type: '类型',
-    value: '默认值',
-    componentToken: '组件 Token',
-    globalToken: '全局 Token',
-    componentComment: '这里是你的组件 token',
-    globalComment: '这里是你的全局 token',
-    help: '如何定制？',
-    customizeTokenLink: '/docs/vue/customize-theme-cn#修改主题变量',
-    customizeComponentTokenLink: '/docs/vue/customize-theme-cn#修改组件变量',
-  },
-  en: {
-    token: 'Token Name',
-    description: 'Description',
-    type: 'Type',
-    value: 'Default Value',
-    componentToken: 'Component Token',
-    globalToken: 'Global Token',
-    componentComment: 'here is your component tokens',
-    globalComment: 'here is your global tokens',
-    help: 'How to use?',
-    customizeTokenLink: '/docs/vue/customize-theme#customize-design-token',
-    customizeComponentTokenLink: 'docs/react/customize-theme#customize-component-token',
-  },
-}
-
-const locale = useSemanticLocale(locales)
+const { t, messages } = useLocale()
 
 const { token: tokenState } = theme.useToken()
 
@@ -144,22 +115,22 @@ function resolveValue(value: any): any {
 // Columns definition
 const columns = computed(() => [
   {
-    title: locale.value.token,
+    title: t('components.componentTokenTable.token'),
     dataIndex: 'name',
     key: 'name',
   },
   {
-    title: locale.value.description,
+    title: t('components.componentTokenTable.description'),
     dataIndex: 'desc',
     key: 'desc',
   },
   {
-    title: locale.value.type,
+    title: t('components.componentTokenTable.type'),
     dataIndex: 'type',
     key: 'type',
   },
   {
-    title: locale.value.value,
+    title: t('components.componentTokenTable.value'),
     dataIndex: 'value',
     key: 'value',
   },
@@ -213,9 +184,12 @@ function useSubTableData(
           ? data[component]?.component?.[name]
           : defToken[name]
 
+        const currentLocale = messages.value.components
+        const isChinese = 'componentTokenTable' in currentLocale && currentLocale.componentTokenTable.token === 'Token 名称'
+
         return {
           name,
-          desc: locale.value === locales.cn ? meta.desc : meta.descEn,
+          desc: isChinese ? meta.desc : meta.descEn,
           type: meta.type,
           value: component ? resolveValue(rawValue) : rawValue,
         }
@@ -244,7 +218,7 @@ const componentCode = computed(() => {
   :theme="{
     components: {
       ${props.component}: {
-        /* ${locale.value.componentComment} */
+        /* ${t('components.componentTokenTable.componentComment')} */
       },
     },
   }"
@@ -257,7 +231,7 @@ const globalCode = computed(() => {
   return `<a-config-provider
   :theme="{
     token: {
-      /* ${locale.value.globalComment} */
+      /* ${t('components.componentTokenTable.globalComment')} */
     },
   }"
 >
@@ -276,7 +250,7 @@ const globalCode = computed(() => {
           :rotate="componentOpen ? 90 : 0"
         />
         <a-flex class="text-16px font-bold" gap="small" justify="flex-start" align="center">
-          {{ locale.componentToken }}
+          {{ t('components.componentTokenTable.componentToken') }}
           <a-popover
             destroy-on-hidden
             :overlay-style="{ width: '400px' }"
@@ -284,15 +258,15 @@ const globalCode = computed(() => {
             <template #content>
               <a-typography>
                 <pre dir="ltr" style="font-size: 12px;"><code dir="ltr">{{ componentCode }}</code></pre>
-                <a class="text-[#999]" :href="locale.customizeTokenLink" target="_blank" rel="noreferrer">
+                <a class="text-[#999]" :href="t('components.componentTokenTable.customizeTokenLink')" target="_blank" rel="noreferrer">
                   <LinkOutlined style="margin-inline-end: 4px;" />
-                  {{ locale.help }}
+                  {{ t('components.componentTokenTable.help') }}
                 </a>
               </a-typography>
             </template>
             <span class="text-12px font-normal text-[#999]" @click.stop>
               <QuestionCircleOutlined style="margin-inline-end: 4px;" />
-              {{ locale.help }}
+              {{ t('components.componentTokenTable.help') }}
             </span>
           </a-popover>
         </a-flex>
@@ -346,7 +320,7 @@ const globalCode = computed(() => {
           :rotate="globalOpen ? 90 : 0"
         />
         <a-flex class="text-16px font-bold" gap="small" justify="flex-start" align="center">
-          {{ locale.globalToken }}
+          {{ t('components.componentTokenTable.globalToken') }}
           <a-popover
             destroy-on-hidden
             :overlay-style="{ width: '400px' }"
@@ -354,15 +328,15 @@ const globalCode = computed(() => {
             <template #content>
               <a-typography>
                 <pre dir="ltr" style="font-size: 12px;"><code dir="ltr">{{ globalCode }}</code></pre>
-                <a class="text-[#999]" :href="locale.customizeComponentTokenLink" target="_blank" rel="noreferrer">
+                <a class="text-[#999]" :href="t('components.componentTokenTable.customizeComponentTokenLink')" target="_blank" rel="noreferrer">
                   <LinkOutlined style="margin-inline-end: 4px;" />
-                  {{ locale.help }}
+                  {{ t('components.componentTokenTable.help') }}
                 </a>
               </a-typography>
             </template>
             <span class="text-12px font-normal text-[#999]" @click.stop>
               <QuestionCircleOutlined style="margin-inline-end: 4px;" />
-              {{ locale.help }}
+              {{ t('components.componentTokenTable.help') }}
             </span>
           </a-popover>
         </a-flex>

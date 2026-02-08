@@ -3,6 +3,7 @@ import { SearchOutlined } from '@antdv-next/icons'
 import { storeToRefs } from 'pinia'
 import { onMounted, ref, useTemplateRef } from 'vue'
 import { RouterLink } from 'vue-router'
+import { useLocale } from '@/composables/use-locale'
 import { useAppStore } from '@/stores/app'
 import { covers } from './covers'
 
@@ -13,6 +14,7 @@ const inputRef = useTemplateRef('searchInput')
 const searchBarAffixed = ref(false)
 
 const { siderMenus, siderLocales, locale, darkMode } = storeToRefs(useAppStore())
+const { t } = useLocale()
 
 interface ComponentItem {
   key: string
@@ -78,7 +80,7 @@ onMounted(() => {
     <a-divider />
     <a-affix :offset-top="80" @change="handleAffixChange">
       <div class="components-overview-affix" :class="{ 'components-overview-affixed': searchBarAffixed }">
-        <a-input ref="searchInput" v-model:value="search" auto-focus variant="borderless" placeholder="搜索组件" class="components-overview-search" :style="{ fontSize: searchBarAffixed ? '18px' : '' }" @change="handleSearchChange">
+        <a-input ref="searchInput" v-model:value="search" auto-focus variant="borderless" :placeholder="t('components.overview.searchPlaceholder')" class="components-overview-search" :style="{ fontSize: searchBarAffixed ? '18px' : '' }" @change="handleSearchChange">
           <template #suffix>
             <SearchOutlined />
           </template>

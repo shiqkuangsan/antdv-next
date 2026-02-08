@@ -1,9 +1,8 @@
 <script setup lang="ts">
 import type { CategoriesKeys } from './field'
 import { message } from 'antdv-next'
-import { storeToRefs } from 'pinia'
 import { computed, onBeforeUnmount, ref } from 'vue'
-import { useAppStore } from '@/stores/app'
+import { useLocale } from '@/composables/use-locale'
 import CopyableIcon from './CopyableIcon.vue'
 
 export type ThemeType = 'Filled' | 'Outlined' | 'TwoTone'
@@ -15,17 +14,17 @@ const props = defineProps<{
   newIcons: string[]
 }>()
 
-const { locale } = storeToRefs(useAppStore())
+const { t } = useLocale()
 const justCopied = ref<string | null>(null)
 const copyId = ref<ReturnType<typeof setTimeout> | null>(null)
 
 function onCopied(type: string, text: string) {
-  message.success(`${text} copied 🎉`)
+  message.success(`${text} ${t('ui.iconSearch.copiedMessage')}`)
   justCopied.value = type
   copyId.value = setTimeout(() => {
     justCopied.value = null
   }, 2000)
-};
+}
 
 onBeforeUnmount(() => {
   if (copyId.value) {
@@ -33,21 +32,12 @@ onBeforeUnmount(() => {
   }
 })
 
-const CategoriesLocales = {
-  direction: { 'zh-CN': '方向性图标', 'en-US': 'Directional Icons' },
-  suggestion: { 'zh-CN': '提示建议性图标', 'en-US': 'Suggested Icons' },
-  editor: { 'zh-CN': '编辑类图标', 'en-US': 'Editor Icons' },
-  data: { 'zh-CN': '数据类图标', 'en-US': 'Data Icons' },
-  logo: { 'zh-CN': '品牌和标识', 'en-US': 'Brand and Logos' },
-  other: { 'zh-CN': '网站通用图标', 'en-US': 'Application Icons' },
-}
-
-const t = computed(() => CategoriesLocales[props.title]?.[locale.value])
+const categoryTitle = computed(() => t(`iconSearch.categories.${props.title}`))
 </script>
 
 <template>
   <div>
-    <h3>{{ t }}</h3>
+    <h3>{{ categoryTitle }}</h3>
     <ul class="anticonsList">
       <CopyableIcon
         v-for="name in icons"

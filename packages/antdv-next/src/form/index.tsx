@@ -13,3 +13,4 @@ export default Form
 export {
   FormItem,
 }
+export type { FormItemEmits, FormItemProps, FormItemSlots } from './FormItem'

@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { storeToRefs } from 'pinia'
 import { computed } from 'vue'
+import { useLocale } from '@/composables/use-locale'
 import { useAppStore } from '@/stores/app.ts'
 
 const props = defineProps<{
@@ -9,24 +10,13 @@ const props = defineProps<{
   index: number
 }>()
 
-const locales = {
-  'zh-CN': {
-    new: '新增',
-    update: '更新',
-  },
-  'en-US': {
-    new: 'New',
-    update: 'Update',
-  },
-}
+const { t } = useLocale()
 
 const appStore = useAppStore()
-const { locale, darkMode } = storeToRefs(appStore)
-
-const currentLocale = computed(() => locales[locale.value])
+const { darkMode } = storeToRefs(appStore)
 
 const tagColor = computed(() => props.type === 'new' ? 'processing' : 'warning')
-const tagText = computed(() => props.type === 'new' ? currentLocale.value.new : currentLocale.value.update)
+const tagText = computed(() => props.type === 'new' ? t('homePage.componentItem.new') : t('homePage.componentItem.update'))
 
 const circleStyle = computed(() => ({
   insetInlineEnd: `${(props.index % 2) * -20 - 20}px`,

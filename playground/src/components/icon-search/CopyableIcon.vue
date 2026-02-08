@@ -2,6 +2,7 @@
 import * as AntdIcons from '@antdv-next/icons/all'
 import { message } from 'antdv-next'
 import { computed } from 'vue'
+import { useLocale } from '@/composables/use-locale'
 
 type ThemeType = 'Filled' | 'Outlined' | 'TwoTone'
 
@@ -16,17 +17,13 @@ const emit = defineEmits<{
   (e: 'copied', type: string, text: string): void
 }>()
 
+const { t } = useLocale()
+
 const iconName = computed(() => `${props.name}`)
 
-const iconComponent = computed(() => AntdIcons[iconName.value])
+const iconComponent = computed(() => AntdIcons[iconName.value as keyof typeof AntdIcons])
 
 const copyText = computed(() => `<${iconName.value} />`)
-
-const errorMessage = computed(() =>
-  navigator.language && navigator.language.toLowerCase().startsWith('zh')
-    ? '复制名称失败，请重试'
-    : 'Copy icon name failed, please try again.',
-)
 
 async function copyToClipboard(text: string) {
   try {
@@ -48,7 +45,7 @@ async function copyToClipboard(text: string) {
   catch {
     return false
   }
-};
+}
 
 async function handleClick() {
   const ok = await copyToClipboard(copyText.value)
@@ -56,9 +53,9 @@ async function handleClick() {
     emit('copied', props.name, copyText.value)
   }
   else {
-    message.error(errorMessage.value)
+    message.error(t('common.copyFailed'))
   }
-};
+}
 </script>
 
 <template>

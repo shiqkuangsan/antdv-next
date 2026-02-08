@@ -1,8 +1,7 @@
 <script setup lang="ts">
-import { storeToRefs } from 'pinia'
-import { computed, ref, watchEffect } from 'vue'
+import { ref, watchEffect } from 'vue'
 import { useRoute } from 'vue-router'
-import { useAppStore } from '@/stores/app'
+import { useLocale } from '@/composables/use-locale'
 
 interface Author {
   login?: string
@@ -42,10 +41,9 @@ const REPO_OWNER = 'antdv-next'
 const REPO_NAME = 'antdv-next'
 const REPO_PATH = `${REPO_OWNER}/${REPO_NAME}`
 
-const { locale } = storeToRefs(useAppStore())
+const { t } = useLocale()
 const route = useRoute()
 const contributors = ref<ResultData[]>([])
-const isZn = computed(() => locale.value === 'zh-CN')
 
 function filterData(data: CommitsData[]) {
   const contributorMap = new Map<string, ResultData>()
@@ -69,9 +67,7 @@ function filterData(data: CommitsData[]) {
   })
   contributors.value = Array.from(contributorMap.values())
     .sort((a, b) => (b.count || 0) - (a.count || 0))
-
-  console.log(contributors.value)
-};
+}
 async function getContributors() {
   const path = route.path
   const parts = path.split('/')
@@ -88,7 +84,7 @@ async function getContributors() {
       return null
     }
   }
-};
+}
 watchEffect(() => {
   getContributors()
 })
@@ -97,7 +93,7 @@ watchEffect(() => {
 <template>
   <div v-if="contributors.length > 0" class="contributors-container">
     <div class="title">
-      {{ isZn ? '文档贡献者' : 'contributors' }}
+      {{ t('layout.contributors.title') }}
     </div>
     <div class="contributors-list">
       <ul class="contributors" style="margin-left: 0; padding-left: 0;">

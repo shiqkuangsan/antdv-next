@@ -1,15 +1,19 @@
-import codeDemo from './code-demo'
+import common from './common'
+import components from './components'
 import home from './home'
+import homePage from './home-page'
+import layout from './layout'
+import menu from './menu'
 import menuComponents from './menu-components'
-import menuDocs from './menu-docs'
-import menuHeader from './menu-header'
-import themeBtn from './theme-btn'
+import ui from './ui'
 
 export default {
-  codeDemo,
+  common,
+  components,
   home,
+  homePage,
+  layout,
   menuComponents,
-  menuDocs,
-  menuHeader,
-  themeBtn,
+  menu,
+  ui,
 } as const

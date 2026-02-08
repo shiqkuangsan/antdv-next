@@ -43,7 +43,7 @@ function onLoad() {
 onMounted(() => {
   observer = new IntersectionObserver(
     (entries) => {
-      if (entries[0].isIntersecting && !isQueued.value) {
+      if (entries[0]?.isIntersecting && !isQueued.value) {
         isQueued.value = true
         observer?.disconnect()
         observer = null

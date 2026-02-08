@@ -8,6 +8,7 @@ import { Card, DatePicker, FloatButton, Masonry, Splitter, SplitterPanel, Tour }
 import dayjs from 'dayjs'
 import { storeToRefs } from 'pinia'
 import { computed, h } from 'vue'
+import { useLocale } from '@/composables/use-locale'
 import { useAppStore } from '@/stores/app.ts'
 import ComponentItem from './component-item.vue'
 
@@ -15,45 +16,16 @@ const { _InternalPanelDoNotUseOrYouWillBeFired: DatePickerPanel } = DatePicker a
 const { _InternalPanelDoNotUseOrYouWillBeFired: TourPanel } = Tour as any
 const { _InternalPanelDoNotUseOrYouWillBeFired: FloatButtonPanel } = FloatButton as any
 
-const locales = {
-  'zh-CN': {
-    yesterday: '昨天',
-    lastWeek: '上周',
-    lastMonth: '上月',
-    lastYear: '去年',
-    new: '新增',
-    update: '更新',
-    sampleContent: 'Antdv Next 使用 CSS-in-JS 技术以提供动态与混合主题的能力。与此同时，我们使用组件级别的 CSS-in-JS 解决方案，让你的应用获得更好的性能。',
-    inProgress: '进行中',
-    success: '成功',
-    taskFailed: '任务失败',
-    tour: '漫游导览帮助用户对新加的功能进行快速了解',
-  },
-  'en-US': {
-    yesterday: 'Yesterday',
-    lastWeek: 'Last Week',
-    lastMonth: 'Last Month',
-    lastYear: 'Last Year',
-    new: 'New',
-    update: 'Update',
-    sampleContent: 'Antdv Next use CSS-in-JS technology to provide dynamic & mix theme ability. And which use component level CSS-in-JS solution get your application a better performance.',
-    inProgress: 'In Progress',
-    success: 'Success',
-    taskFailed: 'Task Failed',
-    tour: 'A quick guide for new come user about how to use app.',
-  },
-}
+const { t } = useLocale()
 
 const appStore = useAppStore()
-const { locale, darkMode } = storeToRefs(appStore)
-
-const currentLocale = computed(() => locales[locale.value])
+const { darkMode } = storeToRefs(appStore)
 
 const datePickerPresets = computed(() => [
-  { label: currentLocale.value.yesterday, value: dayjs().add(-1, 'd') },
-  { label: currentLocale.value.lastWeek, value: dayjs().add(-7, 'd') },
-  { label: currentLocale.value.lastMonth, value: dayjs().add(-1, 'month') },
-  { label: currentLocale.value.lastYear, value: dayjs().add(-1, 'year') },
+  { label: t('homePage.componentsList.yesterday'), value: dayjs().add(-1, 'd') },
+  { label: t('homePage.componentsList.lastWeek'), value: dayjs().add(-7, 'd') },
+  { label: t('homePage.componentsList.lastMonth'), value: dayjs().add(-1, 'month') },
+  { label: t('homePage.componentsList.lastYear'), value: dayjs().add(-1, 'year') },
 ])
 
 const floatButtonItems = computed(() => [
@@ -93,7 +65,7 @@ const splitterBackground = computed(() => darkMode.value ? '#1f1f1f' : '#ffffff'
       <ComponentItem title="Tour" type="new" :index="1">
         <TourPanel
           title="Antdv Next"
-          :description="currentLocale.tour"
+          :description="t('homePage.componentsList.tour')"
           :style="{ width: '350px' }"
           :current="3"
           :total="9"

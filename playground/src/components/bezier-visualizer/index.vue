@@ -2,7 +2,7 @@
 import { LinkOutlined } from '@antdv-next/icons'
 import { theme } from 'antdv-next'
 import { computed } from 'vue'
-import { useSemanticLocale } from '@/composables/use-locale'
+import { useLocale } from '@/composables/use-locale'
 
 defineOptions({
   name: 'BezierVisualizer',
@@ -17,16 +17,7 @@ const props = withDefaults(defineProps<{
   height: 180,
 })
 
-const locales = {
-  cn: {
-    open: '在 cubic-bezier.com 中打开',
-  },
-  en: {
-    open: 'Open in cubic-bezier.com',
-  },
-}
-
-const locale = useSemanticLocale(locales)
+const { t } = useLocale()
 
 const { token } = theme.useToken()
 
@@ -136,7 +127,7 @@ const patternId = computed(() => `bezier-pattern-${Math.random().toString(36).sl
 
     <a-flex align="center">
       <a-typography-text>{{ value }}</a-typography-text>
-      <a-tooltip :title="locale.open">
+      <a-tooltip :title="t('components.bezierVisualizer.open')">
         <a-button
           type="link"
           :href="cubicBezierUrl"

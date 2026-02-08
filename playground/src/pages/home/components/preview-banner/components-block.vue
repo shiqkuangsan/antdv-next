@@ -1,106 +1,56 @@
 <script setup lang="ts">
 import { AntDesignOutlined, CheckOutlined, CloseOutlined, DownOutlined } from '@antdv-next/icons'
 import { message, Modal, theme, Tooltip } from 'antdv-next'
-import { storeToRefs } from 'pinia'
 import { computed } from 'vue'
-import { useAppStore } from '@/stores/app.ts'
+import { useLocale } from '@/composables/use-locale'
 import Tilt from './tilt.vue'
 
 const { _InternalPanelDoNotUseOrYouWillBeFired: ModalPanel } = Modal as any
 const { _InternalPanelDoNotUseOrYouWillBeFired: InternalTooltip } = Tooltip
 const { _InternalPanelDoNotUseOrYouWillBeFired: InternalMessage } = message
 
-const appStore = useAppStore()
-
-const { locale } = storeToRefs(appStore)
-
 const { token } = theme.useToken()
 
-const locales = computed(() => {
-  return {
-    'zh-CN': {
-      range: '设置范围',
-      text: 'Antdv Next 使用 CSS-in-JS 技术以提供动态与混合主题的能力。与此同时,我们使用组件级别的 CSS-in-JS 解决方案,让你的应用获得更好的性能。',
-      infoText: '信息内容展示',
-      dropdown: '下拉菜单',
-      finished: '已完成',
-      inProgress: '进行中',
-      waiting: '等待中',
-      option: '选项',
-      apple: '苹果',
-      banana: '香蕉',
-      orange: '橘子',
-      watermelon: '西瓜',
-      primary: '主要按钮',
-      danger: '危险按钮',
-      default: '默认按钮',
-      dashed: '虚线按钮',
-      icon: '图标按钮',
-      hello: '你好,Antdv Next!',
-      release: 'Antdv Next 1.0 正式发布!',
-    },
-    'en-US': {
-      range: 'Set Range',
-      text: 'Antdv Next use CSS-in-JS technology to provide dynamic & mix theme ability. And which use component level CSS-in-JS solution get your application a better performance.',
-      infoText: 'Info Text',
-      dropdown: 'Dropdown',
-      finished: 'Finished',
-      inProgress: 'In Progress',
-      waiting: 'Waiting',
-      option: 'Option',
-      apple: 'Apple',
-      banana: 'Banana',
-      orange: 'Orange',
-      watermelon: 'Watermelon',
-      primary: 'Primary',
-      danger: 'Danger',
-      default: 'Default',
-      dashed: 'Dashed',
-      icon: 'Icon',
-      hello: 'Hello, Antdv Next!',
-      release: 'Antdv Next 1.0 is released!',
-    },
-  }[locale.value]
-})
+const { t } = useLocale()
 
 const dropdownItems = computed(() =>
   Array.from({ length: 5 }).map((_, index) => ({
     key: `opt${index}`,
-    label: `${locales.value.option} ${index}`,
+    label: `${t('homePage.componentsBlock.option')} ${index}`,
   })))
 
 const selectOptions = computed(() => [
-  { value: 'apple', label: locales.value.apple },
-  { value: 'banana', label: locales.value.banana },
-  { value: 'orange', label: locales.value.orange },
-  { value: 'watermelon', label: locales.value.watermelon },
+  { value: 'apple', label: t('homePage.componentsBlock.apple') },
+  { value: 'banana', label: t('homePage.componentsBlock.banana') },
+  { value: 'orange', label: t('homePage.componentsBlock.orange') },
+  { value: 'watermelon', label: t('homePage.componentsBlock.watermelon') },
 ])
 
 const stepsItems = computed(() => [
-  { title: locales.value.finished },
-  { title: locales.value.inProgress },
-  { title: locales.value.waiting },
+  { title: t('homePage.componentsBlock.finished') },
+  { title: t('homePage.componentsBlock.inProgress') },
+  { title: t('homePage.componentsBlock.waiting') },
 ])
 
 const checkboxOptions = computed(() => [
-  locales.value.apple,
-  locales.value.banana,
-  locales.value.orange,
+  t('homePage.componentsBlock.apple'),
+  t('homePage.componentsBlock.banana'),
+  t('homePage.componentsBlock.orange'),
 ])
 </script>
 
 <template>
   <Tilt :options="{ max: 4, glare: false, scale: 0.98 }" class="holder">
     <ModalPanel title="Antdv Next" width="100%">
-      {{ locales.text }}
+      {{ t('homePage.componentsBlock.text') }}
     </ModalPanel>
-    <a-alert :title="locales.infoText" type="info" />
+    <a-alert :title="t('homePage.componentsBlock.infoText')" type="info" />
     <!-- Line -->
     <div class="flex">
       <a-color-picker style="flex: none;" />
       <div style="flex: none;">
         <a-space-compact>
-          <a-button>{{ locales.dropdown }}</a-button>
+          <a-button>{{ t('homePage.componentsBlock.dropdown') }}</a-button>
           <a-dropdown :menu="{ items: dropdownItems }">
             <a-button>
               <template #icon>
@@ -143,22 +93,22 @@ const checkboxOptions = computed(() => [
     <!-- Line -->
     <div class="flex">
       <a-button class="ptg_20" type="primary">
-        {{ locales.primary }}
+        {{ t('homePage.componentsBlock.primary') }}
       </a-button>
       <a-button class="ptg_20" type="primary" danger>
-        {{ locales.danger }}
+        {{ t('homePage.componentsBlock.danger') }}
       </a-button>
       <a-button class="ptg_20">
-        {{ locales.default }}
+        {{ t('homePage.componentsBlock.default') }}
       </a-button>
       <a-button class="ptg_20" type="dashed">
-        {{ locales.dashed }}
+        {{ t('homePage.componentsBlock.dashed') }}
       </a-button>
       <a-button class="ptg_20">
         <template #icon>
           <AntDesignOutlined />
         </template>
-        {{ locales.icon }}
+        {{ t('homePage.componentsBlock.icon') }}
       </a-button>
     </div>
     <!-- Line -->
@@ -178,14 +128,14 @@ const checkboxOptions = computed(() => [
         <a-checkbox-group
           class="ptg_none"
           :options="checkboxOptions"
-          :default-value="[locales.apple]"
+          :default-value="[t('homePage.componentsBlock.apple')]"
         />
       </div>
     </div>
     <div>
-      <InternalMessage :content="locales.release" type="success" />
+      <InternalMessage :content="t('homePage.componentsBlock.release')" type="success" />
     </div>
-    <InternalTooltip :title="locales.hello" placement="topLeft" class="noMargin" />
+    <InternalTooltip :title="t('homePage.componentsBlock.hello')" placement="topLeft" class="noMargin" />
     <a-alert title="Antdv Next love you!" type="success" />
   </Tilt>
 </template>

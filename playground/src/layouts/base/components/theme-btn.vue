@@ -6,7 +6,7 @@ import { computed, h } from 'vue'
 import ThemeIcon from '@/components/icons/theme.vue'
 import { themeModeStore } from '@/composables/local-store'
 import { useTheme } from '@/composables/theme'
-import { useThemeBtnLocale } from '@/composables/use-theme-btn-locale'
+import { useLocale } from '@/composables/use-locale'
 import { useAppStore } from '@/stores/app'
 
 defineOptions({
@@ -19,7 +19,7 @@ const appStore = useAppStore()
 const { compactMode, happyMode } = storeToRefs(appStore)
 
 const themeMode = themeModeStore
-const t = useThemeBtnLocale()
+const { t } = useLocale()
 
 const BlueDot = h('span', {
   style: {
@@ -34,19 +34,19 @@ const BlueDot = h('span', {
 const themeMenuItems = computed<MenuProps['items']>(() => [
   {
     key: 'system',
-    label: t.value.system,
+    label: t('ui.themeBtn.system'),
     icon: h(SyncOutlined),
     extra: themeMode.value === 'system' ? BlueDot : undefined,
   },
   {
     key: 'light',
-    label: t.value.light,
+    label: t('ui.themeBtn.light'),
     icon: h(SunOutlined),
     extra: themeMode.value === 'light' ? BlueDot : undefined,
   },
   {
     key: 'dark',
-    label: t.value.dark,
+    label: t('ui.themeBtn.dark'),
     icon: h(MoonOutlined),
     extra: themeMode.value === 'dark' ? BlueDot : undefined,
   },
@@ -55,7 +55,7 @@ const themeMenuItems = computed<MenuProps['items']>(() => [
   },
   {
     key: 'compact',
-    label: t.value.compact,
+    label: t('ui.themeBtn.compact'),
     icon: h(CompressOutlined),
     extra: compactMode.value ? BlueDot : undefined,
   },
@@ -64,7 +64,7 @@ const themeMenuItems = computed<MenuProps['items']>(() => [
   },
   {
     key: 'happy',
-    label: t.value.happy,
+    label: t('ui.themeBtn.happy'),
     icon: h(SmileOutlined),
     extra: happyMode.value ? BlueDot : undefined,
   },
@@ -73,13 +73,13 @@ const themeMenuItems = computed<MenuProps['items']>(() => [
   },
   {
     key: 'ai-theme',
-    label: t.value.aiTheme,
+    label: t('ui.themeBtn.aiTheme'),
     icon: h(ShopOutlined),
     disabled: true,
   },
   {
     key: 'theme-editor',
-    label: t.value.themeEditor,
+    label: t('ui.themeBtn.themeEditor'),
     icon: h(BgColorsOutlined),
     extra: h(LinkOutlined),
     disabled: true,

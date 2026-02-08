@@ -23,7 +23,7 @@ export const headerItems: MenuItemType[] = [
 ]
 
 // Helper to flatten nested header locales
-function flattenHeaderLocales(nestedLocales: typeof locales['zh-CN']['menuHeader']) {
+function flattenHeaderLocales(nestedLocales: typeof locales['zh-CN']['menu']['header']) {
   return {
     '/docs/vue': nestedLocales.docs.vue,
     '/components': nestedLocales.components,
@@ -35,8 +35,8 @@ function flattenHeaderLocales(nestedLocales: typeof locales['zh-CN']['menuHeader
 
 // Export locale map by converting centralized locales to the expected format
 export const headerLocales: Record<string, Record<InnerLocale, string>> = (() => {
-  const zhFlat = flattenHeaderLocales(locales['zh-CN'].menuHeader)
-  const enFlat = flattenHeaderLocales(locales['en-US'].menuHeader as any)
+  const zhFlat = flattenHeaderLocales(locales['zh-CN'].menu.header)
+  const enFlat = flattenHeaderLocales(locales['en-US'].menu.header as any)
 
   const result: Record<string, Record<InnerLocale, string>> = {}
 

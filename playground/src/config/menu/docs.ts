@@ -1,11 +1,11 @@
 import type { AntdvMenuItem } from './interface'
-import type { MenuDocs } from '@/locales/en-US/menu-docs'
+import type { Menu } from '@/locales/zh-CN/menu'
 import type { InnerLocale } from '@/utils/locale'
 import locales from '@/locales'
 import { components } from './components'
 
 // Helper to flatten nested docs locales
-function flattenDocsLocales(nestedLocales: MenuDocs) {
+function flattenDocsLocales(nestedLocales: Menu) {
   const vue = nestedLocales.docs.vue
   const blog = nestedLocales.blog
   return {
@@ -32,8 +32,8 @@ function flattenDocsLocales(nestedLocales: MenuDocs) {
 
 // Export locale map by converting centralized locales to the expected format
 export const docsMenuLocales: Record<string, Record<InnerLocale, string>> = (() => {
-  const zhFlat = flattenDocsLocales(locales['zh-CN'].menuDocs)
-  const enFlat = flattenDocsLocales(locales['en-US'].menuDocs)
+  const zhFlat = flattenDocsLocales(locales['zh-CN'].menu)
+  const enFlat = flattenDocsLocales(locales['en-US'].menu)
 
   const result: Record<string, Record<InnerLocale, string>> = {}
 
