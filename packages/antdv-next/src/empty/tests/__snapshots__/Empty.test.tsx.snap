@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`empty > RTL direction > should render correct snapshot in RTL 1`] = `
+exports[`empty > rTL direction > should render correct snapshot in RTL 1`] = `
 <div
   class="css-var-root ant-empty ant-empty-rtl"
 >
