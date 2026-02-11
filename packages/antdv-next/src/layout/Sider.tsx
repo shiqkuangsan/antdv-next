@@ -117,7 +117,7 @@ const Sider = defineComponent<
   const responsiveHandler: (mql: MediaQueryListEvent | MediaQueryList) => void = (mql) => {
     below.value = mql.matches
     emit('breakpoint', mql.matches)
-    if (!collapsed.value !== mql.matches) {
+    if (collapsed.value !== mql.matches) {
       handleSetCollapsed(mql.matches, 'responsive')
     }
   }
