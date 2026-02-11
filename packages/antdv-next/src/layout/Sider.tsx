@@ -218,7 +218,7 @@ const Sider = defineComponent<
       {
         [`${prefixCls.value}-collapsed`]: collapsed.value,
         [`${prefixCls.value}-has-trigger`]: collapsible && trigger !== null && !zeroWidthTrigger,
-        [`${prefixCls.value}-below`]: !!below,
+        [`${prefixCls.value}-below`]: !!below.value,
         [`${prefixCls.value}-zero-width`]: Number.parseFloat(siderWidth.value) === 0,
       },
       (attrs as any).class,
