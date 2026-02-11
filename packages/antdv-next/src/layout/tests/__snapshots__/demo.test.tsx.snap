@@ -43,7 +43,7 @@ exports[`layout demo > renders basic correctly 1`] = `
       data-v-579aa1c1=""
     >
       <aside
-        class="ant-layout-sider ant-layout-sider-dark ant-layout-sider-below demo-sider css-var-root"
+        class="ant-layout-sider ant-layout-sider-dark demo-sider css-var-root"
         data-v-579aa1c1=""
         style="flex: 0 0 25%; max-width: 25%; min-width: 25%; width: 25%;"
       >
@@ -89,7 +89,7 @@ exports[`layout demo > renders basic correctly 1`] = `
          Content 
       </main>
       <aside
-        class="ant-layout-sider ant-layout-sider-dark ant-layout-sider-below demo-sider css-var-root"
+        class="ant-layout-sider ant-layout-sider-dark demo-sider css-var-root"
         data-v-579aa1c1=""
         style="flex: 0 0 25%; max-width: 25%; min-width: 25%; width: 25%;"
       >
@@ -113,7 +113,7 @@ exports[`layout demo > renders basic correctly 1`] = `
     data-v-579aa1c1=""
   >
     <aside
-      class="ant-layout-sider ant-layout-sider-dark ant-layout-sider-below demo-sider css-var-root"
+      class="ant-layout-sider ant-layout-sider-dark demo-sider css-var-root"
       data-v-579aa1c1=""
       style="flex: 0 0 25%; max-width: 25%; min-width: 25%; width: 25%;"
     >
@@ -157,7 +157,7 @@ exports[`layout demo > renders custom-trigger correctly 1`] = `
   data-v-05304da6=""
 >
   <aside
-    class="ant-layout-sider ant-layout-sider-dark ant-layout-sider-below css-var-root"
+    class="ant-layout-sider ant-layout-sider-dark css-var-root"
     data-v-05304da6=""
     style="flex: 0 0 200px; max-width: 200px; min-width: 200px; width: 200px;"
   >
@@ -528,7 +528,7 @@ exports[`layout demo > renders fixed-sider correctly 1`] = `
   data-v-20492677=""
 >
   <aside
-    class="ant-layout-sider ant-layout-sider-dark ant-layout-sider-below css-var-root"
+    class="ant-layout-sider ant-layout-sider-dark css-var-root"
     data-v-20492677=""
     style="overflow: auto; height: 100vh; position: sticky; inset-inline-start: 0; top: 0px; scrollbar-width: thin; scrollbar-gutter: stable; flex: 0 0 200px; max-width: 200px; min-width: 200px; width: 200px;"
   >
@@ -1287,9 +1287,9 @@ exports[`layout demo > renders responsive correctly 1`] = `
   data-v-b36dc6c3=""
 >
   <aside
-    class="ant-layout-sider ant-layout-sider-dark ant-layout-sider-below css-var-root"
+    class="ant-layout-sider ant-layout-sider-dark ant-layout-sider-collapsed ant-layout-sider-below ant-layout-sider-zero-width css-var-root"
     data-v-b36dc6c3=""
-    style="flex: 0 0 200px; max-width: 200px; min-width: 200px; width: 200px;"
+    style="flex: 0 0 0px; max-width: 0px; min-width: 0px; width: 0px;"
   >
     <div
       class="ant-layout-sider-children"
@@ -1299,7 +1299,7 @@ exports[`layout demo > renders responsive correctly 1`] = `
         data-v-b36dc6c3=""
       />
       <ul
-        class="ant-menu ant-menu-root ant-menu-inline ant-menu-dark css-var-root ant-menu-css-var"
+        class="ant-menu ant-menu-root ant-menu-vertical ant-menu-dark ant-menu-inline-collapsed css-var-root ant-menu-css-var"
         data-menu-list="true"
         role="menu"
         tabindex="0"
@@ -1310,7 +1310,6 @@ exports[`layout demo > renders responsive correctly 1`] = `
           data-menu-id="vc-menu-uuid-1"
           label="nav 1"
           role="menuitem"
-          style="padding-left: 24px;"
           tabindex="-1"
         >
           <span
@@ -1345,7 +1344,6 @@ exports[`layout demo > renders responsive correctly 1`] = `
           data-menu-id="vc-menu-uuid-2"
           label="nav 2"
           role="menuitem"
-          style="padding-left: 24px;"
           tabindex="-1"
         >
           <span
@@ -1380,7 +1378,6 @@ exports[`layout demo > renders responsive correctly 1`] = `
           data-menu-id="vc-menu-uuid-3"
           label="nav 3"
           role="menuitem"
-          style="padding-left: 24px;"
           tabindex="-1"
         >
           <span
@@ -1415,7 +1412,6 @@ exports[`layout demo > renders responsive correctly 1`] = `
           data-menu-id="vc-menu-uuid-4"
           label="nav 4"
           role="menuitem"
-          style="padding-left: 24px;"
           tabindex="-1"
         >
           <span
@@ -1521,7 +1517,7 @@ exports[`layout demo > renders side correctly 1`] = `
   data-v-a42faed5=""
 >
   <aside
-    class="ant-layout-sider ant-layout-sider-dark ant-layout-sider-has-trigger ant-layout-sider-below css-var-root"
+    class="ant-layout-sider ant-layout-sider-dark ant-layout-sider-has-trigger css-var-root"
     data-v-a42faed5=""
     style="flex: 0 0 200px; max-width: 200px; min-width: 200px; width: 200px;"
   >
@@ -2411,7 +2407,7 @@ exports[`layout demo > renders top-side correctly 1`] = `
       style="background: rgb(255, 255, 255); border-radius: 8px;"
     >
       <aside
-        class="ant-layout-sider ant-layout-sider-dark ant-layout-sider-below css-var-root"
+        class="ant-layout-sider ant-layout-sider-dark css-var-root"
         data-v-680aeaac=""
         style="background: rgb(255, 255, 255); flex: 0 0 200px; max-width: 200px; min-width: 200px; width: 200px;"
       >
@@ -2833,7 +2829,7 @@ exports[`layout demo > renders top-side-2 correctly 1`] = `
     data-v-191fd412=""
   >
     <aside
-      class="ant-layout-sider ant-layout-sider-dark ant-layout-sider-below css-var-root"
+      class="ant-layout-sider ant-layout-sider-dark css-var-root"
       data-v-191fd412=""
       style="background: rgb(255, 255, 255); flex: 0 0 200px; max-width: 200px; min-width: 200px; width: 200px;"
     >
