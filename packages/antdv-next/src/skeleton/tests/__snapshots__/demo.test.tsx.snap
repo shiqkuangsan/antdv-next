@@ -1361,9 +1361,6 @@ exports[`skeleton demo > renders element correctly 1`] = `
                           class="ant-radio-button-input"
                           type="radio"
                         />
-                        <span
-                          class="ant-radio-button-inner"
-                        />
                       </span>
                       <span
                         class="ant-radio-button-label"
@@ -1382,9 +1379,6 @@ exports[`skeleton demo > renders element correctly 1`] = `
                           class="ant-radio-button-input"
                           type="radio"
                         />
-                        <span
-                          class="ant-radio-button-inner"
-                        />
                       </span>
                       <span
                         class="ant-radio-button-label"
@@ -1402,9 +1396,6 @@ exports[`skeleton demo > renders element correctly 1`] = `
                         <input
                           class="ant-radio-button-input"
                           type="radio"
-                        />
-                        <span
-                          class="ant-radio-button-inner"
                         />
                       </span>
                       <span
@@ -1485,9 +1476,6 @@ exports[`skeleton demo > renders element correctly 1`] = `
                           class="ant-radio-button-input"
                           type="radio"
                         />
-                        <span
-                          class="ant-radio-button-inner"
-                        />
                       </span>
                       <span
                         class="ant-radio-button-label"
@@ -1505,9 +1493,6 @@ exports[`skeleton demo > renders element correctly 1`] = `
                         <input
                           class="ant-radio-button-input"
                           type="radio"
-                        />
-                        <span
-                          class="ant-radio-button-inner"
                         />
                       </span>
                       <span
@@ -1527,9 +1512,6 @@ exports[`skeleton demo > renders element correctly 1`] = `
                           class="ant-radio-button-input"
                           type="radio"
                         />
-                        <span
-                          class="ant-radio-button-inner"
-                        />
                       </span>
                       <span
                         class="ant-radio-button-label"
@@ -1547,9 +1529,6 @@ exports[`skeleton demo > renders element correctly 1`] = `
                         <input
                           class="ant-radio-button-input"
                           type="radio"
-                        />
-                        <span
-                          class="ant-radio-button-inner"
                         />
                       </span>
                       <span
@@ -1629,9 +1608,6 @@ exports[`skeleton demo > renders element correctly 1`] = `
                           class="ant-radio-button-input"
                           type="radio"
                         />
-                        <span
-                          class="ant-radio-button-inner"
-                        />
                       </span>
                       <span
                         class="ant-radio-button-label"
@@ -1650,9 +1626,6 @@ exports[`skeleton demo > renders element correctly 1`] = `
                           checked=""
                           class="ant-radio-button-input"
                           type="radio"
-                        />
-                        <span
-                          class="ant-radio-button-inner"
                         />
                       </span>
                       <span
