@@ -6683,7 +6683,7 @@ exports[`input demo > renders with-model correctly 1`] = `
           class="ant-typography css-var-root"
         >
           <strong>
-            Input
+             Input 
             <!---->
             <!---->
             <!---->
@@ -6703,7 +6703,7 @@ exports[`input demo > renders with-model correctly 1`] = `
         <span
           class="ant-typography ant-typography-secondary css-var-root"
         >
-          value: ""
+           value: ""
           <!---->
           <!---->
           <!---->
@@ -6724,7 +6724,7 @@ exports[`input demo > renders with-model correctly 1`] = `
           class="ant-typography css-var-root"
         >
           <strong>
-            Password
+             Password 
             <!---->
             <!---->
             <!---->
@@ -6779,7 +6779,7 @@ exports[`input demo > renders with-model correctly 1`] = `
         <span
           class="ant-typography ant-typography-secondary css-var-root"
         >
-          value: ""
+           value: ""
           <!---->
           <!---->
           <!---->
@@ -6800,7 +6800,7 @@ exports[`input demo > renders with-model correctly 1`] = `
           class="ant-typography css-var-root"
         >
           <strong>
-            TextArea
+             TextArea 
             <!---->
             <!---->
             <!---->
@@ -6820,7 +6820,7 @@ exports[`input demo > renders with-model correctly 1`] = `
         <span
           class="ant-typography ant-typography-secondary css-var-root"
         >
-          value: ""
+           value: ""
           <!---->
           <!---->
           <!---->
@@ -6841,7 +6841,7 @@ exports[`input demo > renders with-model correctly 1`] = `
           class="ant-typography css-var-root"
         >
           <strong>
-            Search
+             Search 
             <!---->
             <!---->
             <!---->
@@ -6895,7 +6895,7 @@ exports[`input demo > renders with-model correctly 1`] = `
         <span
           class="ant-typography ant-typography-secondary css-var-root"
         >
-          value: ""
+           value: ""
           <!---->
           <!---->
           <!---->
@@ -6916,7 +6916,7 @@ exports[`input demo > renders with-model correctly 1`] = `
           class="ant-typography css-var-root"
         >
           <strong>
-            OTP
+             OTP 
             <!---->
             <!---->
             <!---->
@@ -7024,7 +7024,7 @@ exports[`input demo > renders with-model correctly 1`] = `
         <span
           class="ant-typography ant-typography-secondary css-var-root"
         >
-          value: ""
+           value: ""
           <!---->
           <!---->
           <!---->
@@ -7069,7 +7069,7 @@ exports[`input demo > renders with-model correctly 1`] = `
           class="ant-typography css-var-root"
         >
           <strong>
-            Input
+             Input 
             <!---->
             <!---->
             <!---->
@@ -7089,7 +7089,7 @@ exports[`input demo > renders with-model correctly 1`] = `
         <span
           class="ant-typography ant-typography-secondary css-var-root"
         >
-          value: ""
+           value: ""
           <!---->
           <!---->
           <!---->
@@ -7110,7 +7110,7 @@ exports[`input demo > renders with-model correctly 1`] = `
           class="ant-typography css-var-root"
         >
           <strong>
-            Password
+             Password 
             <!---->
             <!---->
             <!---->
@@ -7165,7 +7165,7 @@ exports[`input demo > renders with-model correctly 1`] = `
         <span
           class="ant-typography ant-typography-secondary css-var-root"
         >
-          value: ""
+           value: ""
           <!---->
           <!---->
           <!---->
@@ -7186,7 +7186,7 @@ exports[`input demo > renders with-model correctly 1`] = `
           class="ant-typography css-var-root"
         >
           <strong>
-            TextArea
+             TextArea 
             <!---->
             <!---->
             <!---->
@@ -7206,7 +7206,7 @@ exports[`input demo > renders with-model correctly 1`] = `
         <span
           class="ant-typography ant-typography-secondary css-var-root"
         >
-          value: ""
+           value: ""
           <!---->
           <!---->
           <!---->
@@ -7227,7 +7227,7 @@ exports[`input demo > renders with-model correctly 1`] = `
           class="ant-typography css-var-root"
         >
           <strong>
-            Search
+             Search 
             <!---->
             <!---->
             <!---->
@@ -7281,7 +7281,7 @@ exports[`input demo > renders with-model correctly 1`] = `
         <span
           class="ant-typography ant-typography-secondary css-var-root"
         >
-          value: ""
+           value: ""
           <!---->
           <!---->
           <!---->
@@ -7302,7 +7302,7 @@ exports[`input demo > renders with-model correctly 1`] = `
           class="ant-typography css-var-root"
         >
           <strong>
-            OTP
+             OTP 
             <!---->
             <!---->
             <!---->
@@ -7410,7 +7410,7 @@ exports[`input demo > renders with-model correctly 1`] = `
         <span
           class="ant-typography ant-typography-secondary css-var-root"
         >
-          value: ""
+           value: ""
           <!---->
           <!---->
           <!---->
