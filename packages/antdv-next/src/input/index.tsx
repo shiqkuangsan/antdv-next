@@ -1,10 +1,11 @@
 import type { App } from 'vue'
+import { withModel } from '../_util/withModel'
 import Group from './Group'
-import Input from './Input'
-import OTP from './OTP'
-import Password from './Password'
-import Search from './Search'
-import TextArea from './TextArea'
+import InternalInput from './Input'
+import InternalOTP from './OTP'
+import InternalPassword from './Password'
+import InternalSearch from './Search'
+import InternalTextArea from './TextArea'
 
 export type { InputGroupProps } from './Group'
 export type { InputEmits, InputProps, InputRef, InputSlots } from './Input'
@@ -12,6 +13,12 @@ export type { OTPProps } from './OTP'
 export type { PasswordProps } from './Password'
 export type { SearchProps } from './Search'
 export type { TextAreaProps, TextAreaRef } from './TextArea'
+
+const Input = withModel(InternalInput, { prop: 'value' })
+const Search = withModel(InternalSearch, { prop: 'value' })
+const TextArea = withModel(InternalTextArea, { prop: 'value' })
+const Password = withModel(InternalPassword, { prop: 'value' })
+const OTP = withModel(InternalOTP, { prop: 'value' })
 
 const CompoundedInput = Input
 
@@ -22,11 +29,11 @@ const CompoundedInput = Input
 ;(CompoundedInput as any).Group = Group
 
 ;(CompoundedInput as any).install = (app: App) => {
-  app.component(Input.name, CompoundedInput)
-  app.component(Search.name, Search)
-  app.component(TextArea.name, TextArea)
-  app.component(Password.name, Password)
-  app.component(OTP.name, OTP)
+  app.component(InternalInput.name, CompoundedInput)
+  app.component(InternalSearch.name, Search)
+  app.component(InternalTextArea.name, TextArea)
+  app.component(InternalPassword.name, Password)
+  app.component(InternalOTP.name, OTP)
   app.component(Group.name, Group)
   return app
 }
