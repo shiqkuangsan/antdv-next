@@ -1,4 +1,4 @@
-import { afterAll, beforeAll, describe, expect, it, vi } from 'vitest'
+import { beforeAll, describe, expect, it, vi } from 'vitest'
 import { h, nextTick, ref } from 'vue'
 import Tag, { CheckableTag, CheckableTagGroup } from '..'
 import ConfigProvider from '../../config-provider'
@@ -21,10 +21,6 @@ beforeAll(() => {
     }
   }
 })
-afterAll(() => {
-  CSSStyleDeclaration.prototype.setProperty = originalSetProperty
-})
-
 describe('tag', () => {
   mountTest(Tag)
   rtlTest(() => h(Tag))
@@ -676,9 +672,9 @@ describe('checkable-tag-group', () => {
     })
     const tags = wrapper.findAll(`.${prefixCls}-checkable`)
     expect(tags.length).toBe(3)
-    expect(tags[0].text()).toBe('A')
-    expect(tags[1].text()).toBe('B')
-    expect(tags[2].text()).toBe('C')
+    expect(tags[0]!.text()).toBe('A')
+    expect(tags[1]!.text()).toBe('B')
+    expect(tags[2]!.text()).toBe('C')
   })
 
   it('should support primitive options', () => {
@@ -687,7 +683,7 @@ describe('checkable-tag-group', () => {
     })
     const tags = wrapper.findAll(`.${prefixCls}-checkable`)
     expect(tags.length).toBe(3)
-    expect(tags[0].text()).toBe('X')
+    expect(tags[0]!.text()).toBe('X')
   })
 
   // ===================== single mode =====================
@@ -697,7 +693,7 @@ describe('checkable-tag-group', () => {
     const wrapper = mount(CheckableTagGroup, {
       props: { options, onChange },
     })
-    await wrapper.findAll(`.${prefixCls}-checkable`)[0].trigger('click')
+    await wrapper.findAll(`.${prefixCls}-checkable`)[0]!.trigger('click')
     expect(onChange).toHaveBeenCalledWith('a')
   })
 
@@ -706,7 +702,7 @@ describe('checkable-tag-group', () => {
     const wrapper = mount(CheckableTagGroup, {
       props: { options, value: 'a', onChange },
     })
-    await wrapper.findAll(`.${prefixCls}-checkable`)[0].trigger('click')
+    await wrapper.findAll(`.${prefixCls}-checkable`)[0]!.trigger('click')
     expect(onChange).toHaveBeenCalledWith(null)
   })
 
@@ -715,8 +711,8 @@ describe('checkable-tag-group', () => {
       props: { options, value: 'b' },
     })
     const tags = wrapper.findAll(`.${prefixCls}-checkable`)
-    expect(tags[1].classes()).toContain(`${prefixCls}-checkable-checked`)
-    expect(tags[0].classes()).not.toContain(`${prefixCls}-checkable-checked`)
+    expect(tags[1]!.classes()).toContain(`${prefixCls}-checkable-checked`)
+    expect(tags[0]!.classes()).not.toContain(`${prefixCls}-checkable-checked`)
   })
 
   // ===================== multiple mode =====================
@@ -726,7 +722,7 @@ describe('checkable-tag-group', () => {
     const wrapper = mount(CheckableTagGroup, {
       props: { options, multiple: true, value: ['a'], onChange },
     })
-    await wrapper.findAll(`.${prefixCls}-checkable`)[1].trigger('click')
+    await wrapper.findAll(`.${prefixCls}-checkable`)[1]!.trigger('click')
     expect(onChange).toHaveBeenCalledWith(['a', 'b'])
   })
 
@@ -735,7 +731,7 @@ describe('checkable-tag-group', () => {
     const wrapper = mount(CheckableTagGroup, {
       props: { options, multiple: true, value: ['a', 'b'], onChange },
     })
-    await wrapper.findAll(`.${prefixCls}-checkable`)[0].trigger('click')
+    await wrapper.findAll(`.${prefixCls}-checkable`)[0]!.trigger('click')
     expect(onChange).toHaveBeenCalledWith(['b'])
   })
 
@@ -746,7 +742,7 @@ describe('checkable-tag-group', () => {
       props: { options, defaultValue: 'b' },
     })
     const tags = wrapper.findAll(`.${prefixCls}-checkable`)
-    expect(tags[1].classes()).toContain(`${prefixCls}-checkable-checked`)
+    expect(tags[1]!.classes()).toContain(`${prefixCls}-checkable-checked`)
   })
 
   // ===================== disabled =====================
@@ -756,7 +752,7 @@ describe('checkable-tag-group', () => {
     const wrapper = mount(CheckableTagGroup, {
       props: { options, disabled: true, onChange },
     })
-    await wrapper.findAll(`.${prefixCls}-checkable`)[0].trigger('click')
+    await wrapper.findAll(`.${prefixCls}-checkable`)[0]!.trigger('click')
     expect(onChange).not.toHaveBeenCalled()
   })
 
@@ -769,10 +765,10 @@ describe('checkable-tag-group', () => {
     const wrapper = mount(CheckableTagGroup, {
       props: { options: disabledOptions, onChange },
     })
-    await wrapper.findAll(`.${prefixCls}-checkable`)[0].trigger('click')
+    await wrapper.findAll(`.${prefixCls}-checkable`)[0]!.trigger('click')
     expect(onChange).not.toHaveBeenCalled()
 
-    await wrapper.findAll(`.${prefixCls}-checkable`)[1].trigger('click')
+    await wrapper.findAll(`.${prefixCls}-checkable`)[1]!.trigger('click')
     expect(onChange).toHaveBeenCalledWith('b')
   })
 
@@ -827,7 +823,7 @@ describe('checkable-tag-group', () => {
     const wrapper = mount(CheckableTagGroup, {
       props: { 'options': options, 'onUpdate:value': onUpdateValue },
     })
-    await wrapper.findAll(`.${prefixCls}-checkable`)[0].trigger('click')
+    await wrapper.findAll(`.${prefixCls}-checkable`)[0]!.trigger('click')
     expect(onUpdateValue).toHaveBeenCalledWith('a')
   })
 
@@ -846,8 +842,8 @@ describe('checkable-tag-group', () => {
     expect(root.attributes('style')).toContain('padding: 8px')
 
     const items = wrapper.findAll(`.${prefixCls}-checkable`)
-    expect(items[0].classes()).toContain('g-item')
-    expect(items[0].attributes('style')).toContain('margin: 4px')
+    expect(items[0]!.classes()).toContain('g-item')
+    expect(items[0]!.attributes('style')).toContain('margin: 4px')
   })
 
   // ===================== Snapshot =====================
