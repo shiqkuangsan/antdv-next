@@ -1,0 +1,72 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`statistic > rtl render > component should be rendered correctly in RTL direction 1`] = `
+<div
+  data-v-app=""
+>
+  <div
+    class="ant-statistic ant-statistic-rtl css-var-root"
+  >
+    <!---->
+    <div
+      class="ant-statistic-content"
+    >
+      <!---->
+      <span
+        class="ant-statistic-content-value"
+      >
+        <span
+          class="ant-statistic-content-value-int"
+        >
+          0
+        </span>
+      </span>
+      <!---->
+    </div>
+  </div>
+</div>
+`;
+
+exports[`statistic > should match snapshot 1`] = `
+<div
+  class="ant-statistic css-var-root"
+>
+  <div
+    class="ant-statistic-header"
+  >
+    <div
+      class="ant-statistic-title"
+    >
+      Account Balance (CNY)
+    </div>
+  </div>
+  <div
+    class="ant-statistic-content"
+  >
+    <span
+      class="ant-statistic-content-prefix"
+    >
+      $
+    </span>
+    <span
+      class="ant-statistic-content-value"
+    >
+      <span
+        class="ant-statistic-content-value-int"
+      >
+        112,893
+      </span>
+      <span
+        class="ant-statistic-content-value-decimal"
+      >
+        .12
+      </span>
+    </span>
+    <span
+      class="ant-statistic-content-suffix"
+    >
+      万
+    </span>
+  </div>
+</div>
+`;
