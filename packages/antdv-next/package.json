@@ -1,7 +1,7 @@
 {
   "name": "antdv-next",
   "type": "module",
-  "version": "1.0.3",
+  "version": "1.0.4-beta.1",
   "description": "Ant Design Vue3 Component Library",
   "author": {
     "email": "aibayanyu@gamil.com",
@@ -96,10 +96,13 @@
   },
   "scripts": {
     "test": "vitest run",
-    "build": "run-s build:esm build:umd build:with-locales build:p",
+    "build": "run-s build:esm build:vite:parallel build:p",
     "build:p": "run-p build:web-types build:style",
     "build:esm": "tsdown",
-    "build:with-locales": "vite build --config ./vite.with-locales.config.ts",
+    "build:with-locales": "run-p build:with-locales:esm build:with-locales:umd",
+    "build:with-locales:esm": "cross-env WITH_LOCALES_FORMAT=es vite build --config ./vite.with-locales.config.ts",
+    "build:with-locales:umd": "cross-env WITH_LOCALES_FORMAT=umd vite build --config ./vite.with-locales.config.ts",
+    "build:vite:parallel": "run-p build:umd build:full-esm build:with-locales",
     "build:full-esm": "vite build --config ./vite.esm.config.ts",
     "build:umd": "vite build",
     "build:web-types": "tsx ./scripts/web-types/index.ts",
