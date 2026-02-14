@@ -1,8 +1,10 @@
+import { execSync } from 'node:child_process'
 import { readFileSync } from 'node:fs'
 import path from 'node:path'
 import pico from 'picocolors'
 
-const msgPath = path.resolve('.git/COMMIT_EDITMSG')
+const gitDir = execSync('git rev-parse --git-dir', { encoding: 'utf-8' }).trim()
+const msgPath = path.resolve(gitDir, 'COMMIT_EDITMSG')
 const msg = readFileSync(msgPath, 'utf-8').trim()
 
 const commitRE
