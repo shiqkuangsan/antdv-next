@@ -1,0 +1,75 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`spin > rtl render > component should be rendered correctly in RTL direction 1`] = `
+<div
+  data-v-app=""
+>
+  <div
+    aria-busy="true"
+    aria-live="polite"
+    class="ant-spin ant-spin-spinning ant-spin-rtl ant-spin-section css-var-root"
+  >
+    <span
+      class="ant-spin-dot-holder"
+    >
+      <span
+        class="ant-spin-dot ant-spin-dot-spin"
+      >
+        <i
+          class="ant-spin-dot-item"
+        />
+        <i
+          class="ant-spin-dot-item"
+        />
+        <i
+          class="ant-spin-dot-item"
+        />
+        <i
+          class="ant-spin-dot-item"
+        />
+      </span>
+    </span>
+    <!---->
+    <!---->
+    <!---->
+  </div>
+</div>
+`;
+
+exports[`spin > should match snapshot (basic spinning) 1`] = `
+"<div class="ant-spin ant-spin-spinning ant-spin-section css-var-root" aria-live="polite" aria-busy="true"><span class="ant-spin-dot-holder"><span class="ant-spin-dot ant-spin-dot-spin"><i class="ant-spin-dot-item"></i><i class="ant-spin-dot-item"></i><i class="ant-spin-dot-item"></i><i class="ant-spin-dot-item"></i></span></span>
+  <!---->
+  <!---->
+  <!---->
+</div>"
+`;
+
+exports[`spin > should match snapshot (fullscreen) 1`] = `
+"<div class="ant-spin ant-spin-spinning ant-spin-fullscreen css-var-root" aria-live="polite" aria-busy="true">
+  <div class="ant-spin-section"><span class="ant-spin-dot-holder"><span class="ant-spin-dot ant-spin-dot-spin"><i class="ant-spin-dot-item"></i><i class="ant-spin-dot-item"></i><i class="ant-spin-dot-item"></i><i class="ant-spin-dot-item"></i></span></span>
+    <!---->
+    <!---->
+  </div>
+  <!---->
+</div>"
+`;
+
+exports[`spin > should match snapshot (nested mode) 1`] = `
+"<div class="ant-spin ant-spin-spinning css-var-root" aria-live="polite" aria-busy="true">
+  <div class="ant-spin-section"><span class="ant-spin-dot-holder"><span class="ant-spin-dot ant-spin-dot-spin"><i class="ant-spin-dot-item"></i><i class="ant-spin-dot-item"></i><i class="ant-spin-dot-item"></i><i class="ant-spin-dot-item"></i></span></span>
+    <!---->
+    <!---->
+  </div>
+  <div class="ant-spin-container">
+    <div>Content</div>
+  </div>
+</div>"
+`;
+
+exports[`spin > should match snapshot (with description) 1`] = `
+"<div class="ant-spin ant-spin-spinning ant-spin-section css-var-root" aria-live="polite" aria-busy="true"><span class="ant-spin-dot-holder"><span class="ant-spin-dot ant-spin-dot-spin"><i class="ant-spin-dot-item"></i><i class="ant-spin-dot-item"></i><i class="ant-spin-dot-item"></i><i class="ant-spin-dot-item"></i></span></span>
+  <!---->
+  <div class="ant-spin-description">Loading...</div>
+  <!---->
+</div>"
+`;
