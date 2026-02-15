@@ -19,6 +19,7 @@ import { getAttrStyleAndClass, useMergeSemantic, useToArr, useToProps } from '..
 import genPurePanel from '../_util/PurePanel.tsx'
 import { toPropsRefs } from '../_util/tools'
 import { devUseWarning, isDev } from '../_util/warning'
+import { withModel } from '../_util/withModel'
 import { useComponentBaseConfig } from '../config-provider/context'
 import Select from '../select'
 
@@ -390,7 +391,7 @@ const InternalAutoComplete = defineComponent<
   },
 )
 
-const AutoComplete = InternalAutoComplete as typeof InternalAutoComplete & {
+const AutoComplete = withModel(InternalAutoComplete, { prop: 'value' }) as typeof InternalAutoComplete & {
   Option: typeof Option
   install: (app: App) => void
   _InternalPanelDoNotUseOrYouWillBeFired: any
