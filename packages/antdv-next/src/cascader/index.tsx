@@ -23,6 +23,7 @@ import genPurePanel from '../_util/PurePanel.tsx'
 import { getMergedStatus, getStatusClassNames } from '../_util/statusUtils'
 import { getSlotPropsFnRun, toPropsRefs } from '../_util/tools'
 import { devUseWarning, isDev } from '../_util/warning'
+import { withModel } from '../_util/withModel'
 import { useComponentBaseConfig } from '../config-provider/context'
 import { DefaultRenderEmpty } from '../config-provider/defaultRenderEmpty'
 import { useDisabledContext } from '../config-provider/DisabledContext'
@@ -544,7 +545,7 @@ const InternalCascader = defineComponent<
   },
 )
 
-const Cascader = InternalCascader as typeof InternalCascader & {
+const Cascader = withModel(InternalCascader, { prop: 'value' }) as typeof InternalCascader & {
   install: (app: App) => void
   Panel: typeof CascaderPanel
   SHOW_PARENT: typeof SHOW_PARENT
@@ -557,13 +558,13 @@ Cascader.SHOW_PARENT = SHOW_PARENT
 Cascader.SHOW_CHILD = SHOW_CHILD
 
 Cascader.install = (app: App) => {
-  app.component(Cascader.name, Cascader)
+  app.component(InternalCascader.name, Cascader)
   app.component(CascaderPanel.name, CascaderPanel)
 }
 
 // We don't care debug panel
 /* istanbul ignore next */
-const PurePanel = genPurePanel(Cascader, 'popupAlign', (props: any) => omit(props, ['visible']))
+const PurePanel = genPurePanel(InternalCascader, 'popupAlign', (props: any) => omit(props, ['visible']))
 Cascader._InternalPanelDoNotUseOrYouWillBeFired = PurePanel
 
 export { CascaderPanel, SHOW_CHILD, SHOW_PARENT }
