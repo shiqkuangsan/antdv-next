@@ -22,6 +22,7 @@ import genPurePanel from '../_util/PurePanel.tsx'
 import { getMergedStatus, getStatusClassNames } from '../_util/statusUtils'
 import { getSlotPropsFnRun, toPropsRefs } from '../_util/tools'
 import { devUseWarning, isDev } from '../_util/warning'
+import { withModel } from '../_util/withModel'
 import { useComponentBaseConfig } from '../config-provider/context'
 import { DefaultRenderEmpty } from '../config-provider/defaultRenderEmpty'
 import { useDisabledContext } from '../config-provider/DisabledContext'
@@ -235,7 +236,7 @@ const SECRET_COMBOBOX_MODE_DO_NOT_USE = 'SECRET_COMBOBOX_MODE_DO_NOT_USE'
 const defaults = {
   listHeight: 256,
 } as any
-const Select = defineComponent<
+const InternalSelect = defineComponent<
   SelectProps,
   SelectEmits,
   string,
@@ -595,8 +596,10 @@ const Select = defineComponent<
   },
 )
 
+const Select = withModel(InternalSelect, { prop: 'value' })
+
 ;(Select as any).install = (app: App) => {
-  app.component(Select.name, Select)
+  app.component(InternalSelect.name, Select)
   app.component('ASelectOption', Option as any)
   app.component('ASelectOptGroup', OptGroup as any)
 }
@@ -608,7 +611,7 @@ export default Select
 
 // We don't care debug panel
 /* istanbul ignore next */
-const PurePanel = genPurePanel(Select, 'popupAlign')
+const PurePanel = genPurePanel(InternalSelect, 'popupAlign')
 ;(Select as any)._InternalPanelDoNotUseOrYouWillBeFired = PurePanel
 
 export const SelectOption = Option
