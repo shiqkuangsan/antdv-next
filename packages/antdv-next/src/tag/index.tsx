@@ -13,10 +13,11 @@ import useClosable, { pickClosable } from '../_util/hooks/useClosable.tsx'
 import { getSlotPropsFnRun, toPropsRefs } from '../_util/tools.ts'
 import { replaceElement } from '../_util/vueNode.ts'
 import Wave from '../_util/wave'
+import { withModel } from '../_util/withModel'
 import { useComponentBaseConfig, useConfig } from '../config-provider/context.ts'
 import { useDisabledContext } from '../config-provider/DisabledContext.tsx'
 import CheckableTag from './CheckableTag.tsx'
-import CheckableTagGroup from './CheckableTagGroup.tsx'
+import InternalCheckableTagGroup from './CheckableTagGroup.tsx'
 import useColor from './hooks/useColor.ts'
 import useStyle from './style'
 import PresetCmp from './style/presetCmp.ts'
@@ -253,11 +254,14 @@ const Tag = InternalTag as typeof InternalTag & {
 
 Tag.CheckableTag = CheckableTag
 
+const CheckableTagGroup = withModel(InternalCheckableTagGroup, { prop: 'value' }) as typeof InternalCheckableTagGroup
+
 ;(Tag as any).install = (app: App) => {
   app.component(InternalTag.name, Tag)
   app.component(CheckableTag.name, CheckableTag)
-  app.component(CheckableTagGroup.name, CheckableTagGroup)
+  app.component(InternalCheckableTagGroup.name, CheckableTagGroup)
 }
+
 export {
   CheckableTag,
   CheckableTagGroup,
