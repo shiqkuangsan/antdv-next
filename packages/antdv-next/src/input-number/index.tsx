@@ -15,6 +15,7 @@ import { getAttrStyleAndClass, useMergeSemantic, useToArr, useToProps } from '..
 import { getMergedStatus, getStatusClassNames } from '../_util/statusUtils'
 import { getSlotPropsFnRun, toPropsRefs } from '../_util/tools'
 import { devUseWarning, isDev } from '../_util/warning'
+import { withModel } from '../_util/withModel'
 import { useComponentBaseConfig } from '../config-provider/context'
 import { useDisabledContext } from '../config-provider/DisabledContext.tsx'
 import useCSSVarCls from '../config-provider/hooks/useCSSVarCls'
@@ -148,7 +149,7 @@ const omitKeys: string[] = [
   'onChange',
 ]
 
-const InputNumber = defineComponent<
+const InternalInputNumber = defineComponent<
   InputNumberProps,
   InputNumberEmits,
   string,
@@ -422,8 +423,10 @@ const InputNumber = defineComponent<
   },
 )
 
+const InputNumber = withModel(InternalInputNumber, { prop: 'value' })
+
 ;(InputNumber as any).install = (app: App) => {
-  app.component(InputNumber.name, InputNumber)
+  app.component(InternalInputNumber.name, InputNumber)
   return app
 }
 
