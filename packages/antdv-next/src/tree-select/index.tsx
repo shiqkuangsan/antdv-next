@@ -24,6 +24,7 @@ import genPurePanel from '../_util/PurePanel.tsx'
 import { getMergedStatus, getStatusClassNames } from '../_util/statusUtils'
 import { getSlotPropsFnRun, toPropsRefs } from '../_util/tools'
 import { devUseWarning, isDev } from '../_util/warning'
+import { withModel } from '../_util/withModel'
 import { useComponentBaseConfig, useConfig } from '../config-provider/context'
 import { DefaultRenderEmpty } from '../config-provider/defaultRenderEmpty'
 import { useDisabledContext } from '../config-provider/DisabledContext'
@@ -602,7 +603,7 @@ const InternalTreeSelect = defineComponent<
   },
 )
 
-const TreeSelect = InternalTreeSelect as typeof InternalTreeSelect & {
+const TreeSelect = withModel(InternalTreeSelect, { prop: 'value' }) as typeof InternalTreeSelect & {
   install: (app: App) => void
   TreeNode: typeof TreeNode
   SHOW_ALL: typeof SHOW_ALL
