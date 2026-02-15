@@ -7,6 +7,7 @@ import { clsx } from '@v-c/util'
 import { omit } from 'es-toolkit'
 import { defineComponent, shallowRef } from 'vue'
 import { getAttrStyleAndClass } from '../_util/hooks'
+import { withModel } from '../_util/withModel'
 import { useComponentBaseConfig } from '../config-provider/context.ts'
 import { useDisabledContext } from '../config-provider/DisabledContext.tsx'
 import Tooltip from '../tooltip'
@@ -39,7 +40,7 @@ export interface RateEmits {
   'mouseleave': (e: FocusEvent) => void
 }
 
-const Rate = defineComponent<
+const InternalRate = defineComponent<
   RateProps,
   RateEmits,
   string
@@ -138,8 +139,12 @@ const Rate = defineComponent<
     inheritAttrs: false,
   },
 )
-;(Rate as any).install = (app: App) => {
-  app.component(Rate.name, Rate)
+const Rate = withModel(InternalRate, { prop: 'value' }) as typeof InternalRate & {
+  install: (app: App) => void
+}
+
+Rate.install = (app: App) => {
+  app.component(InternalRate.name, Rate)
 }
 
 export default Rate
