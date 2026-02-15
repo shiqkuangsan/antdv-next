@@ -2,18 +2,21 @@ import type { Dayjs } from 'dayjs'
 import type { App } from 'vue'
 import type { CalendarMode, CalendarProps } from './generateCalendar'
 import dayjsGenerateConfig from '@v-c/picker/generate/dayjs'
+import { withModel } from '../_util/withModel'
 import generateCalendar from './generateCalendar'
 
-const Calendar = generateCalendar<Dayjs>(dayjsGenerateConfig)
+const InternalCalendar = generateCalendar<Dayjs>(dayjsGenerateConfig)
 
-export type CalendarType = typeof Calendar & {
+export type CalendarType = typeof InternalCalendar & {
   generateCalendar: typeof generateCalendar
 }
+
+const Calendar = withModel(InternalCalendar, { prop: 'value' }) as CalendarType
 
 ;(Calendar as CalendarType).generateCalendar = generateCalendar
 
 ;(Calendar as any).install = (app: App) => {
-  app.component(Calendar.name, Calendar)
+  app.component(InternalCalendar.name, Calendar)
 }
 
 export type { CalendarMode, CalendarProps }
