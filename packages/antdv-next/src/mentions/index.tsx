@@ -21,6 +21,7 @@ import { getMergedStatus, getStatusClassNames } from '../_util/statusUtils'
 import toList from '../_util/toList'
 import { getSlotPropsFnRun, toPropsRefs } from '../_util/tools'
 import { devUseWarning, isDev } from '../_util/warning'
+import { withModel } from '../_util/withModel'
 import { useComponentBaseConfig } from '../config-provider/context'
 import { DefaultRenderEmpty } from '../config-provider/defaultRenderEmpty'
 import { useDisabledContext } from '../config-provider/DisabledContext'
@@ -401,7 +402,7 @@ const InternalMentions = defineComponent<
   },
 )
 
-const Mentions = InternalMentions as typeof InternalMentions & {
+const Mentions = withModel(InternalMentions, { prop: 'value' }) as typeof InternalMentions & {
   Option: typeof Option
   getMentions: (value: string, config?: MentionsConfig) => MentionsEntity[]
   install: (app: App) => void
@@ -411,7 +412,7 @@ const Mentions = InternalMentions as typeof InternalMentions & {
 Mentions.Option = Option
 
 Mentions.install = (app: App): void => {
-  app.component(Mentions.name, Mentions)
+  app.component(InternalMentions.name, Mentions)
   app.component('AMentionsOption', Option)
 }
 
@@ -446,7 +447,7 @@ Mentions.getMentions = (value = '', config: MentionsConfig = {}): MentionsEntity
 
 // We don't care debug panel
 /* istanbul ignore next */
-const PurePanel = genPurePanel(Mentions, undefined, undefined, 'mentions')
+const PurePanel = genPurePanel(InternalMentions, undefined, undefined, 'mentions')
 ;(Mentions as any)._InternalPanelDoNotUseOrYouWillBeFired = PurePanel
 
 export default Mentions
