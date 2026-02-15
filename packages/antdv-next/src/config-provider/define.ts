@@ -22,6 +22,7 @@ import type {
   InputConfig,
   InputNumberConfig,
   InputSearchConfig,
+  MasonryConfig,
   MentionsConfig,
   MenuConfig,
   ModalConfig,
@@ -145,6 +146,7 @@ export interface ConfigProviderProps {
   rangePicker?: RangePickerConfig
   dropdown?: ComponentStyleConfig
   flex?: FlexConfig
+  masonry?: MasonryConfig
   // /**
   //  * Wave is special component which only patch on the effect of component interaction.
   //  */

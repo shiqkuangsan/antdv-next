@@ -91,6 +91,7 @@ const PASSED_PROPS: Exclude<
   'upload',
   'datePicker',
   'breadcrumb',
+  'masonry',
   'descriptions',
   'divider',
   'flex',
