@@ -15,6 +15,7 @@ import { filterEmpty, removeUndefined } from '@v-c/util/dist/props-util'
 import { computed, defineComponent, useId } from 'vue'
 import { pureAttrs, useMergeSemantic, useOrientation, useToArr, useToProps } from '../_util/hooks'
 import { getSlotPropsFnRun, toPropsRefs } from '../_util/tools.ts'
+import { withModel } from '../_util/withModel'
 import { useComponentBaseConfig } from '../config-provider/context.ts'
 import { useSize } from '../config-provider/hooks/useSize.ts'
 import Tooltip from '../tooltip'
@@ -239,11 +240,11 @@ const InternalSegmented = defineComponent<
   },
 )
 
-const Segmented = InternalSegmented as typeof InternalSegmented & {
+const Segmented = withModel(InternalSegmented, { prop: 'value' }) as typeof InternalSegmented & {
   install: (app: App) => void
 }
 
 Segmented.install = (app: App) => {
-  app.component(Segmented.name, Segmented)
+  app.component(InternalSegmented.name, Segmented)
 }
 export default Segmented
