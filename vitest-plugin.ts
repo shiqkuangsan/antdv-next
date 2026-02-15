@@ -43,7 +43,7 @@ export default defineConfig({
       },
       {
         find: '@',
-        replacement: path.resolve(baseUrl, './playground/src'),
+        replacement: path.resolve(baseUrl, './docs/src'),
       },
     ],
   },

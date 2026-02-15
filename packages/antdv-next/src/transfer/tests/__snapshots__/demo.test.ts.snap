@@ -3,15 +3,15 @@
 exports[`transfer demo > renders _semantic correctly 1`] = `
 <div
   class="semantic-preview-container"
-  data-v-0e8f6da1=""
+  data-v-dfc8ebef=""
 >
   <div
     class="ant-row css-var-root semantic-preview-row"
-    data-v-0e8f6da1=""
+    data-v-dfc8ebef=""
   >
     <div
       class="ant-col ant-col-16 css-var-root semantic-preview-col"
-      data-v-0e8f6da1=""
+      data-v-dfc8ebef=""
     >
       <div
         class="ant-transfer css-var-v-0 ant-transfer-css-var semantic-mark-root"
@@ -824,28 +824,28 @@ exports[`transfer demo > renders _semantic correctly 1`] = `
     </div>
     <div
       class="ant-col ant-col-8 css-var-root"
-      data-v-0e8f6da1=""
+      data-v-dfc8ebef=""
     >
       <ul
         class="semantic-list"
-        data-v-0e8f6da1=""
+        data-v-dfc8ebef=""
       >
         <li
           class="semantic-list-item"
-          data-v-0e8f6da1=""
+          data-v-dfc8ebef=""
         >
           <div
             class="ant-flex css-var-root ant-flex-align-stretch ant-flex-gap-small ant-flex-vertical"
-            data-v-0e8f6da1=""
+            data-v-dfc8ebef=""
           >
             <div
               class="ant-flex css-var-root ant-flex-align-center ant-flex-justify-space-between ant-flex-gap-small"
-              data-v-0e8f6da1=""
+              data-v-dfc8ebef=""
             >
               <!-- Title + Version -->
               <div
                 class="ant-flex css-var-root ant-flex-align-center ant-flex-gap-small"
-                data-v-0e8f6da1=""
+                data-v-dfc8ebef=""
               >
                 <h5
                   class="ant-typography css-var-root"
@@ -866,11 +866,11 @@ exports[`transfer demo > renders _semantic correctly 1`] = `
               <!-- Pin + Sample -->
               <div
                 class="ant-flex css-var-root ant-flex-align-center ant-flex-gap-small"
-                data-v-0e8f6da1=""
+                data-v-dfc8ebef=""
               >
                 <button
                   class="ant-btn css-var-root ant-btn-text ant-btn-color-default ant-btn-variant-text ant-btn-sm ant-btn-icon-only"
-                  data-v-0e8f6da1=""
+                  data-v-dfc8ebef=""
                   type="button"
                 >
                   <span
@@ -879,7 +879,7 @@ exports[`transfer demo > renders _semantic correctly 1`] = `
                     <span
                       aria-label="pushpin"
                       class="anticon anticon-pushpin"
-                      data-v-0e8f6da1=""
+                      data-v-dfc8ebef=""
                       role="img"
                     >
                       <svg
@@ -902,7 +902,7 @@ exports[`transfer demo > renders _semantic correctly 1`] = `
                 </button>
                 <button
                   class="ant-btn css-var-root ant-btn-text ant-btn-color-default ant-btn-variant-text ant-btn-sm ant-btn-icon-only"
-                  data-v-0e8f6da1=""
+                  data-v-dfc8ebef=""
                   type="button"
                 >
                   <span
@@ -911,7 +911,7 @@ exports[`transfer demo > renders _semantic correctly 1`] = `
                     <span
                       aria-label="info-circle"
                       class="anticon anticon-info-circle"
-                      data-v-0e8f6da1=""
+                      data-v-dfc8ebef=""
                       role="img"
                     >
                       <svg
@@ -956,20 +956,20 @@ exports[`transfer demo > renders _semantic correctly 1`] = `
         </li>
         <li
           class="semantic-list-item"
-          data-v-0e8f6da1=""
+          data-v-dfc8ebef=""
         >
           <div
             class="ant-flex css-var-root ant-flex-align-stretch ant-flex-gap-small ant-flex-vertical"
-            data-v-0e8f6da1=""
+            data-v-dfc8ebef=""
           >
             <div
               class="ant-flex css-var-root ant-flex-align-center ant-flex-justify-space-between ant-flex-gap-small"
-              data-v-0e8f6da1=""
+              data-v-dfc8ebef=""
             >
               <!-- Title + Version -->
               <div
                 class="ant-flex css-var-root ant-flex-align-center ant-flex-gap-small"
-                data-v-0e8f6da1=""
+                data-v-dfc8ebef=""
               >
                 <h5
                   class="ant-typography css-var-root"
@@ -990,11 +990,11 @@ exports[`transfer demo > renders _semantic correctly 1`] = `
               <!-- Pin + Sample -->
               <div
                 class="ant-flex css-var-root ant-flex-align-center ant-flex-gap-small"
-                data-v-0e8f6da1=""
+                data-v-dfc8ebef=""
               >
                 <button
                   class="ant-btn css-var-root ant-btn-text ant-btn-color-default ant-btn-variant-text ant-btn-sm ant-btn-icon-only"
-                  data-v-0e8f6da1=""
+                  data-v-dfc8ebef=""
                   type="button"
                 >
                   <span
@@ -1003,7 +1003,7 @@ exports[`transfer demo > renders _semantic correctly 1`] = `
                     <span
                       aria-label="pushpin"
                       class="anticon anticon-pushpin"
-                      data-v-0e8f6da1=""
+                      data-v-dfc8ebef=""
                       role="img"
                     >
                       <svg
@@ -1026,7 +1026,7 @@ exports[`transfer demo > renders _semantic correctly 1`] = `
                 </button>
                 <button
                   class="ant-btn css-var-root ant-btn-text ant-btn-color-default ant-btn-variant-text ant-btn-sm ant-btn-icon-only"
-                  data-v-0e8f6da1=""
+                  data-v-dfc8ebef=""
                   type="button"
                 >
                   <span
@@ -1035,7 +1035,7 @@ exports[`transfer demo > renders _semantic correctly 1`] = `
                     <span
                       aria-label="info-circle"
                       class="anticon anticon-info-circle"
-                      data-v-0e8f6da1=""
+                      data-v-dfc8ebef=""
                       role="img"
                     >
                       <svg
@@ -1080,20 +1080,20 @@ exports[`transfer demo > renders _semantic correctly 1`] = `
         </li>
         <li
           class="semantic-list-item"
-          data-v-0e8f6da1=""
+          data-v-dfc8ebef=""
         >
           <div
             class="ant-flex css-var-root ant-flex-align-stretch ant-flex-gap-small ant-flex-vertical"
-            data-v-0e8f6da1=""
+            data-v-dfc8ebef=""
           >
             <div
               class="ant-flex css-var-root ant-flex-align-center ant-flex-justify-space-between ant-flex-gap-small"
-              data-v-0e8f6da1=""
+              data-v-dfc8ebef=""
             >
               <!-- Title + Version -->
               <div
                 class="ant-flex css-var-root ant-flex-align-center ant-flex-gap-small"
-                data-v-0e8f6da1=""
+                data-v-dfc8ebef=""
               >
                 <h5
                   class="ant-typography css-var-root"
@@ -1114,11 +1114,11 @@ exports[`transfer demo > renders _semantic correctly 1`] = `
               <!-- Pin + Sample -->
               <div
                 class="ant-flex css-var-root ant-flex-align-center ant-flex-gap-small"
-                data-v-0e8f6da1=""
+                data-v-dfc8ebef=""
               >
                 <button
                   class="ant-btn css-var-root ant-btn-text ant-btn-color-default ant-btn-variant-text ant-btn-sm ant-btn-icon-only"
-                  data-v-0e8f6da1=""
+                  data-v-dfc8ebef=""
                   type="button"
                 >
                   <span
@@ -1127,7 +1127,7 @@ exports[`transfer demo > renders _semantic correctly 1`] = `
                     <span
                       aria-label="pushpin"
                       class="anticon anticon-pushpin"
-                      data-v-0e8f6da1=""
+                      data-v-dfc8ebef=""
                       role="img"
                     >
                       <svg
@@ -1150,7 +1150,7 @@ exports[`transfer demo > renders _semantic correctly 1`] = `
                 </button>
                 <button
                   class="ant-btn css-var-root ant-btn-text ant-btn-color-default ant-btn-variant-text ant-btn-sm ant-btn-icon-only"
-                  data-v-0e8f6da1=""
+                  data-v-dfc8ebef=""
                   type="button"
                 >
                   <span
@@ -1159,7 +1159,7 @@ exports[`transfer demo > renders _semantic correctly 1`] = `
                     <span
                       aria-label="info-circle"
                       class="anticon anticon-info-circle"
-                      data-v-0e8f6da1=""
+                      data-v-dfc8ebef=""
                       role="img"
                     >
                       <svg
@@ -1204,20 +1204,20 @@ exports[`transfer demo > renders _semantic correctly 1`] = `
         </li>
         <li
           class="semantic-list-item"
-          data-v-0e8f6da1=""
+          data-v-dfc8ebef=""
         >
           <div
             class="ant-flex css-var-root ant-flex-align-stretch ant-flex-gap-small ant-flex-vertical"
-            data-v-0e8f6da1=""
+            data-v-dfc8ebef=""
           >
             <div
               class="ant-flex css-var-root ant-flex-align-center ant-flex-justify-space-between ant-flex-gap-small"
-              data-v-0e8f6da1=""
+              data-v-dfc8ebef=""
             >
               <!-- Title + Version -->
               <div
                 class="ant-flex css-var-root ant-flex-align-center ant-flex-gap-small"
-                data-v-0e8f6da1=""
+                data-v-dfc8ebef=""
               >
                 <h5
                   class="ant-typography css-var-root"
@@ -1238,11 +1238,11 @@ exports[`transfer demo > renders _semantic correctly 1`] = `
               <!-- Pin + Sample -->
               <div
                 class="ant-flex css-var-root ant-flex-align-center ant-flex-gap-small"
-                data-v-0e8f6da1=""
+                data-v-dfc8ebef=""
               >
                 <button
                   class="ant-btn css-var-root ant-btn-text ant-btn-color-default ant-btn-variant-text ant-btn-sm ant-btn-icon-only"
-                  data-v-0e8f6da1=""
+                  data-v-dfc8ebef=""
                   type="button"
                 >
                   <span
@@ -1251,7 +1251,7 @@ exports[`transfer demo > renders _semantic correctly 1`] = `
                     <span
                       aria-label="pushpin"
                       class="anticon anticon-pushpin"
-                      data-v-0e8f6da1=""
+                      data-v-dfc8ebef=""
                       role="img"
                     >
                       <svg
@@ -1274,7 +1274,7 @@ exports[`transfer demo > renders _semantic correctly 1`] = `
                 </button>
                 <button
                   class="ant-btn css-var-root ant-btn-text ant-btn-color-default ant-btn-variant-text ant-btn-sm ant-btn-icon-only"
-                  data-v-0e8f6da1=""
+                  data-v-dfc8ebef=""
                   type="button"
                 >
                   <span
@@ -1283,7 +1283,7 @@ exports[`transfer demo > renders _semantic correctly 1`] = `
                     <span
                       aria-label="info-circle"
                       class="anticon anticon-info-circle"
-                      data-v-0e8f6da1=""
+                      data-v-dfc8ebef=""
                       role="img"
                     >
                       <svg
@@ -1328,20 +1328,20 @@ exports[`transfer demo > renders _semantic correctly 1`] = `
         </li>
         <li
           class="semantic-list-item"
-          data-v-0e8f6da1=""
+          data-v-dfc8ebef=""
         >
           <div
             class="ant-flex css-var-root ant-flex-align-stretch ant-flex-gap-small ant-flex-vertical"
-            data-v-0e8f6da1=""
+            data-v-dfc8ebef=""
           >
             <div
               class="ant-flex css-var-root ant-flex-align-center ant-flex-justify-space-between ant-flex-gap-small"
-              data-v-0e8f6da1=""
+              data-v-dfc8ebef=""
             >
               <!-- Title + Version -->
               <div
                 class="ant-flex css-var-root ant-flex-align-center ant-flex-gap-small"
-                data-v-0e8f6da1=""
+                data-v-dfc8ebef=""
               >
                 <h5
                   class="ant-typography css-var-root"
@@ -1362,11 +1362,11 @@ exports[`transfer demo > renders _semantic correctly 1`] = `
               <!-- Pin + Sample -->
               <div
                 class="ant-flex css-var-root ant-flex-align-center ant-flex-gap-small"
-                data-v-0e8f6da1=""
+                data-v-dfc8ebef=""
               >
                 <button
                   class="ant-btn css-var-root ant-btn-text ant-btn-color-default ant-btn-variant-text ant-btn-sm ant-btn-icon-only"
-                  data-v-0e8f6da1=""
+                  data-v-dfc8ebef=""
                   type="button"
                 >
                   <span
@@ -1375,7 +1375,7 @@ exports[`transfer demo > renders _semantic correctly 1`] = `
                     <span
                       aria-label="pushpin"
                       class="anticon anticon-pushpin"
-                      data-v-0e8f6da1=""
+                      data-v-dfc8ebef=""
                       role="img"
                     >
                       <svg
@@ -1398,7 +1398,7 @@ exports[`transfer demo > renders _semantic correctly 1`] = `
                 </button>
                 <button
                   class="ant-btn css-var-root ant-btn-text ant-btn-color-default ant-btn-variant-text ant-btn-sm ant-btn-icon-only"
-                  data-v-0e8f6da1=""
+                  data-v-dfc8ebef=""
                   type="button"
                 >
                   <span
@@ -1407,7 +1407,7 @@ exports[`transfer demo > renders _semantic correctly 1`] = `
                     <span
                       aria-label="info-circle"
                       class="anticon anticon-info-circle"
-                      data-v-0e8f6da1=""
+                      data-v-dfc8ebef=""
                       role="img"
                     >
                       <svg
@@ -1452,20 +1452,20 @@ exports[`transfer demo > renders _semantic correctly 1`] = `
         </li>
         <li
           class="semantic-list-item"
-          data-v-0e8f6da1=""
+          data-v-dfc8ebef=""
         >
           <div
             class="ant-flex css-var-root ant-flex-align-stretch ant-flex-gap-small ant-flex-vertical"
-            data-v-0e8f6da1=""
+            data-v-dfc8ebef=""
           >
             <div
               class="ant-flex css-var-root ant-flex-align-center ant-flex-justify-space-between ant-flex-gap-small"
-              data-v-0e8f6da1=""
+              data-v-dfc8ebef=""
             >
               <!-- Title + Version -->
               <div
                 class="ant-flex css-var-root ant-flex-align-center ant-flex-gap-small"
-                data-v-0e8f6da1=""
+                data-v-dfc8ebef=""
               >
                 <h5
                   class="ant-typography css-var-root"
@@ -1486,11 +1486,11 @@ exports[`transfer demo > renders _semantic correctly 1`] = `
               <!-- Pin + Sample -->
               <div
                 class="ant-flex css-var-root ant-flex-align-center ant-flex-gap-small"
-                data-v-0e8f6da1=""
+                data-v-dfc8ebef=""
               >
                 <button
                   class="ant-btn css-var-root ant-btn-text ant-btn-color-default ant-btn-variant-text ant-btn-sm ant-btn-icon-only"
-                  data-v-0e8f6da1=""
+                  data-v-dfc8ebef=""
                   type="button"
                 >
                   <span
@@ -1499,7 +1499,7 @@ exports[`transfer demo > renders _semantic correctly 1`] = `
                     <span
                       aria-label="pushpin"
                       class="anticon anticon-pushpin"
-                      data-v-0e8f6da1=""
+                      data-v-dfc8ebef=""
                       role="img"
                     >
                       <svg
@@ -1522,7 +1522,7 @@ exports[`transfer demo > renders _semantic correctly 1`] = `
                 </button>
                 <button
                   class="ant-btn css-var-root ant-btn-text ant-btn-color-default ant-btn-variant-text ant-btn-sm ant-btn-icon-only"
-                  data-v-0e8f6da1=""
+                  data-v-dfc8ebef=""
                   type="button"
                 >
                   <span
@@ -1531,7 +1531,7 @@ exports[`transfer demo > renders _semantic correctly 1`] = `
                     <span
                       aria-label="info-circle"
                       class="anticon anticon-info-circle"
-                      data-v-0e8f6da1=""
+                      data-v-dfc8ebef=""
                       role="img"
                     >
                       <svg
@@ -1576,20 +1576,20 @@ exports[`transfer demo > renders _semantic correctly 1`] = `
         </li>
         <li
           class="semantic-list-item"
-          data-v-0e8f6da1=""
+          data-v-dfc8ebef=""
         >
           <div
             class="ant-flex css-var-root ant-flex-align-stretch ant-flex-gap-small ant-flex-vertical"
-            data-v-0e8f6da1=""
+            data-v-dfc8ebef=""
           >
             <div
               class="ant-flex css-var-root ant-flex-align-center ant-flex-justify-space-between ant-flex-gap-small"
-              data-v-0e8f6da1=""
+              data-v-dfc8ebef=""
             >
               <!-- Title + Version -->
               <div
                 class="ant-flex css-var-root ant-flex-align-center ant-flex-gap-small"
-                data-v-0e8f6da1=""
+                data-v-dfc8ebef=""
               >
                 <h5
                   class="ant-typography css-var-root"
@@ -1610,11 +1610,11 @@ exports[`transfer demo > renders _semantic correctly 1`] = `
               <!-- Pin + Sample -->
               <div
                 class="ant-flex css-var-root ant-flex-align-center ant-flex-gap-small"
-                data-v-0e8f6da1=""
+                data-v-dfc8ebef=""
               >
                 <button
                   class="ant-btn css-var-root ant-btn-text ant-btn-color-default ant-btn-variant-text ant-btn-sm ant-btn-icon-only"
-                  data-v-0e8f6da1=""
+                  data-v-dfc8ebef=""
                   type="button"
                 >
                   <span
@@ -1623,7 +1623,7 @@ exports[`transfer demo > renders _semantic correctly 1`] = `
                     <span
                       aria-label="pushpin"
                       class="anticon anticon-pushpin"
-                      data-v-0e8f6da1=""
+                      data-v-dfc8ebef=""
                       role="img"
                     >
                       <svg
@@ -1646,7 +1646,7 @@ exports[`transfer demo > renders _semantic correctly 1`] = `
                 </button>
                 <button
                   class="ant-btn css-var-root ant-btn-text ant-btn-color-default ant-btn-variant-text ant-btn-sm ant-btn-icon-only"
-                  data-v-0e8f6da1=""
+                  data-v-dfc8ebef=""
                   type="button"
                 >
                   <span
@@ -1655,7 +1655,7 @@ exports[`transfer demo > renders _semantic correctly 1`] = `
                     <span
                       aria-label="info-circle"
                       class="anticon anticon-info-circle"
-                      data-v-0e8f6da1=""
+                      data-v-dfc8ebef=""
                       role="img"
                     >
                       <svg
@@ -1700,20 +1700,20 @@ exports[`transfer demo > renders _semantic correctly 1`] = `
         </li>
         <li
           class="semantic-list-item"
-          data-v-0e8f6da1=""
+          data-v-dfc8ebef=""
         >
           <div
             class="ant-flex css-var-root ant-flex-align-stretch ant-flex-gap-small ant-flex-vertical"
-            data-v-0e8f6da1=""
+            data-v-dfc8ebef=""
           >
             <div
               class="ant-flex css-var-root ant-flex-align-center ant-flex-justify-space-between ant-flex-gap-small"
-              data-v-0e8f6da1=""
+              data-v-dfc8ebef=""
             >
               <!-- Title + Version -->
               <div
                 class="ant-flex css-var-root ant-flex-align-center ant-flex-gap-small"
-                data-v-0e8f6da1=""
+                data-v-dfc8ebef=""
               >
                 <h5
                   class="ant-typography css-var-root"
@@ -1734,11 +1734,11 @@ exports[`transfer demo > renders _semantic correctly 1`] = `
               <!-- Pin + Sample -->
               <div
                 class="ant-flex css-var-root ant-flex-align-center ant-flex-gap-small"
-                data-v-0e8f6da1=""
+                data-v-dfc8ebef=""
               >
                 <button
                   class="ant-btn css-var-root ant-btn-text ant-btn-color-default ant-btn-variant-text ant-btn-sm ant-btn-icon-only"
-                  data-v-0e8f6da1=""
+                  data-v-dfc8ebef=""
                   type="button"
                 >
                   <span
@@ -1747,7 +1747,7 @@ exports[`transfer demo > renders _semantic correctly 1`] = `
                     <span
                       aria-label="pushpin"
                       class="anticon anticon-pushpin"
-                      data-v-0e8f6da1=""
+                      data-v-dfc8ebef=""
                       role="img"
                     >
                       <svg
@@ -1770,7 +1770,7 @@ exports[`transfer demo > renders _semantic correctly 1`] = `
                 </button>
                 <button
                   class="ant-btn css-var-root ant-btn-text ant-btn-color-default ant-btn-variant-text ant-btn-sm ant-btn-icon-only"
-                  data-v-0e8f6da1=""
+                  data-v-dfc8ebef=""
                   type="button"
                 >
                   <span
@@ -1779,7 +1779,7 @@ exports[`transfer demo > renders _semantic correctly 1`] = `
                     <span
                       aria-label="info-circle"
                       class="anticon anticon-info-circle"
-                      data-v-0e8f6da1=""
+                      data-v-dfc8ebef=""
                       role="img"
                     >
                       <svg
@@ -1824,20 +1824,20 @@ exports[`transfer demo > renders _semantic correctly 1`] = `
         </li>
         <li
           class="semantic-list-item"
-          data-v-0e8f6da1=""
+          data-v-dfc8ebef=""
         >
           <div
             class="ant-flex css-var-root ant-flex-align-stretch ant-flex-gap-small ant-flex-vertical"
-            data-v-0e8f6da1=""
+            data-v-dfc8ebef=""
           >
             <div
               class="ant-flex css-var-root ant-flex-align-center ant-flex-justify-space-between ant-flex-gap-small"
-              data-v-0e8f6da1=""
+              data-v-dfc8ebef=""
             >
               <!-- Title + Version -->
               <div
                 class="ant-flex css-var-root ant-flex-align-center ant-flex-gap-small"
-                data-v-0e8f6da1=""
+                data-v-dfc8ebef=""
               >
                 <h5
                   class="ant-typography css-var-root"
@@ -1858,11 +1858,11 @@ exports[`transfer demo > renders _semantic correctly 1`] = `
               <!-- Pin + Sample -->
               <div
                 class="ant-flex css-var-root ant-flex-align-center ant-flex-gap-small"
-                data-v-0e8f6da1=""
+                data-v-dfc8ebef=""
               >
                 <button
                   class="ant-btn css-var-root ant-btn-text ant-btn-color-default ant-btn-variant-text ant-btn-sm ant-btn-icon-only"
-                  data-v-0e8f6da1=""
+                  data-v-dfc8ebef=""
                   type="button"
                 >
                   <span
@@ -1871,7 +1871,7 @@ exports[`transfer demo > renders _semantic correctly 1`] = `
                     <span
                       aria-label="pushpin"
                       class="anticon anticon-pushpin"
-                      data-v-0e8f6da1=""
+                      data-v-dfc8ebef=""
                       role="img"
                     >
                       <svg
@@ -1894,7 +1894,7 @@ exports[`transfer demo > renders _semantic correctly 1`] = `
                 </button>
                 <button
                   class="ant-btn css-var-root ant-btn-text ant-btn-color-default ant-btn-variant-text ant-btn-sm ant-btn-icon-only"
-                  data-v-0e8f6da1=""
+                  data-v-dfc8ebef=""
                   type="button"
                 >
                   <span
@@ -1903,7 +1903,7 @@ exports[`transfer demo > renders _semantic correctly 1`] = `
                     <span
                       aria-label="info-circle"
                       class="anticon anticon-info-circle"
-                      data-v-0e8f6da1=""
+                      data-v-dfc8ebef=""
                       role="img"
                     >
                       <svg
@@ -1948,20 +1948,20 @@ exports[`transfer demo > renders _semantic correctly 1`] = `
         </li>
         <li
           class="semantic-list-item"
-          data-v-0e8f6da1=""
+          data-v-dfc8ebef=""
         >
           <div
             class="ant-flex css-var-root ant-flex-align-stretch ant-flex-gap-small ant-flex-vertical"
-            data-v-0e8f6da1=""
+            data-v-dfc8ebef=""
           >
             <div
               class="ant-flex css-var-root ant-flex-align-center ant-flex-justify-space-between ant-flex-gap-small"
-              data-v-0e8f6da1=""
+              data-v-dfc8ebef=""
             >
               <!-- Title + Version -->
               <div
                 class="ant-flex css-var-root ant-flex-align-center ant-flex-gap-small"
-                data-v-0e8f6da1=""
+                data-v-dfc8ebef=""
               >
                 <h5
                   class="ant-typography css-var-root"
@@ -1982,11 +1982,11 @@ exports[`transfer demo > renders _semantic correctly 1`] = `
               <!-- Pin + Sample -->
               <div
                 class="ant-flex css-var-root ant-flex-align-center ant-flex-gap-small"
-                data-v-0e8f6da1=""
+                data-v-dfc8ebef=""
               >
                 <button
                   class="ant-btn css-var-root ant-btn-text ant-btn-color-default ant-btn-variant-text ant-btn-sm ant-btn-icon-only"
-                  data-v-0e8f6da1=""
+                  data-v-dfc8ebef=""
                   type="button"
                 >
                   <span
@@ -1995,7 +1995,7 @@ exports[`transfer demo > renders _semantic correctly 1`] = `
                     <span
                       aria-label="pushpin"
                       class="anticon anticon-pushpin"
-                      data-v-0e8f6da1=""
+                      data-v-dfc8ebef=""
                       role="img"
                     >
                       <svg
@@ -2018,7 +2018,7 @@ exports[`transfer demo > renders _semantic correctly 1`] = `
                 </button>
                 <button
                   class="ant-btn css-var-root ant-btn-text ant-btn-color-default ant-btn-variant-text ant-btn-sm ant-btn-icon-only"
-                  data-v-0e8f6da1=""
+                  data-v-dfc8ebef=""
                   type="button"
                 >
                   <span
@@ -2027,7 +2027,7 @@ exports[`transfer demo > renders _semantic correctly 1`] = `
                     <span
                       aria-label="info-circle"
                       class="anticon anticon-info-circle"
-                      data-v-0e8f6da1=""
+                      data-v-dfc8ebef=""
                       role="img"
                     >
                       <svg
@@ -2072,20 +2072,20 @@ exports[`transfer demo > renders _semantic correctly 1`] = `
         </li>
         <li
           class="semantic-list-item"
-          data-v-0e8f6da1=""
+          data-v-dfc8ebef=""
         >
           <div
             class="ant-flex css-var-root ant-flex-align-stretch ant-flex-gap-small ant-flex-vertical"
-            data-v-0e8f6da1=""
+            data-v-dfc8ebef=""
           >
             <div
               class="ant-flex css-var-root ant-flex-align-center ant-flex-justify-space-between ant-flex-gap-small"
-              data-v-0e8f6da1=""
+              data-v-dfc8ebef=""
             >
               <!-- Title + Version -->
               <div
                 class="ant-flex css-var-root ant-flex-align-center ant-flex-gap-small"
-                data-v-0e8f6da1=""
+                data-v-dfc8ebef=""
               >
                 <h5
                   class="ant-typography css-var-root"
@@ -2106,11 +2106,11 @@ exports[`transfer demo > renders _semantic correctly 1`] = `
               <!-- Pin + Sample -->
               <div
                 class="ant-flex css-var-root ant-flex-align-center ant-flex-gap-small"
-                data-v-0e8f6da1=""
+                data-v-dfc8ebef=""
               >
                 <button
                   class="ant-btn css-var-root ant-btn-text ant-btn-color-default ant-btn-variant-text ant-btn-sm ant-btn-icon-only"
-                  data-v-0e8f6da1=""
+                  data-v-dfc8ebef=""
                   type="button"
                 >
                   <span
@@ -2119,7 +2119,7 @@ exports[`transfer demo > renders _semantic correctly 1`] = `
                     <span
                       aria-label="pushpin"
                       class="anticon anticon-pushpin"
-                      data-v-0e8f6da1=""
+                      data-v-dfc8ebef=""
                       role="img"
                     >
                       <svg
@@ -2142,7 +2142,7 @@ exports[`transfer demo > renders _semantic correctly 1`] = `
                 </button>
                 <button
                   class="ant-btn css-var-root ant-btn-text ant-btn-color-default ant-btn-variant-text ant-btn-sm ant-btn-icon-only"
-                  data-v-0e8f6da1=""
+                  data-v-dfc8ebef=""
                   type="button"
                 >
                   <span
@@ -2151,7 +2151,7 @@ exports[`transfer demo > renders _semantic correctly 1`] = `
                     <span
                       aria-label="info-circle"
                       class="anticon anticon-info-circle"
-                      data-v-0e8f6da1=""
+                      data-v-dfc8ebef=""
                       role="img"
                     >
                       <svg
@@ -3994,7 +3994,7 @@ exports[`transfer demo > renders basic correctly 1`] = `
 exports[`transfer demo > renders custom-item correctly 1`] = `
 <div
   class="ant-transfer css-var-root ant-transfer-css-var"
-  data-v-452d0f41=""
+  data-v-2cf4954d=""
 >
   <div
     class="ant-transfer-section"
@@ -6886,12 +6886,12 @@ exports[`transfer demo > renders status correctly 1`] = `
 exports[`transfer demo > renders style-class correctly 1`] = `
 <div
   class="ant-flex css-var-root ant-flex-align-stretch ant-flex-gap-large ant-flex-vertical"
-  data-v-daae5a8a=""
+  data-v-77803f29=""
   style="width: 100%;"
 >
   <div
     class="ant-transfer ant-transfer-status-error css-var-root ant-transfer-css-var"
-    data-v-daae5a8a=""
+    data-v-77803f29=""
   >
     <div
       class="ant-transfer-section transfer-demo-section"
@@ -7546,7 +7546,7 @@ exports[`transfer demo > renders style-class correctly 1`] = `
   </div>
   <div
     class="ant-transfer ant-transfer-status-warning css-var-root ant-transfer-css-var"
-    data-v-daae5a8a=""
+    data-v-77803f29=""
   >
     <div
       class="ant-transfer-section transfer-demo-section"
@@ -8207,7 +8207,7 @@ exports[`transfer demo > renders style-class correctly 1`] = `
 exports[`transfer demo > renders tree-transfer correctly 1`] = `
 <div
   class="ant-transfer ant-transfer-customize-list css-var-root ant-transfer-css-var tree-transfer"
-  data-v-efe414ce=""
+  data-v-6ddf457b=""
 >
   <div
     class="ant-transfer-section"
@@ -8233,12 +8233,12 @@ exports[`transfer demo > renders tree-transfer correctly 1`] = `
         class="ant-transfer-list-body-customize-wrapper"
       >
         <div
-          data-v-efe414ce=""
+          data-v-6ddf457b=""
           style="padding: 8px;"
         >
           <div
             class="ant-tree ant-tree-icon-hide ant-tree-block-node css-var-root"
-            data-v-efe414ce=""
+            data-v-6ddf457b=""
           >
             <div
               aria-hidden="true"

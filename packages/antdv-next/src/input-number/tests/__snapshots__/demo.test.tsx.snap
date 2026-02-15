@@ -3,15 +3,15 @@
 exports[`input-number demo > renders _semantic correctly 1`] = `
 <div
   class="semantic-preview-container"
-  data-v-0e8f6da1=""
+  data-v-dfc8ebef=""
 >
   <div
     class="ant-row css-var-root semantic-preview-row"
-    data-v-0e8f6da1=""
+    data-v-dfc8ebef=""
   >
     <div
       class="ant-col ant-col-16 css-var-root semantic-preview-col"
-      data-v-0e8f6da1=""
+      data-v-dfc8ebef=""
     >
       <div
         style="display: flex; flex-direction: column; gap: 16px;"
@@ -176,28 +176,28 @@ exports[`input-number demo > renders _semantic correctly 1`] = `
     </div>
     <div
       class="ant-col ant-col-8 css-var-root"
-      data-v-0e8f6da1=""
+      data-v-dfc8ebef=""
     >
       <ul
         class="semantic-list"
-        data-v-0e8f6da1=""
+        data-v-dfc8ebef=""
       >
         <li
           class="semantic-list-item"
-          data-v-0e8f6da1=""
+          data-v-dfc8ebef=""
         >
           <div
             class="ant-flex css-var-root ant-flex-align-stretch ant-flex-gap-small ant-flex-vertical"
-            data-v-0e8f6da1=""
+            data-v-dfc8ebef=""
           >
             <div
               class="ant-flex css-var-root ant-flex-align-center ant-flex-justify-space-between ant-flex-gap-small"
-              data-v-0e8f6da1=""
+              data-v-dfc8ebef=""
             >
               <!-- Title + Version -->
               <div
                 class="ant-flex css-var-root ant-flex-align-center ant-flex-gap-small"
-                data-v-0e8f6da1=""
+                data-v-dfc8ebef=""
               >
                 <h5
                   class="ant-typography css-var-root"
@@ -218,11 +218,11 @@ exports[`input-number demo > renders _semantic correctly 1`] = `
               <!-- Pin + Sample -->
               <div
                 class="ant-flex css-var-root ant-flex-align-center ant-flex-gap-small"
-                data-v-0e8f6da1=""
+                data-v-dfc8ebef=""
               >
                 <button
                   class="ant-btn css-var-root ant-btn-text ant-btn-color-default ant-btn-variant-text ant-btn-sm ant-btn-icon-only"
-                  data-v-0e8f6da1=""
+                  data-v-dfc8ebef=""
                   type="button"
                 >
                   <span
@@ -231,7 +231,7 @@ exports[`input-number demo > renders _semantic correctly 1`] = `
                     <span
                       aria-label="pushpin"
                       class="anticon anticon-pushpin"
-                      data-v-0e8f6da1=""
+                      data-v-dfc8ebef=""
                       role="img"
                     >
                       <svg
@@ -254,7 +254,7 @@ exports[`input-number demo > renders _semantic correctly 1`] = `
                 </button>
                 <button
                   class="ant-btn css-var-root ant-btn-text ant-btn-color-default ant-btn-variant-text ant-btn-sm ant-btn-icon-only"
-                  data-v-0e8f6da1=""
+                  data-v-dfc8ebef=""
                   type="button"
                 >
                   <span
@@ -263,7 +263,7 @@ exports[`input-number demo > renders _semantic correctly 1`] = `
                     <span
                       aria-label="info-circle"
                       class="anticon anticon-info-circle"
-                      data-v-0e8f6da1=""
+                      data-v-dfc8ebef=""
                       role="img"
                     >
                       <svg
@@ -308,20 +308,20 @@ exports[`input-number demo > renders _semantic correctly 1`] = `
         </li>
         <li
           class="semantic-list-item"
-          data-v-0e8f6da1=""
+          data-v-dfc8ebef=""
         >
           <div
             class="ant-flex css-var-root ant-flex-align-stretch ant-flex-gap-small ant-flex-vertical"
-            data-v-0e8f6da1=""
+            data-v-dfc8ebef=""
           >
             <div
               class="ant-flex css-var-root ant-flex-align-center ant-flex-justify-space-between ant-flex-gap-small"
-              data-v-0e8f6da1=""
+              data-v-dfc8ebef=""
             >
               <!-- Title + Version -->
               <div
                 class="ant-flex css-var-root ant-flex-align-center ant-flex-gap-small"
-                data-v-0e8f6da1=""
+                data-v-dfc8ebef=""
               >
                 <h5
                   class="ant-typography css-var-root"
@@ -342,11 +342,11 @@ exports[`input-number demo > renders _semantic correctly 1`] = `
               <!-- Pin + Sample -->
               <div
                 class="ant-flex css-var-root ant-flex-align-center ant-flex-gap-small"
-                data-v-0e8f6da1=""
+                data-v-dfc8ebef=""
               >
                 <button
                   class="ant-btn css-var-root ant-btn-text ant-btn-color-default ant-btn-variant-text ant-btn-sm ant-btn-icon-only"
-                  data-v-0e8f6da1=""
+                  data-v-dfc8ebef=""
                   type="button"
                 >
                   <span
@@ -355,7 +355,7 @@ exports[`input-number demo > renders _semantic correctly 1`] = `
                     <span
                       aria-label="pushpin"
                       class="anticon anticon-pushpin"
-                      data-v-0e8f6da1=""
+                      data-v-dfc8ebef=""
                       role="img"
                     >
                       <svg
@@ -378,7 +378,7 @@ exports[`input-number demo > renders _semantic correctly 1`] = `
                 </button>
                 <button
                   class="ant-btn css-var-root ant-btn-text ant-btn-color-default ant-btn-variant-text ant-btn-sm ant-btn-icon-only"
-                  data-v-0e8f6da1=""
+                  data-v-dfc8ebef=""
                   type="button"
                 >
                   <span
@@ -387,7 +387,7 @@ exports[`input-number demo > renders _semantic correctly 1`] = `
                     <span
                       aria-label="info-circle"
                       class="anticon anticon-info-circle"
-                      data-v-0e8f6da1=""
+                      data-v-dfc8ebef=""
                       role="img"
                     >
                       <svg
@@ -432,20 +432,20 @@ exports[`input-number demo > renders _semantic correctly 1`] = `
         </li>
         <li
           class="semantic-list-item"
-          data-v-0e8f6da1=""
+          data-v-dfc8ebef=""
         >
           <div
             class="ant-flex css-var-root ant-flex-align-stretch ant-flex-gap-small ant-flex-vertical"
-            data-v-0e8f6da1=""
+            data-v-dfc8ebef=""
           >
             <div
               class="ant-flex css-var-root ant-flex-align-center ant-flex-justify-space-between ant-flex-gap-small"
-              data-v-0e8f6da1=""
+              data-v-dfc8ebef=""
             >
               <!-- Title + Version -->
               <div
                 class="ant-flex css-var-root ant-flex-align-center ant-flex-gap-small"
-                data-v-0e8f6da1=""
+                data-v-dfc8ebef=""
               >
                 <h5
                   class="ant-typography css-var-root"
@@ -466,11 +466,11 @@ exports[`input-number demo > renders _semantic correctly 1`] = `
               <!-- Pin + Sample -->
               <div
                 class="ant-flex css-var-root ant-flex-align-center ant-flex-gap-small"
-                data-v-0e8f6da1=""
+                data-v-dfc8ebef=""
               >
                 <button
                   class="ant-btn css-var-root ant-btn-text ant-btn-color-default ant-btn-variant-text ant-btn-sm ant-btn-icon-only"
-                  data-v-0e8f6da1=""
+                  data-v-dfc8ebef=""
                   type="button"
                 >
                   <span
@@ -479,7 +479,7 @@ exports[`input-number demo > renders _semantic correctly 1`] = `
                     <span
                       aria-label="pushpin"
                       class="anticon anticon-pushpin"
-                      data-v-0e8f6da1=""
+                      data-v-dfc8ebef=""
                       role="img"
                     >
                       <svg
@@ -502,7 +502,7 @@ exports[`input-number demo > renders _semantic correctly 1`] = `
                 </button>
                 <button
                   class="ant-btn css-var-root ant-btn-text ant-btn-color-default ant-btn-variant-text ant-btn-sm ant-btn-icon-only"
-                  data-v-0e8f6da1=""
+                  data-v-dfc8ebef=""
                   type="button"
                 >
                   <span
@@ -511,7 +511,7 @@ exports[`input-number demo > renders _semantic correctly 1`] = `
                     <span
                       aria-label="info-circle"
                       class="anticon anticon-info-circle"
-                      data-v-0e8f6da1=""
+                      data-v-dfc8ebef=""
                       role="img"
                     >
                       <svg
@@ -556,20 +556,20 @@ exports[`input-number demo > renders _semantic correctly 1`] = `
         </li>
         <li
           class="semantic-list-item"
-          data-v-0e8f6da1=""
+          data-v-dfc8ebef=""
         >
           <div
             class="ant-flex css-var-root ant-flex-align-stretch ant-flex-gap-small ant-flex-vertical"
-            data-v-0e8f6da1=""
+            data-v-dfc8ebef=""
           >
             <div
               class="ant-flex css-var-root ant-flex-align-center ant-flex-justify-space-between ant-flex-gap-small"
-              data-v-0e8f6da1=""
+              data-v-dfc8ebef=""
             >
               <!-- Title + Version -->
               <div
                 class="ant-flex css-var-root ant-flex-align-center ant-flex-gap-small"
-                data-v-0e8f6da1=""
+                data-v-dfc8ebef=""
               >
                 <h5
                   class="ant-typography css-var-root"
@@ -590,11 +590,11 @@ exports[`input-number demo > renders _semantic correctly 1`] = `
               <!-- Pin + Sample -->
               <div
                 class="ant-flex css-var-root ant-flex-align-center ant-flex-gap-small"
-                data-v-0e8f6da1=""
+                data-v-dfc8ebef=""
               >
                 <button
                   class="ant-btn css-var-root ant-btn-text ant-btn-color-default ant-btn-variant-text ant-btn-sm ant-btn-icon-only"
-                  data-v-0e8f6da1=""
+                  data-v-dfc8ebef=""
                   type="button"
                 >
                   <span
@@ -603,7 +603,7 @@ exports[`input-number demo > renders _semantic correctly 1`] = `
                     <span
                       aria-label="pushpin"
                       class="anticon anticon-pushpin"
-                      data-v-0e8f6da1=""
+                      data-v-dfc8ebef=""
                       role="img"
                     >
                       <svg
@@ -626,7 +626,7 @@ exports[`input-number demo > renders _semantic correctly 1`] = `
                 </button>
                 <button
                   class="ant-btn css-var-root ant-btn-text ant-btn-color-default ant-btn-variant-text ant-btn-sm ant-btn-icon-only"
-                  data-v-0e8f6da1=""
+                  data-v-dfc8ebef=""
                   type="button"
                 >
                   <span
@@ -635,7 +635,7 @@ exports[`input-number demo > renders _semantic correctly 1`] = `
                     <span
                       aria-label="info-circle"
                       class="anticon anticon-info-circle"
-                      data-v-0e8f6da1=""
+                      data-v-dfc8ebef=""
                       role="img"
                     >
                       <svg
@@ -680,20 +680,20 @@ exports[`input-number demo > renders _semantic correctly 1`] = `
         </li>
         <li
           class="semantic-list-item"
-          data-v-0e8f6da1=""
+          data-v-dfc8ebef=""
         >
           <div
             class="ant-flex css-var-root ant-flex-align-stretch ant-flex-gap-small ant-flex-vertical"
-            data-v-0e8f6da1=""
+            data-v-dfc8ebef=""
           >
             <div
               class="ant-flex css-var-root ant-flex-align-center ant-flex-justify-space-between ant-flex-gap-small"
-              data-v-0e8f6da1=""
+              data-v-dfc8ebef=""
             >
               <!-- Title + Version -->
               <div
                 class="ant-flex css-var-root ant-flex-align-center ant-flex-gap-small"
-                data-v-0e8f6da1=""
+                data-v-dfc8ebef=""
               >
                 <h5
                   class="ant-typography css-var-root"
@@ -714,11 +714,11 @@ exports[`input-number demo > renders _semantic correctly 1`] = `
               <!-- Pin + Sample -->
               <div
                 class="ant-flex css-var-root ant-flex-align-center ant-flex-gap-small"
-                data-v-0e8f6da1=""
+                data-v-dfc8ebef=""
               >
                 <button
                   class="ant-btn css-var-root ant-btn-text ant-btn-color-default ant-btn-variant-text ant-btn-sm ant-btn-icon-only"
-                  data-v-0e8f6da1=""
+                  data-v-dfc8ebef=""
                   type="button"
                 >
                   <span
@@ -727,7 +727,7 @@ exports[`input-number demo > renders _semantic correctly 1`] = `
                     <span
                       aria-label="pushpin"
                       class="anticon anticon-pushpin"
-                      data-v-0e8f6da1=""
+                      data-v-dfc8ebef=""
                       role="img"
                     >
                       <svg
@@ -750,7 +750,7 @@ exports[`input-number demo > renders _semantic correctly 1`] = `
                 </button>
                 <button
                   class="ant-btn css-var-root ant-btn-text ant-btn-color-default ant-btn-variant-text ant-btn-sm ant-btn-icon-only"
-                  data-v-0e8f6da1=""
+                  data-v-dfc8ebef=""
                   type="button"
                 >
                   <span
@@ -759,7 +759,7 @@ exports[`input-number demo > renders _semantic correctly 1`] = `
                     <span
                       aria-label="info-circle"
                       class="anticon anticon-info-circle"
-                      data-v-0e8f6da1=""
+                      data-v-dfc8ebef=""
                       role="img"
                     >
                       <svg
@@ -804,20 +804,20 @@ exports[`input-number demo > renders _semantic correctly 1`] = `
         </li>
         <li
           class="semantic-list-item"
-          data-v-0e8f6da1=""
+          data-v-dfc8ebef=""
         >
           <div
             class="ant-flex css-var-root ant-flex-align-stretch ant-flex-gap-small ant-flex-vertical"
-            data-v-0e8f6da1=""
+            data-v-dfc8ebef=""
           >
             <div
               class="ant-flex css-var-root ant-flex-align-center ant-flex-justify-space-between ant-flex-gap-small"
-              data-v-0e8f6da1=""
+              data-v-dfc8ebef=""
             >
               <!-- Title + Version -->
               <div
                 class="ant-flex css-var-root ant-flex-align-center ant-flex-gap-small"
-                data-v-0e8f6da1=""
+                data-v-dfc8ebef=""
               >
                 <h5
                   class="ant-typography css-var-root"
@@ -838,11 +838,11 @@ exports[`input-number demo > renders _semantic correctly 1`] = `
               <!-- Pin + Sample -->
               <div
                 class="ant-flex css-var-root ant-flex-align-center ant-flex-gap-small"
-                data-v-0e8f6da1=""
+                data-v-dfc8ebef=""
               >
                 <button
                   class="ant-btn css-var-root ant-btn-text ant-btn-color-default ant-btn-variant-text ant-btn-sm ant-btn-icon-only"
-                  data-v-0e8f6da1=""
+                  data-v-dfc8ebef=""
                   type="button"
                 >
                   <span
@@ -851,7 +851,7 @@ exports[`input-number demo > renders _semantic correctly 1`] = `
                     <span
                       aria-label="pushpin"
                       class="anticon anticon-pushpin"
-                      data-v-0e8f6da1=""
+                      data-v-dfc8ebef=""
                       role="img"
                     >
                       <svg
@@ -874,7 +874,7 @@ exports[`input-number demo > renders _semantic correctly 1`] = `
                 </button>
                 <button
                   class="ant-btn css-var-root ant-btn-text ant-btn-color-default ant-btn-variant-text ant-btn-sm ant-btn-icon-only"
-                  data-v-0e8f6da1=""
+                  data-v-dfc8ebef=""
                   type="button"
                 >
                   <span
@@ -883,7 +883,7 @@ exports[`input-number demo > renders _semantic correctly 1`] = `
                     <span
                       aria-label="info-circle"
                       class="anticon anticon-info-circle"
-                      data-v-0e8f6da1=""
+                      data-v-dfc8ebef=""
                       role="img"
                     >
                       <svg
@@ -3043,11 +3043,11 @@ exports[`input-number demo > renders status correctly 1`] = `
 exports[`input-number demo > renders style-class correctly 1`] = `
 <div
   class="ant-flex css-var-root ant-flex-align-stretch ant-flex-gap-middle ant-flex-vertical"
-  data-v-d8f2fdb6=""
+  data-v-cbcba30a=""
 >
   <div
     class="ant-input-number ant-input-number-mode-input css-var-root ant-input-number-css-var shard ant-input-number-outlined shard"
-    data-v-d8f2fdb6=""
+    data-v-cbcba30a=""
   >
     <!---->
     <!---->
@@ -3123,7 +3123,7 @@ exports[`input-number demo > renders style-class correctly 1`] = `
   </div>
   <div
     class="ant-input-number ant-input-number-mode-input css-var-root ant-input-number-css-var shard ant-input-number-outlined ant-input-number-lg shard"
-    data-v-d8f2fdb6=""
+    data-v-cbcba30a=""
     style="background-color: rgba(250, 250, 250, 0.5); border-color: rgb(114, 46, 209);"
   >
     <!---->

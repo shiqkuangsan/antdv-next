@@ -3,48 +3,48 @@
 exports[`layout demo > renders basic correctly 1`] = `
 <div
   class="ant-flex css-var-root ant-flex-wrap-wrap ant-flex-gap-middle"
-  data-v-579aa1c1=""
+  data-v-8a9a70e8=""
 >
   <div
     class="ant-layout demo-layout css-var-root demo-layout"
-    data-v-579aa1c1=""
+    data-v-8a9a70e8=""
   >
     <header
       class="ant-layout-header demo-header css-var-root demo-header"
-      data-v-579aa1c1=""
+      data-v-8a9a70e8=""
     >
        Header 
     </header>
     <main
       class="ant-layout-content demo-content css-var-root demo-content"
-      data-v-579aa1c1=""
+      data-v-8a9a70e8=""
     >
        Content 
     </main>
     <footer
       class="ant-layout-footer demo-footer css-var-root demo-footer"
-      data-v-579aa1c1=""
+      data-v-8a9a70e8=""
     >
        Footer 
     </footer>
   </div>
   <div
     class="ant-layout demo-layout css-var-root demo-layout"
-    data-v-579aa1c1=""
+    data-v-8a9a70e8=""
   >
     <header
       class="ant-layout-header demo-header css-var-root demo-header"
-      data-v-579aa1c1=""
+      data-v-8a9a70e8=""
     >
        Header 
     </header>
     <div
       class="ant-layout ant-layout-has-sider css-var-root"
-      data-v-579aa1c1=""
+      data-v-8a9a70e8=""
     >
       <aside
         class="ant-layout-sider ant-layout-sider-dark demo-sider css-var-root"
-        data-v-579aa1c1=""
+        data-v-8a9a70e8=""
         style="flex: 0 0 25%; max-width: 25%; min-width: 25%; width: 25%;"
       >
         <div
@@ -56,41 +56,41 @@ exports[`layout demo > renders basic correctly 1`] = `
       </aside>
       <main
         class="ant-layout-content demo-content css-var-root demo-content"
-        data-v-579aa1c1=""
+        data-v-8a9a70e8=""
       >
          Content 
       </main>
     </div>
     <footer
       class="ant-layout-footer demo-footer css-var-root demo-footer"
-      data-v-579aa1c1=""
+      data-v-8a9a70e8=""
     >
        Footer 
     </footer>
   </div>
   <div
     class="ant-layout demo-layout css-var-root demo-layout"
-    data-v-579aa1c1=""
+    data-v-8a9a70e8=""
   >
     <header
       class="ant-layout-header demo-header css-var-root demo-header"
-      data-v-579aa1c1=""
+      data-v-8a9a70e8=""
     >
        Header 
     </header>
     <div
       class="ant-layout ant-layout-has-sider css-var-root"
-      data-v-579aa1c1=""
+      data-v-8a9a70e8=""
     >
       <main
         class="ant-layout-content demo-content css-var-root demo-content"
-        data-v-579aa1c1=""
+        data-v-8a9a70e8=""
       >
          Content 
       </main>
       <aside
         class="ant-layout-sider ant-layout-sider-dark demo-sider css-var-root"
-        data-v-579aa1c1=""
+        data-v-8a9a70e8=""
         style="flex: 0 0 25%; max-width: 25%; min-width: 25%; width: 25%;"
       >
         <div
@@ -103,18 +103,18 @@ exports[`layout demo > renders basic correctly 1`] = `
     </div>
     <footer
       class="ant-layout-footer demo-footer css-var-root demo-footer"
-      data-v-579aa1c1=""
+      data-v-8a9a70e8=""
     >
        Footer 
     </footer>
   </div>
   <div
     class="ant-layout ant-layout-has-sider demo-layout css-var-root demo-layout"
-    data-v-579aa1c1=""
+    data-v-8a9a70e8=""
   >
     <aside
       class="ant-layout-sider ant-layout-sider-dark demo-sider css-var-root"
-      data-v-579aa1c1=""
+      data-v-8a9a70e8=""
       style="flex: 0 0 25%; max-width: 25%; min-width: 25%; width: 25%;"
     >
       <div
@@ -126,23 +126,23 @@ exports[`layout demo > renders basic correctly 1`] = `
     </aside>
     <div
       class="ant-layout css-var-root"
-      data-v-579aa1c1=""
+      data-v-8a9a70e8=""
     >
       <header
         class="ant-layout-header demo-header css-var-root demo-header"
-        data-v-579aa1c1=""
+        data-v-8a9a70e8=""
       >
          Header 
       </header>
       <main
         class="ant-layout-content demo-content css-var-root demo-content"
-        data-v-579aa1c1=""
+        data-v-8a9a70e8=""
       >
          Content 
       </main>
       <footer
         class="ant-layout-footer demo-footer css-var-root demo-footer"
-        data-v-579aa1c1=""
+        data-v-8a9a70e8=""
       >
          Footer 
       </footer>
@@ -154,11 +154,11 @@ exports[`layout demo > renders basic correctly 1`] = `
 exports[`layout demo > renders custom-trigger correctly 1`] = `
 <div
   class="ant-layout ant-layout-has-sider css-var-root"
-  data-v-05304da6=""
+  data-v-abdf83f8=""
 >
   <aside
     class="ant-layout-sider ant-layout-sider-dark css-var-root"
-    data-v-05304da6=""
+    data-v-abdf83f8=""
     style="flex: 0 0 200px; max-width: 200px; min-width: 200px; width: 200px;"
   >
     <div
@@ -166,7 +166,7 @@ exports[`layout demo > renders custom-trigger correctly 1`] = `
     >
       <div
         class="demo-logo-vertical"
-        data-v-05304da6=""
+        data-v-abdf83f8=""
       />
       <ul
         class="ant-menu ant-menu-root ant-menu-inline ant-menu-dark css-var-root ant-menu-css-var"
@@ -297,16 +297,16 @@ exports[`layout demo > renders custom-trigger correctly 1`] = `
   </aside>
   <div
     class="ant-layout css-var-root"
-    data-v-05304da6=""
+    data-v-abdf83f8=""
   >
     <header
       class="ant-layout-header custom-header css-var-root custom-header"
-      data-v-05304da6=""
+      data-v-abdf83f8=""
       style="background: rgb(255, 255, 255);"
     >
       <button
         class="ant-btn css-var-root ant-btn-text ant-btn-color-default ant-btn-variant-text ant-btn-icon-only trigger-button"
-        data-v-05304da6=""
+        data-v-abdf83f8=""
         type="button"
       >
         <span
@@ -315,7 +315,7 @@ exports[`layout demo > renders custom-trigger correctly 1`] = `
           <span
             aria-label="menu-fold"
             class="anticon anticon-menu-fold"
-            data-v-05304da6=""
+            data-v-abdf83f8=""
             role="img"
           >
             <svg
@@ -339,7 +339,7 @@ exports[`layout demo > renders custom-trigger correctly 1`] = `
     </header>
     <main
       class="ant-layout-content custom-content css-var-root custom-content"
-      data-v-05304da6=""
+      data-v-abdf83f8=""
       style="background: rgb(255, 255, 255); border-radius: 8px;"
     >
        Content 
@@ -351,15 +351,15 @@ exports[`layout demo > renders custom-trigger correctly 1`] = `
 exports[`layout demo > renders fixed correctly 1`] = `
 <div
   class="ant-layout css-var-root"
-  data-v-37e708ae=""
+  data-v-37deaf19=""
 >
   <header
     class="ant-layout-header demo-header css-var-root demo-header"
-    data-v-37e708ae=""
+    data-v-37deaf19=""
   >
     <div
       class="demo-logo"
-      data-v-37e708ae=""
+      data-v-37deaf19=""
     />
     <ul
       class="ant-menu-overflow ant-menu ant-menu-root ant-menu-horizontal ant-menu-dark demo-menu css-var-root ant-menu-css-var"
@@ -458,11 +458,11 @@ exports[`layout demo > renders fixed correctly 1`] = `
   </header>
   <main
     class="ant-layout-content demo-content css-var-root demo-content"
-    data-v-37e708ae=""
+    data-v-37deaf19=""
   >
     <nav
       class="ant-breadcrumb demo-breadcrumb css-var-root"
-      data-v-37e708ae=""
+      data-v-37deaf19=""
     >
       <ol>
         <li
@@ -507,7 +507,7 @@ exports[`layout demo > renders fixed correctly 1`] = `
     </nav>
     <div
       class="demo-content-box"
-      data-v-37e708ae=""
+      data-v-37deaf19=""
       style="background: rgb(255, 255, 255); border-radius: 8px;"
     >
        Content 
@@ -515,7 +515,7 @@ exports[`layout demo > renders fixed correctly 1`] = `
   </main>
   <footer
     class="ant-layout-footer demo-footer css-var-root demo-footer"
-    data-v-37e708ae=""
+    data-v-37deaf19=""
   >
      Antdv Next ©2026 Created by Ant UED 
   </footer>
@@ -525,11 +525,11 @@ exports[`layout demo > renders fixed correctly 1`] = `
 exports[`layout demo > renders fixed-sider correctly 1`] = `
 <div
   class="ant-layout ant-layout-has-sider css-var-root"
-  data-v-20492677=""
+  data-v-dc441303=""
 >
   <aside
     class="ant-layout-sider ant-layout-sider-dark css-var-root"
-    data-v-20492677=""
+    data-v-dc441303=""
     style="overflow: auto; height: 100vh; position: sticky; inset-inline-start: 0; top: 0px; scrollbar-width: thin; scrollbar-gutter: stable; flex: 0 0 200px; max-width: 200px; min-width: 200px; width: 200px;"
   >
     <div
@@ -537,7 +537,7 @@ exports[`layout demo > renders fixed-sider correctly 1`] = `
     >
       <div
         class="demo-logo-vertical"
-        data-v-20492677=""
+        data-v-dc441303=""
       />
       <ul
         class="ant-menu ant-menu-root ant-menu-inline ant-menu-dark css-var-root ant-menu-css-var"
@@ -848,432 +848,432 @@ exports[`layout demo > renders fixed-sider correctly 1`] = `
   </aside>
   <div
     class="ant-layout css-var-root"
-    data-v-20492677=""
+    data-v-dc441303=""
   >
     <header
       class="ant-layout-header fixed-header css-var-root fixed-header"
-      data-v-20492677=""
+      data-v-dc441303=""
       style="background: rgb(255, 255, 255);"
     />
     <main
       class="ant-layout-content fixed-content css-var-root fixed-content"
-      data-v-20492677=""
+      data-v-dc441303=""
     >
       <div
         class="fixed-content-box"
-        data-v-20492677=""
+        data-v-dc441303=""
         style="background: rgb(255, 255, 255); border-radius: 8px;"
       >
         <p
-          data-v-20492677=""
+          data-v-dc441303=""
         >
           long content
         </p>
         ... 
         <br
-          data-v-20492677=""
+          data-v-dc441303=""
         />
         ... 
         <br
-          data-v-20492677=""
+          data-v-dc441303=""
         />
         ... 
         <br
-          data-v-20492677=""
+          data-v-dc441303=""
         />
         ... 
         <br
-          data-v-20492677=""
+          data-v-dc441303=""
         />
         ... 
         <br
-          data-v-20492677=""
+          data-v-dc441303=""
         />
         ... 
         <br
-          data-v-20492677=""
+          data-v-dc441303=""
         />
         ... 
         <br
-          data-v-20492677=""
+          data-v-dc441303=""
         />
         ... 
         <br
-          data-v-20492677=""
+          data-v-dc441303=""
         />
         ... 
         <br
-          data-v-20492677=""
+          data-v-dc441303=""
         />
         ... 
         <br
-          data-v-20492677=""
+          data-v-dc441303=""
         />
         ... 
         <br
-          data-v-20492677=""
+          data-v-dc441303=""
         />
         ... 
         <br
-          data-v-20492677=""
+          data-v-dc441303=""
         />
         ... 
         <br
-          data-v-20492677=""
+          data-v-dc441303=""
         />
         ... 
         <br
-          data-v-20492677=""
+          data-v-dc441303=""
         />
         ... 
         <br
-          data-v-20492677=""
+          data-v-dc441303=""
         />
         ... 
         <br
-          data-v-20492677=""
+          data-v-dc441303=""
         />
         ... 
         <br
-          data-v-20492677=""
+          data-v-dc441303=""
         />
         ... 
         <br
-          data-v-20492677=""
+          data-v-dc441303=""
         />
         ... 
         <br
-          data-v-20492677=""
-        />
-        more 
-        <br
-          data-v-20492677=""
-        />
-        ... 
-        <br
-          data-v-20492677=""
-        />
-        ... 
-        <br
-          data-v-20492677=""
-        />
-        ... 
-        <br
-          data-v-20492677=""
-        />
-        ... 
-        <br
-          data-v-20492677=""
-        />
-        ... 
-        <br
-          data-v-20492677=""
-        />
-        ... 
-        <br
-          data-v-20492677=""
-        />
-        ... 
-        <br
-          data-v-20492677=""
-        />
-        ... 
-        <br
-          data-v-20492677=""
-        />
-        ... 
-        <br
-          data-v-20492677=""
-        />
-        ... 
-        <br
-          data-v-20492677=""
-        />
-        ... 
-        <br
-          data-v-20492677=""
-        />
-        ... 
-        <br
-          data-v-20492677=""
-        />
-        ... 
-        <br
-          data-v-20492677=""
-        />
-        ... 
-        <br
-          data-v-20492677=""
-        />
-        ... 
-        <br
-          data-v-20492677=""
-        />
-        ... 
-        <br
-          data-v-20492677=""
-        />
-        ... 
-        <br
-          data-v-20492677=""
-        />
-        ... 
-        <br
-          data-v-20492677=""
-        />
-        ... 
-        <br
-          data-v-20492677=""
+          data-v-dc441303=""
         />
         more 
         <br
-          data-v-20492677=""
+          data-v-dc441303=""
         />
         ... 
         <br
-          data-v-20492677=""
+          data-v-dc441303=""
         />
         ... 
         <br
-          data-v-20492677=""
+          data-v-dc441303=""
         />
         ... 
         <br
-          data-v-20492677=""
+          data-v-dc441303=""
         />
         ... 
         <br
-          data-v-20492677=""
+          data-v-dc441303=""
         />
         ... 
         <br
-          data-v-20492677=""
+          data-v-dc441303=""
         />
         ... 
         <br
-          data-v-20492677=""
+          data-v-dc441303=""
         />
         ... 
         <br
-          data-v-20492677=""
+          data-v-dc441303=""
         />
         ... 
         <br
-          data-v-20492677=""
+          data-v-dc441303=""
         />
         ... 
         <br
-          data-v-20492677=""
+          data-v-dc441303=""
         />
         ... 
         <br
-          data-v-20492677=""
+          data-v-dc441303=""
         />
         ... 
         <br
-          data-v-20492677=""
+          data-v-dc441303=""
         />
         ... 
         <br
-          data-v-20492677=""
+          data-v-dc441303=""
         />
         ... 
         <br
-          data-v-20492677=""
+          data-v-dc441303=""
         />
         ... 
         <br
-          data-v-20492677=""
+          data-v-dc441303=""
         />
         ... 
         <br
-          data-v-20492677=""
+          data-v-dc441303=""
         />
         ... 
         <br
-          data-v-20492677=""
+          data-v-dc441303=""
         />
         ... 
         <br
-          data-v-20492677=""
+          data-v-dc441303=""
         />
         ... 
         <br
-          data-v-20492677=""
+          data-v-dc441303=""
         />
         ... 
         <br
-          data-v-20492677=""
+          data-v-dc441303=""
         />
         more 
         <br
-          data-v-20492677=""
+          data-v-dc441303=""
         />
         ... 
         <br
-          data-v-20492677=""
+          data-v-dc441303=""
         />
         ... 
         <br
-          data-v-20492677=""
+          data-v-dc441303=""
         />
         ... 
         <br
-          data-v-20492677=""
+          data-v-dc441303=""
         />
         ... 
         <br
-          data-v-20492677=""
+          data-v-dc441303=""
         />
         ... 
         <br
-          data-v-20492677=""
+          data-v-dc441303=""
         />
         ... 
         <br
-          data-v-20492677=""
+          data-v-dc441303=""
         />
         ... 
         <br
-          data-v-20492677=""
+          data-v-dc441303=""
         />
         ... 
         <br
-          data-v-20492677=""
+          data-v-dc441303=""
         />
         ... 
         <br
-          data-v-20492677=""
+          data-v-dc441303=""
         />
         ... 
         <br
-          data-v-20492677=""
+          data-v-dc441303=""
         />
         ... 
         <br
-          data-v-20492677=""
+          data-v-dc441303=""
         />
         ... 
         <br
-          data-v-20492677=""
+          data-v-dc441303=""
         />
         ... 
         <br
-          data-v-20492677=""
+          data-v-dc441303=""
         />
         ... 
         <br
-          data-v-20492677=""
+          data-v-dc441303=""
         />
         ... 
         <br
-          data-v-20492677=""
+          data-v-dc441303=""
         />
         ... 
         <br
-          data-v-20492677=""
+          data-v-dc441303=""
         />
         ... 
         <br
-          data-v-20492677=""
+          data-v-dc441303=""
         />
         ... 
         <br
-          data-v-20492677=""
+          data-v-dc441303=""
         />
         ... 
         <br
-          data-v-20492677=""
+          data-v-dc441303=""
         />
         more 
         <br
-          data-v-20492677=""
+          data-v-dc441303=""
         />
         ... 
         <br
-          data-v-20492677=""
+          data-v-dc441303=""
         />
         ... 
         <br
-          data-v-20492677=""
+          data-v-dc441303=""
         />
         ... 
         <br
-          data-v-20492677=""
+          data-v-dc441303=""
         />
         ... 
         <br
-          data-v-20492677=""
+          data-v-dc441303=""
         />
         ... 
         <br
-          data-v-20492677=""
+          data-v-dc441303=""
         />
         ... 
         <br
-          data-v-20492677=""
+          data-v-dc441303=""
         />
         ... 
         <br
-          data-v-20492677=""
+          data-v-dc441303=""
         />
         ... 
         <br
-          data-v-20492677=""
+          data-v-dc441303=""
         />
         ... 
         <br
-          data-v-20492677=""
+          data-v-dc441303=""
         />
         ... 
         <br
-          data-v-20492677=""
+          data-v-dc441303=""
         />
         ... 
         <br
-          data-v-20492677=""
+          data-v-dc441303=""
         />
         ... 
         <br
-          data-v-20492677=""
+          data-v-dc441303=""
         />
         ... 
         <br
-          data-v-20492677=""
+          data-v-dc441303=""
         />
         ... 
         <br
-          data-v-20492677=""
+          data-v-dc441303=""
         />
         ... 
         <br
-          data-v-20492677=""
+          data-v-dc441303=""
         />
         ... 
         <br
-          data-v-20492677=""
+          data-v-dc441303=""
         />
         ... 
         <br
-          data-v-20492677=""
+          data-v-dc441303=""
         />
         ... 
         <br
-          data-v-20492677=""
+          data-v-dc441303=""
         />
         ... 
         <br
-          data-v-20492677=""
+          data-v-dc441303=""
         />
         more 
         <br
-          data-v-20492677=""
+          data-v-dc441303=""
+        />
+        ... 
+        <br
+          data-v-dc441303=""
+        />
+        ... 
+        <br
+          data-v-dc441303=""
+        />
+        ... 
+        <br
+          data-v-dc441303=""
+        />
+        ... 
+        <br
+          data-v-dc441303=""
+        />
+        ... 
+        <br
+          data-v-dc441303=""
+        />
+        ... 
+        <br
+          data-v-dc441303=""
+        />
+        ... 
+        <br
+          data-v-dc441303=""
+        />
+        ... 
+        <br
+          data-v-dc441303=""
+        />
+        ... 
+        <br
+          data-v-dc441303=""
+        />
+        ... 
+        <br
+          data-v-dc441303=""
+        />
+        ... 
+        <br
+          data-v-dc441303=""
+        />
+        ... 
+        <br
+          data-v-dc441303=""
+        />
+        ... 
+        <br
+          data-v-dc441303=""
+        />
+        ... 
+        <br
+          data-v-dc441303=""
+        />
+        ... 
+        <br
+          data-v-dc441303=""
+        />
+        ... 
+        <br
+          data-v-dc441303=""
+        />
+        ... 
+        <br
+          data-v-dc441303=""
+        />
+        ... 
+        <br
+          data-v-dc441303=""
+        />
+        ... 
+        <br
+          data-v-dc441303=""
+        />
+        more 
+        <br
+          data-v-dc441303=""
         />
       </div>
     </main>
     <footer
       class="ant-layout-footer fixed-footer css-var-root fixed-footer"
-      data-v-20492677=""
+      data-v-dc441303=""
     >
        Antdv Next ©2026 Created by Ant UED 
     </footer>
@@ -1284,11 +1284,11 @@ exports[`layout demo > renders fixed-sider correctly 1`] = `
 exports[`layout demo > renders responsive correctly 1`] = `
 <div
   class="ant-layout ant-layout-has-sider css-var-root"
-  data-v-b36dc6c3=""
+  data-v-c531d7ce=""
 >
   <aside
     class="ant-layout-sider ant-layout-sider-dark ant-layout-sider-collapsed ant-layout-sider-below ant-layout-sider-zero-width css-var-root"
-    data-v-b36dc6c3=""
+    data-v-c531d7ce=""
     style="flex: 0 0 0px; max-width: 0px; min-width: 0px; width: 0px;"
   >
     <div
@@ -1296,7 +1296,7 @@ exports[`layout demo > renders responsive correctly 1`] = `
     >
       <div
         class="demo-logo-vertical"
-        data-v-b36dc6c3=""
+        data-v-c531d7ce=""
       />
       <ul
         class="ant-menu ant-menu-root ant-menu-vertical ant-menu-dark ant-menu-inline-collapsed css-var-root ant-menu-css-var"
@@ -1461,7 +1461,7 @@ exports[`layout demo > renders responsive correctly 1`] = `
       <span
         aria-label="bars"
         class="anticon anticon-bars"
-        data-v-b36dc6c3=""
+        data-v-c531d7ce=""
         role="img"
       >
         <svg
@@ -1482,20 +1482,20 @@ exports[`layout demo > renders responsive correctly 1`] = `
   </aside>
   <div
     class="ant-layout css-var-root"
-    data-v-b36dc6c3=""
+    data-v-c531d7ce=""
   >
     <header
       class="ant-layout-header responsive-header css-var-root responsive-header"
-      data-v-b36dc6c3=""
+      data-v-c531d7ce=""
       style="background: rgb(255, 255, 255);"
     />
     <main
       class="ant-layout-content responsive-content css-var-root responsive-content"
-      data-v-b36dc6c3=""
+      data-v-c531d7ce=""
     >
       <div
         class="responsive-content-box"
-        data-v-b36dc6c3=""
+        data-v-c531d7ce=""
         style="background: rgb(255, 255, 255); border-radius: 8px;"
       >
          content 
@@ -1503,7 +1503,7 @@ exports[`layout demo > renders responsive correctly 1`] = `
     </main>
     <footer
       class="ant-layout-footer responsive-footer css-var-root responsive-footer"
-      data-v-b36dc6c3=""
+      data-v-c531d7ce=""
     >
        Antdv Next ©2026 Created by Ant UED 
     </footer>
@@ -1514,11 +1514,11 @@ exports[`layout demo > renders responsive correctly 1`] = `
 exports[`layout demo > renders side correctly 1`] = `
 <div
   class="ant-layout ant-layout-has-sider side-layout css-var-root side-layout"
-  data-v-a42faed5=""
+  data-v-a29884ea=""
 >
   <aside
     class="ant-layout-sider ant-layout-sider-dark ant-layout-sider-has-trigger css-var-root"
-    data-v-a42faed5=""
+    data-v-a29884ea=""
     style="flex: 0 0 200px; max-width: 200px; min-width: 200px; width: 200px;"
   >
     <div
@@ -1526,7 +1526,7 @@ exports[`layout demo > renders side correctly 1`] = `
     >
       <div
         class="demo-logo-vertical"
-        data-v-a42faed5=""
+        data-v-a29884ea=""
       />
       <ul
         class="ant-menu ant-menu-root ant-menu-inline ant-menu-dark css-var-root ant-menu-css-var"
@@ -1785,7 +1785,7 @@ exports[`layout demo > renders side correctly 1`] = `
       <span
         aria-label="left"
         class="anticon anticon-left"
-        data-v-a42faed5=""
+        data-v-a29884ea=""
         role="img"
       >
         <svg
@@ -1806,20 +1806,20 @@ exports[`layout demo > renders side correctly 1`] = `
   </aside>
   <div
     class="ant-layout css-var-root"
-    data-v-a42faed5=""
+    data-v-a29884ea=""
   >
     <header
       class="ant-layout-header side-header css-var-root side-header"
-      data-v-a42faed5=""
+      data-v-a29884ea=""
       style="background: rgb(255, 255, 255);"
     />
     <main
       class="ant-layout-content side-content css-var-root side-content"
-      data-v-a42faed5=""
+      data-v-a29884ea=""
     >
       <nav
         class="ant-breadcrumb side-breadcrumb css-var-root"
-        data-v-a42faed5=""
+        data-v-a29884ea=""
       >
         <ol>
           <li
@@ -1850,7 +1850,7 @@ exports[`layout demo > renders side correctly 1`] = `
       </nav>
       <div
         class="side-content-box"
-        data-v-a42faed5=""
+        data-v-a29884ea=""
         style="background: rgb(255, 255, 255); border-radius: 8px;"
       >
          Bill is a cat. 
@@ -1858,7 +1858,7 @@ exports[`layout demo > renders side correctly 1`] = `
     </main>
     <footer
       class="ant-layout-footer side-footer css-var-root side-footer"
-      data-v-a42faed5=""
+      data-v-a29884ea=""
     >
        Antdv Next ©2026 Created by Ant UED 
     </footer>
@@ -1869,15 +1869,15 @@ exports[`layout demo > renders side correctly 1`] = `
 exports[`layout demo > renders top correctly 1`] = `
 <div
   class="ant-layout css-var-root"
-  data-v-ce68d8a7=""
+  data-v-6c1c6387=""
 >
   <header
     class="ant-layout-header demo-header css-var-root demo-header"
-    data-v-ce68d8a7=""
+    data-v-6c1c6387=""
   >
     <div
       class="demo-logo"
-      data-v-ce68d8a7=""
+      data-v-6c1c6387=""
     />
     <ul
       class="ant-menu-overflow ant-menu ant-menu-root ant-menu-horizontal ant-menu-dark demo-menu css-var-root ant-menu-css-var"
@@ -2180,11 +2180,11 @@ exports[`layout demo > renders top correctly 1`] = `
   </header>
   <main
     class="ant-layout-content demo-content css-var-root demo-content"
-    data-v-ce68d8a7=""
+    data-v-6c1c6387=""
   >
     <nav
       class="ant-breadcrumb demo-breadcrumb css-var-root"
-      data-v-ce68d8a7=""
+      data-v-6c1c6387=""
     >
       <ol>
         <li
@@ -2229,7 +2229,7 @@ exports[`layout demo > renders top correctly 1`] = `
     </nav>
     <div
       class="demo-content-box"
-      data-v-ce68d8a7=""
+      data-v-6c1c6387=""
       style="background: rgb(255, 255, 255); border-radius: 8px;"
     >
        Content 
@@ -2237,7 +2237,7 @@ exports[`layout demo > renders top correctly 1`] = `
   </main>
   <footer
     class="ant-layout-footer demo-footer css-var-root demo-footer"
-    data-v-ce68d8a7=""
+    data-v-6c1c6387=""
   >
      Antdv Next ©2026 Created by Ant UED 
   </footer>
@@ -2247,15 +2247,15 @@ exports[`layout demo > renders top correctly 1`] = `
 exports[`layout demo > renders top-side correctly 1`] = `
 <div
   class="ant-layout css-var-root"
-  data-v-680aeaac=""
+  data-v-6569885e=""
 >
   <header
     class="ant-layout-header demo-header css-var-root demo-header"
-    data-v-680aeaac=""
+    data-v-6569885e=""
   >
     <div
       class="demo-logo"
-      data-v-680aeaac=""
+      data-v-6569885e=""
     />
     <ul
       class="ant-menu-overflow ant-menu ant-menu-root ant-menu-horizontal ant-menu-dark demo-menu css-var-root ant-menu-css-var"
@@ -2354,11 +2354,11 @@ exports[`layout demo > renders top-side correctly 1`] = `
   </header>
   <div
     class="demo-body"
-    data-v-680aeaac=""
+    data-v-6569885e=""
   >
     <nav
       class="ant-breadcrumb demo-breadcrumb css-var-root"
-      data-v-680aeaac=""
+      data-v-6569885e=""
     >
       <ol>
         <li
@@ -2403,12 +2403,12 @@ exports[`layout demo > renders top-side correctly 1`] = `
     </nav>
     <div
       class="ant-layout ant-layout-has-sider demo-inner css-var-root demo-inner"
-      data-v-680aeaac=""
+      data-v-6569885e=""
       style="background: rgb(255, 255, 255); border-radius: 8px;"
     >
       <aside
         class="ant-layout-sider ant-layout-sider-dark css-var-root"
-        data-v-680aeaac=""
+        data-v-6569885e=""
         style="background: rgb(255, 255, 255); flex: 0 0 200px; max-width: 200px; min-width: 200px; width: 200px;"
       >
         <div
@@ -2701,7 +2701,7 @@ exports[`layout demo > renders top-side correctly 1`] = `
       </aside>
       <main
         class="ant-layout-content demo-content css-var-root demo-content"
-        data-v-680aeaac=""
+        data-v-6569885e=""
       >
          Content 
       </main>
@@ -2709,7 +2709,7 @@ exports[`layout demo > renders top-side correctly 1`] = `
   </div>
   <footer
     class="ant-layout-footer demo-footer css-var-root demo-footer"
-    data-v-680aeaac=""
+    data-v-6569885e=""
   >
      Antdv Next ©2026 Created by Ant UED 
   </footer>
@@ -2719,15 +2719,15 @@ exports[`layout demo > renders top-side correctly 1`] = `
 exports[`layout demo > renders top-side-2 correctly 1`] = `
 <div
   class="ant-layout css-var-root"
-  data-v-191fd412=""
+  data-v-6783405e=""
 >
   <header
     class="ant-layout-header demo-header css-var-root demo-header"
-    data-v-191fd412=""
+    data-v-6783405e=""
   >
     <div
       class="demo-logo"
-      data-v-191fd412=""
+      data-v-6783405e=""
     />
     <ul
       class="ant-menu-overflow ant-menu ant-menu-root ant-menu-horizontal ant-menu-dark demo-menu css-var-root ant-menu-css-var"
@@ -2826,11 +2826,11 @@ exports[`layout demo > renders top-side-2 correctly 1`] = `
   </header>
   <div
     class="ant-layout ant-layout-has-sider css-var-root"
-    data-v-191fd412=""
+    data-v-6783405e=""
   >
     <aside
       class="ant-layout-sider ant-layout-sider-dark css-var-root"
-      data-v-191fd412=""
+      data-v-6783405e=""
       style="background: rgb(255, 255, 255); flex: 0 0 200px; max-width: 200px; min-width: 200px; width: 200px;"
     >
       <div
@@ -3123,11 +3123,11 @@ exports[`layout demo > renders top-side-2 correctly 1`] = `
     </aside>
     <div
       class="ant-layout demo-main css-var-root demo-main"
-      data-v-191fd412=""
+      data-v-6783405e=""
     >
       <nav
         class="ant-breadcrumb demo-breadcrumb css-var-root"
-        data-v-191fd412=""
+        data-v-6783405e=""
       >
         <ol>
           <li
@@ -3172,7 +3172,7 @@ exports[`layout demo > renders top-side-2 correctly 1`] = `
       </nav>
       <main
         class="ant-layout-content demo-content css-var-root demo-content"
-        data-v-191fd412=""
+        data-v-6783405e=""
         style="background: rgb(255, 255, 255); border-radius: 8px;"
       >
          Content 

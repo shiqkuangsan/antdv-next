@@ -3,15 +3,15 @@
 exports[`switch demo > renders _semantic correctly 1`] = `
 <div
   class="semantic-preview-container"
-  data-v-0e8f6da1=""
+  data-v-dfc8ebef=""
 >
   <div
     class="ant-row css-var-root semantic-preview-row"
-    data-v-0e8f6da1=""
+    data-v-dfc8ebef=""
   >
     <div
       class="ant-col ant-col-16 css-var-root semantic-preview-col"
-      data-v-0e8f6da1=""
+      data-v-dfc8ebef=""
     >
       <button
         aria-checked="false"
@@ -44,28 +44,28 @@ exports[`switch demo > renders _semantic correctly 1`] = `
     </div>
     <div
       class="ant-col ant-col-8 css-var-root"
-      data-v-0e8f6da1=""
+      data-v-dfc8ebef=""
     >
       <ul
         class="semantic-list"
-        data-v-0e8f6da1=""
+        data-v-dfc8ebef=""
       >
         <li
           class="semantic-list-item"
-          data-v-0e8f6da1=""
+          data-v-dfc8ebef=""
         >
           <div
             class="ant-flex css-var-root ant-flex-align-stretch ant-flex-gap-small ant-flex-vertical"
-            data-v-0e8f6da1=""
+            data-v-dfc8ebef=""
           >
             <div
               class="ant-flex css-var-root ant-flex-align-center ant-flex-justify-space-between ant-flex-gap-small"
-              data-v-0e8f6da1=""
+              data-v-dfc8ebef=""
             >
               <!-- Title + Version -->
               <div
                 class="ant-flex css-var-root ant-flex-align-center ant-flex-gap-small"
-                data-v-0e8f6da1=""
+                data-v-dfc8ebef=""
               >
                 <h5
                   class="ant-typography css-var-root"
@@ -83,7 +83,7 @@ exports[`switch demo > renders _semantic correctly 1`] = `
                 </h5>
                 <span
                   class="ant-tag ant-tag-filled ant-tag-blue css-var-root"
-                  data-v-0e8f6da1=""
+                  data-v-dfc8ebef=""
                 >
                   1.0.0
                   <!---->
@@ -94,11 +94,11 @@ exports[`switch demo > renders _semantic correctly 1`] = `
               <!-- Pin + Sample -->
               <div
                 class="ant-flex css-var-root ant-flex-align-center ant-flex-gap-small"
-                data-v-0e8f6da1=""
+                data-v-dfc8ebef=""
               >
                 <button
                   class="ant-btn css-var-root ant-btn-text ant-btn-color-default ant-btn-variant-text ant-btn-sm ant-btn-icon-only"
-                  data-v-0e8f6da1=""
+                  data-v-dfc8ebef=""
                   type="button"
                 >
                   <span
@@ -107,7 +107,7 @@ exports[`switch demo > renders _semantic correctly 1`] = `
                     <span
                       aria-label="pushpin"
                       class="anticon anticon-pushpin"
-                      data-v-0e8f6da1=""
+                      data-v-dfc8ebef=""
                       role="img"
                     >
                       <svg
@@ -130,7 +130,7 @@ exports[`switch demo > renders _semantic correctly 1`] = `
                 </button>
                 <button
                   class="ant-btn css-var-root ant-btn-text ant-btn-color-default ant-btn-variant-text ant-btn-sm ant-btn-icon-only"
-                  data-v-0e8f6da1=""
+                  data-v-dfc8ebef=""
                   type="button"
                 >
                   <span
@@ -139,7 +139,7 @@ exports[`switch demo > renders _semantic correctly 1`] = `
                     <span
                       aria-label="info-circle"
                       class="anticon anticon-info-circle"
-                      data-v-0e8f6da1=""
+                      data-v-dfc8ebef=""
                       role="img"
                     >
                       <svg
@@ -184,20 +184,20 @@ exports[`switch demo > renders _semantic correctly 1`] = `
         </li>
         <li
           class="semantic-list-item"
-          data-v-0e8f6da1=""
+          data-v-dfc8ebef=""
         >
           <div
             class="ant-flex css-var-root ant-flex-align-stretch ant-flex-gap-small ant-flex-vertical"
-            data-v-0e8f6da1=""
+            data-v-dfc8ebef=""
           >
             <div
               class="ant-flex css-var-root ant-flex-align-center ant-flex-justify-space-between ant-flex-gap-small"
-              data-v-0e8f6da1=""
+              data-v-dfc8ebef=""
             >
               <!-- Title + Version -->
               <div
                 class="ant-flex css-var-root ant-flex-align-center ant-flex-gap-small"
-                data-v-0e8f6da1=""
+                data-v-dfc8ebef=""
               >
                 <h5
                   class="ant-typography css-var-root"
@@ -215,7 +215,7 @@ exports[`switch demo > renders _semantic correctly 1`] = `
                 </h5>
                 <span
                   class="ant-tag ant-tag-filled ant-tag-blue css-var-root"
-                  data-v-0e8f6da1=""
+                  data-v-dfc8ebef=""
                 >
                   1.0.0
                   <!---->
@@ -226,11 +226,11 @@ exports[`switch demo > renders _semantic correctly 1`] = `
               <!-- Pin + Sample -->
               <div
                 class="ant-flex css-var-root ant-flex-align-center ant-flex-gap-small"
-                data-v-0e8f6da1=""
+                data-v-dfc8ebef=""
               >
                 <button
                   class="ant-btn css-var-root ant-btn-text ant-btn-color-default ant-btn-variant-text ant-btn-sm ant-btn-icon-only"
-                  data-v-0e8f6da1=""
+                  data-v-dfc8ebef=""
                   type="button"
                 >
                   <span
@@ -239,7 +239,7 @@ exports[`switch demo > renders _semantic correctly 1`] = `
                     <span
                       aria-label="pushpin"
                       class="anticon anticon-pushpin"
-                      data-v-0e8f6da1=""
+                      data-v-dfc8ebef=""
                       role="img"
                     >
                       <svg
@@ -262,7 +262,7 @@ exports[`switch demo > renders _semantic correctly 1`] = `
                 </button>
                 <button
                   class="ant-btn css-var-root ant-btn-text ant-btn-color-default ant-btn-variant-text ant-btn-sm ant-btn-icon-only"
-                  data-v-0e8f6da1=""
+                  data-v-dfc8ebef=""
                   type="button"
                 >
                   <span
@@ -271,7 +271,7 @@ exports[`switch demo > renders _semantic correctly 1`] = `
                     <span
                       aria-label="info-circle"
                       class="anticon anticon-info-circle"
-                      data-v-0e8f6da1=""
+                      data-v-dfc8ebef=""
                       role="img"
                     >
                       <svg
@@ -316,20 +316,20 @@ exports[`switch demo > renders _semantic correctly 1`] = `
         </li>
         <li
           class="semantic-list-item"
-          data-v-0e8f6da1=""
+          data-v-dfc8ebef=""
         >
           <div
             class="ant-flex css-var-root ant-flex-align-stretch ant-flex-gap-small ant-flex-vertical"
-            data-v-0e8f6da1=""
+            data-v-dfc8ebef=""
           >
             <div
               class="ant-flex css-var-root ant-flex-align-center ant-flex-justify-space-between ant-flex-gap-small"
-              data-v-0e8f6da1=""
+              data-v-dfc8ebef=""
             >
               <!-- Title + Version -->
               <div
                 class="ant-flex css-var-root ant-flex-align-center ant-flex-gap-small"
-                data-v-0e8f6da1=""
+                data-v-dfc8ebef=""
               >
                 <h5
                   class="ant-typography css-var-root"
@@ -347,7 +347,7 @@ exports[`switch demo > renders _semantic correctly 1`] = `
                 </h5>
                 <span
                   class="ant-tag ant-tag-filled ant-tag-blue css-var-root"
-                  data-v-0e8f6da1=""
+                  data-v-dfc8ebef=""
                 >
                   1.0.3
                   <!---->
@@ -358,11 +358,11 @@ exports[`switch demo > renders _semantic correctly 1`] = `
               <!-- Pin + Sample -->
               <div
                 class="ant-flex css-var-root ant-flex-align-center ant-flex-gap-small"
-                data-v-0e8f6da1=""
+                data-v-dfc8ebef=""
               >
                 <button
                   class="ant-btn css-var-root ant-btn-text ant-btn-color-default ant-btn-variant-text ant-btn-sm ant-btn-icon-only"
-                  data-v-0e8f6da1=""
+                  data-v-dfc8ebef=""
                   type="button"
                 >
                   <span
@@ -371,7 +371,7 @@ exports[`switch demo > renders _semantic correctly 1`] = `
                     <span
                       aria-label="pushpin"
                       class="anticon anticon-pushpin"
-                      data-v-0e8f6da1=""
+                      data-v-dfc8ebef=""
                       role="img"
                     >
                       <svg
@@ -394,7 +394,7 @@ exports[`switch demo > renders _semantic correctly 1`] = `
                 </button>
                 <button
                   class="ant-btn css-var-root ant-btn-text ant-btn-color-default ant-btn-variant-text ant-btn-sm ant-btn-icon-only"
-                  data-v-0e8f6da1=""
+                  data-v-dfc8ebef=""
                   type="button"
                 >
                   <span
@@ -403,7 +403,7 @@ exports[`switch demo > renders _semantic correctly 1`] = `
                     <span
                       aria-label="info-circle"
                       class="anticon anticon-info-circle"
-                      data-v-0e8f6da1=""
+                      data-v-dfc8ebef=""
                       role="img"
                     >
                       <svg
@@ -752,13 +752,13 @@ exports[`switch demo > renders size correctly 1`] = `
 exports[`switch demo > renders style-class correctly 1`] = `
 <div
   class="ant-flex css-var-root ant-flex-align-stretch ant-flex-gap-middle ant-flex-vertical"
-  data-v-9d494092=""
+  data-v-355da09f=""
 >
   <button
     aria-checked="false"
     checked="false"
     class="ant-switch ant-switch-small custom-switch-root css-var-root"
-    data-v-9d494092=""
+    data-v-355da09f=""
     role="switch"
     style="background-color: rgb(245, 210, 210);"
     type="button"
@@ -787,7 +787,7 @@ exports[`switch demo > renders style-class correctly 1`] = `
     aria-checked="false"
     checked="false"
     class="ant-switch custom-switch-root css-var-root"
-    data-v-9d494092=""
+    data-v-355da09f=""
     role="switch"
     style="background-color: rgb(189, 227, 195);"
     type="button"

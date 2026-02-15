@@ -13,7 +13,7 @@ interface DemoTestOptions {
 }
 
 export default function demoTest(component: string, options: DemoTestOptions = {}) {
-  const demoDir = resolve(rootDir, 'playground/src/pages/components', component, 'demo')
+  const demoDir = resolve(rootDir, 'docs/src/pages/components', component, 'demo')
 
   let files: string[] = []
   try {
