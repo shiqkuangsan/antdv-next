@@ -14,6 +14,7 @@ import { computed, defineComponent, shallowRef } from 'vue'
 import genPurePanel from '../_util/PurePanel.tsx'
 import { toPropsRefs } from '../_util/tools'
 import { devUseWarning, isDev } from '../_util/warning'
+import { withModel } from '../_util/withModel'
 import DatePicker from '../date-picker'
 import useMergedPickerSemantic from '../date-picker/hooks/useMergedPickerSemantic'
 import { useVariants } from '../form/hooks/useVariant'
@@ -375,19 +376,23 @@ const TimePicker = defineComponent<
 export type MergedTimePicker = typeof TimePicker & {
   RangePicker: typeof RangePicker
   _InternalPanelDoNotUseOrYouWillBeFired: any
+  install: (app: App) => void
 }
+
+const WrappedTimePicker = withModel(TimePicker, { prop: 'value' }) as MergedTimePicker
+const WrappedRangePicker = withModel(RangePicker, { prop: 'value' }) as typeof RangePicker
 
 // We don't care debug panel
 /* istanbul ignore next */
-const PurePanel = genPurePanel(TimePicker, 'popupAlign', undefined, 'picker')
-;(TimePicker as MergedTimePicker)._InternalPanelDoNotUseOrYouWillBeFired = PurePanel
-;(TimePicker as MergedTimePicker).RangePicker = RangePicker
+const PurePanel = genPurePanel(WrappedTimePicker, 'popupAlign', undefined, 'picker')
+WrappedTimePicker._InternalPanelDoNotUseOrYouWillBeFired = PurePanel
+WrappedTimePicker.RangePicker = WrappedRangePicker
 
-;(TimePicker as any).install = (app: App) => {
-  app.component(TimePicker.name, TimePicker)
-  app.component(RangePicker.name, RangePicker)
+WrappedTimePicker.install = (app: App) => {
+  app.component(TimePicker.name, WrappedTimePicker)
+  app.component(RangePicker.name, WrappedRangePicker)
 }
 
-export default TimePicker as MergedTimePicker
+export default WrappedTimePicker
 
-export const TimeRangePicker = RangePicker
+export const TimeRangePicker = WrappedRangePicker
