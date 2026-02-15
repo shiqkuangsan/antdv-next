@@ -1,5 +1,5 @@
 import type { Component } from 'vue'
-import { defineComponent, h, shallowRef } from 'vue'
+import { defineComponent, getCurrentInstance, h, shallowRef } from 'vue'
 import { isDev } from './warning'
 
 export interface WithModelOptions {
@@ -36,13 +36,23 @@ export function withModel<C extends Component>(
     inheritAttrs: false,
     setup(_, { attrs, slots, expose }) {
       const innerRef = shallowRef<any>()
+      const instance = getCurrentInstance()
 
-      // Proxy-based expose so ref methods are forwarded transparently
+      // Proxy-based expose so ref methods are forwarded transparently.
+      // Vue internal properties ($parent, $root, etc.) are sourced from
+      // the wrapper's own instance so that test-utils and other tools
+      // that rely on template refs continue to work correctly.
       expose(new Proxy({}, {
         get(_, key) {
+          if (typeof key === 'string' && key.startsWith('$')) {
+            return instance?.proxy?.[key as keyof typeof instance.proxy]
+          }
           return innerRef.value?.[key]
         },
         has(_, key) {
+          if (typeof key === 'string' && key.startsWith('$')) {
+            return instance?.proxy ? (key as string) in instance.proxy : false
+          }
           return innerRef.value ? key in innerRef.value : false
         },
         ownKeys() {
