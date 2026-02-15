@@ -15,6 +15,7 @@ import {
   useToProps,
 } from '../_util/hooks'
 import { toPropsRefs } from '../_util/tools'
+import { withModel } from '../_util/withModel'
 import { useComponentBaseConfig } from '../config-provider/context'
 import { useDisabledContext } from '../config-provider/DisabledContext.tsx'
 import { useSliderInternalContext } from './Context'
@@ -148,7 +149,7 @@ function getTipFormatter(tipFormatter?: Formatter) {
   return (val?: number) => (typeof val === 'number' ? val.toString() : '')
 }
 
-const Slider = defineComponent<
+const InternalSlider = defineComponent<
   SliderInternalProps,
   SliderEmits,
   string,
@@ -413,7 +414,11 @@ const Slider = defineComponent<
   },
 )
 
-;(Slider as any).install = (app: App) => {
-  app.component(Slider.name, Slider)
+const Slider = withModel(InternalSlider, { prop: 'value' }) as typeof InternalSlider & {
+  install: (app: App) => void
+}
+
+Slider.install = (app: App) => {
+  app.component(InternalSlider.name, Slider)
 }
 export default Slider
