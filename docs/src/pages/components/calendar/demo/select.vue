@@ -11,8 +11,8 @@ import type { Dayjs } from 'dayjs'
 import dayjs from 'dayjs'
 import { ref } from 'vue'
 
-const date = ref(dayjs('2017-01-25'))
-const selectedValue = ref(dayjs('2017-01-25'))
+const date = ref(dayjs('2017-01-25T00:00:00Z'))
+const selectedValue = ref(dayjs('2017-01-25T00:00:00Z'))
 function onSelect(value: Dayjs) {
   selectedValue.value = value
 }

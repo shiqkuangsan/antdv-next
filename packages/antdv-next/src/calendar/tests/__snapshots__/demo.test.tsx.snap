@@ -7742,10 +7742,10 @@ exports[`calendar demo > renders select correctly 1`] = `
           class="ant-picker-body"
           generateconfig="[object Object]"
           locale="[object Object]"
-          pickervalue="Tue, 24 Jan 2017 16:00:00 GMT"
+          pickervalue="Wed, 25 Jan 2017 00:00:00 GMT"
           prefixcls="ant-picker"
-          value="Tue, 24 Jan 2017 16:00:00 GMT"
-          values="Tue, 24 Jan 2017 16:00:00 GMT"
+          value="Wed, 25 Jan 2017 00:00:00 GMT"
+          values="Wed, 25 Jan 2017 00:00:00 GMT"
         >
           <table
             class="ant-picker-content"
