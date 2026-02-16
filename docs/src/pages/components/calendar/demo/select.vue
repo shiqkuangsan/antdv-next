@@ -11,7 +11,7 @@ import type { Dayjs } from 'dayjs'
 import dayjs from 'dayjs'
 import { ref } from 'vue'
 
-const date = ref('2017-01-25')
+const date = ref(dayjs('2017-01-25'))
 const selectedValue = ref(dayjs('2017-01-25'))
 function onSelect(value: Dayjs) {
   selectedValue.value = value
@@ -21,7 +21,7 @@ function onSelect(value: Dayjs) {
 <template>
   <a-alert :title="`You selected date: ${selectedValue?.format('YYYY-MM-DD')}`" />
   <a-calendar
-    v-model="date"
+    v-model:value="date"
     @select="onSelect"
   />
 </template>
