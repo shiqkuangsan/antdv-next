@@ -110,7 +110,7 @@ describe('rate', () => {
     it('should emit change and update:value when star is clicked', async () => {
       const wrapper = mount(Rate)
       const stars = wrapper.findAll('[role="radio"]')
-      await stars[2].trigger('click')
+      await stars[2]!.trigger('click')
       expect(wrapper.emitted('change')).toBeTruthy()
       expect(wrapper.emitted('change')![0]).toEqual([3])
       expect(wrapper.emitted('update:value')).toBeTruthy()
@@ -147,6 +147,50 @@ describe('rate', () => {
       const wrapper = mount(Rate)
       expect(typeof (wrapper.vm as any).focus).toBe('function')
       expect(typeof (wrapper.vm as any).blur).toBe('function')
+    })
+  })
+
+  describe('v-model', () => {
+    it('should support v-model (modelValue)', async () => {
+      const wrapper = mount(Rate, { props: { modelValue: 2 } })
+      const stars = wrapper.findAll('[role="radio"]')
+      expect(stars[1]!.attributes('aria-checked')).toBe('true')
+      await stars[3]!.trigger('click')
+      expect(wrapper.emitted('update:modelValue')![0]).toEqual([4])
+      expect(wrapper.emitted('update:value')![0]).toEqual([4])
+    })
+
+    it('should support v-model:value (named v-model)', async () => {
+      const wrapper = mount(Rate, { props: { value: 3 } })
+      const stars = wrapper.findAll('[role="radio"]')
+      await stars[0]!.trigger('click')
+      expect(wrapper.emitted('update:value')![0]).toEqual([1])
+      // should NOT emit update:modelValue when modelValue was not passed
+      expect(wrapper.emitted('update:modelValue')).toBeFalsy()
+    })
+
+    it('should prefer modelValue over value when both provided', () => {
+      const wrapper = mount(Rate, { props: { modelValue: 4, value: 1 } })
+      const stars = wrapper.findAll('[role="radio"]')
+      expect(stars[3]!.attributes('aria-checked')).toBe('true')
+    })
+
+    it('should sync when modelValue changes externally', async () => {
+      const val = ref(1)
+      const wrapper = mount(() => <Rate modelValue={val.value} />)
+      expect(wrapper.findAll('[role="radio"]')[0]!.attributes('aria-checked')).toBe('true')
+      val.value = 5
+      await nextTick()
+      expect(wrapper.findAll('[role="radio"]')[4]!.attributes('aria-checked')).toBe('true')
+    })
+
+    it('should work in uncontrolled mode (no v-model)', async () => {
+      const wrapper = mount(Rate)
+      const stars = wrapper.findAll('[role="radio"]')
+      await stars[2]!.trigger('click')
+      // should emit update:value but not update:modelValue
+      expect(wrapper.emitted('update:value')![0]).toEqual([3])
+      expect(wrapper.emitted('update:modelValue')).toBeFalsy()
     })
   })
 

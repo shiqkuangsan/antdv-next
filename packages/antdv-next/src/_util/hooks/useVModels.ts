@@ -43,7 +43,7 @@ function toKebab(str: string): string {
  */
 export function useVModels<T = any>(
   props: Record<string, any>,
-  emit: (event: string, ...args: any[]) => void,
+  emit: (event: any, ...args: any[]) => void,
   options: UseVModelsOptions<T>,
 ): UseVModelsReturn<T> {
   const { prop, defaultValue } = options
