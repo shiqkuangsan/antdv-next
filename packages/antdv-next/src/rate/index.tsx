@@ -6,7 +6,7 @@ import VcRate from '@v-c/rate'
 import { clsx } from '@v-c/util'
 import { omit } from 'es-toolkit'
 import { defineComponent, shallowRef } from 'vue'
-import { getAttrStyleAndClass } from '../_util/hooks'
+import { getAttrStyleAndClass, useVModels } from '../_util/hooks'
 import { useComponentBaseConfig } from '../config-provider/context.ts'
 import { useDisabledContext } from '../config-provider/DisabledContext.tsx'
 import Tooltip from '../tooltip'
@@ -24,12 +24,14 @@ export interface RateProps extends Omit<
   VcRateProps,
 'onChange' | 'onHoverChange' | 'onFocus' | 'onBlur' | 'onKeyDown' | 'onMouseLeave' | 'onUpdate:value'
 > {
+  modelValue?: number
   rootClass?: string
   size?: 'small' | 'middle' | 'large'
   tooltips?: (TooltipProps | string)[]
 }
 
 export interface RateEmits {
+  'update:modelValue': (value: number) => void
   'update:value': (value: number) => void
   'change': (value: number) => void
   'hoverChange': (value: number) => void
@@ -45,6 +47,7 @@ const Rate = defineComponent<
   string
 >(
   (props = defaults, { attrs, emit, expose }) => {
+    const [resolvedValue, setModelValue] = useVModels(props, emit, { prop: 'value' })
     const rateRef = shallowRef()
     const characterRender: VcRateProps['characterRender'] = (node, { index }) => {
       const { tooltips } = props
@@ -95,7 +98,8 @@ const Rate = defineComponent<
           disabled={mergedDisabled}
           characterRender={characterRender}
           {...restAttrs}
-          {...omit(restProps, ['characterRender'])}
+          {...omit(restProps, ['characterRender', 'modelValue'])}
+          value={resolvedValue.value}
           class={clsx(
             `${ratePrefixCls.value}-${size}`,
             className,
@@ -116,9 +120,9 @@ const Rate = defineComponent<
           onBlur={() => {
             emit('blur')
           }}
-          onChange={(...args) => {
-            emit('change', ...args)
-            emit('update:value', ...args)
+          onChange={(val) => {
+            emit('change', val)
+            setModelValue(val)
           }}
           onKeyDown={(e) => {
             emit('keydown', e)
