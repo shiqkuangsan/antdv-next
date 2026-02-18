@@ -1,0 +1,86 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Grid > Col > rtl render > component should be rendered correctly in RTL direction 1`] = `
+<div
+  data-v-app=""
+>
+  <div
+    class="ant-col ant-col-rtl css-var-root"
+  >
+    <!---->
+  </div>
+</div>
+`;
+
+exports[`Grid > Col > should match snapshot 1`] = `
+<div
+  class="ant-col ant-col-12 ant-col-order-3 ant-col-offset-6 ant-col-push-2 ant-col-pull-1 css-var-root"
+  style="flex: 1 1 auto;"
+>
+  col content
+</div>
+`;
+
+exports[`Grid > Row + Col integration > should match integration snapshot 1`] = `
+<div
+  class="ant-row ant-row-space-between ant-row-top css-var-root"
+  style="margin-left: -8px; margin-right: -8px; row-gap: 24px;"
+>
+  <div
+    class="ant-col ant-col-xs-24 ant-col-sm-12 ant-col-md-8 css-var-root"
+    style="padding-left: 8px; padding-right: 8px;"
+  >
+    responsive col
+  </div>
+  <div
+    class="ant-col ant-col-offset-8 ant-col-xs-24 ant-col-sm-12 ant-col-md-8 css-var-root"
+    style="padding-left: 8px; padding-right: 8px;"
+  >
+    responsive col with offset
+  </div>
+</div>
+`;
+
+exports[`Grid > Row > rtl render > component should be rendered correctly in RTL direction 1`] = `
+<div
+  data-v-app=""
+>
+  <div
+    class="ant-row ant-row-rtl css-var-root"
+  >
+    <!---->
+  </div>
+</div>
+`;
+
+exports[`Grid > Row > should match snapshot 1`] = `
+<div
+  class="ant-row ant-row-center ant-row-middle css-var-root"
+  style="margin-left: -8px; margin-right: -8px; row-gap: 24px;"
+>
+  <div
+    class="ant-col ant-col-6 css-var-root"
+    style="padding-left: 8px; padding-right: 8px;"
+  >
+    col-6
+  </div>
+  <div
+    class="ant-col ant-col-6 css-var-root"
+    style="padding-left: 8px; padding-right: 8px;"
+  >
+    col-6
+  </div>
+  <div
+    class="ant-col ant-col-6 css-var-root"
+    style="padding-left: 8px; padding-right: 8px;"
+  >
+    col-6
+  </div>
+  <div
+    class="ant-col ant-col-6 css-var-root"
+    style="padding-left: 8px; padding-right: 8px;"
+  >
+    col-6
+  </div>
+</div>
+`;
