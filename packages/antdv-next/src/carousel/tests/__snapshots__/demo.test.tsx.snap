@@ -1,0 +1,1216 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`carousel demo > renders arrows correctly 1`] = `
+<div
+  data-v-app=""
+>
+  <div
+    class="ant-carousel css-var-root"
+  >
+    <div
+      class="slick-slider slick-initialized"
+      dir="ltr"
+    >
+      <button
+        aria-label="prev"
+        class="slick-arrow slick-prev slick-disabled"
+        data-role="none"
+        style="display: block;"
+        type="button"
+      >
+        <!---->
+      </button>
+      <div
+        class="slick-list"
+      >
+        <div
+          class="slick-track"
+        >
+          <div
+            aria-hidden="false"
+            class="slick-slide slick-active slick-current"
+            data-index="0"
+            style="outline: none;"
+            tabindex="-1"
+          >
+            <div>
+              <div
+                style="width: 100%; display: inline-block;"
+                tabindex="-1"
+              >
+                <h3
+                  class="custom-carousel-item"
+                >
+                   1 
+                </h3>
+              </div>
+            </div>
+          </div>
+          <div
+            aria-hidden="true"
+            class="slick-slide"
+            data-index="1"
+            style="outline: none;"
+            tabindex="-1"
+          >
+            <div>
+              <div
+                style="width: 100%; display: inline-block;"
+                tabindex="-1"
+              >
+                <h3
+                  class="custom-carousel-item"
+                >
+                   2 
+                </h3>
+              </div>
+            </div>
+          </div>
+          <div
+            aria-hidden="true"
+            class="slick-slide"
+            data-index="2"
+            style="outline: none;"
+            tabindex="-1"
+          >
+            <div>
+              <div
+                style="width: 100%; display: inline-block;"
+                tabindex="-1"
+              >
+                <h3
+                  class="custom-carousel-item"
+                >
+                   3 
+                </h3>
+              </div>
+            </div>
+          </div>
+          <div
+            aria-hidden="true"
+            class="slick-slide"
+            data-index="3"
+            style="outline: none;"
+            tabindex="-1"
+          >
+            <div>
+              <div
+                style="width: 100%; display: inline-block;"
+                tabindex="-1"
+              >
+                <h3
+                  class="custom-carousel-item"
+                >
+                   4 
+                </h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button
+        aria-label="next"
+        class="slick-arrow slick-next"
+        data-role="none"
+        style="display: block;"
+        type="button"
+      >
+        <!---->
+      </button>
+      <ul
+        class="slick-dots slick-dots-bottom"
+        style="display: block;"
+      >
+        <li
+          class="slick-active"
+        >
+          <button>
+            1
+          </button>
+        </li>
+        <li
+          class=""
+        >
+          <button>
+            2
+          </button>
+        </li>
+        <li
+          class=""
+        >
+          <button>
+            3
+          </button>
+        </li>
+        <li
+          class=""
+        >
+          <button>
+            4
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <br />
+  <div
+    class="ant-carousel ant-carousel-vertical css-var-root"
+  >
+    <div
+      class="slick-slider slick-vertical slick-initialized"
+      dir="ltr"
+    >
+      <button
+        aria-label="prev"
+        class="slick-arrow slick-prev slick-disabled"
+        data-role="none"
+        style="display: block;"
+        type="button"
+      >
+        <!---->
+      </button>
+      <div
+        class="slick-list"
+      >
+        <div
+          class="slick-track"
+        >
+          <div
+            aria-hidden="false"
+            class="slick-slide slick-active slick-current"
+            data-index="0"
+            style="outline: none;"
+            tabindex="-1"
+          >
+            <div>
+              <div
+                style="width: 100%; display: inline-block;"
+                tabindex="-1"
+              >
+                <h3
+                  class="custom-carousel-item"
+                >
+                   1 
+                </h3>
+              </div>
+            </div>
+          </div>
+          <div
+            aria-hidden="true"
+            class="slick-slide"
+            data-index="1"
+            style="outline: none;"
+            tabindex="-1"
+          >
+            <div>
+              <div
+                style="width: 100%; display: inline-block;"
+                tabindex="-1"
+              >
+                <h3
+                  class="custom-carousel-item"
+                >
+                   2 
+                </h3>
+              </div>
+            </div>
+          </div>
+          <div
+            aria-hidden="true"
+            class="slick-slide"
+            data-index="2"
+            style="outline: none;"
+            tabindex="-1"
+          >
+            <div>
+              <div
+                style="width: 100%; display: inline-block;"
+                tabindex="-1"
+              >
+                <h3
+                  class="custom-carousel-item"
+                >
+                   3 
+                </h3>
+              </div>
+            </div>
+          </div>
+          <div
+            aria-hidden="true"
+            class="slick-slide"
+            data-index="3"
+            style="outline: none;"
+            tabindex="-1"
+          >
+            <div>
+              <div
+                style="width: 100%; display: inline-block;"
+                tabindex="-1"
+              >
+                <h3
+                  class="custom-carousel-item"
+                >
+                   4 
+                </h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button
+        aria-label="next"
+        class="slick-arrow slick-next"
+        data-role="none"
+        style="display: block;"
+        type="button"
+      >
+        <!---->
+      </button>
+      <ul
+        class="slick-dots slick-dots-start"
+        style="display: block;"
+      >
+        <li
+          class="slick-active"
+        >
+          <button>
+            1
+          </button>
+        </li>
+        <li
+          class=""
+        >
+          <button>
+            2
+          </button>
+        </li>
+        <li
+          class=""
+        >
+          <button>
+            3
+          </button>
+        </li>
+        <li
+          class=""
+        >
+          <button>
+            4
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`carousel demo > renders autoplay correctly 1`] = `
+<div
+  class="ant-carousel css-var-root"
+>
+  <div
+    class="slick-slider slick-initialized"
+    dir="ltr"
+  >
+    <!---->
+    <div
+      class="slick-list"
+    >
+      <div
+        class="slick-track"
+      >
+        <div
+          aria-hidden="true"
+          class="slick-slide slick-cloned"
+          data-index="-1"
+          tabindex="-1"
+        >
+          <div>
+            <div
+              style="width: 100%; display: inline-block;"
+              tabindex="-1"
+            >
+              <h3
+                class="custom-carousel-item"
+              >
+                 4 
+              </h3>
+            </div>
+          </div>
+        </div>
+        <div
+          aria-hidden="false"
+          class="slick-slide slick-active slick-current"
+          data-index="0"
+          style="outline: none;"
+          tabindex="-1"
+        >
+          <div>
+            <div
+              style="width: 100%; display: inline-block;"
+              tabindex="-1"
+            >
+              <h3
+                class="custom-carousel-item"
+              >
+                 1 
+              </h3>
+            </div>
+          </div>
+        </div>
+        <div
+          aria-hidden="true"
+          class="slick-slide"
+          data-index="1"
+          style="outline: none;"
+          tabindex="-1"
+        >
+          <div>
+            <div
+              style="width: 100%; display: inline-block;"
+              tabindex="-1"
+            >
+              <h3
+                class="custom-carousel-item"
+              >
+                 2 
+              </h3>
+            </div>
+          </div>
+        </div>
+        <div
+          aria-hidden="true"
+          class="slick-slide"
+          data-index="2"
+          style="outline: none;"
+          tabindex="-1"
+        >
+          <div>
+            <div
+              style="width: 100%; display: inline-block;"
+              tabindex="-1"
+            >
+              <h3
+                class="custom-carousel-item"
+              >
+                 3 
+              </h3>
+            </div>
+          </div>
+        </div>
+        <div
+          aria-hidden="true"
+          class="slick-slide"
+          data-index="3"
+          style="outline: none;"
+          tabindex="-1"
+        >
+          <div>
+            <div
+              style="width: 100%; display: inline-block;"
+              tabindex="-1"
+            >
+              <h3
+                class="custom-carousel-item"
+              >
+                 4 
+              </h3>
+            </div>
+          </div>
+        </div>
+        <div
+          aria-hidden="true"
+          class="slick-slide slick-cloned"
+          data-index="4"
+          tabindex="-1"
+        >
+          <div>
+            <div
+              style="width: 100%; display: inline-block;"
+              tabindex="-1"
+            >
+              <h3
+                class="custom-carousel-item"
+              >
+                 1 
+              </h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!---->
+    <ul
+      class="slick-dots slick-dots-bottom"
+      style="display: block;"
+    >
+      <li
+        class="slick-active"
+      >
+        <button>
+          1
+        </button>
+      </li>
+      <li
+        class=""
+      >
+        <button>
+          2
+        </button>
+      </li>
+      <li
+        class=""
+      >
+        <button>
+          3
+        </button>
+      </li>
+      <li
+        class=""
+      >
+        <button>
+          4
+        </button>
+      </li>
+    </ul>
+  </div>
+</div>
+`;
+
+exports[`carousel demo > renders basic correctly 1`] = `
+<div
+  class="ant-carousel css-var-root"
+>
+  <div
+    class="slick-slider slick-initialized"
+    dir="ltr"
+  >
+    <!---->
+    <div
+      class="slick-list"
+    >
+      <div
+        class="slick-track"
+      >
+        <div
+          aria-hidden="true"
+          class="slick-slide slick-cloned"
+          data-index="-1"
+          tabindex="-1"
+        >
+          <div>
+            <div
+              style="width: 100%; display: inline-block;"
+              tabindex="-1"
+            >
+              <h3
+                class="custom-carousel-item"
+              >
+                 4 
+              </h3>
+            </div>
+          </div>
+        </div>
+        <div
+          aria-hidden="false"
+          class="slick-slide slick-active slick-current"
+          data-index="0"
+          style="outline: none;"
+          tabindex="-1"
+        >
+          <div>
+            <div
+              style="width: 100%; display: inline-block;"
+              tabindex="-1"
+            >
+              <h3
+                class="custom-carousel-item"
+              >
+                 1 
+              </h3>
+            </div>
+          </div>
+        </div>
+        <div
+          aria-hidden="true"
+          class="slick-slide"
+          data-index="1"
+          style="outline: none;"
+          tabindex="-1"
+        >
+          <div>
+            <div
+              style="width: 100%; display: inline-block;"
+              tabindex="-1"
+            >
+              <h3
+                class="custom-carousel-item"
+              >
+                 2 
+              </h3>
+            </div>
+          </div>
+        </div>
+        <div
+          aria-hidden="true"
+          class="slick-slide"
+          data-index="2"
+          style="outline: none;"
+          tabindex="-1"
+        >
+          <div>
+            <div
+              style="width: 100%; display: inline-block;"
+              tabindex="-1"
+            >
+              <h3
+                class="custom-carousel-item"
+              >
+                 3 
+              </h3>
+            </div>
+          </div>
+        </div>
+        <div
+          aria-hidden="true"
+          class="slick-slide"
+          data-index="3"
+          style="outline: none;"
+          tabindex="-1"
+        >
+          <div>
+            <div
+              style="width: 100%; display: inline-block;"
+              tabindex="-1"
+            >
+              <h3
+                class="custom-carousel-item"
+              >
+                 4 
+              </h3>
+            </div>
+          </div>
+        </div>
+        <div
+          aria-hidden="true"
+          class="slick-slide slick-cloned"
+          data-index="4"
+          tabindex="-1"
+        >
+          <div>
+            <div
+              style="width: 100%; display: inline-block;"
+              tabindex="-1"
+            >
+              <h3
+                class="custom-carousel-item"
+              >
+                 1 
+              </h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!---->
+    <ul
+      class="slick-dots slick-dots-bottom"
+      style="display: block;"
+    >
+      <li
+        class="slick-active"
+      >
+        <button>
+          1
+        </button>
+      </li>
+      <li
+        class=""
+      >
+        <button>
+          2
+        </button>
+      </li>
+      <li
+        class=""
+      >
+        <button>
+          3
+        </button>
+      </li>
+      <li
+        class=""
+      >
+        <button>
+          4
+        </button>
+      </li>
+    </ul>
+  </div>
+</div>
+`;
+
+exports[`carousel demo > renders dot-duration correctly 1`] = `
+<div
+  class="ant-carousel css-var-root"
+  style="--dot-duration: 5000ms;"
+>
+  <div
+    class="slick-slider slick-initialized"
+    dir="ltr"
+  >
+    <!---->
+    <div
+      class="slick-list"
+    >
+      <div
+        class="slick-track"
+      >
+        <div
+          aria-hidden="true"
+          class="slick-slide slick-cloned"
+          data-index="-1"
+          tabindex="-1"
+        >
+          <div>
+            <div
+              style="width: 100%; display: inline-block;"
+              tabindex="-1"
+            >
+              <h3
+                class="custom-carousel-item"
+              >
+                 4 
+              </h3>
+            </div>
+          </div>
+        </div>
+        <div
+          aria-hidden="false"
+          class="slick-slide slick-active slick-current"
+          data-index="0"
+          style="outline: none;"
+          tabindex="-1"
+        >
+          <div>
+            <div
+              style="width: 100%; display: inline-block;"
+              tabindex="-1"
+            >
+              <h3
+                class="custom-carousel-item"
+              >
+                 1 
+              </h3>
+            </div>
+          </div>
+        </div>
+        <div
+          aria-hidden="true"
+          class="slick-slide"
+          data-index="1"
+          style="outline: none;"
+          tabindex="-1"
+        >
+          <div>
+            <div
+              style="width: 100%; display: inline-block;"
+              tabindex="-1"
+            >
+              <h3
+                class="custom-carousel-item"
+              >
+                 2 
+              </h3>
+            </div>
+          </div>
+        </div>
+        <div
+          aria-hidden="true"
+          class="slick-slide"
+          data-index="2"
+          style="outline: none;"
+          tabindex="-1"
+        >
+          <div>
+            <div
+              style="width: 100%; display: inline-block;"
+              tabindex="-1"
+            >
+              <h3
+                class="custom-carousel-item"
+              >
+                 3 
+              </h3>
+            </div>
+          </div>
+        </div>
+        <div
+          aria-hidden="true"
+          class="slick-slide"
+          data-index="3"
+          style="outline: none;"
+          tabindex="-1"
+        >
+          <div>
+            <div
+              style="width: 100%; display: inline-block;"
+              tabindex="-1"
+            >
+              <h3
+                class="custom-carousel-item"
+              >
+                 4 
+              </h3>
+            </div>
+          </div>
+        </div>
+        <div
+          aria-hidden="true"
+          class="slick-slide slick-cloned"
+          data-index="4"
+          tabindex="-1"
+        >
+          <div>
+            <div
+              style="width: 100%; display: inline-block;"
+              tabindex="-1"
+            >
+              <h3
+                class="custom-carousel-item"
+              >
+                 1 
+              </h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!---->
+    <ul
+      class="slick-dots slick-dots-bottom"
+      style="display: block;"
+    >
+      <li
+        class="slick-active"
+      >
+        <button>
+          1
+        </button>
+      </li>
+      <li
+        class=""
+      >
+        <button>
+          2
+        </button>
+      </li>
+      <li
+        class=""
+      >
+        <button>
+          3
+        </button>
+      </li>
+      <li
+        class=""
+      >
+        <button>
+          4
+        </button>
+      </li>
+    </ul>
+  </div>
+</div>
+`;
+
+exports[`carousel demo > renders fade correctly 1`] = `
+<div
+  class="ant-carousel css-var-root"
+>
+  <div
+    class="slick-slider slick-initialized"
+    dir="ltr"
+    effect="fade"
+  >
+    <!---->
+    <div
+      class="slick-list"
+    >
+      <div
+        class="slick-track"
+      >
+        <div
+          aria-hidden="false"
+          class="slick-slide slick-active slick-current"
+          data-index="0"
+          style="outline: none; position: relative; opacity: 1; z-index: 999; transition: opacity 500ms ease, visibility 500ms ease;"
+          tabindex="-1"
+        >
+          <div>
+            <div
+              style="width: 100%; display: inline-block;"
+              tabindex="-1"
+            >
+              <h3
+                class="custom-carousel-item"
+              >
+                 1 
+              </h3>
+            </div>
+          </div>
+        </div>
+        <div
+          aria-hidden="true"
+          class="slick-slide"
+          data-index="1"
+          style="outline: none; position: relative; opacity: 0; z-index: 998; transition: opacity 500ms ease, visibility 500ms ease;"
+          tabindex="-1"
+        >
+          <div>
+            <div
+              style="width: 100%; display: inline-block;"
+              tabindex="-1"
+            >
+              <h3
+                class="custom-carousel-item"
+              >
+                 2 
+              </h3>
+            </div>
+          </div>
+        </div>
+        <div
+          aria-hidden="true"
+          class="slick-slide"
+          data-index="2"
+          style="outline: none; position: relative; opacity: 0; z-index: 998; transition: opacity 500ms ease, visibility 500ms ease;"
+          tabindex="-1"
+        >
+          <div>
+            <div
+              style="width: 100%; display: inline-block;"
+              tabindex="-1"
+            >
+              <h3
+                class="custom-carousel-item"
+              >
+                 3 
+              </h3>
+            </div>
+          </div>
+        </div>
+        <div
+          aria-hidden="true"
+          class="slick-slide"
+          data-index="3"
+          style="outline: none; position: relative; opacity: 0; z-index: 998; transition: opacity 500ms ease, visibility 500ms ease;"
+          tabindex="-1"
+        >
+          <div>
+            <div
+              style="width: 100%; display: inline-block;"
+              tabindex="-1"
+            >
+              <h3
+                class="custom-carousel-item"
+              >
+                 4 
+              </h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!---->
+    <ul
+      class="slick-dots slick-dots-bottom"
+      style="display: block;"
+    >
+      <li
+        class="slick-active"
+      >
+        <button>
+          1
+        </button>
+      </li>
+      <li
+        class=""
+      >
+        <button>
+          2
+        </button>
+      </li>
+      <li
+        class=""
+      >
+        <button>
+          3
+        </button>
+      </li>
+      <li
+        class=""
+      >
+        <button>
+          4
+        </button>
+      </li>
+    </ul>
+  </div>
+</div>
+`;
+
+exports[`carousel demo > renders placement correctly 1`] = `
+<div
+  data-v-app=""
+>
+  <div
+    class="ant-radio-group ant-radio-group-outline css-var-root ant-radio-css-var"
+    style="margin-bottom: 8px;"
+  >
+    <label
+      class="ant-radio-button-wrapper ant-radio-button-wrapper-checked css-var-root ant-radio-css-var"
+    >
+      <span
+        class="ant-radio-button ant-radio-button-checked"
+        name="v-0"
+      >
+        <input
+          checked=""
+          class="ant-radio-button-input"
+          type="radio"
+        />
+      </span>
+      <span
+        class="ant-radio-button-label"
+      >
+         Top 
+      </span>
+    </label>
+    <label
+      class="ant-radio-button-wrapper css-var-root ant-radio-css-var"
+    >
+      <span
+        class="ant-radio-button"
+        name="v-0"
+      >
+        <input
+          class="ant-radio-button-input"
+          type="radio"
+        />
+      </span>
+      <span
+        class="ant-radio-button-label"
+      >
+         Bottom 
+      </span>
+    </label>
+    <label
+      class="ant-radio-button-wrapper css-var-root ant-radio-css-var"
+    >
+      <span
+        class="ant-radio-button"
+        name="v-0"
+      >
+        <input
+          class="ant-radio-button-input"
+          type="radio"
+        />
+      </span>
+      <span
+        class="ant-radio-button-label"
+      >
+         Start 
+      </span>
+    </label>
+    <label
+      class="ant-radio-button-wrapper css-var-root ant-radio-css-var"
+    >
+      <span
+        class="ant-radio-button"
+        name="v-0"
+      >
+        <input
+          class="ant-radio-button-input"
+          type="radio"
+        />
+      </span>
+      <span
+        class="ant-radio-button-label"
+      >
+         End 
+      </span>
+    </label>
+  </div>
+  <div
+    class="ant-carousel css-var-root"
+  >
+    <div
+      class="slick-slider slick-initialized"
+      dir="ltr"
+    >
+      <!---->
+      <div
+        class="slick-list"
+      >
+        <div
+          class="slick-track"
+        >
+          <div
+            aria-hidden="true"
+            class="slick-slide slick-cloned"
+            data-index="-1"
+            tabindex="-1"
+          >
+            <div>
+              <div
+                style="width: 100%; display: inline-block;"
+                tabindex="-1"
+              >
+                <h3
+                  class="custom-carousel-item"
+                >
+                   4 
+                </h3>
+              </div>
+            </div>
+          </div>
+          <div
+            aria-hidden="false"
+            class="slick-slide slick-active slick-current"
+            data-index="0"
+            style="outline: none;"
+            tabindex="-1"
+          >
+            <div>
+              <div
+                style="width: 100%; display: inline-block;"
+                tabindex="-1"
+              >
+                <h3
+                  class="custom-carousel-item"
+                >
+                   1 
+                </h3>
+              </div>
+            </div>
+          </div>
+          <div
+            aria-hidden="true"
+            class="slick-slide"
+            data-index="1"
+            style="outline: none;"
+            tabindex="-1"
+          >
+            <div>
+              <div
+                style="width: 100%; display: inline-block;"
+                tabindex="-1"
+              >
+                <h3
+                  class="custom-carousel-item"
+                >
+                   2 
+                </h3>
+              </div>
+            </div>
+          </div>
+          <div
+            aria-hidden="true"
+            class="slick-slide"
+            data-index="2"
+            style="outline: none;"
+            tabindex="-1"
+          >
+            <div>
+              <div
+                style="width: 100%; display: inline-block;"
+                tabindex="-1"
+              >
+                <h3
+                  class="custom-carousel-item"
+                >
+                   3 
+                </h3>
+              </div>
+            </div>
+          </div>
+          <div
+            aria-hidden="true"
+            class="slick-slide"
+            data-index="3"
+            style="outline: none;"
+            tabindex="-1"
+          >
+            <div>
+              <div
+                style="width: 100%; display: inline-block;"
+                tabindex="-1"
+              >
+                <h3
+                  class="custom-carousel-item"
+                >
+                   4 
+                </h3>
+              </div>
+            </div>
+          </div>
+          <div
+            aria-hidden="true"
+            class="slick-slide slick-cloned"
+            data-index="4"
+            tabindex="-1"
+          >
+            <div>
+              <div
+                style="width: 100%; display: inline-block;"
+                tabindex="-1"
+              >
+                <h3
+                  class="custom-carousel-item"
+                >
+                   1 
+                </h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!---->
+      <ul
+        class="slick-dots slick-dots-top"
+        style="display: block;"
+      >
+        <li
+          class="slick-active"
+        >
+          <button>
+            1
+          </button>
+        </li>
+        <li
+          class=""
+        >
+          <button>
+            2
+          </button>
+        </li>
+        <li
+          class=""
+        >
+          <button>
+            3
+          </button>
+        </li>
+        <li
+          class=""
+        >
+          <button>
+            4
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+`;

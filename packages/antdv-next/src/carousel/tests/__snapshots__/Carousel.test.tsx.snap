@@ -1,0 +1,271 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`carousel > rtl render > component should be rendered correctly in RTL direction 1`] = `
+<div
+  data-v-app=""
+>
+  <div
+    class="ant-carousel ant-carousel-rtl css-var-root"
+  >
+    <div
+      class="slick-slider slick-initialized"
+      dir="ltr"
+    >
+      <!---->
+      <div
+        class="slick-list"
+      >
+        <div
+          class="slick-track"
+        >
+          <div
+            aria-hidden="true"
+            class="slick-slide slick-cloned"
+            data-index="4"
+            tabindex="-1"
+          >
+            <div>
+              <div
+                style="width: 100%; display: inline-block;"
+                tabindex="-1"
+              >
+                Slide 1
+              </div>
+            </div>
+          </div>
+          <div
+            aria-hidden="false"
+            class="slick-slide slick-active slick-current"
+            data-index="3"
+            style="outline: none;"
+            tabindex="-1"
+          >
+            <div>
+              <div
+                style="width: 100%; display: inline-block;"
+                tabindex="-1"
+              >
+                Slide 4
+              </div>
+            </div>
+          </div>
+          <div
+            aria-hidden="true"
+            class="slick-slide"
+            data-index="2"
+            style="outline: none;"
+            tabindex="-1"
+          >
+            <div>
+              <div
+                style="width: 100%; display: inline-block;"
+                tabindex="-1"
+              >
+                Slide 3
+              </div>
+            </div>
+          </div>
+          <div
+            aria-hidden="true"
+            class="slick-slide"
+            data-index="1"
+            style="outline: none;"
+            tabindex="-1"
+          >
+            <div>
+              <div
+                style="width: 100%; display: inline-block;"
+                tabindex="-1"
+              >
+                Slide 2
+              </div>
+            </div>
+          </div>
+          <div
+            aria-hidden="true"
+            class="slick-slide"
+            data-index="0"
+            style="outline: none;"
+            tabindex="-1"
+          >
+            <div>
+              <div
+                style="width: 100%; display: inline-block;"
+                tabindex="-1"
+              >
+                Slide 1
+              </div>
+            </div>
+          </div>
+          <div
+            aria-hidden="true"
+            class="slick-slide slick-cloned"
+            data-index="-1"
+            tabindex="-1"
+          >
+            <div>
+              <div
+                style="width: 100%; display: inline-block;"
+                tabindex="-1"
+              >
+                Slide 4
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!---->
+      <ul
+        class="slick-dots slick-dots-bottom"
+        style="display: block;"
+      >
+        <li
+          class="slick-active"
+        >
+          <button>
+            1
+          </button>
+        </li>
+        <li
+          class=""
+        >
+          <button>
+            2
+          </button>
+        </li>
+        <li
+          class=""
+        >
+          <button>
+            3
+          </button>
+        </li>
+        <li
+          class=""
+        >
+          <button>
+            4
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`carousel > should match snapshot - basic 1`] = `
+"<div class="ant-carousel css-var-root">
+  <div class="slick-slider slick-initialized" dir="ltr">
+    <!---->
+    <div class="slick-list">
+      <div class="slick-track">
+        <div data-index="-1" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true">
+          <div>
+            <div tabindex="-1" style="width: 100%; display: inline-block;">Slide 3</div>
+          </div>
+        </div>
+        <div data-index="0" class="slick-slide slick-active slick-current" tabindex="-1" aria-hidden="false" style="outline: none;">
+          <div>
+            <div tabindex="-1" style="width: 100%; display: inline-block;">Slide 1</div>
+          </div>
+        </div>
+        <div data-index="1" class="slick-slide" tabindex="-1" aria-hidden="true" style="outline: none;">
+          <div>
+            <div tabindex="-1" style="width: 100%; display: inline-block;">Slide 2</div>
+          </div>
+        </div>
+        <div data-index="2" class="slick-slide" tabindex="-1" aria-hidden="true" style="outline: none;">
+          <div>
+            <div tabindex="-1" style="width: 100%; display: inline-block;">Slide 3</div>
+          </div>
+        </div>
+        <div data-index="3" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true">
+          <div>
+            <div tabindex="-1" style="width: 100%; display: inline-block;">Slide 1</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!---->
+    <ul style="display: block;" class="slick-dots slick-dots-bottom">
+      <li class="slick-active"><button>1</button></li>
+      <li class=""><button>2</button></li>
+      <li class=""><button>3</button></li>
+    </ul>
+  </div>
+</div>"
+`;
+
+exports[`carousel > should match snapshot - vertical 1`] = `
+"<div class="ant-carousel ant-carousel-vertical css-var-root">
+  <div class="slick-slider slick-vertical slick-initialized" dir="ltr">
+    <!---->
+    <div class="slick-list">
+      <div class="slick-track">
+        <div data-index="-1" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true">
+          <div>
+            <div tabindex="-1" style="width: 100%; display: inline-block;">Slide 2</div>
+          </div>
+        </div>
+        <div data-index="0" class="slick-slide slick-active slick-current" tabindex="-1" aria-hidden="false" style="outline: none;">
+          <div>
+            <div tabindex="-1" style="width: 100%; display: inline-block;">Slide 1</div>
+          </div>
+        </div>
+        <div data-index="1" class="slick-slide" tabindex="-1" aria-hidden="true" style="outline: none;">
+          <div>
+            <div tabindex="-1" style="width: 100%; display: inline-block;">Slide 2</div>
+          </div>
+        </div>
+        <div data-index="2" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true">
+          <div>
+            <div tabindex="-1" style="width: 100%; display: inline-block;">Slide 1</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!---->
+    <ul style="display: block;" class="slick-dots slick-dots-start">
+      <li class="slick-active"><button>1</button></li>
+      <li class=""><button>2</button></li>
+    </ul>
+  </div>
+</div>"
+`;
+
+exports[`carousel > should match snapshot - with dots and dotPlacement 1`] = `
+"<div class="ant-carousel css-var-root">
+  <div class="slick-slider slick-initialized" dir="ltr">
+    <!---->
+    <div class="slick-list">
+      <div class="slick-track">
+        <div data-index="-1" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true">
+          <div>
+            <div tabindex="-1" style="width: 100%; display: inline-block;">Slide 2</div>
+          </div>
+        </div>
+        <div data-index="0" class="slick-slide slick-active slick-current" tabindex="-1" aria-hidden="false" style="outline: none;">
+          <div>
+            <div tabindex="-1" style="width: 100%; display: inline-block;">Slide 1</div>
+          </div>
+        </div>
+        <div data-index="1" class="slick-slide" tabindex="-1" aria-hidden="true" style="outline: none;">
+          <div>
+            <div tabindex="-1" style="width: 100%; display: inline-block;">Slide 2</div>
+          </div>
+        </div>
+        <div data-index="2" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true">
+          <div>
+            <div tabindex="-1" style="width: 100%; display: inline-block;">Slide 1</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!---->
+    <ul style="display: block;" class="slick-dots slick-dots-top">
+      <li class="slick-active"><button>1</button></li>
+      <li class=""><button>2</button></li>
+    </ul>
+  </div>
+</div>"
+`;
