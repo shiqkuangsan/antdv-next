@@ -1,5 +1,5 @@
 import type { ComputedRef, ShallowRef } from 'vue'
-import { computed, getCurrentInstance, shallowRef } from 'vue'
+import { computed, shallowRef } from 'vue'
 import { isDev } from '../warning'
 
 export interface UseVModelsOptions<T = any> {
@@ -19,10 +19,6 @@ export type UseVModelsReturn<T> = [
   /** Setter: updates internal state (uncontrolled) + emits update events */
   setValue: (newVal: T, ...extraArgs: any[]) => void,
 ]
-
-function toKebab(str: string): string {
-  return str.replace(/[A-Z]/g, m => `-${m.toLowerCase()}`)
-}
 
 /**
  * Composable for v-model support with multi-prop alias.
@@ -49,24 +45,15 @@ export function useVModels<T = any>(
   const { prop, defaultValue } = options
   const propKeys = (Array.isArray(prop) ? [...prop] : [prop]).filter(Boolean)
 
-  const instance = getCurrentInstance()!
-  const vnodeProps = instance.vnode.props || {}
-
-  // Use `in` operator (not `!== undefined`) to handle explicit undefined (controlled with no initial value)
-  const hasInVnodeProps = (key: string) => key in vnodeProps || toKebab(key) in vnodeProps
-
-  const hasModelValue = hasInVnodeProps('modelValue')
+  const hasModelValue = props.modelValue !== undefined
   // Find the first prop key that was actually passed by parent
-  const controlledPropKey = propKeys.find(k => hasInVnodeProps(k))
+  const controlledPropKey = propKeys.find(k => props[k] !== undefined)
   const hasPropValue = controlledPropKey !== undefined
 
   // Dev warning when both modelValue and named prop are provided
   if (isDev && hasModelValue && hasPropValue) {
-    const componentName = instance.type && 'name' in (instance.type as any)
-      ? (instance.type as any).name
-      : 'Unknown'
     console.warn(
-      `[antdv: ${componentName}] Both \`modelValue\` and \`${controlledPropKey}\` are provided. `
+      `[antdv] Both \`modelValue\` and \`${controlledPropKey}\` are provided. `
       + `\`modelValue\` takes priority. Remove one to avoid ambiguity.`,
     )
   }
@@ -75,7 +62,7 @@ export function useVModels<T = any>(
   const resolveDefaultValue = (): T => {
     for (const key of propKeys) {
       const defaultPropName = `default${key.charAt(0).toUpperCase()}${key.slice(1)}`
-      if (defaultPropName in props && props[defaultPropName] !== undefined) {
+      if (props[defaultPropName] !== undefined) {
         return props[defaultPropName]
       }
     }
@@ -88,10 +75,11 @@ export function useVModels<T = any>(
   // Merged value: computed reads directly from props (controlled) or internal ref (uncontrolled)
   // No watch needed — computed tracks reactivity automatically, zero delay
   const mergedValue = computed<T>(() => {
-    if (hasModelValue)
+    if (props.modelValue !== undefined)
       return props.modelValue
-    if (hasPropValue)
-      return props[controlledPropKey!]
+    const key = propKeys.find(k => props[k] !== undefined)
+    if (key !== undefined)
+      return props[key]
     return internalValue.value
   })
 
