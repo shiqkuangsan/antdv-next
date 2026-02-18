@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Grid > Col > rtl render > component should be rendered correctly in RTL direction 1`] = `
+exports[`grid > col > rtl render > component should be rendered correctly in RTL direction 1`] = `
 <div
   data-v-app=""
 >
@@ -12,7 +12,7 @@ exports[`Grid > Col > rtl render > component should be rendered correctly in RTL
 </div>
 `;
 
-exports[`Grid > Col > should match snapshot 1`] = `
+exports[`grid > col > should match snapshot 1`] = `
 <div
   class="ant-col ant-col-12 ant-col-order-3 ant-col-offset-6 ant-col-push-2 ant-col-pull-1 css-var-root"
   style="flex: 1 1 auto;"
@@ -21,7 +21,7 @@ exports[`Grid > Col > should match snapshot 1`] = `
 </div>
 `;
 
-exports[`Grid > Row + Col integration > should match integration snapshot 1`] = `
+exports[`grid > row + Col integration > should match integration snapshot 1`] = `
 <div
   class="ant-row ant-row-space-between ant-row-top css-var-root"
   style="margin-left: -8px; margin-right: -8px; row-gap: 24px;"
@@ -41,7 +41,7 @@ exports[`Grid > Row + Col integration > should match integration snapshot 1`] = 
 </div>
 `;
 
-exports[`Grid > Row > rtl render > component should be rendered correctly in RTL direction 1`] = `
+exports[`grid > row > rtl render > component should be rendered correctly in RTL direction 1`] = `
 <div
   data-v-app=""
 >
@@ -53,7 +53,7 @@ exports[`Grid > Row > rtl render > component should be rendered correctly in RTL
 </div>
 `;
 
-exports[`Grid > Row > should match snapshot 1`] = `
+exports[`grid > row > should match snapshot 1`] = `
 <div
   class="ant-row ant-row-center ant-row-middle css-var-root"
   style="margin-left: -8px; margin-right: -8px; row-gap: 24px;"
