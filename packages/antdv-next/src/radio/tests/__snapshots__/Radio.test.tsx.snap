@@ -1,0 +1,242 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`radio > rtl render > component should be rendered correctly in RTL direction 1`] = `
+<div
+  data-v-app=""
+>
+  <label
+    class="ant-radio-wrapper ant-radio-wrapper-rtl css-var-root ant-radio-css-var"
+  >
+    <span
+      class="ant-radio ant-wave-target ant-wave-target"
+    >
+      <input
+        class="ant-radio-input"
+        type="radio"
+      />
+    </span>
+    <!---->
+  </label>
+</div>
+`;
+
+exports[`radio > rtl render > component should be rendered correctly in RTL direction 2`] = `
+<div
+  data-v-app=""
+>
+  <div
+    class="ant-radio-group ant-radio-group-outline ant-radio-group-rtl css-var-root ant-radio-css-var"
+  >
+    <!---->
+  </div>
+</div>
+`;
+
+exports[`radio > rtl render > component should be rendered correctly in RTL direction 3`] = `
+<div
+  data-v-app=""
+>
+  <label
+    class="ant-radio-button-wrapper ant-radio-button-wrapper-rtl css-var-root ant-radio-css-var"
+  >
+    <span
+      class="ant-radio-button"
+    >
+      <input
+        class="ant-radio-button-input"
+        type="radio"
+      />
+    </span>
+    <!---->
+  </label>
+</div>
+`;
+
+exports[`radio > should match snapshot 1`] = `
+<label
+  class="ant-radio-wrapper ant-radio-wrapper-checked css-var-root ant-radio-css-var"
+>
+  <span
+    class="ant-radio ant-wave-target ant-radio-checked ant-wave-target"
+  >
+    <input
+      checked=""
+      class="ant-radio-input"
+      type="radio"
+    />
+  </span>
+  <span
+    class="ant-radio-label"
+  >
+    Option A
+  </span>
+</label>
+`;
+
+exports[`radio button > should match snapshot 1`] = `
+<div
+  class="ant-radio-group ant-radio-group-outline css-var-root ant-radio-css-var"
+>
+  <label
+    class="ant-radio-button-wrapper ant-radio-button-wrapper-checked css-var-root ant-radio-css-var"
+  >
+    <span
+      class="ant-radio-button ant-radio-button-checked"
+      name="v-0"
+    >
+      <input
+        checked=""
+        class="ant-radio-button-input"
+        type="radio"
+      />
+    </span>
+    <span
+      class="ant-radio-button-label"
+    >
+      A
+    </span>
+  </label>
+  <label
+    class="ant-radio-button-wrapper css-var-root ant-radio-css-var"
+  >
+    <span
+      class="ant-radio-button"
+      name="v-0"
+    >
+      <input
+        class="ant-radio-button-input"
+        type="radio"
+      />
+    </span>
+    <span
+      class="ant-radio-button-label"
+    >
+      B
+    </span>
+  </label>
+  <label
+    class="ant-radio-button-wrapper css-var-root ant-radio-css-var"
+  >
+    <span
+      class="ant-radio-button"
+      name="v-0"
+    >
+      <input
+        class="ant-radio-button-input"
+        type="radio"
+      />
+    </span>
+    <span
+      class="ant-radio-button-label"
+    >
+      C
+    </span>
+  </label>
+</div>
+`;
+
+exports[`radio group > should match snapshot with children 1`] = `
+<div
+  class="ant-radio-group ant-radio-group-outline css-var-root ant-radio-css-var"
+>
+  <label
+    class="ant-radio-wrapper ant-radio-wrapper-checked css-var-root ant-radio-css-var"
+  >
+    <span
+      class="ant-radio ant-wave-target ant-radio-checked ant-wave-target"
+      name="v-0"
+    >
+      <input
+        checked=""
+        class="ant-radio-input"
+        type="radio"
+      />
+    </span>
+    <span
+      class="ant-radio-label"
+    >
+      A
+    </span>
+  </label>
+  <label
+    class="ant-radio-wrapper css-var-root ant-radio-css-var"
+  >
+    <span
+      class="ant-radio ant-wave-target ant-wave-target"
+      name="v-0"
+    >
+      <input
+        class="ant-radio-input"
+        type="radio"
+      />
+    </span>
+    <span
+      class="ant-radio-label"
+    >
+      B
+    </span>
+  </label>
+</div>
+`;
+
+exports[`radio group > should match snapshot with options 1`] = `
+<div
+  class="ant-radio-group ant-radio-group-outline css-var-root ant-radio-css-var"
+>
+  <label
+    class="ant-radio-wrapper css-var-root ant-radio-css-var"
+  >
+    <span
+      class="ant-radio ant-wave-target ant-wave-target"
+      name="v-0"
+    >
+      <input
+        class="ant-radio-input"
+        type="radio"
+      />
+    </span>
+    <span
+      class="ant-radio-label"
+    >
+      A
+    </span>
+  </label>
+  <label
+    class="ant-radio-wrapper ant-radio-wrapper-checked css-var-root ant-radio-css-var"
+  >
+    <span
+      class="ant-radio ant-wave-target ant-radio-checked ant-wave-target"
+      name="v-0"
+    >
+      <input
+        checked=""
+        class="ant-radio-input"
+        type="radio"
+      />
+    </span>
+    <span
+      class="ant-radio-label"
+    >
+      B
+    </span>
+  </label>
+  <label
+    class="ant-radio-wrapper css-var-root ant-radio-css-var"
+  >
+    <span
+      class="ant-radio ant-wave-target ant-wave-target"
+      name="v-0"
+    >
+      <input
+        class="ant-radio-input"
+        type="radio"
+      />
+    </span>
+    <span
+      class="ant-radio-label"
+    >
+      C
+    </span>
+  </label>
+</div>
+`;

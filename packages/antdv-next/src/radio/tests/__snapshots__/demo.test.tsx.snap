@@ -1,0 +1,2132 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`radio demo > renders _semantic correctly 1`] = `
+<div
+  class="semantic-preview-container"
+  data-v-dfc8ebef=""
+>
+  <div
+    class="ant-row css-var-root semantic-preview-row"
+    data-v-dfc8ebef=""
+  >
+    <div
+      class="ant-col ant-col-16 css-var-root semantic-preview-col"
+      data-v-dfc8ebef=""
+    >
+      <label
+        class="ant-radio-wrapper semantic-mark-root css-var-v-0 ant-radio-css-var"
+      >
+        <span
+          class="ant-radio semantic-mark-icon ant-wave-target semantic-mark-icon ant-wave-target"
+        >
+          <input
+            class="ant-radio-input"
+            type="radio"
+          />
+        </span>
+        <span
+          class="ant-radio-label semantic-mark-label"
+        >
+           Radio 
+        </span>
+      </label>
+    </div>
+    <div
+      class="ant-col ant-col-8 css-var-root"
+      data-v-dfc8ebef=""
+    >
+      <ul
+        class="semantic-list"
+        data-v-dfc8ebef=""
+      >
+        <li
+          class="semantic-list-item"
+          data-v-dfc8ebef=""
+        >
+          <div
+            class="ant-flex css-var-root ant-flex-align-stretch ant-flex-gap-small ant-flex-vertical"
+            data-v-dfc8ebef=""
+          >
+            <div
+              class="ant-flex css-var-root ant-flex-align-center ant-flex-justify-space-between ant-flex-gap-small"
+              data-v-dfc8ebef=""
+            >
+              <!-- Title + Version -->
+              <div
+                class="ant-flex css-var-root ant-flex-align-center ant-flex-gap-small"
+                data-v-dfc8ebef=""
+              >
+                <h5
+                  class="ant-typography css-var-root"
+                  style="margin: 0px;"
+                >
+                  root
+                  <!---->
+                  <!---->
+                  <!---->
+                  <!---->
+                  <!---->
+                  <!---->
+                  <!---->
+                  <!---->
+                </h5>
+                <span
+                  class="ant-tag ant-tag-filled ant-tag-blue css-var-root"
+                  data-v-dfc8ebef=""
+                >
+                  1.0.0
+                  <!---->
+                  <!---->
+                  <!---->
+                </span>
+              </div>
+              <!-- Pin + Sample -->
+              <div
+                class="ant-flex css-var-root ant-flex-align-center ant-flex-gap-small"
+                data-v-dfc8ebef=""
+              >
+                <button
+                  class="ant-btn css-var-root ant-btn-text ant-btn-color-default ant-btn-variant-text ant-btn-sm ant-btn-icon-only"
+                  data-v-dfc8ebef=""
+                  type="button"
+                >
+                  <span
+                    class="ant-btn-icon"
+                  >
+                    <span
+                      aria-label="pushpin"
+                      class="anticon anticon-pushpin"
+                      data-v-dfc8ebef=""
+                      role="img"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        data-icon="pushpin"
+                        fill="currentColor"
+                        focusable="false"
+                        height="1em"
+                        viewBox="64 64 896 896"
+                        width="1em"
+                      >
+                        <path
+                          d="M878.3 392.1L631.9 145.7c-6.5-6.5-15-9.7-23.5-9.7s-17 3.2-23.5 9.7L423.8 306.9c-12.2-1.4-24.5-2-36.8-2-73.2 0-146.4 24.1-206.5 72.3a33.23 33.23 0 00-2.7 49.4l181.7 181.7-215.4 215.2a15.8 15.8 0 00-4.6 9.8l-3.4 37.2c-.9 9.4 6.6 17.4 15.9 17.4.5 0 1 0 1.5-.1l37.2-3.4c3.7-.3 7.2-2 9.8-4.6l215.4-215.4 181.7 181.7c6.5 6.5 15 9.7 23.5 9.7 9.7 0 19.3-4.2 25.9-12.4 56.3-70.3 79.7-158.3 70.2-243.4l161.1-161.1c12.9-12.8 12.9-33.8 0-46.8zM666.2 549.3l-24.5 24.5 3.8 34.4a259.92 259.92 0 01-30.4 153.9L262 408.8c12.9-7.1 26.3-13.1 40.3-17.9 27.2-9.4 55.7-14.1 84.7-14.1 9.6 0 19.3.5 28.9 1.6l34.4 3.8 24.5-24.5L608.5 224 800 415.5 666.2 549.3z"
+                        />
+                      </svg>
+                    </span>
+                  </span>
+                  <!---->
+                  <!---->
+                </button>
+                <button
+                  class="ant-btn css-var-root ant-btn-text ant-btn-color-default ant-btn-variant-text ant-btn-sm ant-btn-icon-only"
+                  data-v-dfc8ebef=""
+                  type="button"
+                >
+                  <span
+                    class="ant-btn-icon"
+                  >
+                    <span
+                      aria-label="info-circle"
+                      class="anticon anticon-info-circle"
+                      data-v-dfc8ebef=""
+                      role="img"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        data-icon="info-circle"
+                        fill="currentColor"
+                        focusable="false"
+                        height="1em"
+                        viewBox="64 64 896 896"
+                        width="1em"
+                      >
+                        <path
+                          d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z"
+                        />
+                        <path
+                          d="M464 336a48 48 0 1096 0 48 48 0 10-96 0zm72 112h-48c-4.4 0-8 3.6-8 8v272c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8V456c0-4.4-3.6-8-8-8z"
+                        />
+                      </svg>
+                    </span>
+                  </span>
+                  <!---->
+                  <!---->
+                </button>
+                <!---->
+              </div>
+            </div>
+            <div
+              class="ant-typography css-var-root"
+              style="margin: 0px; font-size: 12px;"
+            >
+              Root element with layout styles, cursor styles, disabled text color and other basic container styles
+              <!---->
+              <!---->
+              <!---->
+              <!---->
+              <!---->
+              <!---->
+              <!---->
+              <!---->
+            </div>
+          </div>
+        </li>
+        <li
+          class="semantic-list-item"
+          data-v-dfc8ebef=""
+        >
+          <div
+            class="ant-flex css-var-root ant-flex-align-stretch ant-flex-gap-small ant-flex-vertical"
+            data-v-dfc8ebef=""
+          >
+            <div
+              class="ant-flex css-var-root ant-flex-align-center ant-flex-justify-space-between ant-flex-gap-small"
+              data-v-dfc8ebef=""
+            >
+              <!-- Title + Version -->
+              <div
+                class="ant-flex css-var-root ant-flex-align-center ant-flex-gap-small"
+                data-v-dfc8ebef=""
+              >
+                <h5
+                  class="ant-typography css-var-root"
+                  style="margin: 0px;"
+                >
+                  icon
+                  <!---->
+                  <!---->
+                  <!---->
+                  <!---->
+                  <!---->
+                  <!---->
+                  <!---->
+                  <!---->
+                </h5>
+                <span
+                  class="ant-tag ant-tag-filled ant-tag-blue css-var-root"
+                  data-v-dfc8ebef=""
+                >
+                  1.0.0
+                  <!---->
+                  <!---->
+                  <!---->
+                </span>
+              </div>
+              <!-- Pin + Sample -->
+              <div
+                class="ant-flex css-var-root ant-flex-align-center ant-flex-gap-small"
+                data-v-dfc8ebef=""
+              >
+                <button
+                  class="ant-btn css-var-root ant-btn-text ant-btn-color-default ant-btn-variant-text ant-btn-sm ant-btn-icon-only"
+                  data-v-dfc8ebef=""
+                  type="button"
+                >
+                  <span
+                    class="ant-btn-icon"
+                  >
+                    <span
+                      aria-label="pushpin"
+                      class="anticon anticon-pushpin"
+                      data-v-dfc8ebef=""
+                      role="img"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        data-icon="pushpin"
+                        fill="currentColor"
+                        focusable="false"
+                        height="1em"
+                        viewBox="64 64 896 896"
+                        width="1em"
+                      >
+                        <path
+                          d="M878.3 392.1L631.9 145.7c-6.5-6.5-15-9.7-23.5-9.7s-17 3.2-23.5 9.7L423.8 306.9c-12.2-1.4-24.5-2-36.8-2-73.2 0-146.4 24.1-206.5 72.3a33.23 33.23 0 00-2.7 49.4l181.7 181.7-215.4 215.2a15.8 15.8 0 00-4.6 9.8l-3.4 37.2c-.9 9.4 6.6 17.4 15.9 17.4.5 0 1 0 1.5-.1l37.2-3.4c3.7-.3 7.2-2 9.8-4.6l215.4-215.4 181.7 181.7c6.5 6.5 15 9.7 23.5 9.7 9.7 0 19.3-4.2 25.9-12.4 56.3-70.3 79.7-158.3 70.2-243.4l161.1-161.1c12.9-12.8 12.9-33.8 0-46.8zM666.2 549.3l-24.5 24.5 3.8 34.4a259.92 259.92 0 01-30.4 153.9L262 408.8c12.9-7.1 26.3-13.1 40.3-17.9 27.2-9.4 55.7-14.1 84.7-14.1 9.6 0 19.3.5 28.9 1.6l34.4 3.8 24.5-24.5L608.5 224 800 415.5 666.2 549.3z"
+                        />
+                      </svg>
+                    </span>
+                  </span>
+                  <!---->
+                  <!---->
+                </button>
+                <button
+                  class="ant-btn css-var-root ant-btn-text ant-btn-color-default ant-btn-variant-text ant-btn-sm ant-btn-icon-only"
+                  data-v-dfc8ebef=""
+                  type="button"
+                >
+                  <span
+                    class="ant-btn-icon"
+                  >
+                    <span
+                      aria-label="info-circle"
+                      class="anticon anticon-info-circle"
+                      data-v-dfc8ebef=""
+                      role="img"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        data-icon="info-circle"
+                        fill="currentColor"
+                        focusable="false"
+                        height="1em"
+                        viewBox="64 64 896 896"
+                        width="1em"
+                      >
+                        <path
+                          d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z"
+                        />
+                        <path
+                          d="M464 336a48 48 0 1096 0 48 48 0 10-96 0zm72 112h-48c-4.4 0-8 3.6-8 8v272c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8V456c0-4.4-3.6-8-8-8z"
+                        />
+                      </svg>
+                    </span>
+                  </span>
+                  <!---->
+                  <!---->
+                </button>
+                <!---->
+              </div>
+            </div>
+            <div
+              class="ant-typography css-var-root"
+              style="margin: 0px; font-size: 12px;"
+            >
+              Icon element with border radius, transition animations, border styles, hover states, focus states and other interactive styles
+              <!---->
+              <!---->
+              <!---->
+              <!---->
+              <!---->
+              <!---->
+              <!---->
+              <!---->
+            </div>
+          </div>
+        </li>
+        <li
+          class="semantic-list-item"
+          data-v-dfc8ebef=""
+        >
+          <div
+            class="ant-flex css-var-root ant-flex-align-stretch ant-flex-gap-small ant-flex-vertical"
+            data-v-dfc8ebef=""
+          >
+            <div
+              class="ant-flex css-var-root ant-flex-align-center ant-flex-justify-space-between ant-flex-gap-small"
+              data-v-dfc8ebef=""
+            >
+              <!-- Title + Version -->
+              <div
+                class="ant-flex css-var-root ant-flex-align-center ant-flex-gap-small"
+                data-v-dfc8ebef=""
+              >
+                <h5
+                  class="ant-typography css-var-root"
+                  style="margin: 0px;"
+                >
+                  label
+                  <!---->
+                  <!---->
+                  <!---->
+                  <!---->
+                  <!---->
+                  <!---->
+                  <!---->
+                  <!---->
+                </h5>
+                <span
+                  class="ant-tag ant-tag-filled ant-tag-blue css-var-root"
+                  data-v-dfc8ebef=""
+                >
+                  1.0.0
+                  <!---->
+                  <!---->
+                  <!---->
+                </span>
+              </div>
+              <!-- Pin + Sample -->
+              <div
+                class="ant-flex css-var-root ant-flex-align-center ant-flex-gap-small"
+                data-v-dfc8ebef=""
+              >
+                <button
+                  class="ant-btn css-var-root ant-btn-text ant-btn-color-default ant-btn-variant-text ant-btn-sm ant-btn-icon-only"
+                  data-v-dfc8ebef=""
+                  type="button"
+                >
+                  <span
+                    class="ant-btn-icon"
+                  >
+                    <span
+                      aria-label="pushpin"
+                      class="anticon anticon-pushpin"
+                      data-v-dfc8ebef=""
+                      role="img"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        data-icon="pushpin"
+                        fill="currentColor"
+                        focusable="false"
+                        height="1em"
+                        viewBox="64 64 896 896"
+                        width="1em"
+                      >
+                        <path
+                          d="M878.3 392.1L631.9 145.7c-6.5-6.5-15-9.7-23.5-9.7s-17 3.2-23.5 9.7L423.8 306.9c-12.2-1.4-24.5-2-36.8-2-73.2 0-146.4 24.1-206.5 72.3a33.23 33.23 0 00-2.7 49.4l181.7 181.7-215.4 215.2a15.8 15.8 0 00-4.6 9.8l-3.4 37.2c-.9 9.4 6.6 17.4 15.9 17.4.5 0 1 0 1.5-.1l37.2-3.4c3.7-.3 7.2-2 9.8-4.6l215.4-215.4 181.7 181.7c6.5 6.5 15 9.7 23.5 9.7 9.7 0 19.3-4.2 25.9-12.4 56.3-70.3 79.7-158.3 70.2-243.4l161.1-161.1c12.9-12.8 12.9-33.8 0-46.8zM666.2 549.3l-24.5 24.5 3.8 34.4a259.92 259.92 0 01-30.4 153.9L262 408.8c12.9-7.1 26.3-13.1 40.3-17.9 27.2-9.4 55.7-14.1 84.7-14.1 9.6 0 19.3.5 28.9 1.6l34.4 3.8 24.5-24.5L608.5 224 800 415.5 666.2 549.3z"
+                        />
+                      </svg>
+                    </span>
+                  </span>
+                  <!---->
+                  <!---->
+                </button>
+                <button
+                  class="ant-btn css-var-root ant-btn-text ant-btn-color-default ant-btn-variant-text ant-btn-sm ant-btn-icon-only"
+                  data-v-dfc8ebef=""
+                  type="button"
+                >
+                  <span
+                    class="ant-btn-icon"
+                  >
+                    <span
+                      aria-label="info-circle"
+                      class="anticon anticon-info-circle"
+                      data-v-dfc8ebef=""
+                      role="img"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        data-icon="info-circle"
+                        fill="currentColor"
+                        focusable="false"
+                        height="1em"
+                        viewBox="64 64 896 896"
+                        width="1em"
+                      >
+                        <path
+                          d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z"
+                        />
+                        <path
+                          d="M464 336a48 48 0 1096 0 48 48 0 10-96 0zm72 112h-48c-4.4 0-8 3.6-8 8v272c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8V456c0-4.4-3.6-8-8-8z"
+                        />
+                      </svg>
+                    </span>
+                  </span>
+                  <!---->
+                  <!---->
+                </button>
+                <!---->
+              </div>
+            </div>
+            <div
+              class="ant-typography css-var-root"
+              style="margin: 0px; font-size: 12px;"
+            >
+              Label element with padding, text color, disabled states, alignment and other text styles
+              <!---->
+              <!---->
+              <!---->
+              <!---->
+              <!---->
+              <!---->
+              <!---->
+              <!---->
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`radio demo > renders basic correctly 1`] = `
+<label
+  class="ant-radio-wrapper css-var-root ant-radio-css-var"
+>
+  <span
+    class="ant-radio ant-wave-target ant-wave-target"
+  >
+    <input
+      class="ant-radio-input"
+      type="radio"
+    />
+  </span>
+  <span
+    class="ant-radio-label"
+  >
+     Radio 
+  </span>
+</label>
+`;
+
+exports[`radio demo > renders disabled correctly 1`] = `
+<div
+  class="ant-space ant-space-vertical ant-space-gap-row-small ant-space-gap-col-small css-var-root"
+>
+  <div
+    class="ant-space-item"
+  >
+    <div
+      class="ant-space ant-space-horizontal ant-space-align-center ant-space-gap-row-small ant-space-gap-col-small css-var-root"
+    >
+      <div
+        class="ant-space-item"
+      >
+        <label
+          class="ant-radio-wrapper ant-radio-wrapper-disabled css-var-root ant-radio-css-var"
+        >
+          <span
+            class="ant-radio ant-wave-target ant-radio-disabled ant-wave-target"
+          >
+            <input
+              class="ant-radio-input"
+              disabled=""
+              type="radio"
+            />
+          </span>
+          <span
+            class="ant-radio-label"
+          >
+             Disabled 
+          </span>
+        </label>
+      </div>
+      <!---->
+      <div
+        class="ant-space-item"
+      >
+        <label
+          class="ant-radio-wrapper ant-radio-wrapper-checked ant-radio-wrapper-disabled css-var-root ant-radio-css-var"
+        >
+          <span
+            class="ant-radio ant-wave-target ant-radio-checked ant-radio-disabled ant-wave-target"
+          >
+            <input
+              checked=""
+              class="ant-radio-input"
+              disabled=""
+              type="radio"
+            />
+          </span>
+          <span
+            class="ant-radio-label"
+          >
+             Disabled 
+          </span>
+        </label>
+      </div>
+      <!---->
+    </div>
+  </div>
+  <!---->
+  <div
+    class="ant-space-item"
+  >
+    <button
+      class="ant-btn css-var-root ant-btn-primary ant-btn-color-primary ant-btn-variant-solid"
+      type="button"
+    >
+      <transition-stub
+        appear="false"
+        css="true"
+        name="ant-btn-loading-icon-motion"
+        persisted="false"
+      >
+        <!---->
+      </transition-stub>
+      <span>
+         Toggle disabled 
+      </span>
+      <!---->
+    </button>
+  </div>
+  <!---->
+</div>
+`;
+
+exports[`radio demo > renders radio-group correctly 1`] = `
+<div
+  class="ant-radio-group ant-radio-group-outline css-var-root ant-radio-css-var"
+>
+  <label
+    class="ant-radio-wrapper option-1 css-var-root ant-radio-css-var"
+  >
+    <span
+      class="ant-radio ant-wave-target ant-wave-target"
+      name="v-0"
+    >
+      <input
+        class="ant-radio-input"
+        type="radio"
+      />
+    </span>
+    <span
+      class="ant-radio-label"
+    >
+      <div
+        class="ant-flex css-var-root ant-flex-align-center ant-flex-justify-center ant-flex-gap-small ant-flex-vertical"
+      >
+        <span
+          aria-label="line-chart"
+          class="anticon anticon-line-chart"
+          role="img"
+        >
+          <svg
+            aria-hidden="true"
+            data-icon="line-chart"
+            fill="currentColor"
+            focusable="false"
+            height="1em"
+            viewBox="64 64 896 896"
+            width="1em"
+          >
+            <path
+              d="M888 792H200V168c0-4.4-3.6-8-8-8h-56c-4.4 0-8 3.6-8 8v688c0 4.4 3.6 8 8 8h752c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM305.8 637.7c3.1 3.1 8.1 3.1 11.3 0l138.3-137.6L583 628.5c3.1 3.1 8.2 3.1 11.3 0l275.4-275.3c3.1-3.1 3.1-8.2 0-11.3l-39.6-39.6a8.03 8.03 0 00-11.3 0l-230 229.9L461.4 404a8.03 8.03 0 00-11.3 0L266.3 586.7a8.03 8.03 0 000 11.3l39.5 39.7z"
+            />
+          </svg>
+        </span>
+         LineChat
+      </div>
+    </span>
+  </label>
+  <label
+    class="ant-radio-wrapper option-2 css-var-root ant-radio-css-var"
+  >
+    <span
+      class="ant-radio ant-wave-target ant-wave-target"
+      name="v-0"
+    >
+      <input
+        class="ant-radio-input"
+        type="radio"
+      />
+    </span>
+    <span
+      class="ant-radio-label"
+    >
+      <div
+        class="ant-flex css-var-root ant-flex-align-center ant-flex-justify-center ant-flex-gap-small ant-flex-vertical"
+      >
+        <span
+          aria-label="dot-chart"
+          class="anticon anticon-dot-chart"
+          role="img"
+        >
+          <svg
+            aria-hidden="true"
+            data-icon="dot-chart"
+            fill="currentColor"
+            focusable="false"
+            height="1em"
+            viewBox="64 64 896 896"
+            width="1em"
+          >
+            <path
+              d="M888 792H200V168c0-4.4-3.6-8-8-8h-56c-4.4 0-8 3.6-8 8v688c0 4.4 3.6 8 8 8h752c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM288 604a64 64 0 10128 0 64 64 0 10-128 0zm118-224a48 48 0 1096 0 48 48 0 10-96 0zm158 228a96 96 0 10192 0 96 96 0 10-192 0zm148-314a56 56 0 10112 0 56 56 0 10-112 0z"
+            />
+          </svg>
+        </span>
+         DotChart
+      </div>
+    </span>
+  </label>
+  <label
+    class="ant-radio-wrapper option-3 css-var-root ant-radio-css-var"
+  >
+    <span
+      class="ant-radio ant-wave-target ant-wave-target"
+      name="v-0"
+    >
+      <input
+        class="ant-radio-input"
+        type="radio"
+      />
+    </span>
+    <span
+      class="ant-radio-label"
+    >
+      <div
+        class="ant-flex css-var-root ant-flex-align-center ant-flex-justify-center ant-flex-gap-small ant-flex-vertical"
+      >
+        <span
+          aria-label="bar-chart"
+          class="anticon anticon-bar-chart"
+          role="img"
+        >
+          <svg
+            aria-hidden="true"
+            data-icon="bar-chart"
+            fill="currentColor"
+            focusable="false"
+            height="1em"
+            viewBox="64 64 896 896"
+            width="1em"
+          >
+            <path
+              d="M888 792H200V168c0-4.4-3.6-8-8-8h-56c-4.4 0-8 3.6-8 8v688c0 4.4 3.6 8 8 8h752c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm-600-80h56c4.4 0 8-3.6 8-8V560c0-4.4-3.6-8-8-8h-56c-4.4 0-8 3.6-8 8v144c0 4.4 3.6 8 8 8zm152 0h56c4.4 0 8-3.6 8-8V384c0-4.4-3.6-8-8-8h-56c-4.4 0-8 3.6-8 8v320c0 4.4 3.6 8 8 8zm152 0h56c4.4 0 8-3.6 8-8V462c0-4.4-3.6-8-8-8h-56c-4.4 0-8 3.6-8 8v242c0 4.4 3.6 8 8 8zm152 0h56c4.4 0 8-3.6 8-8V304c0-4.4-3.6-8-8-8h-56c-4.4 0-8 3.6-8 8v400c0 4.4 3.6 8 8 8z"
+            />
+          </svg>
+        </span>
+         BarChart
+      </div>
+    </span>
+  </label>
+  <label
+    class="ant-radio-wrapper option-4 css-var-root ant-radio-css-var"
+  >
+    <span
+      class="ant-radio ant-wave-target ant-wave-target"
+      name="v-0"
+    >
+      <input
+        class="ant-radio-input"
+        type="radio"
+      />
+    </span>
+    <span
+      class="ant-radio-label"
+    >
+      <div
+        class="ant-flex css-var-root ant-flex-align-center ant-flex-justify-center ant-flex-gap-small ant-flex-vertical"
+      >
+        <span
+          aria-label="pie-chart"
+          class="anticon anticon-pie-chart"
+          role="img"
+        >
+          <svg
+            aria-hidden="true"
+            data-icon="pie-chart"
+            fill="currentColor"
+            focusable="false"
+            height="1em"
+            viewBox="64 64 896 896"
+            width="1em"
+          >
+            <path
+              d="M864 518H506V160c0-4.4-3.6-8-8-8h-26a398.46 398.46 0 00-282.8 117.1 398.19 398.19 0 00-85.7 127.1A397.61 397.61 0 0072 552a398.46 398.46 0 00117.1 282.8c36.7 36.7 79.5 65.6 127.1 85.7A397.61 397.61 0 00472 952a398.46 398.46 0 00282.8-117.1c36.7-36.7 65.6-79.5 85.7-127.1A397.61 397.61 0 00872 552v-26c0-4.4-3.6-8-8-8zM705.7 787.8A331.59 331.59 0 01470.4 884c-88.1-.4-170.9-34.9-233.2-97.2C174.5 724.1 140 640.7 140 552c0-88.7 34.5-172.1 97.2-234.8 54.6-54.6 124.9-87.9 200.8-95.5V586h364.3c-7.7 76.3-41.3 147-96.6 201.8zM952 462.4l-2.6-28.2c-8.5-92.1-49.4-179-115.2-244.6A399.4 399.4 0 00589 74.6L560.7 72c-4.7-.4-8.7 3.2-8.7 7.9V464c0 4.4 3.6 8 8 8l384-1c4.7 0 8.4-4 8-8.6zm-332.2-58.2V147.6a332.24 332.24 0 01166.4 89.8c45.7 45.6 77 103.6 90 166.1l-256.4.7z"
+            />
+          </svg>
+        </span>
+         PieChart
+      </div>
+    </span>
+  </label>
+</div>
+`;
+
+exports[`radio demo > renders radiobutton correctly 1`] = `
+<div
+  class="ant-flex css-var-root ant-flex-align-stretch ant-flex-gap-middle ant-flex-vertical"
+>
+  <div
+    class="ant-radio-group ant-radio-group-outline css-var-root ant-radio-css-var"
+  >
+    <label
+      class="ant-radio-button-wrapper ant-radio-button-wrapper-checked css-var-root ant-radio-css-var"
+    >
+      <span
+        class="ant-radio-button ant-radio-button-checked"
+        name="v-0"
+      >
+        <input
+          checked=""
+          class="ant-radio-button-input"
+          type="radio"
+        />
+      </span>
+      <span
+        class="ant-radio-button-label"
+      >
+         Hangzhou 
+      </span>
+    </label>
+    <label
+      class="ant-radio-button-wrapper css-var-root ant-radio-css-var"
+    >
+      <span
+        class="ant-radio-button"
+        name="v-0"
+      >
+        <input
+          class="ant-radio-button-input"
+          type="radio"
+        />
+      </span>
+      <span
+        class="ant-radio-button-label"
+      >
+         Shanghai 
+      </span>
+    </label>
+    <label
+      class="ant-radio-button-wrapper css-var-root ant-radio-css-var"
+    >
+      <span
+        class="ant-radio-button"
+        name="v-0"
+      >
+        <input
+          class="ant-radio-button-input"
+          type="radio"
+        />
+      </span>
+      <span
+        class="ant-radio-button-label"
+      >
+         Beijing 
+      </span>
+    </label>
+    <label
+      class="ant-radio-button-wrapper css-var-root ant-radio-css-var"
+    >
+      <span
+        class="ant-radio-button"
+        name="v-0"
+      >
+        <input
+          class="ant-radio-button-input"
+          type="radio"
+        />
+      </span>
+      <span
+        class="ant-radio-button-label"
+      >
+         Chengdu 
+      </span>
+    </label>
+  </div>
+  <div
+    class="ant-radio-group ant-radio-group-outline css-var-root ant-radio-css-var"
+  >
+    <label
+      class="ant-radio-button-wrapper ant-radio-button-wrapper-checked css-var-root ant-radio-css-var"
+    >
+      <span
+        class="ant-radio-button ant-radio-button-checked"
+        name="v-1"
+      >
+        <input
+          checked=""
+          class="ant-radio-button-input"
+          type="radio"
+        />
+      </span>
+      <span
+        class="ant-radio-button-label"
+      >
+         Hangzhou 
+      </span>
+    </label>
+    <label
+      class="ant-radio-button-wrapper ant-radio-button-wrapper-disabled css-var-root ant-radio-css-var"
+    >
+      <span
+        class="ant-radio-button ant-radio-button-disabled"
+        name="v-1"
+      >
+        <input
+          class="ant-radio-button-input"
+          disabled=""
+          type="radio"
+        />
+      </span>
+      <span
+        class="ant-radio-button-label"
+      >
+         Shanghai 
+      </span>
+    </label>
+    <label
+      class="ant-radio-button-wrapper css-var-root ant-radio-css-var"
+    >
+      <span
+        class="ant-radio-button"
+        name="v-1"
+      >
+        <input
+          class="ant-radio-button-input"
+          type="radio"
+        />
+      </span>
+      <span
+        class="ant-radio-button-label"
+      >
+         Beijing 
+      </span>
+    </label>
+    <label
+      class="ant-radio-button-wrapper css-var-root ant-radio-css-var"
+    >
+      <span
+        class="ant-radio-button"
+        name="v-1"
+      >
+        <input
+          class="ant-radio-button-input"
+          type="radio"
+        />
+      </span>
+      <span
+        class="ant-radio-button-label"
+      >
+         Chengdu 
+      </span>
+    </label>
+  </div>
+  <div
+    class="ant-radio-group ant-radio-group-outline css-var-root ant-radio-css-var"
+  >
+    <label
+      class="ant-radio-button-wrapper ant-radio-button-wrapper-checked ant-radio-button-wrapper-disabled css-var-root ant-radio-css-var"
+    >
+      <span
+        class="ant-radio-button ant-radio-button-checked ant-radio-button-disabled"
+        name="v-2"
+      >
+        <input
+          checked=""
+          class="ant-radio-button-input"
+          disabled=""
+          type="radio"
+        />
+      </span>
+      <span
+        class="ant-radio-button-label"
+      >
+         Hangzhou 
+      </span>
+    </label>
+    <label
+      class="ant-radio-button-wrapper ant-radio-button-wrapper-disabled css-var-root ant-radio-css-var"
+    >
+      <span
+        class="ant-radio-button ant-radio-button-disabled"
+        name="v-2"
+      >
+        <input
+          class="ant-radio-button-input"
+          disabled=""
+          type="radio"
+        />
+      </span>
+      <span
+        class="ant-radio-button-label"
+      >
+         Shanghai 
+      </span>
+    </label>
+    <label
+      class="ant-radio-button-wrapper ant-radio-button-wrapper-disabled css-var-root ant-radio-css-var"
+    >
+      <span
+        class="ant-radio-button ant-radio-button-disabled"
+        name="v-2"
+      >
+        <input
+          class="ant-radio-button-input"
+          disabled=""
+          type="radio"
+        />
+      </span>
+      <span
+        class="ant-radio-button-label"
+      >
+         Beijing 
+      </span>
+    </label>
+    <label
+      class="ant-radio-button-wrapper ant-radio-button-wrapper-disabled css-var-root ant-radio-css-var"
+    >
+      <span
+        class="ant-radio-button ant-radio-button-disabled"
+        name="v-2"
+      >
+        <input
+          class="ant-radio-button-input"
+          disabled=""
+          type="radio"
+        />
+      </span>
+      <span
+        class="ant-radio-button-label"
+      >
+         Chengdu 
+      </span>
+    </label>
+  </div>
+</div>
+`;
+
+exports[`radio demo > renders radiobutton-solid correctly 1`] = `
+<div
+  class="ant-flex css-var-root ant-flex-align-stretch ant-flex-gap-middle ant-flex-vertical"
+>
+  <div
+    class="ant-radio-group ant-radio-group-solid css-var-root ant-radio-css-var"
+  >
+    <label
+      class="ant-radio-button-wrapper ant-radio-button-wrapper-checked css-var-root ant-radio-css-var"
+    >
+      <span
+        class="ant-radio-button ant-radio-button-checked"
+        name="v-0"
+      >
+        <input
+          checked=""
+          class="ant-radio-button-input"
+          type="radio"
+        />
+      </span>
+      <span
+        class="ant-radio-button-label"
+      >
+         Hangzhou 
+      </span>
+    </label>
+    <label
+      class="ant-radio-button-wrapper css-var-root ant-radio-css-var"
+    >
+      <span
+        class="ant-radio-button"
+        name="v-0"
+      >
+        <input
+          class="ant-radio-button-input"
+          type="radio"
+        />
+      </span>
+      <span
+        class="ant-radio-button-label"
+      >
+         Shanghai 
+      </span>
+    </label>
+    <label
+      class="ant-radio-button-wrapper css-var-root ant-radio-css-var"
+    >
+      <span
+        class="ant-radio-button"
+        name="v-0"
+      >
+        <input
+          class="ant-radio-button-input"
+          type="radio"
+        />
+      </span>
+      <span
+        class="ant-radio-button-label"
+      >
+         Beijing 
+      </span>
+    </label>
+    <label
+      class="ant-radio-button-wrapper css-var-root ant-radio-css-var"
+    >
+      <span
+        class="ant-radio-button"
+        name="v-0"
+      >
+        <input
+          class="ant-radio-button-input"
+          type="radio"
+        />
+      </span>
+      <span
+        class="ant-radio-button-label"
+      >
+         Chengdu 
+      </span>
+    </label>
+  </div>
+  <div
+    class="ant-radio-group ant-radio-group-solid css-var-root ant-radio-css-var"
+  >
+    <label
+      class="ant-radio-button-wrapper ant-radio-button-wrapper-checked css-var-root ant-radio-css-var"
+    >
+      <span
+        class="ant-radio-button ant-radio-button-checked"
+        name="v-1"
+      >
+        <input
+          checked=""
+          class="ant-radio-button-input"
+          type="radio"
+        />
+      </span>
+      <span
+        class="ant-radio-button-label"
+      >
+         Hangzhou 
+      </span>
+    </label>
+    <label
+      class="ant-radio-button-wrapper ant-radio-button-wrapper-disabled css-var-root ant-radio-css-var"
+    >
+      <span
+        class="ant-radio-button ant-radio-button-disabled"
+        name="v-1"
+      >
+        <input
+          class="ant-radio-button-input"
+          disabled=""
+          type="radio"
+        />
+      </span>
+      <span
+        class="ant-radio-button-label"
+      >
+         Shanghai 
+      </span>
+    </label>
+    <label
+      class="ant-radio-button-wrapper css-var-root ant-radio-css-var"
+    >
+      <span
+        class="ant-radio-button"
+        name="v-1"
+      >
+        <input
+          class="ant-radio-button-input"
+          type="radio"
+        />
+      </span>
+      <span
+        class="ant-radio-button-label"
+      >
+         Beijing 
+      </span>
+    </label>
+    <label
+      class="ant-radio-button-wrapper css-var-root ant-radio-css-var"
+    >
+      <span
+        class="ant-radio-button"
+        name="v-1"
+      >
+        <input
+          class="ant-radio-button-input"
+          type="radio"
+        />
+      </span>
+      <span
+        class="ant-radio-button-label"
+      >
+         Chengdu 
+      </span>
+    </label>
+  </div>
+</div>
+`;
+
+exports[`radio demo > renders radiogroup correctly 1`] = `
+<div
+  class="ant-radio-group ant-radio-group-outline css-var-root ant-radio-css-var"
+>
+  <label
+    class="ant-radio-wrapper ant-radio-wrapper-checked option-1 css-var-root ant-radio-css-var"
+  >
+    <span
+      class="ant-radio ant-wave-target ant-radio-checked ant-wave-target"
+      name="v-0"
+    >
+      <input
+        checked=""
+        class="ant-radio-input"
+        type="radio"
+      />
+    </span>
+    <span
+      class="ant-radio-label"
+    >
+      <div
+        class="ant-flex css-var-root ant-flex-align-center ant-flex-justify-center ant-flex-gap-small ant-flex-vertical"
+      >
+        <span
+          aria-label="line-chart"
+          class="anticon anticon-line-chart"
+          role="img"
+          style="font-size: 18px;"
+        >
+          <svg
+            aria-hidden="true"
+            data-icon="line-chart"
+            fill="currentColor"
+            focusable="false"
+            height="1em"
+            viewBox="64 64 896 896"
+            width="1em"
+          >
+            <path
+              d="M888 792H200V168c0-4.4-3.6-8-8-8h-56c-4.4 0-8 3.6-8 8v688c0 4.4 3.6 8 8 8h752c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM305.8 637.7c3.1 3.1 8.1 3.1 11.3 0l138.3-137.6L583 628.5c3.1 3.1 8.2 3.1 11.3 0l275.4-275.3c3.1-3.1 3.1-8.2 0-11.3l-39.6-39.6a8.03 8.03 0 00-11.3 0l-230 229.9L461.4 404a8.03 8.03 0 00-11.3 0L266.3 586.7a8.03 8.03 0 000 11.3l39.5 39.7z"
+            />
+          </svg>
+        </span>
+         LineChat
+      </div>
+    </span>
+  </label>
+  <label
+    class="ant-radio-wrapper option-2 css-var-root ant-radio-css-var"
+  >
+    <span
+      class="ant-radio ant-wave-target ant-wave-target"
+      name="v-0"
+    >
+      <input
+        class="ant-radio-input"
+        type="radio"
+      />
+    </span>
+    <span
+      class="ant-radio-label"
+    >
+      <div
+        class="ant-flex css-var-root ant-flex-align-center ant-flex-justify-center ant-flex-gap-small ant-flex-vertical"
+      >
+        <span
+          aria-label="dot-chart"
+          class="anticon anticon-dot-chart"
+          role="img"
+          style="font-size: 18px;"
+        >
+          <svg
+            aria-hidden="true"
+            data-icon="dot-chart"
+            fill="currentColor"
+            focusable="false"
+            height="1em"
+            viewBox="64 64 896 896"
+            width="1em"
+          >
+            <path
+              d="M888 792H200V168c0-4.4-3.6-8-8-8h-56c-4.4 0-8 3.6-8 8v688c0 4.4 3.6 8 8 8h752c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM288 604a64 64 0 10128 0 64 64 0 10-128 0zm118-224a48 48 0 1096 0 48 48 0 10-96 0zm158 228a96 96 0 10192 0 96 96 0 10-192 0zm148-314a56 56 0 10112 0 56 56 0 10-112 0z"
+            />
+          </svg>
+        </span>
+         DotChart
+      </div>
+    </span>
+  </label>
+  <label
+    class="ant-radio-wrapper option-3 css-var-root ant-radio-css-var"
+  >
+    <span
+      class="ant-radio ant-wave-target ant-wave-target"
+      name="v-0"
+    >
+      <input
+        class="ant-radio-input"
+        type="radio"
+      />
+    </span>
+    <span
+      class="ant-radio-label"
+    >
+      <div
+        class="ant-flex css-var-root ant-flex-align-center ant-flex-justify-center ant-flex-gap-small ant-flex-vertical"
+      >
+        <span
+          aria-label="bar-chart"
+          class="anticon anticon-bar-chart"
+          role="img"
+          style="font-size: 18px;"
+        >
+          <svg
+            aria-hidden="true"
+            data-icon="bar-chart"
+            fill="currentColor"
+            focusable="false"
+            height="1em"
+            viewBox="64 64 896 896"
+            width="1em"
+          >
+            <path
+              d="M888 792H200V168c0-4.4-3.6-8-8-8h-56c-4.4 0-8 3.6-8 8v688c0 4.4 3.6 8 8 8h752c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm-600-80h56c4.4 0 8-3.6 8-8V560c0-4.4-3.6-8-8-8h-56c-4.4 0-8 3.6-8 8v144c0 4.4 3.6 8 8 8zm152 0h56c4.4 0 8-3.6 8-8V384c0-4.4-3.6-8-8-8h-56c-4.4 0-8 3.6-8 8v320c0 4.4 3.6 8 8 8zm152 0h56c4.4 0 8-3.6 8-8V462c0-4.4-3.6-8-8-8h-56c-4.4 0-8 3.6-8 8v242c0 4.4 3.6 8 8 8zm152 0h56c4.4 0 8-3.6 8-8V304c0-4.4-3.6-8-8-8h-56c-4.4 0-8 3.6-8 8v400c0 4.4 3.6 8 8 8z"
+            />
+          </svg>
+        </span>
+         BarChart
+      </div>
+    </span>
+  </label>
+  <label
+    class="ant-radio-wrapper option-4 css-var-root ant-radio-css-var"
+  >
+    <span
+      class="ant-radio ant-wave-target ant-wave-target"
+      name="v-0"
+    >
+      <input
+        class="ant-radio-input"
+        type="radio"
+      />
+    </span>
+    <span
+      class="ant-radio-label"
+    >
+      <div
+        class="ant-flex css-var-root ant-flex-align-center ant-flex-justify-center ant-flex-gap-small ant-flex-vertical"
+      >
+        <span
+          aria-label="pie-chart"
+          class="anticon anticon-pie-chart"
+          role="img"
+          style="font-size: 18px;"
+        >
+          <svg
+            aria-hidden="true"
+            data-icon="pie-chart"
+            fill="currentColor"
+            focusable="false"
+            height="1em"
+            viewBox="64 64 896 896"
+            width="1em"
+          >
+            <path
+              d="M864 518H506V160c0-4.4-3.6-8-8-8h-26a398.46 398.46 0 00-282.8 117.1 398.19 398.19 0 00-85.7 127.1A397.61 397.61 0 0072 552a398.46 398.46 0 00117.1 282.8c36.7 36.7 79.5 65.6 127.1 85.7A397.61 397.61 0 00472 952a398.46 398.46 0 00282.8-117.1c36.7-36.7 65.6-79.5 85.7-127.1A397.61 397.61 0 00872 552v-26c0-4.4-3.6-8-8-8zM705.7 787.8A331.59 331.59 0 01470.4 884c-88.1-.4-170.9-34.9-233.2-97.2C174.5 724.1 140 640.7 140 552c0-88.7 34.5-172.1 97.2-234.8 54.6-54.6 124.9-87.9 200.8-95.5V586h364.3c-7.7 76.3-41.3 147-96.6 201.8zM952 462.4l-2.6-28.2c-8.5-92.1-49.4-179-115.2-244.6A399.4 399.4 0 00589 74.6L560.7 72c-4.7-.4-8.7 3.2-8.7 7.9V464c0 4.4 3.6 8 8 8l384-1c4.7 0 8.4-4 8-8.6zm-332.2-58.2V147.6a332.24 332.24 0 01166.4 89.8c45.7 45.6 77 103.6 90 166.1l-256.4.7z"
+            />
+          </svg>
+        </span>
+         PieChart
+      </div>
+    </span>
+  </label>
+</div>
+`;
+
+exports[`radio demo > renders radiogroup-block correctly 1`] = `
+<div
+  class="ant-flex css-var-root ant-flex-align-stretch ant-flex-gap-middle ant-flex-vertical"
+>
+  <div
+    class="ant-radio-group ant-radio-group-outline ant-radio-group-block css-var-root ant-radio-css-var"
+  >
+    <label
+      class="ant-radio-wrapper ant-radio-wrapper-checked ant-radio-wrapper-block css-var-root ant-radio-css-var"
+    >
+      <span
+        class="ant-radio ant-wave-target ant-radio-checked ant-wave-target"
+        name="v-0"
+      >
+        <input
+          checked=""
+          class="ant-radio-input"
+          type="radio"
+        />
+      </span>
+      <span
+        class="ant-radio-label"
+      >
+        Apple
+      </span>
+    </label>
+    <label
+      class="ant-radio-wrapper ant-radio-wrapper-block css-var-root ant-radio-css-var"
+    >
+      <span
+        class="ant-radio ant-wave-target ant-wave-target"
+        name="v-0"
+      >
+        <input
+          class="ant-radio-input"
+          type="radio"
+        />
+      </span>
+      <span
+        class="ant-radio-label"
+      >
+        Pear
+      </span>
+    </label>
+    <label
+      class="ant-radio-wrapper ant-radio-wrapper-block css-var-root ant-radio-css-var"
+    >
+      <span
+        class="ant-radio ant-wave-target ant-wave-target"
+        name="v-0"
+      >
+        <input
+          class="ant-radio-input"
+          type="radio"
+        />
+      </span>
+      <span
+        class="ant-radio-label"
+      >
+        Orange
+      </span>
+    </label>
+  </div>
+  <div
+    class="ant-radio-group ant-radio-group-solid ant-radio-group-block css-var-root ant-radio-css-var"
+  >
+    <label
+      class="ant-radio-button-wrapper ant-radio-button-wrapper-checked ant-radio-button-wrapper-block css-var-root ant-radio-css-var"
+    >
+      <span
+        class="ant-radio-button ant-radio-button-checked"
+        name="v-1"
+      >
+        <input
+          checked=""
+          class="ant-radio-button-input"
+          type="radio"
+        />
+      </span>
+      <span
+        class="ant-radio-button-label"
+      >
+        Apple
+      </span>
+    </label>
+    <label
+      class="ant-radio-button-wrapper ant-radio-button-wrapper-block css-var-root ant-radio-css-var"
+    >
+      <span
+        class="ant-radio-button"
+        name="v-1"
+      >
+        <input
+          class="ant-radio-button-input"
+          type="radio"
+        />
+      </span>
+      <span
+        class="ant-radio-button-label"
+      >
+        Pear
+      </span>
+    </label>
+    <label
+      class="ant-radio-button-wrapper ant-radio-button-wrapper-block css-var-root ant-radio-css-var"
+    >
+      <span
+        class="ant-radio-button"
+        name="v-1"
+      >
+        <input
+          class="ant-radio-button-input"
+          type="radio"
+        />
+      </span>
+      <span
+        class="ant-radio-button-label"
+      >
+        Orange
+      </span>
+    </label>
+  </div>
+  <div
+    class="ant-radio-group ant-radio-group-outline ant-radio-group-block css-var-root ant-radio-css-var"
+  >
+    <label
+      class="ant-radio-button-wrapper ant-radio-button-wrapper-checked ant-radio-button-wrapper-block css-var-root ant-radio-css-var"
+    >
+      <span
+        class="ant-radio-button ant-radio-button-checked"
+        name="v-2"
+      >
+        <input
+          checked=""
+          class="ant-radio-button-input"
+          type="radio"
+        />
+      </span>
+      <span
+        class="ant-radio-button-label"
+      >
+        Apple
+      </span>
+    </label>
+    <label
+      class="ant-radio-button-wrapper ant-radio-button-wrapper-block css-var-root ant-radio-css-var"
+    >
+      <span
+        class="ant-radio-button"
+        name="v-2"
+      >
+        <input
+          class="ant-radio-button-input"
+          type="radio"
+        />
+      </span>
+      <span
+        class="ant-radio-button-label"
+      >
+        Pear
+      </span>
+    </label>
+    <label
+      class="ant-radio-button-wrapper ant-radio-button-wrapper-block css-var-root ant-radio-css-var"
+    >
+      <span
+        class="ant-radio-button"
+        name="v-2"
+      >
+        <input
+          class="ant-radio-button-input"
+          type="radio"
+        />
+      </span>
+      <span
+        class="ant-radio-button-label"
+      >
+        Orange
+      </span>
+    </label>
+  </div>
+</div>
+`;
+
+exports[`radio demo > renders radiogroup-more correctly 1`] = `
+<div
+  class="ant-radio-group ant-radio-group-outline css-var-root ant-radio-css-var ant-radio-group-vertical"
+>
+  <label
+    class="ant-radio-wrapper ant-radio-wrapper-checked css-var-root ant-radio-css-var"
+  >
+    <span
+      class="ant-radio ant-wave-target ant-radio-checked ant-wave-target"
+      name="v-0"
+    >
+      <input
+        checked=""
+        class="ant-radio-input"
+        type="radio"
+      />
+    </span>
+    <span
+      class="ant-radio-label"
+    >
+       Option A 
+    </span>
+  </label>
+  <label
+    class="ant-radio-wrapper css-var-root ant-radio-css-var"
+  >
+    <span
+      class="ant-radio ant-wave-target ant-wave-target"
+      name="v-0"
+    >
+      <input
+        class="ant-radio-input"
+        type="radio"
+      />
+    </span>
+    <span
+      class="ant-radio-label"
+    >
+       Option B 
+    </span>
+  </label>
+  <label
+    class="ant-radio-wrapper css-var-root ant-radio-css-var"
+  >
+    <span
+      class="ant-radio ant-wave-target ant-wave-target"
+      name="v-0"
+    >
+      <input
+        class="ant-radio-input"
+        type="radio"
+      />
+    </span>
+    <span
+      class="ant-radio-label"
+    >
+       Option C 
+    </span>
+  </label>
+  <label
+    class="ant-radio-wrapper css-var-root ant-radio-css-var"
+  >
+    <span
+      class="ant-radio ant-wave-target ant-wave-target"
+      name="v-0"
+    >
+      <input
+        class="ant-radio-input"
+        type="radio"
+      />
+    </span>
+    <span
+      class="ant-radio-label"
+    >
+       More... 
+    </span>
+  </label>
+</div>
+`;
+
+exports[`radio demo > renders radiogroup-options correctly 1`] = `
+<div
+  class="ant-flex css-var-root ant-flex-align-stretch ant-flex-gap-middle ant-flex-vertical"
+>
+  <div
+    class="ant-radio-group ant-radio-group-outline css-var-root ant-radio-css-var"
+  >
+    <label
+      class="ant-radio-wrapper ant-radio-wrapper-checked css-var-root ant-radio-css-var"
+    >
+      <span
+        class="ant-radio ant-wave-target ant-radio-checked ant-wave-target"
+        name="v-0"
+      >
+        <input
+          checked=""
+          class="ant-radio-input"
+          type="radio"
+        />
+      </span>
+      <span
+        class="ant-radio-label"
+      >
+        Apple
+      </span>
+    </label>
+    <label
+      class="ant-radio-wrapper css-var-root ant-radio-css-var"
+    >
+      <span
+        class="ant-radio ant-wave-target ant-wave-target"
+        name="v-0"
+      >
+        <input
+          class="ant-radio-input"
+          type="radio"
+        />
+      </span>
+      <span
+        class="ant-radio-label"
+      >
+        Pear
+      </span>
+    </label>
+    <label
+      class="ant-radio-wrapper css-var-root ant-radio-css-var"
+    >
+      <span
+        class="ant-radio ant-wave-target ant-wave-target"
+        name="v-0"
+      >
+        <input
+          class="ant-radio-input"
+          type="radio"
+        />
+      </span>
+      <span
+        class="ant-radio-label"
+      >
+        Orange
+      </span>
+    </label>
+  </div>
+  <div
+    class="ant-radio-group ant-radio-group-outline css-var-root ant-radio-css-var"
+  >
+    <label
+      class="ant-radio-wrapper ant-radio-wrapper-checked css-var-root ant-radio-css-var"
+    >
+      <span
+        class="ant-radio ant-wave-target ant-radio-checked ant-wave-target"
+        name="v-1"
+      >
+        <input
+          checked=""
+          class="ant-radio-input"
+          type="radio"
+        />
+      </span>
+      <span
+        class="ant-radio-label"
+      >
+        Apple
+      </span>
+    </label>
+    <label
+      class="ant-radio-wrapper css-var-root ant-radio-css-var"
+    >
+      <span
+        class="ant-radio ant-wave-target ant-wave-target"
+        name="v-1"
+      >
+        <input
+          class="ant-radio-input"
+          type="radio"
+        />
+      </span>
+      <span
+        class="ant-radio-label"
+      >
+        Pear
+      </span>
+    </label>
+    <label
+      class="ant-radio-wrapper ant-radio-wrapper-disabled css-var-root ant-radio-css-var"
+    >
+      <span
+        class="ant-radio ant-wave-target ant-radio-disabled ant-wave-target"
+        name="v-1"
+      >
+        <input
+          class="ant-radio-input"
+          disabled=""
+          type="radio"
+        />
+      </span>
+      <span
+        class="ant-radio-label"
+      >
+        Orange
+      </span>
+    </label>
+  </div>
+  <br />
+  <div
+    class="ant-radio-group ant-radio-group-outline css-var-root ant-radio-css-var"
+  >
+    <label
+      class="ant-radio-button-wrapper ant-radio-button-wrapper-checked css-var-root ant-radio-css-var"
+    >
+      <span
+        class="ant-radio-button ant-radio-button-checked"
+        name="v-2"
+      >
+        <input
+          checked=""
+          class="ant-radio-button-input"
+          type="radio"
+        />
+      </span>
+      <span
+        class="ant-radio-button-label"
+      >
+        Apple
+      </span>
+    </label>
+    <label
+      class="ant-radio-button-wrapper css-var-root ant-radio-css-var"
+    >
+      <span
+        class="ant-radio-button"
+        name="v-2"
+      >
+        <input
+          class="ant-radio-button-input"
+          type="radio"
+        />
+      </span>
+      <span
+        class="ant-radio-button-label"
+      >
+        Pear
+      </span>
+    </label>
+    <label
+      class="ant-radio-button-wrapper css-var-root ant-radio-css-var"
+      title="Orange"
+    >
+      <span
+        class="ant-radio-button"
+        name="v-2"
+      >
+        <input
+          class="ant-radio-button-input"
+          type="radio"
+        />
+      </span>
+      <span
+        class="ant-radio-button-label"
+      >
+        Orange
+      </span>
+    </label>
+  </div>
+  <div
+    class="ant-radio-group ant-radio-group-solid css-var-root ant-radio-css-var"
+  >
+    <label
+      class="ant-radio-button-wrapper ant-radio-button-wrapper-checked css-var-root ant-radio-css-var"
+    >
+      <span
+        class="ant-radio-button ant-radio-button-checked"
+        name="v-3"
+      >
+        <input
+          checked=""
+          class="ant-radio-button-input"
+          type="radio"
+        />
+      </span>
+      <span
+        class="ant-radio-button-label"
+      >
+        Apple
+      </span>
+    </label>
+    <label
+      class="ant-radio-button-wrapper css-var-root ant-radio-css-var"
+    >
+      <span
+        class="ant-radio-button"
+        name="v-3"
+      >
+        <input
+          class="ant-radio-button-input"
+          type="radio"
+        />
+      </span>
+      <span
+        class="ant-radio-button-label"
+      >
+        Pear
+      </span>
+    </label>
+    <label
+      class="ant-radio-button-wrapper ant-radio-button-wrapper-disabled css-var-root ant-radio-css-var"
+    >
+      <span
+        class="ant-radio-button ant-radio-button-disabled"
+        name="v-3"
+      >
+        <input
+          class="ant-radio-button-input"
+          disabled=""
+          type="radio"
+        />
+      </span>
+      <span
+        class="ant-radio-button-label"
+      >
+        Orange
+      </span>
+    </label>
+  </div>
+</div>
+`;
+
+exports[`radio demo > renders radiogroup-with-name correctly 1`] = `
+<div
+  class="ant-radio-group ant-radio-group-outline css-var-root ant-radio-css-var"
+>
+  <label
+    class="ant-radio-wrapper ant-radio-wrapper-checked css-var-root ant-radio-css-var"
+  >
+    <span
+      class="ant-radio ant-wave-target ant-radio-checked ant-wave-target"
+      name="radiogroup"
+    >
+      <input
+        checked=""
+        class="ant-radio-input"
+        type="radio"
+      />
+    </span>
+    <span
+      class="ant-radio-label"
+    >
+      A
+    </span>
+  </label>
+  <label
+    class="ant-radio-wrapper css-var-root ant-radio-css-var"
+  >
+    <span
+      class="ant-radio ant-wave-target ant-wave-target"
+      name="radiogroup"
+    >
+      <input
+        class="ant-radio-input"
+        type="radio"
+      />
+    </span>
+    <span
+      class="ant-radio-label"
+    >
+      B
+    </span>
+  </label>
+  <label
+    class="ant-radio-wrapper css-var-root ant-radio-css-var"
+  >
+    <span
+      class="ant-radio ant-wave-target ant-wave-target"
+      name="radiogroup"
+    >
+      <input
+        class="ant-radio-input"
+        type="radio"
+      />
+    </span>
+    <span
+      class="ant-radio-label"
+    >
+      C
+    </span>
+  </label>
+  <label
+    class="ant-radio-wrapper css-var-root ant-radio-css-var"
+  >
+    <span
+      class="ant-radio ant-wave-target ant-wave-target"
+      name="radiogroup"
+    >
+      <input
+        class="ant-radio-input"
+        type="radio"
+      />
+    </span>
+    <span
+      class="ant-radio-label"
+    >
+      D
+    </span>
+  </label>
+</div>
+`;
+
+exports[`radio demo > renders size correctly 1`] = `
+<div
+  class="ant-flex css-var-root ant-flex-align-stretch ant-flex-gap-middle ant-flex-vertical"
+>
+  <div
+    class="ant-radio-group ant-radio-group-outline ant-radio-group-small css-var-root ant-radio-css-var"
+  >
+    <label
+      class="ant-radio-button-wrapper ant-radio-button-wrapper-checked css-var-root ant-radio-css-var"
+    >
+      <span
+        class="ant-radio-button ant-radio-button-checked"
+        name="v-0"
+      >
+        <input
+          checked=""
+          class="ant-radio-button-input"
+          type="radio"
+        />
+      </span>
+      <span
+        class="ant-radio-button-label"
+      >
+         Hangzhou 
+      </span>
+    </label>
+    <label
+      class="ant-radio-button-wrapper css-var-root ant-radio-css-var"
+    >
+      <span
+        class="ant-radio-button"
+        name="v-0"
+      >
+        <input
+          class="ant-radio-button-input"
+          type="radio"
+        />
+      </span>
+      <span
+        class="ant-radio-button-label"
+      >
+         Shanghai 
+      </span>
+    </label>
+    <label
+      class="ant-radio-button-wrapper css-var-root ant-radio-css-var"
+    >
+      <span
+        class="ant-radio-button"
+        name="v-0"
+      >
+        <input
+          class="ant-radio-button-input"
+          type="radio"
+        />
+      </span>
+      <span
+        class="ant-radio-button-label"
+      >
+         Beijing 
+      </span>
+    </label>
+    <label
+      class="ant-radio-button-wrapper css-var-root ant-radio-css-var"
+    >
+      <span
+        class="ant-radio-button"
+        name="v-0"
+      >
+        <input
+          class="ant-radio-button-input"
+          type="radio"
+        />
+      </span>
+      <span
+        class="ant-radio-button-label"
+      >
+         Chengdu 
+      </span>
+    </label>
+  </div>
+  <div
+    class="ant-radio-group ant-radio-group-outline css-var-root ant-radio-css-var"
+  >
+    <label
+      class="ant-radio-button-wrapper ant-radio-button-wrapper-checked css-var-root ant-radio-css-var"
+    >
+      <span
+        class="ant-radio-button ant-radio-button-checked"
+        name="v-1"
+      >
+        <input
+          checked=""
+          class="ant-radio-button-input"
+          type="radio"
+        />
+      </span>
+      <span
+        class="ant-radio-button-label"
+      >
+         Hangzhou 
+      </span>
+    </label>
+    <label
+      class="ant-radio-button-wrapper css-var-root ant-radio-css-var"
+    >
+      <span
+        class="ant-radio-button"
+        name="v-1"
+      >
+        <input
+          class="ant-radio-button-input"
+          type="radio"
+        />
+      </span>
+      <span
+        class="ant-radio-button-label"
+      >
+         Shanghai 
+      </span>
+    </label>
+    <label
+      class="ant-radio-button-wrapper css-var-root ant-radio-css-var"
+    >
+      <span
+        class="ant-radio-button"
+        name="v-1"
+      >
+        <input
+          class="ant-radio-button-input"
+          type="radio"
+        />
+      </span>
+      <span
+        class="ant-radio-button-label"
+      >
+         Beijing 
+      </span>
+    </label>
+    <label
+      class="ant-radio-button-wrapper css-var-root ant-radio-css-var"
+    >
+      <span
+        class="ant-radio-button"
+        name="v-1"
+      >
+        <input
+          class="ant-radio-button-input"
+          type="radio"
+        />
+      </span>
+      <span
+        class="ant-radio-button-label"
+      >
+         Chengdu 
+      </span>
+    </label>
+  </div>
+  <div
+    class="ant-radio-group ant-radio-group-outline ant-radio-group-large css-var-root ant-radio-css-var"
+  >
+    <label
+      class="ant-radio-button-wrapper ant-radio-button-wrapper-checked ant-radio-button-wrapper-disabled css-var-root ant-radio-css-var"
+    >
+      <span
+        class="ant-radio-button ant-radio-button-checked ant-radio-button-disabled"
+        name="v-2"
+      >
+        <input
+          checked=""
+          class="ant-radio-button-input"
+          disabled=""
+          type="radio"
+        />
+      </span>
+      <span
+        class="ant-radio-button-label"
+      >
+         Hangzhou 
+      </span>
+    </label>
+    <label
+      class="ant-radio-button-wrapper ant-radio-button-wrapper-disabled css-var-root ant-radio-css-var"
+    >
+      <span
+        class="ant-radio-button ant-radio-button-disabled"
+        name="v-2"
+      >
+        <input
+          class="ant-radio-button-input"
+          disabled=""
+          type="radio"
+        />
+      </span>
+      <span
+        class="ant-radio-button-label"
+      >
+         Shanghai 
+      </span>
+    </label>
+    <label
+      class="ant-radio-button-wrapper ant-radio-button-wrapper-disabled css-var-root ant-radio-css-var"
+    >
+      <span
+        class="ant-radio-button ant-radio-button-disabled"
+        name="v-2"
+      >
+        <input
+          class="ant-radio-button-input"
+          disabled=""
+          type="radio"
+        />
+      </span>
+      <span
+        class="ant-radio-button-label"
+      >
+         Beijing 
+      </span>
+    </label>
+    <label
+      class="ant-radio-button-wrapper ant-radio-button-wrapper-disabled css-var-root ant-radio-css-var"
+    >
+      <span
+        class="ant-radio-button ant-radio-button-disabled"
+        name="v-2"
+      >
+        <input
+          class="ant-radio-button-input"
+          disabled=""
+          type="radio"
+        />
+      </span>
+      <span
+        class="ant-radio-button-label"
+      >
+         Chengdu 
+      </span>
+    </label>
+  </div>
+</div>
+`;
