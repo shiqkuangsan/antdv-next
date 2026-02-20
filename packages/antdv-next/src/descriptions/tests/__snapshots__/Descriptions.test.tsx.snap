@@ -1,0 +1,283 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Descriptions > matches snapshot with basic props 1`] = `
+<div
+  class="ant-descriptions ant-descriptions-bordered css-var-root"
+>
+  <div
+    class="ant-descriptions-header"
+  >
+    <div
+      class="ant-descriptions-title"
+    >
+      User Info
+    </div>
+    <!---->
+  </div>
+  <div
+    class="ant-descriptions-view"
+  >
+    <table>
+      <tbody>
+        <tr
+          class="ant-descriptions-row"
+        >
+          <th
+            class="ant-descriptions-item-label"
+            colspan="1"
+          >
+            <span>
+              Name
+            </span>
+            <!---->
+          </th>
+          <td
+            class="ant-descriptions-item-content undefined"
+            colspan="1"
+          >
+            <!---->
+            <span>
+              Zhou Maomao
+            </span>
+          </td>
+          <th
+            class="ant-descriptions-item-label"
+            colspan="1"
+          >
+            <span>
+              Phone
+            </span>
+            <!---->
+          </th>
+          <td
+            class="ant-descriptions-item-content undefined"
+            colspan="1"
+          >
+            <!---->
+            <span>
+              1810000000
+            </span>
+          </td>
+        </tr>
+        <tr
+          class="ant-descriptions-row"
+        >
+          <th
+            class="ant-descriptions-item-label"
+            colspan="1"
+          >
+            <span>
+              Address
+            </span>
+            <!---->
+          </th>
+          <td
+            class="ant-descriptions-item-content undefined"
+            colspan="3"
+          >
+            <!---->
+            <span>
+              Hangzhou
+            </span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+`;
+
+exports[`Descriptions > matches snapshot with vertical layout 1`] = `
+<div
+  class="ant-descriptions css-var-root"
+>
+  <!---->
+  <div
+    class="ant-descriptions-view"
+  >
+    <table>
+      <tbody>
+        <tr
+          class="ant-descriptions-row"
+        >
+          <th
+            class="ant-descriptions-item"
+            colspan="1"
+          >
+            <div
+              class="ant-descriptions-item-container"
+            >
+              <span
+                class="ant-descriptions-item-label"
+              >
+                Product
+              </span>
+              <!---->
+            </div>
+          </th>
+          <th
+            class="ant-descriptions-item"
+            colspan="1"
+          >
+            <div
+              class="ant-descriptions-item-container"
+            >
+              <span
+                class="ant-descriptions-item-label"
+              >
+                Billing
+              </span>
+              <!---->
+            </div>
+          </th>
+          <th
+            class="ant-descriptions-item"
+            colspan="1"
+          >
+            <div
+              class="ant-descriptions-item-container"
+            >
+              <span
+                class="ant-descriptions-item-label"
+              >
+                Time
+              </span>
+              <!---->
+            </div>
+          </th>
+        </tr>
+        <tr
+          class="ant-descriptions-row"
+        >
+          <td
+            class="ant-descriptions-item"
+            colspan="1"
+          >
+            <div
+              class="ant-descriptions-item-container"
+            >
+              <!---->
+              <span
+                class="ant-descriptions-item-content"
+              >
+                Cloud Database
+              </span>
+            </div>
+          </td>
+          <td
+            class="ant-descriptions-item"
+            colspan="1"
+          >
+            <div
+              class="ant-descriptions-item-container"
+            >
+              <!---->
+              <span
+                class="ant-descriptions-item-content"
+              >
+                Prepaid
+              </span>
+            </div>
+          </td>
+          <td
+            class="ant-descriptions-item"
+            colspan="1"
+          >
+            <div
+              class="ant-descriptions-item-container"
+            >
+              <!---->
+              <span
+                class="ant-descriptions-item-content"
+              >
+                18:00:00
+              </span>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+`;
+
+exports[`Descriptions > rtl render > component should be rendered correctly in RTL direction 1`] = `
+<div
+  data-v-app=""
+>
+  <div
+    class="ant-descriptions ant-descriptions-rtl css-var-root"
+  >
+    <!---->
+    <div
+      class="ant-descriptions-view"
+    >
+      <table>
+        <tbody>
+          <tr
+            class="ant-descriptions-row"
+          >
+            <td
+              class="ant-descriptions-item"
+              colspan="1"
+            >
+              <div
+                class="ant-descriptions-item-container"
+              >
+                <span
+                  class="ant-descriptions-item-label"
+                >
+                  Product
+                </span>
+                <span
+                  class="ant-descriptions-item-content"
+                >
+                  Cloud Database
+                </span>
+              </div>
+            </td>
+            <td
+              class="ant-descriptions-item"
+              colspan="1"
+            >
+              <div
+                class="ant-descriptions-item-container"
+              >
+                <span
+                  class="ant-descriptions-item-label"
+                >
+                  Billing
+                </span>
+                <span
+                  class="ant-descriptions-item-content"
+                >
+                  Prepaid
+                </span>
+              </div>
+            </td>
+            <td
+              class="ant-descriptions-item"
+              colspan="1"
+            >
+              <div
+                class="ant-descriptions-item-container"
+              >
+                <span
+                  class="ant-descriptions-item-label"
+                >
+                  Time
+                </span>
+                <span
+                  class="ant-descriptions-item-content"
+                >
+                  18:00:00
+                </span>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+`;
